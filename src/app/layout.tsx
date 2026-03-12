@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { SkipToContent } from "@/components/layout/skip-to-content";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -13,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LNA — AI-Powered Document Processing Platform",
+  title: "LNA — AI Document Processing & PDF to Excel Automation",
   description:
-    "LNA uses AI to automatically extract, structure, and export data from PDFs into Excel. Intelligent document processing with confidence scoring, batch processing, and conversational data Q&A.",
+    "LNA extracts structured data from any PDF and exports it to Excel automatically. AI-powered document processing with 99.5% accuracy. Request a demo.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -41,7 +44,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        {children}
+        <SkipToContent />
+        <Header />
+        <main id="main-content" className="min-h-screen pt-16">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
