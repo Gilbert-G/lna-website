@@ -31,7 +31,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
+      <Section className="noise-overlay gradient-mesh relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative flex flex-col items-center gap-8 text-center">
           <AnimateIn>
@@ -79,7 +79,7 @@ export default function HomePage() {
                 alt="LNA platform dashboard showing PDF to Excel conversion"
                 width={960}
                 height={540}
-                className="rounded-2xl shadow-xl"
+                className="shadow-layered rounded-2xl"
                 priority
               />
             </div>
@@ -177,7 +177,7 @@ export default function HomePage() {
               },
             ].map((step, i) => (
               <AnimateIn key={step.step} delay={i * 0.15}>
-                <div className="bg-card flex flex-col items-center rounded-2xl border p-6 text-center">
+                <div className="glass-card shadow-layered flex flex-col items-center rounded-2xl p-6 text-center">
                   <span className="text-primary mb-2 text-xs font-bold tracking-widest uppercase">
                     {step.step} — {step.label}
                   </span>
@@ -268,7 +268,7 @@ export default function HomePage() {
               },
             ].map((feature, i) => (
               <AnimateIn key={feature.title} delay={i * 0.1}>
-                <div className="bg-card flex flex-col gap-4 rounded-2xl border p-6">
+                <div className="glass-card shadow-layered flex flex-col gap-4 rounded-2xl p-6">
                   <div className="bg-primary/10 text-primary w-fit rounded-xl p-3">
                     <feature.icon className="size-6" />
                   </div>
@@ -425,7 +425,7 @@ export default function HomePage() {
               },
             ].map((testimonial, i) => (
               <AnimateIn key={testimonial.name} delay={i * 0.1}>
-                <div className="bg-card flex flex-col gap-4 rounded-2xl border p-6">
+                <div className="glass-card shadow-layered flex flex-col gap-4 rounded-2xl p-6">
                   <div className="flex gap-1">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <Star

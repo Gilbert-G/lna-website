@@ -199,7 +199,7 @@ export default function FeaturesPage() {
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
+      <Section className="noise-overlay gradient-mesh relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative text-center">
           <AnimateIn>
@@ -297,7 +297,7 @@ export default function FeaturesPage() {
                   alt={feature.headline}
                   width={600}
                   height={400}
-                  className="rounded-2xl shadow-lg"
+                  className="shadow-layered rounded-2xl"
                 />
               </AnimateIn>
             </div>
@@ -402,7 +402,7 @@ export default function FeaturesPage() {
                 alt="User management dashboard"
                 width={600}
                 height={400}
-                className="rounded-2xl shadow-lg"
+                className="shadow-layered rounded-2xl"
               />
             </AnimateIn>
           </div>

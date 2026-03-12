@@ -53,12 +53,11 @@ const values = [
   },
 ];
 
-
 export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
+      <Section className="noise-overlay gradient-mesh relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative text-center">
           <AnimateIn>
@@ -83,7 +82,7 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <AnimateIn>
               <div>
-                <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+                <span className="text-primary text-xs font-semibold tracking-widest uppercase">
                   The Problem
                 </span>
                 <h2 className="text-fluid-lg mt-3 font-bold">
@@ -137,13 +136,13 @@ export default function AboutPage() {
       <Section className="bg-surface">
         <Container>
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               Mission &amp; Vision
             </span>
           </AnimateIn>
           <div className="mt-8 grid gap-8 md:grid-cols-2">
             <AnimateIn delay={0.1}>
-              <div className="bg-card rounded-2xl border p-8">
+              <div className="glass-card shadow-layered rounded-2xl p-8">
                 <Target className="text-primary size-8" />
                 <h3 className="mt-4 text-xl font-bold">Our Mission</h3>
                 <p className="text-muted-foreground mt-3 leading-relaxed">
@@ -154,7 +153,7 @@ export default function AboutPage() {
               </div>
             </AnimateIn>
             <AnimateIn delay={0.2}>
-              <div className="bg-card rounded-2xl border p-8">
+              <div className="glass-card shadow-layered rounded-2xl p-8">
                 <Eye className="text-primary size-8" />
                 <h3 className="mt-4 text-xl font-bold">Our Vision</h3>
                 <p className="text-muted-foreground mt-3 leading-relaxed">
@@ -173,7 +172,7 @@ export default function AboutPage() {
       <Section>
         <Container>
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               What We Stand For
             </span>
             <h2 className="text-fluid-lg mt-3 font-bold">
@@ -183,7 +182,7 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, i) => (
               <AnimateIn key={value.title} delay={0.1 * i}>
-                <div className="bg-card rounded-2xl border p-6">
+                <div className="glass-card shadow-layered rounded-2xl p-6">
                   <value.icon className="text-primary size-6" />
                   <h3 className="mt-3 text-lg font-bold">{value.title}</h3>
                   <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
@@ -200,7 +199,7 @@ export default function AboutPage() {
       <Section>
         <Container className="max-w-3xl">
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               The Company
             </span>
             <h2 className="text-fluid-lg mt-3 font-bold">
@@ -215,8 +214,8 @@ export default function AboutPage() {
                 tools for professional workflows.
               </p>
               <p>
-                Manureva Solutions operates from two locations: Paris, France and
-                Pondicherry, India. Our team brings together expertise in AI
+                Manureva Solutions operates from two locations: Paris, France
+                and Pondicherry, India. Our team brings together expertise in AI
                 engineering, enterprise software, and product design, with a
                 shared focus on building tools that solve real operational
                 problems.

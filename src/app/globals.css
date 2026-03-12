@@ -199,3 +199,95 @@
 .text-fluid-base {
   font-size: clamp(1rem, 0.925rem + 0.3vw, 1.125rem);
 }
+
+/* ---- Glassmorphism & Visual Effects (LNAW-56) ---- */
+
+/* Frosted glass card */
+.glass-card {
+  background: oklch(1 0 0 / 70%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid oklch(1 0 0 / 20%);
+}
+.dark .glass-card {
+  background: oklch(0.17 0.015 260 / 60%);
+  border-color: oklch(1 0 0 / 10%);
+}
+
+/* Layered shadow — soft outer + sharp inner */
+.shadow-layered {
+  box-shadow:
+    0 1px 2px oklch(0 0 0 / 4%),
+    0 4px 12px oklch(0 0 0 / 6%),
+    0 16px 40px oklch(0 0 0 / 4%);
+}
+.dark .shadow-layered {
+  box-shadow:
+    0 1px 2px oklch(0 0 0 / 20%),
+    0 4px 12px oklch(0 0 0 / 25%),
+    0 16px 40px oklch(0 0 0 / 15%);
+}
+
+/* Subtle noise texture overlay */
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  border-radius: inherit;
+}
+
+/* Gradient mesh background for hero/CTA */
+.gradient-mesh {
+  background:
+    radial-gradient(
+      ellipse 80% 50% at 20% 40%,
+      oklch(0.546 0.245 262.881 / 8%) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 60% at 80% 20%,
+      oklch(0.532 0.19 275 / 6%) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 50% 70% at 50% 80%,
+      oklch(0.546 0.245 262.881 / 4%) 0%,
+      transparent 60%
+    );
+}
+.dark .gradient-mesh {
+  background:
+    radial-gradient(
+      ellipse 80% 50% at 20% 40%,
+      oklch(0.546 0.245 262.881 / 12%) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 60% at 80% 20%,
+      oklch(0.532 0.19 275 / 10%) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 50% 70% at 50% 80%,
+      oklch(0.546 0.245 262.881 / 6%) 0%,
+      transparent 60%
+    );
+}
+
+/* Brand gradient text utility */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #2563eb, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Brand gradient border — use on a wrapper with padding */
+.border-gradient-brand {
+  border-image: linear-gradient(135deg, #2563eb, #6366f1) 1;
+}

@@ -14,7 +14,7 @@ export default function PricingPage() {
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
+      <Section className="noise-overlay gradient-mesh relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative text-center">
           <AnimateIn>
