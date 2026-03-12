@@ -489,9 +489,10 @@ export default function FeaturesPage() {
               </LinkButton>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-1 text-sm font-medium text-blue-100 hover:text-white"
+                className="link-underline inline-flex items-center gap-1 text-sm font-medium text-blue-100 hover:text-white"
               >
-                View Pricing <ArrowRight className="size-4" />
+                View Pricing{" "}
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
           </AnimateIn>

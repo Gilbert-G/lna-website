@@ -472,9 +472,10 @@ export default function HomePage() {
               </LinkButton>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-1 text-sm font-medium text-blue-100 hover:text-white"
+                className="link-underline inline-flex items-center gap-1 text-sm font-medium text-blue-100 hover:text-white"
               >
-                Or explore pricing <ArrowRight className="size-4" />
+                Or explore pricing{" "}
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
             <p className="mt-4 text-sm text-blue-200">
