@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <defs>
+    <linearGradient id="ctxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" rx="16" fill="#F8FAFC"/>
+
+  <!-- Left: Role selector panel -->
+  <rect x="40" y="40" width="200" height="320" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="56" y="68" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Select Role</text>
+  <text x="56" y="84" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">AI adapts to your context</text>
+
+  <!-- Role 1 - selected -->
+  <rect x="52" y="100" width="176" height="52" rx="8" fill="#6366F1" opacity="0.08" stroke="#6366F1" stroke-width="1.5"/>
+  <circle cx="72" cy="126" r="12" fill="#6366F1" opacity="0.2"/>
+  <text x="68" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#6366F1" font-weight="700">FA</text>
+  <text x="90" y="120" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#4F46E5">Financial Analyst</text>
+  <text x="90" y="136" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Revenue, costs, margins</text>
+  <!-- Check mark -->
+  <circle cx="212" cy="126" r="8" fill="#6366F1"/>
+  <path d="M208 126L211 129L216 123" stroke="white" stroke-width="1.5" fill="none"/>
+
+  <!-- Role 2 -->
+  <rect x="52" y="164" width="176" height="52" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <circle cx="72" cy="190" r="12" fill="#2563EB" opacity="0.1"/>
+  <text x="68" y="194" font-family="system-ui, sans-serif" font-size="10" fill="#2563EB" font-weight="700">CO</text>
+  <text x="90" y="184" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">Compliance Officer</text>
+  <text x="90" y="200" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Regulatory, risk, terms</text>
+
+  <!-- Role 3 -->
+  <rect x="52" y="228" width="176" height="52" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <circle cx="72" cy="254" r="12" fill="#3B82F6" opacity="0.1"/>
+  <text x="66" y="258" font-family="system-ui, sans-serif" font-size="10" fill="#3B82F6" font-weight="700">OM</text>
+  <text x="90" y="248" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">Ops Manager</text>
+  <text x="90" y="264" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Vendors, SLAs, logistics</text>
+
+  <!-- Custom role button -->
+  <rect x="52" y="292" width="176" height="36" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 2"/>
+  <text x="114" y="314" font-family="system-ui, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">+ Custom Role</text>
+
+  <!-- Arrow from roles to chat -->
+  <path d="M248 200L266 200" stroke="#6366F1" stroke-width="2"/>
+  <path d="M262 196L268 200L262 204" fill="#6366F1"/>
+
+  <!-- Right: Chat panel with role-adapted responses -->
+  <rect x="276" y="40" width="284" height="320" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Chat header -->
+  <rect x="276" y="40" width="284" height="44" rx="12" fill="url(#ctxGrad)" opacity="0.06"/>
+  <rect x="276" y="72" width="284" height="12" fill="url(#ctxGrad)" opacity="0.06"/>
+  <circle cx="300" cy="62" r="12" fill="url(#ctxGrad)"/>
+  <text x="296" y="66" font-family="system-ui, sans-serif" font-size="9" fill="white" font-weight="700">AI</text>
+  <text x="320" y="58" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#0F172A">AI Chat</text>
+  <rect x="320" y="64" width="90" height="14" rx="4" fill="#6366F1" opacity="0.1"/>
+  <text x="328" y="75" font-family="system-ui, sans-serif" font-size="8" fill="#6366F1" font-weight="600">Financial Analyst</text>
+
+  <!-- User message -->
+  <rect x="384" y="96" width="160" height="32" rx="8" fill="#2563EB"/>
+  <text x="398" y="110" font-family="system-ui, sans-serif" font-size="10" fill="white">Summarize this invoice</text>
+  <text x="398" y="122" font-family="system-ui, sans-serif" font-size="10" fill="white">for me</text>
+
+  <!-- AI response (financial analyst perspective) -->
+  <rect x="292" y="140" width="252" height="158" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
+
+  <text x="306" y="160" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#4F46E5">Financial Analysis Summary</text>
+
+  <text x="306" y="180" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">REVENUE IMPACT</text>
+  <text x="306" y="194" font-family="system-ui, sans-serif" font-size="10" fill="#0F172A">$12,450 receivable, Net 30 terms</text>
+
+  <text x="306" y="214" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">MARGIN NOTE</text>
+  <text x="306" y="228" font-family="system-ui, sans-serif" font-size="10" fill="#0F172A">Services at 68% gross margin</text>
+
+  <text x="306" y="248" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">CASH FLOW</text>
+  <text x="306" y="262" font-family="system-ui, sans-serif" font-size="10" fill="#0F172A">Expected collection: Apr 9, 2024</text>
+
+  <rect x="306" y="274" width="120" height="14" rx="4" fill="#EEF2FF"/>
+  <text x="314" y="285" font-family="system-ui, sans-serif" font-size="8" fill="#6366F1">Tailored for Financial Analyst</text>
+
+  <!-- Indicator showing this would be different for other roles -->
+  <rect x="292" y="310" width="252" height="36" rx="8" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="0.5"/>
+  <text x="306" y="326" font-family="system-ui, sans-serif" font-size="8" fill="#64748B">As Compliance Officer, this would focus on</text>
+  <text x="306" y="338" font-family="system-ui, sans-serif" font-size="8" fill="#64748B">regulatory terms, risk flags, and legal clauses</text>
+
+  <!-- Decorative elements -->
+  <circle cx="40" cy="390" r="4" fill="#6366F1" opacity="0.1"/>
+  <circle cx="560" cy="380" r="3" fill="#2563EB" opacity="0.1"/>
+  <circle cx="300" cy="385" r="5" fill="#6366F1" opacity="0.08"/>
+</svg>

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Window frame -->
+  <rect width="800" height="500" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <rect width="800" height="44" rx="12" fill="white"/>
+  <circle cx="24" cy="22" r="5" fill="#EF4444"/>
+  <circle cx="42" cy="22" r="5" fill="#F59E0B"/>
+  <circle cx="60" cy="22" r="5" fill="#22C55E"/>
+  <line x1="0" y1="44" x2="800" y2="44" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="24" y="76" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Template Mapping</text>
+  <rect x="640" y="58" width="140" height="28" rx="6" fill="#2563EB"/>
+  <text x="672" y="76" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="white">Save Template</text>
+
+  <!-- Left panel: Template fields -->
+  <rect x="24" y="96" width="340" height="386" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="40" y="122" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#0F172A">Template: Invoice Standard</text>
+  <text x="40" y="140" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">Define output fields for extraction</text>
+
+  <!-- Template field items -->
+  <rect x="40" y="156" width="308" height="36" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="1"/>
+  <circle cx="56" cy="174" r="8" fill="#2563EB" opacity="0.15"/>
+  <text x="52" y="178" font-family="system-ui, sans-serif" font-size="9" fill="#2563EB" font-weight="600">1</text>
+  <text x="72" y="178" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">vendor_name</text>
+  <text x="280" y="178" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">String</text>
+
+  <rect x="40" y="200" width="308" height="36" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="1"/>
+  <circle cx="56" cy="218" r="8" fill="#2563EB" opacity="0.15"/>
+  <text x="52" y="222" font-family="system-ui, sans-serif" font-size="9" fill="#2563EB" font-weight="600">2</text>
+  <text x="72" y="222" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">invoice_number</text>
+  <text x="280" y="222" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">String</text>
+
+  <rect x="40" y="244" width="308" height="36" rx="6" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+  <circle cx="56" cy="262" r="8" fill="#6366F1" opacity="0.15"/>
+  <text x="52" y="266" font-family="system-ui, sans-serif" font-size="9" fill="#6366F1" font-weight="600">3</text>
+  <text x="72" y="266" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">invoice_date</text>
+  <text x="280" y="266" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Date</text>
+
+  <rect x="40" y="288" width="308" height="36" rx="6" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+  <circle cx="56" cy="306" r="8" fill="#6366F1" opacity="0.15"/>
+  <text x="52" y="310" font-family="system-ui, sans-serif" font-size="9" fill="#6366F1" font-weight="600">4</text>
+  <text x="72" y="310" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">total_amount</text>
+  <text x="280" y="310" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Currency</text>
+
+  <rect x="40" y="332" width="308" height="36" rx="6" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <circle cx="56" cy="350" r="8" fill="#E2E8F0"/>
+  <text x="52" y="354" font-family="system-ui, sans-serif" font-size="9" fill="#64748B" font-weight="600">5</text>
+  <text x="72" y="354" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">payment_terms</text>
+  <text x="280" y="354" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">String</text>
+
+  <rect x="40" y="376" width="308" height="36" rx="6" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <circle cx="56" cy="394" r="8" fill="#E2E8F0"/>
+  <text x="52" y="398" font-family="system-ui, sans-serif" font-size="9" fill="#64748B" font-weight="600">6</text>
+  <text x="72" y="398" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">line_items</text>
+  <text x="280" y="398" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Array</text>
+
+  <!-- Add field button -->
+  <rect x="40" y="424" width="308" height="32" rx="6" fill="white" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 2"/>
+  <text x="168" y="444" font-family="system-ui, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">+ Add Field</text>
+
+  <!-- Right panel: Extracted fields -->
+  <rect x="436" y="96" width="340" height="386" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="452" y="122" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#0F172A">Extracted Fields</text>
+  <text x="452" y="140" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">Auto-detected from document</text>
+
+  <!-- Extracted field items -->
+  <rect x="452" y="156" width="308" height="36" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="1"/>
+  <text x="468" y="178" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">Acme Corporation LLC</text>
+  <rect x="690" y="166" width="52" height="16" rx="4" fill="#DCFCE7"/>
+  <text x="700" y="178" font-family="system-ui, sans-serif" font-size="8" fill="#16A34A">99.2%</text>
+
+  <rect x="452" y="200" width="308" height="36" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="1"/>
+  <text x="468" y="222" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">INV-2024-001847</text>
+  <rect x="690" y="210" width="52" height="16" rx="4" fill="#DCFCE7"/>
+  <text x="700" y="222" font-family="system-ui, sans-serif" font-size="8" fill="#16A34A">99.8%</text>
+
+  <rect x="452" y="244" width="308" height="36" rx="6" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+  <text x="468" y="266" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">March 10, 2024</text>
+  <rect x="690" y="254" width="52" height="16" rx="4" fill="#DCFCE7"/>
+  <text x="700" y="266" font-family="system-ui, sans-serif" font-size="8" fill="#16A34A">98.5%</text>
+
+  <rect x="452" y="288" width="308" height="36" rx="6" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+  <text x="468" y="310" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">$12,450.00</text>
+  <rect x="690" y="298" width="52" height="16" rx="4" fill="#DCFCE7"/>
+  <text x="700" y="310" font-family="system-ui, sans-serif" font-size="8" fill="#16A34A">99.1%</text>
+
+  <rect x="452" y="332" width="308" height="36" rx="6" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="468" y="354" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">Net 30</text>
+  <rect x="690" y="342" width="52" height="16" rx="4" fill="#FEF3C7"/>
+  <text x="700" y="354" font-family="system-ui, sans-serif" font-size="8" fill="#D97706">92.3%</text>
+
+  <rect x="452" y="376" width="308" height="36" rx="6" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="468" y="398" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">4 line items</text>
+  <rect x="690" y="386" width="52" height="16" rx="4" fill="#DCFCE7"/>
+  <text x="700" y="398" font-family="system-ui, sans-serif" font-size="8" fill="#16A34A">97.6%</text>
+
+  <!-- Mapping connection lines -->
+  <line x1="348" y1="174" x2="452" y2="174" stroke="#2563EB" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="348" y1="218" x2="452" y2="218" stroke="#2563EB" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="348" y1="262" x2="452" y2="262" stroke="#6366F1" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="348" y1="306" x2="452" y2="306" stroke="#6366F1" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="348" y1="350" x2="452" y2="350" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="348" y1="394" x2="452" y2="394" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Connection dots -->
+  <circle cx="348" cy="174" r="4" fill="#2563EB"/>
+  <circle cx="452" cy="174" r="4" fill="#2563EB"/>
+  <circle cx="348" cy="218" r="4" fill="#2563EB"/>
+  <circle cx="452" cy="218" r="4" fill="#2563EB"/>
+  <circle cx="348" cy="262" r="4" fill="#6366F1"/>
+  <circle cx="452" cy="262" r="4" fill="#6366F1"/>
+  <circle cx="348" cy="306" r="4" fill="#6366F1"/>
+  <circle cx="452" cy="306" r="4" fill="#6366F1"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Left column -->
+  <rect x="6" y="10" width="14" height="6" rx="2" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="6" y="21" width="14" height="6" rx="2" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="6" y="32" width="14" height="6" rx="2" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+  <!-- Right column -->
+  <rect x="28" y="10" width="14" height="6" rx="2" fill="#EEF2FF" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="28" y="21" width="14" height="6" rx="2" fill="#EEF2FF" stroke="#6366F1" stroke-width="1.5"/>
+  <rect x="28" y="32" width="14" height="6" rx="2" fill="#EEF2FF" stroke="#6366F1" stroke-width="1.5"/>
+  <!-- Mapping lines -->
+  <path d="M20 13L28 13" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <path d="M20 24L28 35" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <path d="M20 35L28 24" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <!-- Arrow tips -->
+  <path d="M26 11.5L28 13L26 14.5" stroke="#3B82F6" stroke-width="1.5"/>
+  <path d="M26.5 33.5L28 35L27 36.5" stroke="#3B82F6" stroke-width="1.5"/>
+  <path d="M26.5 22.5L28 24L27 25.5" stroke="#3B82F6" stroke-width="1.5"/>
+</svg>

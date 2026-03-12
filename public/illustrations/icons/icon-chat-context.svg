@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- User silhouette -->
+  <circle cx="18" cy="14" r="6" fill="#EEF2FF" stroke="#6366F1" stroke-width="1.5"/>
+  <path d="M8 32C8 26.5 12.5 22 18 22C23.5 22 28 26.5 28 32" stroke="#6366F1" stroke-width="1.5" fill="#EEF2FF"/>
+  <!-- Gear/cog -->
+  <circle cx="36" cy="20" r="6" fill="none" stroke="#2563EB" stroke-width="1.5"/>
+  <circle cx="36" cy="20" r="2.5" fill="#2563EB"/>
+  <!-- Gear teeth -->
+  <line x1="36" y1="12" x2="36" y2="14" stroke="#2563EB" stroke-width="2"/>
+  <line x1="36" y1="26" x2="36" y2="28" stroke="#2563EB" stroke-width="2"/>
+  <line x1="28" y1="20" x2="30" y2="20" stroke="#2563EB" stroke-width="2"/>
+  <line x1="42" y1="20" x2="44" y2="20" stroke="#2563EB" stroke-width="2"/>
+  <line x1="30.3" y1="14.3" x2="31.7" y2="15.7" stroke="#2563EB" stroke-width="2"/>
+  <line x1="40.3" y1="24.3" x2="41.7" y2="25.7" stroke="#2563EB" stroke-width="2"/>
+  <line x1="40.3" y1="15.7" x2="41.7" y2="14.3" stroke="#2563EB" stroke-width="2"/>
+  <line x1="30.3" y1="25.7" x2="31.7" y2="24.3" stroke="#2563EB" stroke-width="2"/>
+  <!-- Context line -->
+  <path d="M26 30H38C39.1 30 40 30.9 40 32V40C40 41.1 39.1 42 38 42H30" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="3 2"/>
+</svg>
