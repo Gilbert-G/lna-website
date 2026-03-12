@@ -469,20 +469,20 @@ export default function FeaturesPage() {
 
       {/* Final CTA */}
       <Section className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] text-white">
-        <Container className="text-center">
+        <Container className="mx-auto max-w-3xl text-center">
           <AnimateIn>
             <h2 className="text-fluid-lg font-bold">
               Ready to See LNA in Action?
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-blue-100">
               Book a 30-minute demo and we&apos;ll walk you through the platform
               using your document types. No slides. No scripts. Just a live
               demonstration of exactly what LNA can do for your team.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <LinkButton
                 size="lg"
-                className="bg-white px-8 text-base text-blue-600 hover:bg-blue-50"
+                className="bg-white px-8 py-3 text-base font-semibold text-blue-600 shadow-lg hover:bg-blue-50 hover:shadow-xl"
                 href="/contact"
               >
                 Request a Demo

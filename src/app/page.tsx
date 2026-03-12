@@ -452,20 +452,20 @@ export default function HomePage() {
 
       {/* Final CTA */}
       <Section className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] text-white">
-        <Container className="text-center">
+        <Container className="mx-auto max-w-3xl text-center">
           <AnimateIn>
             <h2 className="text-fluid-lg font-bold">
               Stop Copying. Start Extracting.
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-blue-100">
               LNA automates the PDF-to-Excel workflows that are costing your
               team hours every week. See it in action with a personalized demo —
               we&apos;ll show you exactly how it works with your documents.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <LinkButton
                 size="lg"
-                className="bg-white px-8 text-base text-blue-600 hover:bg-blue-50"
+                className="bg-white px-8 py-3 text-base font-semibold text-blue-600 shadow-lg hover:bg-blue-50 hover:shadow-xl"
                 href="/contact"
               >
                 Request a Demo
