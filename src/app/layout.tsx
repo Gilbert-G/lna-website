@@ -4,6 +4,10 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SkipToContent } from "@/components/layout/skip-to-content";
+import { CrispChat } from "@/components/integrations/CrispChat";
+import { CookieConsent } from "@/components/integrations/CookieConsent";
+import { ToastProvider } from "@/components/ui/toast";
+import { DemoRequestModal } from "@/components/forms/DemoRequestModal";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -50,6 +54,10 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CrispChat />
+        <CookieConsent />
+        <ToastProvider />
+        <DemoRequestModal />
       </body>
     </html>
   );

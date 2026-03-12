@@ -24,6 +24,8 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { AnimateIn } from "@/components/ui/animate-in";
+import { DemoModalTrigger } from "@/components/forms/DemoModalTrigger";
+import { VideoEmbed } from "@/components/media/VideoEmbed";
 
 export default function HomePage() {
   return (
@@ -54,10 +56,15 @@ export default function HomePage() {
           </AnimateIn>
           <AnimateIn delay={0.3}>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <LinkButton size="lg" className="px-6 text-base" href="/contact">
+              <DemoModalTrigger className="px-6 text-base">
                 Request a Demo
-              </LinkButton>
-              <LinkButton variant="outline" size="lg" className="px-6 text-base" href="#how-it-works">
+              </DemoModalTrigger>
+              <LinkButton
+                variant="outline"
+                size="lg"
+                className="px-6 text-base"
+                href="#how-it-works"
+              >
                 See How It Works
               </LinkButton>
             </div>
@@ -131,7 +138,7 @@ export default function HomePage() {
         <Container>
           <AnimateIn>
             <div className="mb-12 text-center">
-              <p className="text-primary mb-2 text-sm font-semibold uppercase tracking-wider">
+              <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
                 How It Works
               </p>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -171,7 +178,7 @@ export default function HomePage() {
             ].map((step, i) => (
               <AnimateIn key={step.step} delay={i * 0.15}>
                 <div className="bg-card flex flex-col items-center rounded-2xl border p-6 text-center">
-                  <span className="text-primary mb-2 text-xs font-bold uppercase tracking-widest">
+                  <span className="text-primary mb-2 text-xs font-bold tracking-widest uppercase">
                     {step.step} — {step.label}
                   </span>
                   <div className="bg-primary/10 text-primary mb-4 rounded-xl p-4">
@@ -196,6 +203,11 @@ export default function HomePage() {
               />
             </div>
           </AnimateIn>
+          <AnimateIn delay={0.4}>
+            <div className="mx-auto mt-12 max-w-4xl">
+              <VideoEmbed src="dQw4w9WgXcQ" title="See LNA in action" />
+            </div>
+          </AnimateIn>
         </Container>
       </Section>
 
@@ -204,7 +216,7 @@ export default function HomePage() {
         <Container>
           <AnimateIn>
             <div className="mb-12 text-center">
-              <p className="text-primary mb-2 text-sm font-semibold uppercase tracking-wider">
+              <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
                 Features
               </p>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -276,7 +288,7 @@ export default function HomePage() {
         <Container>
           <AnimateIn>
             <div className="mb-12 text-center">
-              <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-blue-300">
+              <p className="mb-2 text-sm font-semibold tracking-wider text-blue-300 uppercase">
                 What Makes LNA Different
               </p>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -367,7 +379,7 @@ export default function HomePage() {
       <Section>
         <Container>
           <AnimateIn>
-            <p className="text-primary mb-8 text-center text-sm font-semibold uppercase tracking-wider">
+            <p className="text-primary mb-8 text-center text-sm font-semibold tracking-wider uppercase">
               Trusted by Teams Who Process Documents Every Day
             </p>
           </AnimateIn>

@@ -11,13 +11,13 @@ import {
   Users,
   ArrowRight,
   Check,
-  Minus,
 } from "lucide-react";
 import { LinkButton } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { AnimateIn } from "@/components/ui/animate-in";
+import { VideoEmbed } from "@/components/media/VideoEmbed";
 
 export const metadata: Metadata = {
   title: "LNA Features — AI Document Processing & Intelligent Data Extraction",
@@ -100,7 +100,7 @@ const aiFeatures = [
     label: "LLM-Connected Data Q&A",
     headline: "Stop Searching. Start Asking.",
     description:
-      'Spreadsheets are good at storing data. They\'re not good at answering questions. LNA\'s LLM-connected Q&A turns your document library into a conversational data source. Ask anything in plain English and get an accurate answer — grounded entirely in your own uploaded data, not generic AI knowledge.',
+      "Spreadsheets are good at storing data. They're not good at answering questions. LNA's LLM-connected Q&A turns your document library into a conversational data source. Ask anything in plain English and get an accurate answer — grounded entirely in your own uploaded data, not generic AI knowledge.",
     whyItMatters:
       "Most document tools stop at extraction. They give you a spreadsheet and leave you to figure out the rest. LNA goes further — once your data is extracted, it stays live and queryable. Your documents become a database you can have a conversation with.",
     bullets: [
@@ -133,16 +133,66 @@ const aiFeatures = [
 ];
 
 const comparisonRows = [
-  { feature: "Setup required", manual: "None (just time)", ocr: "Configuration needed", lna: "No — schema-free from day one" },
-  { feature: "Accuracy", manual: "Human error rate", ocr: "Moderate", lna: "99.5% with confidence scoring" },
-  { feature: "Speed", manual: "Hours per document", ocr: "Minutes per document", lna: "Seconds per document, in batches" },
-  { feature: "Output format", manual: "Varies", ocr: "Generic CSV or text", lna: "Matches your exact Excel template" },
-  { feature: "Scanned PDFs", manual: "Manual re-entry", ocr: "Limited", lna: "Full OCR support" },
-  { feature: "Multi-page tables", manual: "Error-prone", ocr: "Often fails", lna: "Extracted accurately" },
-  { feature: "AI Q&A", manual: "Not possible", ocr: "Not available", lna: "Ask your documents anything" },
-  { feature: "Context roles", manual: "Not applicable", ocr: "Not available", lna: "Domain-specific AI intelligence" },
-  { feature: "Audit trail", manual: "Non-existent", ocr: "None", lna: "Full extraction and export log" },
-  { feature: "Scalability", manual: "Breaks at volume", ocr: "Limited batch support", lna: "Hundreds of documents at once" },
+  {
+    feature: "Setup required",
+    manual: "None (just time)",
+    ocr: "Configuration needed",
+    lna: "No — schema-free from day one",
+  },
+  {
+    feature: "Accuracy",
+    manual: "Human error rate",
+    ocr: "Moderate",
+    lna: "99.5% with confidence scoring",
+  },
+  {
+    feature: "Speed",
+    manual: "Hours per document",
+    ocr: "Minutes per document",
+    lna: "Seconds per document, in batches",
+  },
+  {
+    feature: "Output format",
+    manual: "Varies",
+    ocr: "Generic CSV or text",
+    lna: "Matches your exact Excel template",
+  },
+  {
+    feature: "Scanned PDFs",
+    manual: "Manual re-entry",
+    ocr: "Limited",
+    lna: "Full OCR support",
+  },
+  {
+    feature: "Multi-page tables",
+    manual: "Error-prone",
+    ocr: "Often fails",
+    lna: "Extracted accurately",
+  },
+  {
+    feature: "AI Q&A",
+    manual: "Not possible",
+    ocr: "Not available",
+    lna: "Ask your documents anything",
+  },
+  {
+    feature: "Context roles",
+    manual: "Not applicable",
+    ocr: "Not available",
+    lna: "Domain-specific AI intelligence",
+  },
+  {
+    feature: "Audit trail",
+    manual: "Non-existent",
+    ocr: "None",
+    lna: "Full extraction and export log",
+  },
+  {
+    feature: "Scalability",
+    manual: "Breaks at volume",
+    ocr: "Limited batch support",
+    lna: "Hundreds of documents at once",
+  },
 ];
 
 export default function FeaturesPage() {
@@ -169,26 +219,41 @@ export default function FeaturesPage() {
               <LinkButton size="lg" className="px-6" href="/contact">
                 Request a Demo
               </LinkButton>
-              <LinkButton variant="outline" size="lg" className="px-6" href="/pricing">
+              <LinkButton
+                variant="outline"
+                size="lg"
+                className="px-6"
+                href="/pricing"
+              >
                 See Pricing <ArrowRight className="ml-1 size-4" />
               </LinkButton>
             </div>
           </AnimateIn>
           {/* Anchor Nav */}
           <AnimateIn delay={0.3}>
-            <nav className="mt-12 flex flex-wrap justify-center gap-2" aria-label="Feature sections">
-              {[...features, ...aiFeatures, { id: "user-management", label: "User Management" }].map(
-                (f) => (
-                  <a
-                    key={f.id}
-                    href={`#${f.id}`}
-                    className="text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-full border px-4 py-1.5 text-sm transition-colors"
-                  >
-                    {f.label}
-                  </a>
-                )
-              )}
+            <nav
+              className="mt-12 flex flex-wrap justify-center gap-2"
+              aria-label="Feature sections"
+            >
+              {[
+                ...features,
+                ...aiFeatures,
+                { id: "user-management", label: "User Management" },
+              ].map((f) => (
+                <a
+                  key={f.id}
+                  href={`#${f.id}`}
+                  className="text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-full border px-4 py-1.5 text-sm transition-colors"
+                >
+                  {f.label}
+                </a>
+              ))}
             </nav>
+          </AnimateIn>
+          <AnimateIn delay={0.4}>
+            <div className="mx-auto mt-12 max-w-4xl">
+              <VideoEmbed src="dQw4w9WgXcQ" title="LNA platform overview" />
+            </div>
           </AnimateIn>
         </Container>
       </Section>
@@ -201,7 +266,9 @@ export default function FeaturesPage() {
           className={i % 2 === 1 ? "bg-muted/30" : ""}
         >
           <Container>
-            <div className={`grid items-center gap-12 lg:grid-cols-2 ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}>
+            <div
+              className={`grid items-center gap-12 lg:grid-cols-2 ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}
+            >
               <AnimateIn className={i % 2 === 1 ? "lg:order-2" : ""}>
                 <div className="bg-primary/10 text-primary mb-4 w-fit rounded-xl p-3">
                   <feature.icon className="size-7" />
@@ -214,10 +281,7 @@ export default function FeaturesPage() {
                 </p>
                 <ul className="mt-6 space-y-3">
                   {feature.bullets.map((bullet) => (
-                    <li
-                      key={bullet}
-                      className="flex items-start gap-3 text-sm"
-                    >
+                    <li key={bullet} className="flex items-start gap-3 text-sm">
                       <Check className="text-primary mt-0.5 size-4 shrink-0" />
                       <span>{bullet}</span>
                     </li>
@@ -254,7 +318,7 @@ export default function FeaturesPage() {
                 <Badge className="mb-4 border-blue-400/30 bg-blue-500/20 text-blue-200">
                   Key Differentiator
                 </Badge>
-                <div className="mb-4 rounded-xl bg-blue-500/20 p-3 w-fit">
+                <div className="mb-4 w-fit rounded-xl bg-blue-500/20 p-3">
                   <feature.icon className="size-7 text-blue-300" />
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight">
@@ -350,7 +414,7 @@ export default function FeaturesPage() {
         <Container>
           <AnimateIn>
             <div className="mb-12 text-center">
-              <p className="text-primary mb-2 text-sm font-semibold uppercase tracking-wider">
+              <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
                 LNA vs. the Alternatives
               </p>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
