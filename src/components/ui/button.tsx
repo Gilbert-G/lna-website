@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button as ButtonPrimitive } from "@base-ui/react/button";
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -57,4 +58,26 @@ function Button({
   );
 }
 
-export { Button, buttonVariants };
+/** Button rendered as a Next.js Link — safe to use from server components. */
+function LinkButton({
+  href,
+  className,
+  variant = "default",
+  size = "default",
+  children,
+  ...props
+}: Omit<ButtonPrimitive.Props, "render"> &
+  VariantProps<typeof buttonVariants> & { href: string }) {
+  return (
+    <ButtonPrimitive
+      data-slot="button"
+      className={cn(buttonVariants({ variant, size, className }))}
+      render={<Link href={href} />}
+      {...props}
+    >
+      {children}
+    </ButtonPrimitive>
+  );
+}
+
+export { Button, LinkButton, buttonVariants };
