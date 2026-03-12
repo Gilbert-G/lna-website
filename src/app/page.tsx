@@ -90,6 +90,7 @@ export default function HomePage() {
       {/* Value Proposition Strip */}
       <Section className="border-y py-12 md:py-16">
         <Container>
+          <h2 className="sr-only">Key Benefits</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {

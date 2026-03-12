@@ -313,6 +313,7 @@ export function PricingContent() {
       {/* ── Tier Cards ── */}
       <Section className="pt-8 md:pt-12">
         <Container>
+          <h2 className="sr-only">Plans</h2>
           <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-3">
             {tiers.map((tier, i) => {
               const isPro = tier.name === "Professional";
