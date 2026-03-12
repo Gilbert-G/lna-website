@@ -5,7 +5,6 @@ import {
   Eye,
   ShieldCheck,
   Lightbulb,
-  Users,
   Sparkles,
   ArrowUpRight,
 } from "lucide-react";
@@ -53,12 +52,6 @@ const values = [
   },
 ];
 
-const teamMembers = [
-  { name: "Team Member", role: "Co-Founder & CEO", photo: "/illustrations/team/placeholder-1.svg" },
-  { name: "Team Member", role: "CTO", photo: "/illustrations/team/placeholder-2.svg" },
-  { name: "Team Member", role: "Head of Product", photo: "/illustrations/team/placeholder-3.svg" },
-  { name: "Team Member", role: "Lead AI Engineer", photo: "/illustrations/team/placeholder-4.svg" },
-];
 
 export default function AboutPage() {
   return (
@@ -195,48 +188,6 @@ export default function AboutPage() {
                   <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
                     {value.description}
                   </p>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Team */}
-      <Section className="bg-muted/30">
-        <Container>
-          <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
-              The Team
-            </span>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              The People Building LNA
-            </h2>
-            <p className="text-muted-foreground mt-3 max-w-2xl text-lg">
-              We&apos;re a focused team at Manureva Solutions, working to make
-              document intelligence accessible to every organization that relies
-              on data.
-            </p>
-          </AnimateIn>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {teamMembers.map((member, i) => (
-              <AnimateIn key={i} delay={0.1 * i}>
-                <div className="bg-card overflow-hidden rounded-2xl border text-center">
-                  <div className="bg-muted flex aspect-square items-center justify-center p-8">
-                    <Image
-                      src={member.photo}
-                      alt={member.name}
-                      width={200}
-                      height={200}
-                      className="size-32"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold">{member.name}</h3>
-                    <p className="text-muted-foreground text-sm">
-                      {member.role}
-                    </p>
-                  </div>
                 </div>
               </AnimateIn>
             ))}
