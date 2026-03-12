@@ -19,7 +19,7 @@ export default function ContactPage() {
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative text-center">
           <AnimateIn>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-fluid-xl font-extrabold">
               Let&apos;s Talk
             </h1>
           </AnimateIn>

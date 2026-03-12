@@ -62,7 +62,7 @@ export default function AboutPage() {
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative text-center">
           <AnimateIn>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-fluid-xl font-extrabold">
               Built to End the Copy-Paste Era
             </h1>
           </AnimateIn>
@@ -86,7 +86,7 @@ export default function AboutPage() {
                 <span className="text-primary text-xs font-semibold uppercase tracking-widest">
                   The Problem
                 </span>
-                <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+                <h2 className="text-fluid-lg mt-3 font-bold">
                   Millions of Hours Lost to a Spreadsheet That Should Fill
                   Itself
                 </h2>
@@ -176,7 +176,7 @@ export default function AboutPage() {
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">
               What We Stand For
             </span>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+            <h2 className="text-fluid-lg mt-3 font-bold">
               The Principles Behind Every Decision We Make
             </h2>
           </AnimateIn>
@@ -203,7 +203,7 @@ export default function AboutPage() {
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">
               The Company
             </span>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+            <h2 className="text-fluid-lg mt-3 font-bold">
               A Product by Manureva Solutions
             </h2>
           </AnimateIn>
@@ -248,7 +248,7 @@ export default function AboutPage() {
       <Section className="bg-surface">
         <Container className="text-center">
           <AnimateIn>
-            <h2 className="text-2xl font-bold sm:text-3xl">
+            <h2 className="text-fluid-lg font-bold">
               Want to See What LNA Can Do?
             </h2>
           </AnimateIn>

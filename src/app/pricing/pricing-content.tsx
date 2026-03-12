@@ -419,7 +419,7 @@ export function PricingContent() {
       <Section>
         <Container>
           <AnimateIn>
-            <h2 className="mb-8 text-center text-2xl font-bold sm:text-3xl">
+            <h2 className="mb-8 text-center text-fluid-lg font-bold">
               Compare Plans in Detail
             </h2>
           </AnimateIn>
@@ -480,7 +480,7 @@ export function PricingContent() {
       <Section>
         <Container className="max-w-3xl">
           <AnimateIn>
-            <h2 className="mb-8 text-center text-2xl font-bold sm:text-3xl">
+            <h2 className="mb-8 text-center text-fluid-lg font-bold">
               Frequently Asked Questions
             </h2>
           </AnimateIn>
@@ -527,7 +527,7 @@ export function PricingContent() {
       <Section className="bg-surface">
         <Container className="text-center">
           <AnimateIn>
-            <h2 className="text-2xl font-bold sm:text-3xl">
+            <h2 className="text-fluid-lg font-bold">
               Not Sure Which Plan Is Right for You?
             </h2>
           </AnimateIn>

@@ -40,7 +40,7 @@ export default function HomePage() {
             </Badge>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="text-fluid-xl max-w-4xl font-extrabold">
               Turn Any PDF Into Perfect Excel —{" "}
               <span className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] bg-clip-text text-transparent">
                 Automatically
@@ -48,7 +48,7 @@ export default function HomePage() {
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.2}>
-            <p className="text-muted-foreground max-w-2xl text-lg md:text-xl">
+            <p className="text-muted-foreground text-fluid-base max-w-2xl">
               LNA uses AI to extract, structure, and export data from your
               documents in seconds — so your team stops copying and starts
               working.
@@ -141,7 +141,7 @@ export default function HomePage() {
               <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
                 How It Works
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="text-fluid-lg font-bold">
                 From Upload to Excel in Three Steps
               </h2>
               <p className="text-muted-foreground mt-3 text-lg">
@@ -219,7 +219,7 @@ export default function HomePage() {
               <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
                 Features
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="text-fluid-lg font-bold">
                 Everything Your Team Needs to Process Documents at Scale
               </h2>
               <p className="text-muted-foreground mt-3 text-lg">
@@ -291,7 +291,7 @@ export default function HomePage() {
               <p className="mb-2 text-sm font-semibold tracking-wider text-blue-300 uppercase">
                 What Makes LNA Different
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="text-fluid-lg font-bold">
                 Beyond Extraction: Document Intelligence That Thinks
               </h2>
               <p className="mt-3 text-lg text-slate-300">
@@ -454,7 +454,7 @@ export default function HomePage() {
       <Section className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] text-white">
         <Container className="text-center">
           <AnimateIn>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-fluid-lg font-bold">
               Stop Copying. Start Extracting.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">

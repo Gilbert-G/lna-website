@@ -170,4 +170,32 @@
   html {
     @apply scroll-smooth font-sans;
   }
+
+  /* Premium typography — editorial headings with tight tracking */
+  h1 {
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+  h2 {
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  h3 {
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  p {
+    line-height: 1.65;
+  }
+}
+
+/* Fluid typography scale */
+.text-fluid-xl {
+  font-size: clamp(1.875rem, 1.5rem + 1.5vw, 3rem);
+}
+.text-fluid-lg {
+  font-size: clamp(1.5rem, 1.25rem + 1vw, 2.25rem);
+}
+.text-fluid-base {
+  font-size: clamp(1rem, 0.925rem + 0.3vw, 1.125rem);
 }

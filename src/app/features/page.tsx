@@ -203,7 +203,7 @@ export default function FeaturesPage() {
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative text-center">
           <AnimateIn>
-            <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-fluid-xl mx-auto max-w-4xl font-extrabold">
               Every Tool You Need to Process Documents Without the Busywork
             </h1>
           </AnimateIn>
@@ -417,7 +417,7 @@ export default function FeaturesPage() {
               <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
                 LNA vs. the Alternatives
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="text-fluid-lg font-bold">
                 There&apos;s a Better Way Than Copy-Paste
               </h2>
             </div>
@@ -471,7 +471,7 @@ export default function FeaturesPage() {
       <Section className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] text-white">
         <Container className="text-center">
           <AnimateIn>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-fluid-lg font-bold">
               Ready to See LNA in Action?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
