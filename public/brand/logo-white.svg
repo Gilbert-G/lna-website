@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Geometric document/data accent - white variant -->
+  <g>
+    <rect x="4" y="8" width="24" height="32" rx="3" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+    <rect x="10" y="14" width="12" height="2" rx="1" fill="#FFFFFF" opacity="0.6"/>
+    <rect x="10" y="20" width="12" height="2" rx="1" fill="#FFFFFF" opacity="0.4"/>
+    <rect x="10" y="26" width="8" height="2" rx="1" fill="#FFFFFF" opacity="0.3"/>
+    <path d="M28 24 L36 24" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <path d="M33 20 L37 24 L33 28" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  </g>
+  <!-- LNA wordmark - white -->
+  <text x="44" y="34" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">LNA</text>
+</svg>

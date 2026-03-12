@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <!-- Document icon with data extraction accent -->
+  <rect x="4" y="4" width="24" height="32" rx="3" stroke="#2563EB" stroke-width="2.5" fill="none"/>
+  <rect x="10" y="10" width="12" height="2" rx="1" fill="#2563EB" opacity="0.6"/>
+  <rect x="10" y="16" width="12" height="2" rx="1" fill="#2563EB" opacity="0.4"/>
+  <rect x="10" y="22" width="8" height="2" rx="1" fill="#2563EB" opacity="0.3"/>
+  <!-- Data extraction arrow -->
+  <path d="M28 20 L36 20" stroke="#6366F1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M33 16 L37 20 L33 24" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

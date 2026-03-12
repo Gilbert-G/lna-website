@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)"/>
+
+  <!-- Decorative geometric shapes -->
+  <circle cx="1050" cy="120" r="200" fill="url(#accent-gradient)"/>
+  <circle cx="150" cy="530" r="150" fill="url(#accent-gradient)"/>
+  <rect x="900" y="400" width="250" height="250" rx="24" fill="url(#accent-gradient)" transform="rotate(15, 1025, 525)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.05" stroke="#FFFFFF" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="630"/><line x1="60" y1="0" x2="60" y2="630"/>
+    <line x1="120" y1="0" x2="120" y2="630"/><line x1="180" y1="0" x2="180" y2="630"/>
+    <line x1="240" y1="0" x2="240" y2="630"/><line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="0" y1="0" x2="1200" y2="0"/><line x1="0" y1="63" x2="1200" y2="63"/>
+    <line x1="0" y1="126" x2="1200" y2="126"/><line x1="0" y1="189" x2="1200" y2="189"/>
+  </g>
+
+  <!-- Document icon (logo mark) -->
+  <g transform="translate(80, 200)">
+    <rect x="0" y="0" width="60" height="80" rx="8" stroke="#FFFFFF" stroke-width="3.5" fill="none" opacity="0.9"/>
+    <rect x="14" y="16" width="32" height="4" rx="2" fill="#FFFFFF" opacity="0.5"/>
+    <rect x="14" y="28" width="32" height="4" rx="2" fill="#FFFFFF" opacity="0.35"/>
+    <rect x="14" y="40" width="22" height="4" rx="2" fill="#FFFFFF" opacity="0.25"/>
+    <path d="M60 40 L80 40" stroke="#818CF8" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <path d="M74 32 L82 40 L74 48" stroke="#818CF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  </g>
+
+  <!-- LNA text -->
+  <text x="180" y="270" font-family="Inter, system-ui, sans-serif" font-size="72" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">LNA</text>
+
+  <!-- Tagline -->
+  <text x="82" y="340" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="400" fill="#FFFFFF" opacity="0.85">AI-Powered Document Processing</text>
+
+  <!-- Subtitle line -->
+  <text x="82" y="385" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="400" fill="#FFFFFF" opacity="0.6">Extract, structure, and export data from PDFs to Excel</text>
+
+  <!-- Bottom branding bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="#000000" opacity="0.2"/>
+  <text x="82" y="612" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#FFFFFF" opacity="0.6">lna.ai</text>
+  <text x="1118" y="612" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#FFFFFF" opacity="0.4" text-anchor="end">Manureva Solutions</text>
+</svg>
