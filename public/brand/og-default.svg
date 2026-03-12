@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <!-- Decorative pattern -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="30" cy="30" r="1" fill="white" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Decorative geometric elements -->
+  <circle cx="950" cy="150" r="120" fill="white" opacity="0.05"/>
+  <circle cx="1000" cy="200" r="80" fill="white" opacity="0.05"/>
+  <rect x="100" y="480" width="200" height="200" rx="20" fill="white" opacity="0.03" transform="rotate(-15 200 580)"/>
+
+  <!-- Logo mark (document icon) -->
+  <g transform="translate(80, 60)">
+    <rect x="0" y="0" width="36" height="46" rx="6" stroke="white" stroke-width="3" fill="none" opacity="0.9"/>
+    <path d="M9 13h18M9 21h18M9 29h12" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="42" cy="8" r="5" fill="white" opacity="0.5"/>
+    <circle cx="42" cy="22" r="5" fill="white" opacity="0.35"/>
+  </g>
+
+  <!-- LNA text -->
+  <text x="135" y="100" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="700" fill="white" letter-spacing="-0.02em" opacity="0.95">
+    LNA
+  </text>
+
+  <!-- Page title placeholder area -->
+  <text x="100" y="320" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="800" fill="white" letter-spacing="-0.025em">
+    AI-Powered Document
+  </text>
+  <text x="100" y="390" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="800" fill="white" letter-spacing="-0.025em">
+    Processing Platform
+  </text>
+
+  <!-- Subtitle -->
+  <text x="100" y="450" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="400" fill="white" opacity="0.8">
+    Extract structured data from PDFs into Excel — automatically.
+  </text>
+
+  <!-- URL -->
+  <text x="100" y="570" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="white" opacity="0.6">
+    lna.ai
+  </text>
+</svg>
