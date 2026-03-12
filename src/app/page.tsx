@@ -212,7 +212,7 @@ export default function HomePage() {
       </Section>
 
       {/* Feature Highlights */}
-      <Section className="bg-muted/30">
+      <Section className="bg-surface">
         <Container>
           <AnimateIn>
             <div className="mb-12 text-center">

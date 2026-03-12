@@ -5,6 +5,7 @@ import {
   Eye,
   ShieldCheck,
   Lightbulb,
+  Users,
   Sparkles,
   ArrowUpRight,
 } from "lucide-react";
@@ -133,7 +134,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Mission & Vision */}
-      <Section className="bg-muted/30">
+      <Section className="bg-surface">
         <Container>
           <AnimateIn>
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">
@@ -244,7 +245,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Final CTA */}
-      <Section className="bg-muted/30">
+      <Section className="bg-surface">
         <Container className="text-center">
           <AnimateIn>
             <h2 className="text-2xl font-bold sm:text-3xl">

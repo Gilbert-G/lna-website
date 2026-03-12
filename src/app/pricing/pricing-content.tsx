@@ -524,7 +524,7 @@ export function PricingContent() {
       </Section>
 
       {/* ── Final CTA ── */}
-      <Section className="bg-muted/30">
+      <Section className="bg-surface">
         <Container className="text-center">
           <AnimateIn>
             <h2 className="text-2xl font-bold sm:text-3xl">

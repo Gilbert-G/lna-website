@@ -263,7 +263,7 @@ export default function FeaturesPage() {
         <Section
           key={feature.id}
           id={feature.id}
-          className={i % 2 === 1 ? "bg-muted/30" : ""}
+          className={i % 2 === 1 ? "bg-surface" : ""}
         >
           <Container>
             <div
@@ -410,7 +410,7 @@ export default function FeaturesPage() {
       </Section>
 
       {/* Comparison Table */}
-      <Section className="bg-muted/30">
+      <Section className="bg-surface">
         <Container>
           <AnimateIn>
             <div className="mb-12 text-center">
