@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="chatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Window frame -->
+  <rect width="800" height="500" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <rect width="800" height="44" rx="12" fill="white"/>
+  <circle cx="24" cy="22" r="5" fill="#EF4444"/>
+  <circle cx="42" cy="22" r="5" fill="#F59E0B"/>
+  <circle cx="60" cy="22" r="5" fill="#22C55E"/>
+  <line x1="0" y1="44" x2="800" y2="44" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="24" y="76" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#0F172A">LLM Q&amp;A</text>
+
+  <!-- Left panel: Document references sidebar -->
+  <rect x="16" y="92" width="200" height="392" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="32" y="116" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#0F172A">Document Context</text>
+  <text x="32" y="132" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">3 documents selected</text>
+
+  <!-- Document references -->
+  <rect x="28" y="144" width="176" height="52" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="1"/>
+  <text x="40" y="162" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#0F172A">Invoice_2024_001.pdf</text>
+  <text x="40" y="178" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">24 fields extracted</text>
+  <circle cx="188" cy="162" r="6" fill="#2563EB" opacity="0.15"/>
+
+  <rect x="28" y="204" width="176" height="52" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="40" y="222" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#0F172A">Contract_NDA.docx</text>
+  <text x="40" y="238" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">18 fields extracted</text>
+
+  <rect x="28" y="264" width="176" height="52" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="40" y="282" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#0F172A">Lease_Agreement.pdf</text>
+  <text x="40" y="298" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">31 fields extracted</text>
+
+  <!-- Add documents button -->
+  <rect x="28" y="328" width="176" height="32" rx="6" fill="white" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 2"/>
+  <text x="90" y="348" font-family="system-ui, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">+ Add Documents</text>
+
+  <!-- Settings -->
+  <text x="32" y="388" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Model Settings</text>
+  <text x="32" y="406" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Temperature: 0.3</text>
+  <text x="32" y="422" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Max tokens: 2048</text>
+  <text x="32" y="438" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Context: Full docs</text>
+
+  <!-- Main chat area -->
+  <rect x="228" y="92" width="556" height="392" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- User message 1 -->
+  <rect x="440" y="110" width="328" height="40" rx="10" fill="#2563EB"/>
+  <text x="456" y="128" font-family="system-ui, sans-serif" font-size="11" fill="white">What is the total amount across all</text>
+  <text x="456" y="142" font-family="system-ui, sans-serif" font-size="11" fill="white">invoices from Acme Corporation?</text>
+
+  <!-- AI response 1 -->
+  <rect x="244" y="162" width="380" height="100" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
+  <circle cx="262" cy="180" r="10" fill="url(#chatGrad)"/>
+  <text x="258" y="184" font-family="system-ui, sans-serif" font-size="9" fill="white" font-weight="700">AI</text>
+  <text x="280" y="184" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">Based on the documents provided:</text>
+  <text x="260" y="206" font-family="system-ui, sans-serif" font-size="10" fill="#0F172A">The total from Acme Corporation is</text>
+  <text x="260" y="220" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#2563EB">$12,450.00</text>
+  <text x="260" y="238" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Source: Invoice_2024_001.pdf, field: total_amount</text>
+  <rect x="260" y="244" width="100" height="12" rx="4" fill="#EFF6FF"/>
+  <text x="268" y="253" font-family="system-ui, sans-serif" font-size="7" fill="#2563EB">Confidence: 99.1%</text>
+
+  <!-- User message 2 -->
+  <rect x="440" y="276" width="328" height="28" rx="10" fill="#2563EB"/>
+  <text x="456" y="294" font-family="system-ui, sans-serif" font-size="11" fill="white">What are the key terms in the NDA?</text>
+
+  <!-- AI response 2 -->
+  <rect x="244" y="316" width="380" height="120" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
+  <circle cx="262" cy="334" r="10" fill="url(#chatGrad)"/>
+  <text x="258" y="338" font-family="system-ui, sans-serif" font-size="9" fill="white" font-weight="700">AI</text>
+  <text x="280" y="338" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">Key NDA terms extracted:</text>
+
+  <circle cx="268" cy="360" r="3" fill="#2563EB"/>
+  <text x="278" y="364" font-family="system-ui, sans-serif" font-size="10" fill="#0F172A">Non-disclosure period: 3 years</text>
+
+  <circle cx="268" cy="380" r="3" fill="#2563EB"/>
+  <text x="278" y="384" font-family="system-ui, sans-serif" font-size="10" fill="#0F172A">Jurisdiction: State of Delaware</text>
+
+  <circle cx="268" cy="400" r="3" fill="#2563EB"/>
+  <text x="278" y="404" font-family="system-ui, sans-serif" font-size="10" fill="#0F172A">Parties: LNA Corp &amp; Acme Corp</text>
+
+  <text x="260" y="424" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">Source: Contract_NDA.docx</text>
+
+  <!-- Chat input -->
+  <rect x="244" y="450" width="524" height="24" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="260" y="466" font-family="system-ui, sans-serif" font-size="10" fill="#94A3B8">Ask a question about your documents...</text>
+  <rect x="730" y="452" width="28" height="20" rx="6" fill="url(#chatGrad)"/>
+  <text x="740" y="466" font-family="system-ui, sans-serif" font-size="11" fill="white" font-weight="700">&#8593;</text>
+</svg>

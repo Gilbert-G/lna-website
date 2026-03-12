@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <defs>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background subtle gradient -->
+  <rect width="600" height="400" rx="16" fill="#F8FAFC"/>
+
+  <!-- Left: Document stack -->
+  <!-- Document 3 (back) -->
+  <rect x="44" y="108" width="140" height="180" rx="8" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Document 2 (middle) -->
+  <rect x="54" y="98" width="140" height="180" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Document 1 (front) -->
+  <rect x="64" y="88" width="140" height="180" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Document content lines -->
+  <rect x="80" y="106" width="90" height="6" rx="2" fill="#2563EB" opacity="0.2"/>
+  <rect x="80" y="120" width="108" height="4" rx="1" fill="#E2E8F0"/>
+  <rect x="80" y="130" width="100" height="4" rx="1" fill="#E2E8F0"/>
+  <rect x="80" y="140" width="90" height="4" rx="1" fill="#E2E8F0"/>
+  <rect x="80" y="156" width="108" height="4" rx="1" fill="#E2E8F0"/>
+  <rect x="80" y="166" width="96" height="4" rx="1" fill="#E2E8F0"/>
+  <rect x="80" y="182" width="80" height="4" rx="1" fill="#E2E8F0"/>
+  <rect x="80" y="192" width="108" height="4" rx="1" fill="#E2E8F0"/>
+  <rect x="80" y="202" width="60" height="4" rx="1" fill="#E2E8F0"/>
+
+  <!-- Highlighted fields on doc -->
+  <rect x="78" y="216" width="60" height="14" rx="3" fill="#2563EB" opacity="0.1" stroke="#2563EB" stroke-width="1"/>
+  <rect x="80" y="219" width="40" height="8" rx="1" fill="#2563EB" opacity="0.3"/>
+
+  <rect x="146" y="216" width="48" height="14" rx="3" fill="#6366F1" opacity="0.1" stroke="#6366F1" stroke-width="1"/>
+  <rect x="148" y="219" width="30" height="8" rx="1" fill="#6366F1" opacity="0.3"/>
+
+  <rect x="78" y="238" width="72" height="14" rx="3" fill="#22C55E" opacity="0.1" stroke="#22C55E" stroke-width="1"/>
+  <rect x="80" y="241" width="50" height="8" rx="1" fill="#22C55E" opacity="0.3"/>
+
+  <!-- Label -->
+  <text x="134" y="296" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#0F172A" text-anchor="middle">Your Documents</text>
+  <text x="134" y="314" font-family="system-ui, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">PDFs, contracts, invoices</text>
+
+  <!-- Data flow lines (left to center) -->
+  <path d="M210 180C240 180 240 200 270 200" stroke="url(#flowGrad)" stroke-width="2" stroke-dasharray="6 3"/>
+  <path d="M210 200C240 200 240 190 270 190" stroke="url(#flowGrad)" stroke-width="2" stroke-dasharray="6 3"/>
+  <path d="M210 220C240 220 240 210 270 210" stroke="url(#flowGrad)" stroke-width="2" stroke-dasharray="6 3"/>
+
+  <!-- Center: AI element -->
+  <circle cx="300" cy="200" r="52" fill="url(#aiGrad)" opacity="0.08"/>
+  <circle cx="300" cy="200" r="40" fill="url(#aiGrad)" opacity="0.15"/>
+  <circle cx="300" cy="200" r="28" fill="url(#aiGrad)"/>
+
+  <!-- AI sparkle icon inside -->
+  <path d="M300 182L303 192L313 195L303 198L300 208L297 198L287 195L297 192Z" fill="white"/>
+  <path d="M314 184L315.5 188L319.5 189.5L315.5 191L314 195L312.5 191L308.5 189.5L312.5 188Z" fill="white" opacity="0.7"/>
+  <path d="M286 205L287.5 209L291.5 210.5L287.5 212L286 216L284.5 212L280.5 210.5L284.5 209Z" fill="white" opacity="0.7"/>
+
+  <!-- Label -->
+  <text x="300" y="268" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#0F172A" text-anchor="middle">AI Analysis</text>
+  <text x="300" y="286" font-family="system-ui, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Powered by LLMs</text>
+
+  <!-- Data flow lines (center to right) -->
+  <path d="M330 190C360 190 360 170 390 170" stroke="url(#flowGrad)" stroke-width="2" stroke-dasharray="6 3"/>
+  <path d="M330 200C360 200 360 200 390 200" stroke="url(#flowGrad)" stroke-width="2" stroke-dasharray="6 3"/>
+  <path d="M330 210C360 210 360 230 390 230" stroke="url(#flowGrad)" stroke-width="2" stroke-dasharray="6 3"/>
+
+  <!-- Right: Structured answer -->
+  <rect x="390" y="100" width="170" height="200" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Chat bubble header -->
+  <rect x="390" y="100" width="170" height="36" rx="12" fill="url(#aiGrad)" opacity="0.08"/>
+  <circle cx="412" cy="118" r="10" fill="url(#aiGrad)"/>
+  <text x="408" y="122" font-family="system-ui, sans-serif" font-size="9" fill="white" font-weight="700">AI</text>
+  <text x="428" y="122" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#0F172A">Answer</text>
+
+  <!-- Structured answer content -->
+  <text x="406" y="154" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">VENDOR</text>
+  <text x="406" y="168" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">Acme Corp</text>
+
+  <line x1="406" y1="178" x2="544" y2="178" stroke="#E2E8F0" stroke-width="0.5"/>
+
+  <text x="406" y="194" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">TOTAL</text>
+  <text x="406" y="208" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">$12,450.00</text>
+  <rect x="490" y="198" width="48" height="14" rx="4" fill="#DCFCE7"/>
+  <text x="498" y="209" font-family="system-ui, sans-serif" font-size="8" fill="#16A34A">99.1%</text>
+
+  <line x1="406" y1="220" x2="544" y2="220" stroke="#E2E8F0" stroke-width="0.5"/>
+
+  <text x="406" y="236" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">KEY TERMS</text>
+  <text x="406" y="250" font-family="system-ui, sans-serif" font-size="10" fill="#0F172A">Net 30, FOB Dest.</text>
+
+  <line x1="406" y1="260" x2="544" y2="260" stroke="#E2E8F0" stroke-width="0.5"/>
+
+  <text x="406" y="276" font-family="system-ui, sans-serif" font-size="9" fill="#64748B">SOURCES</text>
+  <rect x="406" y="282" width="80" height="14" rx="4" fill="#EFF6FF"/>
+  <text x="414" y="293" font-family="system-ui, sans-serif" font-size="8" fill="#2563EB">Invoice_001.pdf</text>
+
+  <!-- Label -->
+  <text x="475" y="324" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#0F172A" text-anchor="middle">Structured Answer</text>
+  <text x="475" y="342" font-family="system-ui, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">With citations &amp; confidence</text>
+
+  <!-- Decorative dots -->
+  <circle cx="50" cy="360" r="3" fill="#2563EB" opacity="0.15"/>
+  <circle cx="70" cy="370" r="2" fill="#6366F1" opacity="0.1"/>
+  <circle cx="540" cy="360" r="3" fill="#6366F1" opacity="0.15"/>
+  <circle cx="560" cy="345" r="2" fill="#2563EB" opacity="0.1"/>
+</svg>

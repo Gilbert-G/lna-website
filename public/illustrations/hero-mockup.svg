@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Browser window -->
+  <rect x="20" y="20" width="760" height="460" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Browser chrome -->
+  <rect x="20" y="20" width="760" height="40" rx="12" fill="#F8FAFC"/>
+  <rect x="20" y="48" width="760" height="12" fill="#F8FAFC"/>
+  <line x1="20" y1="60" x2="780" y2="60" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Traffic lights -->
+  <circle cx="44" cy="40" r="5" fill="#EF4444"/>
+  <circle cx="62" cy="40" r="5" fill="#F59E0B"/>
+  <circle cx="80" cy="40" r="5" fill="#22C55E"/>
+
+  <!-- URL bar -->
+  <rect x="140" y="30" width="400" height="20" rx="6" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="160" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">app.lna-platform.com/dashboard</text>
+
+  <!-- Sidebar -->
+  <rect x="20" y="60" width="180" height="420" fill="#F8FAFC"/>
+  <line x1="200" y1="60" x2="200" y2="480" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Sidebar logo area -->
+  <rect x="36" y="76" width="148" height="28" rx="6" fill="url(#brandGrad)" opacity="0.1"/>
+  <text x="56" y="94" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#2563EB">LNA Platform</text>
+
+  <!-- Sidebar nav items -->
+  <rect x="36" y="120" width="148" height="32" rx="6" fill="#2563EB" opacity="0.1"/>
+  <rect x="48" y="130" width="12" height="12" rx="2" fill="#2563EB" opacity="0.3"/>
+  <text x="68" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#2563EB" font-weight="600">Dashboard</text>
+
+  <rect x="48" y="166" width="12" height="12" rx="2" fill="#64748B" opacity="0.3"/>
+  <text x="68" y="176" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Documents</text>
+
+  <rect x="48" y="194" width="12" height="12" rx="2" fill="#64748B" opacity="0.3"/>
+  <text x="68" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Templates</text>
+
+  <rect x="48" y="222" width="12" height="12" rx="2" fill="#64748B" opacity="0.3"/>
+  <text x="68" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Exports</text>
+
+  <rect x="48" y="250" width="12" height="12" rx="2" fill="#64748B" opacity="0.3"/>
+  <text x="68" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">LLM Q&amp;A</text>
+
+  <rect x="48" y="278" width="12" height="12" rx="2" fill="#64748B" opacity="0.3"/>
+  <text x="68" y="288" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Settings</text>
+
+  <!-- Main content area -->
+  <!-- Header -->
+  <text x="220" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Dashboard Overview</text>
+
+  <!-- Stat cards -->
+  <rect x="220" y="108" width="130" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="232" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748B">Documents</text>
+  <text x="232" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#0F172A">1,247</text>
+
+  <rect x="362" y="108" width="130" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="374" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748B">Extracted Fields</text>
+  <text x="374" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#0F172A">8,432</text>
+
+  <rect x="504" y="108" width="130" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="516" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748B">Accuracy</text>
+  <text x="516" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#22C55E">98.7%</text>
+
+  <!-- Data table -->
+  <rect x="220" y="184" width="416" height="280" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Table header -->
+  <rect x="220" y="184" width="416" height="32" rx="8" fill="#F8FAFC"/>
+  <text x="236" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#64748B">Document</text>
+  <text x="380" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#64748B">Status</text>
+  <text x="470" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#64748B">Fields</text>
+  <text x="550" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#64748B">Date</text>
+
+  <!-- Table rows -->
+  <line x1="220" y1="216" x2="636" y2="216" stroke="#E2E8F0" stroke-width="0.5"/>
+  <text x="236" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0F172A">Invoice_2024_001.pdf</text>
+  <rect x="380" y="226" width="56" height="18" rx="9" fill="#DCFCE7"/>
+  <text x="390" y="239" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#16A34A">Complete</text>
+  <text x="470" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0F172A">24</text>
+  <text x="550" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Mar 10</text>
+
+  <line x1="220" y1="250" x2="636" y2="250" stroke="#E2E8F0" stroke-width="0.5"/>
+  <text x="236" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0F172A">Contract_NDA_v3.docx</text>
+  <rect x="380" y="260" width="56" height="18" rx="9" fill="#DCFCE7"/>
+  <text x="390" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#16A34A">Complete</text>
+  <text x="470" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0F172A">18</text>
+  <text x="550" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Mar 9</text>
+
+  <line x1="220" y1="284" x2="636" y2="284" stroke="#E2E8F0" stroke-width="0.5"/>
+  <text x="236" y="304" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0F172A">Report_Q4_Finance.pdf</text>
+  <rect x="380" y="294" width="68" height="18" rx="9" fill="#FEF3C7"/>
+  <text x="390" y="307" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#D97706">Processing</text>
+  <text x="470" y="304" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0F172A">--</text>
+  <text x="550" y="304" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Mar 9</text>
+
+  <line x1="220" y1="318" x2="636" y2="318" stroke="#E2E8F0" stroke-width="0.5"/>
+  <text x="236" y="338" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0F172A">Lease_Agreement.pdf</text>
+  <rect x="380" y="328" width="56" height="18" rx="9" fill="#DCFCE7"/>
+  <text x="390" y="341" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#16A34A">Complete</text>
+  <text x="470" y="338" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0F172A">31</text>
+  <text x="550" y="338" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Mar 8</text>
+
+  <line x1="220" y1="352" x2="636" y2="352" stroke="#E2E8F0" stroke-width="0.5"/>
+  <text x="236" y="372" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0F172A">Tax_Form_W2.pdf</text>
+  <rect x="380" y="362" width="56" height="18" rx="9" fill="#DCFCE7"/>
+  <text x="390" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#16A34A">Complete</text>
+  <text x="470" y="372" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0F172A">12</text>
+  <text x="550" y="372" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Mar 7</text>
+
+  <!-- AI Chat panel (floating) -->
+  <rect x="650" y="80" width="120" height="390" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow)"/>
+
+  <!-- Chat header -->
+  <rect x="650" y="80" width="120" height="32" rx="10" fill="url(#brandGrad)"/>
+  <text x="674" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="white">AI Assistant</text>
+
+  <!-- Chat messages -->
+  <rect x="658" y="122" width="86" height="24" rx="6" fill="#F1F5F9"/>
+  <text x="664" y="137" font-family="system-ui, -apple-system, sans-serif" font-size="7" fill="#64748B">What fields were</text>
+
+  <rect x="670" y="154" width="92" height="36" rx="6" fill="#EFF6FF"/>
+  <text x="676" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="7" fill="#2563EB">Found 24 fields:</text>
+  <text x="676" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="7" fill="#2563EB">vendor, amount...</text>
+
+  <rect x="658" y="200" width="86" height="24" rx="6" fill="#F1F5F9"/>
+  <text x="664" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="7" fill="#64748B">Show confidence</text>
+
+  <rect x="670" y="232" width="92" height="48" rx="6" fill="#EFF6FF"/>
+  <text x="676" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="7" fill="#2563EB">Confidence scores:</text>
+  <text x="676" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="7" fill="#2563EB">Vendor: 99.2%</text>
+  <text x="676" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="7" fill="#2563EB">Amount: 98.8%</text>
+
+  <!-- Chat input -->
+  <rect x="658" y="440" width="104" height="22" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
+  <text x="666" y="454" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#94A3B8">Ask anything...</text>
+</svg>

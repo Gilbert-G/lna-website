@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Circular background -->
+  <circle cx="100" cy="100" r="100" fill="#EFF6FF"/>
+  <circle cx="100" cy="100" r="96" fill="#F0F9FF" stroke="#BFDBFE" stroke-width="1"/>
+
+  <!-- Head -->
+  <circle cx="100" cy="78" r="28" fill="#BFDBFE"/>
+  <circle cx="100" cy="78" r="26" fill="#93C5FD" opacity="0.3"/>
+
+  <!-- Body/shoulders -->
+  <path d="M46 170C46 140 70 118 100 118C130 118 154 140 154 170" fill="#BFDBFE"/>
+  <path d="M50 168C50 142 72 122 100 122C128 122 150 142 150 168" fill="#93C5FD" opacity="0.3"/>
+
+  <!-- Accent color ring -->
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#3B82F6" stroke-width="2" opacity="0.2"/>
+</svg>
