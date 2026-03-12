@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Geometric document/data accent integrated into L -->
+  <g>
+    <!-- Document icon accent -->
+    <rect x="2" y="8" width="20" height="26" rx="3" stroke="#2563EB" stroke-width="2.5" fill="none"/>
+    <path d="M8 16h8M8 21h8M8 26h5" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+    <!-- Data node accent -->
+    <circle cx="26" cy="12" r="3" fill="#2563EB" opacity="0.6"/>
+    <circle cx="26" cy="22" r="3" fill="#2563EB" opacity="0.4"/>
+    <path d="M22 12h1M22 22h1" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <!-- LNA wordmark -->
+  <text x="40" y="36" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="700" fill="#2563EB" letter-spacing="-0.02em">
+    LNA
+  </text>
+</svg>

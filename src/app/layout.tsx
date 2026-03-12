@@ -13,9 +13,22 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LNA — Modern SaaS Platform",
+  title: "LNA — AI-Powered Document Processing Platform",
   description:
-    "LNA is a full-stack SaaS platform for streamlined business operations.",
+    "LNA uses AI to automatically extract, structure, and export data from PDFs into Excel. Intelligent document processing with confidence scoring, batch processing, and conversational data Q&A.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/favicon.svg",
+  },
+  openGraph: {
+    title: "LNA — AI-Powered Document Processing Platform",
+    description:
+      "Extract structured data from PDFs into Excel — automatically.",
+    images: [{ url: "/brand/og-default.svg", width: 1200, height: 630 }],
+  },
 };
 
 export default function RootLayout({
