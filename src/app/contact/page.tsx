@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
-import { ContactForm } from "./contact-form";
+import { DemoRequestForm } from "@/components/forms/DemoRequestForm";
 import { Mail, Clock, Linkedin, Twitter, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -37,9 +37,9 @@ export default function ContactPage() {
       <Section className="pt-8 md:pt-12">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[1fr_380px]">
-            {/* Form */}
+            {/* Demo Request Form */}
             <AnimateIn>
-              <ContactForm />
+              <DemoRequestForm />
             </AnimateIn>
 
             {/* Sidebar */}
@@ -95,9 +95,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="border-t pt-6">
-                    <p className="mb-3 text-sm font-medium">
-                      Office Locations
-                    </p>
+                    <p className="mb-3 text-sm font-medium">Office Locations</p>
                     <div className="space-y-4">
                       <div className="flex gap-3">
                         <MapPin className="text-primary mt-0.5 size-5 shrink-0" />
