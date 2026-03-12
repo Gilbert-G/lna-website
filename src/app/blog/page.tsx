@@ -6,18 +6,22 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { getAllPosts } from "@/lib/blog";
+import { createPageMetadata } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "LNA Blog — Document AI Insights, Product Updates & Best Practices",
+export const metadata: Metadata = createPageMetadata({
+  title: "LNA Blog — Document Processing Insights & Updates",
   description:
     "Stay up to date with the latest in AI document processing, product updates from LNA, and best practices for automating PDF to Excel workflows.",
-};
+  path: "/blog",
+});
 
 export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
     <>
+      <Breadcrumbs items={[{ name: "Blog", url: "/blog" }]} />
       {/* Hero */}
       <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
@@ -62,10 +66,10 @@ export default function BlogPage() {
                       </div>
                     )}
                     <div className="flex flex-1 flex-col p-5">
-                      <span className="text-primary text-xs font-semibold uppercase tracking-wide">
+                      <span className="text-primary text-xs font-semibold tracking-wide uppercase">
                         {post.category}
                       </span>
-                      <h2 className="mt-2 text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                      <h2 className="group-hover:text-primary mt-2 text-lg leading-snug font-bold transition-colors">
                         {post.title}
                       </h2>
                       <p className="text-muted-foreground mt-2 line-clamp-2 text-sm">

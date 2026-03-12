@@ -3,12 +3,15 @@ import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
+import { createPageMetadata } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy — LNA by Manureva Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "Privacy Policy — LNA",
   description:
     "Learn how LNA collects, uses, and protects your data. Our privacy policy covers data processing, storage, and your rights.",
-};
+  path: "/privacy",
+});
 
 const sections = [
   { id: "information-we-collect", title: "1. Information We Collect" },
@@ -26,6 +29,7 @@ const sections = [
 export default function PrivacyPage() {
   return (
     <>
+      <Breadcrumbs items={[{ name: "Privacy Policy", url: "/privacy" }]} />
       <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative max-w-4xl">
@@ -46,7 +50,7 @@ export default function PrivacyPage() {
             {/* Table of Contents */}
             <AnimateIn>
               <nav className="lg:sticky lg:top-24">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest">
+                <p className="mb-3 text-xs font-semibold tracking-widest uppercase">
                   On this page
                 </p>
                 <ul className="space-y-1.5 text-sm">
@@ -70,9 +74,9 @@ export default function PrivacyPage() {
                 <p>
                   This Privacy Policy describes how Manureva Solutions
                   (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects,
-                  uses, and protects information when you use LNA
-                  (&quot;the Platform&quot;). We are committed to protecting
-                  your privacy and handling your data responsibly.
+                  uses, and protects information when you use LNA (&quot;the
+                  Platform&quot;). We are committed to protecting your privacy
+                  and handling your data responsibly.
                 </p>
 
                 <h2 id="information-we-collect">1. Information We Collect</h2>
@@ -123,12 +127,13 @@ export default function PrivacyPage() {
                     you.
                   </li>
                   <li>
-                    <strong>No AI Training:</strong> We do not use your documents
-                    or extracted data to train AI models.
+                    <strong>No AI Training:</strong> We do not use your
+                    documents or extracted data to train AI models.
                   </li>
                   <li>
-                    <strong>Isolation:</strong> Organization-level data isolation
-                    ensures your data is never accessible to other customers.
+                    <strong>Isolation:</strong> Organization-level data
+                    isolation ensures your data is never accessible to other
+                    customers.
                   </li>
                   <li>
                     <strong>Encryption:</strong> Documents are encrypted at rest
@@ -142,7 +147,9 @@ export default function PrivacyPage() {
                   to protect your data, including:
                 </p>
                 <ul>
-                  <li>Encrypted storage for all documents and extracted data</li>
+                  <li>
+                    Encrypted storage for all documents and extracted data
+                  </li>
                   <li>Secure API connections with JWT-based authentication</li>
                   <li>Regular security audits and vulnerability assessments</li>
                   <li>Role-based access control within the platform</li>
@@ -159,9 +166,9 @@ export default function PrivacyPage() {
                 </p>
                 <ul>
                   <li>
-                    <strong>Service Providers:</strong> Third-party services that
-                    help us operate the platform (e.g., cloud infrastructure,
-                    analytics).
+                    <strong>Service Providers:</strong> Third-party services
+                    that help us operate the platform (e.g., cloud
+                    infrastructure, analytics).
                   </li>
                   <li>
                     <strong>Legal Requirements:</strong> When required by law,
@@ -197,8 +204,9 @@ export default function PrivacyPage() {
                 <p>We use cookies and similar technologies for:</p>
                 <ul>
                   <li>
-                    <strong>Essential Cookies:</strong> Required for the platform
-                    to function (e.g., authentication, session management).
+                    <strong>Essential Cookies:</strong> Required for the
+                    platform to function (e.g., authentication, session
+                    management).
                   </li>
                   <li>
                     <strong>Analytics Cookies:</strong> Help us understand how
@@ -213,10 +221,10 @@ export default function PrivacyPage() {
                 <h2 id="data-retention">8. Data Retention</h2>
                 <p>
                   We retain your data for as long as your account is active or
-                  as needed to provide services. Document data can be exported or
-                  deleted at any time from your account settings. After account
-                  deletion, we remove your data within 30 days, except where
-                  retention is required by law.
+                  as needed to provide services. Document data can be exported
+                  or deleted at any time from your account settings. After
+                  account deletion, we remove your data within 30 days, except
+                  where retention is required by law.
                 </p>
 
                 <h2 id="changes">9. Changes to This Policy</h2>
@@ -243,7 +251,10 @@ export default function PrivacyPage() {
                   </li>
                   <li>
                     Or visit our{" "}
-                    <Link href="/contact" className="text-primary hover:underline">
+                    <Link
+                      href="/contact"
+                      className="text-primary hover:underline"
+                    >
                       Contact page
                     </Link>
                   </li>
