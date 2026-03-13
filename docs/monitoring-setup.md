@@ -5,6 +5,7 @@
 ## 1. Uptime Monitoring (UptimeRobot)
 
 ### Setup Steps
+
 1. Create an account at [UptimeRobot](https://uptimerobot.com)
 2. Add a new monitor:
    - **Monitor Type:** HTTP(s)
@@ -24,6 +25,7 @@
    - Include all monitors
 
 ### Alert Thresholds
+
 - **Down alert:** After 2 consecutive failures (10 minutes)
 - **SSL expiry:** 14 days before expiration
 - **Response time:** Alert if > 3 seconds average over 5 checks
@@ -33,6 +35,7 @@
 ## 2. Google Search Console
 
 ### Setup Steps
+
 1. Go to [Google Search Console](https://search.google.com/search-console)
 2. Add property: `https://getlna.com`
 3. Verify ownership via one of:
@@ -45,6 +48,7 @@
 5. Review initial crawl results after 48 hours
 
 ### Key Reports to Monitor
+
 - **Performance:** Track impressions, clicks, CTR, and average position
 - **Coverage:** Ensure all pages are indexed, fix any errors
 - **Core Web Vitals:** Monitor LCP, FID/INP, CLS scores
@@ -52,6 +56,7 @@
 - **Links:** Track inbound links and internal link structure
 
 ### Weekly Checks
+
 - [ ] Review any new crawl errors
 - [ ] Check for security issues or manual actions
 - [ ] Monitor Core Web Vitals trends
@@ -62,16 +67,18 @@
 ## 3. Google Analytics (GA4) Event Tracking Verification
 
 ### Pre-Configured Events
+
 The following custom events are already instrumented in the codebase:
 
-| Event Name | Trigger Location | Parameters |
-| --- | --- | --- |
-| `demo_request_submitted` | Demo request form | `company`, `role` |
-| `newsletter_signup` | Footer newsletter form | `location` |
-| `video_play` | Video embed component | `video_id`, `video_title` |
-| `video_complete` | Video embed component | `video_id`, `video_title` |
+| Event Name               | Trigger Location       | Parameters                |
+| ------------------------ | ---------------------- | ------------------------- |
+| `demo_request_submitted` | Demo request form      | `company`, `role`         |
+| `newsletter_signup`      | Footer newsletter form | `location`                |
+| `video_play`             | Video embed component  | `video_id`, `video_title` |
+| `video_complete`         | Video embed component  | `video_id`, `video_title` |
 
 ### Verification Checklist
+
 1. **Enable Debug Mode:**
    - Install [GA4 Debugger Chrome Extension](https://chrome.google.com/webstore/detail/google-analytics-debugger)
    - Or add `?debug_mode=true` to any page URL
@@ -90,7 +97,9 @@ The following custom events are already instrumented in the codebase:
    - Verify conversions are marked (demo_request_submitted, newsletter_signup)
 
 ### Conversion Setup
+
 Mark these events as conversions in GA4:
+
 1. Go to Configure > Events
 2. Toggle "Mark as conversion" for:
    - `demo_request_submitted`
@@ -101,26 +110,32 @@ Mark these events as conversions in GA4:
 ## 4. Sentry Error Tracking
 
 ### Configuration
+
 Sentry is configured via environment variables (see `.env.example`):
+
 - `NEXT_PUBLIC_SENTRY_DSN` — Client-side error reporting DSN
 - `SENTRY_AUTH_TOKEN` — For source map uploads during build
 - `SENTRY_ORG` — Organization slug
 - `SENTRY_PROJECT` — Project slug
 
 ### Setup Steps
+
 1. Create a project in [Sentry](https://sentry.io) for Next.js
 2. Copy the DSN from Project Settings > Client Keys
 3. Generate an auth token at Organization Settings > Auth Tokens
 4. Add environment variables to Vercel project settings
 
 ### Verification
+
 1. Deploy with Sentry configured
 2. Trigger a test error (e.g., visit a page that throws)
 3. Verify the error appears in Sentry dashboard
 4. Check that source maps are uploaded (readable stack traces)
 
 ### Alert Configuration
+
 Set up alerts in Sentry:
+
 - **New issue alert:** Notify on first occurrence of any new error
 - **Regression alert:** Notify when a resolved issue recurs
 - **Spike alert:** Notify when error frequency increases 10x in 1 hour
@@ -132,12 +147,12 @@ Set up alerts in Sentry:
 
 ### Severity Levels
 
-| Level | Description | Response Time | Example |
-| --- | --- | --- | --- |
-| **P1 — Critical** | Site is down or major feature broken | 15 minutes | Homepage 500, forms not submitting |
-| **P2 — High** | Significant degradation | 1 hour | Slow load times, partial page failures |
-| **P3 — Medium** | Minor issue, workaround exists | 4 hours | Styling bug, non-critical feature broken |
-| **P4 — Low** | Cosmetic or minor inconvenience | Next business day | Typo, minor layout shift |
+| Level             | Description                          | Response Time     | Example                                  |
+| ----------------- | ------------------------------------ | ----------------- | ---------------------------------------- |
+| **P1 — Critical** | Site is down or major feature broken | 15 minutes        | Homepage 500, forms not submitting       |
+| **P2 — High**     | Significant degradation              | 1 hour            | Slow load times, partial page failures   |
+| **P3 — Medium**   | Minor issue, workaround exists       | 4 hours           | Styling bug, non-critical feature broken |
+| **P4 — Low**      | Cosmetic or minor inconvenience      | Next business day | Typo, minor layout shift                 |
 
 ### Escalation Path
 
@@ -158,6 +173,7 @@ Set up alerts in Sentry:
 ```
 
 ### Rollback Decision Tree
+
 - **Is the site completely down?** → Rollback immediately via Vercel
 - **Is a critical feature broken (forms, navigation)?** → Rollback if fix will take > 30 minutes
 - **Is it a visual/cosmetic issue?** → Fix forward, no rollback needed
@@ -174,6 +190,7 @@ Set up alerts in Sentry:
 **Impact:** What was affected and how many users impacted
 
 ### Timeline
+
 - HH:MM — Alert received
 - HH:MM — Investigation started
 - HH:MM — Root cause identified
@@ -181,12 +198,15 @@ Set up alerts in Sentry:
 - HH:MM — Verified and resolved
 
 ### Root Cause
+
 Description of what caused the incident.
 
 ### Resolution
+
 Description of how it was fixed.
 
 ### Action Items
+
 - [ ] Action item 1
 - [ ] Action item 2
 ```
@@ -196,21 +216,25 @@ Description of how it was fixed.
 ## 6. Form Submission Monitoring
 
 ### Contact Form (`/api/contact`)
+
 - Monitor in Sentry for any 500 errors on this route
 - Set up Resend webhook to track email delivery failures
 - Weekly check: Compare form submissions in GA4 vs emails received
 
 ### Demo Request Form (`/api/demo-request`)
+
 - Same monitoring as contact form
 - Track `demo_request_submitted` conversions in GA4
 - Alert if zero submissions for 48+ hours (may indicate form breakage)
 
 ### Newsletter Form (`/api/newsletter`)
+
 - Monitor Brevo for bounce rates and delivery issues
 - Track `newsletter_signup` conversions in GA4
 - Review subscriber growth weekly in Brevo dashboard
 
 ### Monitoring Checklist (Weekly)
+
 - [ ] Check Sentry for API route errors
 - [ ] Verify form submission counts in GA4 match expected volume
 - [ ] Review email delivery rates in Resend

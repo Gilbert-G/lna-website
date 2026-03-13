@@ -9,22 +9,24 @@
 ## 1. Pre-Deployment Checklist
 
 ### Environment Variables
+
 Verify all required environment variables are set in Vercel project settings:
 
-| Variable | Type | Required | Description |
-| --- | --- | --- | --- |
-| `RESEND_API_KEY` | Server | Yes | Resend email delivery for demo requests |
-| `RESEND_FROM_EMAIL` | Server | No | Sender email (defaults to noreply@getlna.com) |
-| `NEXT_PUBLIC_CRISP_WEBSITE_ID` | Public | No | Crisp live chat widget ID |
-| `BREVO_API_KEY` | Server | Yes | Brevo newsletter API key |
-| `BREVO_LIST_ID` | Server | Yes | Brevo subscriber list ID |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Public | Yes | Google Analytics 4 measurement ID |
-| `SENTRY_DSN` | Public | No | Sentry error tracking DSN |
-| `SENTRY_AUTH_TOKEN` | Server | No | Sentry auth token for source maps |
-| `SENTRY_ORG` | Server | No | Sentry organization slug |
-| `SENTRY_PROJECT` | Server | No | Sentry project slug |
+| Variable                        | Type   | Required | Description                                   |
+| ------------------------------- | ------ | -------- | --------------------------------------------- |
+| `RESEND_API_KEY`                | Server | Yes      | Resend email delivery for demo requests       |
+| `RESEND_FROM_EMAIL`             | Server | No       | Sender email (defaults to noreply@getlna.com) |
+| `NEXT_PUBLIC_CRISP_WEBSITE_ID`  | Public | No       | Crisp live chat widget ID                     |
+| `BREVO_API_KEY`                 | Server | Yes      | Brevo newsletter API key                      |
+| `BREVO_LIST_ID`                 | Server | Yes      | Brevo subscriber list ID                      |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Public | Yes      | Google Analytics 4 measurement ID             |
+| `SENTRY_DSN`                    | Public | No       | Sentry error tracking DSN                     |
+| `SENTRY_AUTH_TOKEN`             | Server | No       | Sentry auth token for source maps             |
+| `SENTRY_ORG`                    | Server | No       | Sentry organization slug                      |
+| `SENTRY_PROJECT`                | Server | No       | Sentry project slug                           |
 
 ### Build Verification
+
 - [ ] `npm run build` succeeds locally with no errors
 - [ ] `npm run lint` passes with no warnings
 - [ ] `npm run type-check` passes
@@ -32,6 +34,7 @@ Verify all required environment variables are set in Vercel project settings:
 - [ ] Preview deployment tested on Vercel
 
 ### Code Review
+
 - [ ] All PRs merged to `main`
 - [ ] No pending critical issues
 - [ ] Staging review checklist completed and signed off
@@ -44,6 +47,7 @@ Verify all required environment variables are set in Vercel project settings:
 ### Initial Project Setup (First Time Only)
 
 1. **Connect repository:**
+
    ```bash
    # Install Vercel CLI if not already installed
    npm i -g vercel
@@ -69,6 +73,7 @@ Verify all required environment variables are set in Vercel project settings:
 ### Deploy to Production
 
 1. **Trigger deployment:**
+
    ```bash
    # Option A: Push to main (auto-deploys if configured)
    git push origin main
@@ -90,16 +95,18 @@ Verify all required environment variables are set in Vercel project settings:
 ## 3. DNS Configuration
 
 ### A Records (Root Domain)
+
 Point `getlna.com` to Vercel's IP address:
 
-| Type | Name | Value | TTL |
-| --- | --- | --- | --- |
-| A | @ | `76.76.21.21` | 300 (5 min) |
+| Type | Name | Value         | TTL         |
+| ---- | ---- | ------------- | ----------- |
+| A    | @    | `76.76.21.21` | 300 (5 min) |
 
 ### CNAME Record (www subdomain)
-| Type | Name | Value | TTL |
-| --- | --- | --- | --- |
-| CNAME | www | `cname.vercel-dns.com` | 300 (5 min) |
+
+| Type  | Name | Value                  | TTL         |
+| ----- | ---- | ---------------------- | ----------- |
+| CNAME | www  | `cname.vercel-dns.com` | 300 (5 min) |
 
 ### Steps at Your DNS Provider
 
@@ -111,6 +118,7 @@ Point `getlna.com` to Vercel's IP address:
 6. Remove any conflicting A/AAAA/CNAME records for `@` and `www`
 
 ### Verify DNS Propagation
+
 ```bash
 # Check A record
 dig getlna.com A +short
@@ -131,17 +139,20 @@ dig www.getlna.com CNAME +short
 Vercel automatically provisions and renews SSL certificates via Let's Encrypt.
 
 ### Verification Steps
+
 1. In Vercel Dashboard, go to Project Settings > Domains
 2. Add `getlna.com` and `www.getlna.com`
 3. Vercel will attempt TXT verification or use DNS records
 4. Wait for SSL certificate to be issued (usually < 5 minutes)
 
 ### TXT Verification (if required)
-| Type | Name | Value | TTL |
-| --- | --- | --- | --- |
-| TXT | `_vercel` | _(provided by Vercel)_ | 300 |
+
+| Type | Name      | Value                  | TTL |
+| ---- | --------- | ---------------------- | --- |
+| TXT  | `_vercel` | _(provided by Vercel)_ | 300 |
 
 ### Verify SSL
+
 ```bash
 # Check SSL certificate
 curl -vI https://getlna.com 2>&1 | grep -E "subject:|issuer:|expire"
@@ -171,6 +182,7 @@ This is configured in `vercel.json` at the project root:
 ```
 
 ### Verification
+
 ```bash
 # Test www redirect
 curl -I https://www.getlna.com
@@ -181,6 +193,7 @@ curl -I https://www.getlna.com/features
 ```
 
 Also configure in Vercel Dashboard:
+
 1. Go to Project Settings > Domains
 2. Add both `getlna.com` and `www.getlna.com`
 3. Set `getlna.com` as the primary domain
@@ -191,6 +204,7 @@ Also configure in Vercel Dashboard:
 ## 6. Post-Deployment Verification
 
 ### Functional Checks
+
 - [ ] Homepage loads at `https://getlna.com`
 - [ ] All pages are accessible (features, pricing, about, contact, blog, privacy, terms)
 - [ ] Contact form submits and sends email via Resend
@@ -200,24 +214,28 @@ Also configure in Vercel Dashboard:
 - [ ] Crisp chat widget loads after consent
 
 ### Performance Checks
+
 - [ ] Run Lighthouse audit on production URL
 - [ ] Performance score > 90
 - [ ] No console errors in browser DevTools
 - [ ] Check Core Web Vitals in PageSpeed Insights
 
 ### SEO Checks
+
 - [ ] `https://getlna.com/robots.txt` is accessible
 - [ ] `https://getlna.com/sitemap.xml` is accessible (if configured)
 - [ ] `https://getlna.com/feed.xml` returns valid RSS
 - [ ] OpenGraph tags render correctly (test with https://opengraph.xyz)
 
 ### Security Checks
+
 - [ ] HTTPS enforced on all pages
 - [ ] Security headers present (check with https://securityheaders.com)
 - [ ] No sensitive data exposed in client-side code
 - [ ] API routes return appropriate error codes
 
 ### Monitoring Checks
+
 - [ ] Sentry receiving events (trigger a test error)
 - [ ] Google Analytics tracking pageviews
 - [ ] Uptime monitoring active and confirming site is up
@@ -227,12 +245,14 @@ Also configure in Vercel Dashboard:
 ## 7. Rollback Procedure
 
 ### Instant Rollback via Vercel Dashboard
+
 1. Go to Vercel Dashboard > Deployments
 2. Find the last known good deployment
 3. Click the three-dot menu > "Promote to Production"
 4. The previous deployment is instantly promoted (no rebuild)
 
 ### Rollback via CLI
+
 ```bash
 # List recent deployments
 vercel ls
@@ -242,16 +262,18 @@ vercel promote <deployment-url>
 ```
 
 ### DNS Rollback (if needed)
+
 1. Update A record to point to previous hosting provider's IP
 2. Update/remove CNAME for www
 3. Lower TTL beforehand to minimize propagation delay
 
 ### Emergency Contacts
-| Role | Name | Contact |
-| --- | --- | --- |
-| Engineering Lead | | |
-| DevOps/Platform | | |
-| Domain Registrar Support | | |
+
+| Role                     | Name | Contact |
+| ------------------------ | ---- | ------- |
+| Engineering Lead         |      |         |
+| DevOps/Platform          |      |         |
+| Domain Registrar Support |      |         |
 
 ---
 
