@@ -199,11 +199,11 @@ export default function FeaturesPage() {
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
+      <Section className="noise-overlay gradient-mesh relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative text-center">
           <AnimateIn>
-            <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-fluid-xl mx-auto max-w-4xl font-extrabold">
               Every Tool You Need to Process Documents Without the Busywork
             </h1>
           </AnimateIn>
@@ -263,7 +263,7 @@ export default function FeaturesPage() {
         <Section
           key={feature.id}
           id={feature.id}
-          className={i % 2 === 1 ? "bg-muted/30" : ""}
+          className={i % 2 === 1 ? "bg-surface" : ""}
         >
           <Container>
             <div
@@ -297,7 +297,7 @@ export default function FeaturesPage() {
                   alt={feature.headline}
                   width={600}
                   height={400}
-                  className="rounded-2xl shadow-lg"
+                  className="shadow-layered rounded-2xl"
                 />
               </AnimateIn>
             </div>
@@ -402,7 +402,7 @@ export default function FeaturesPage() {
                 alt="User management dashboard"
                 width={600}
                 height={400}
-                className="rounded-2xl shadow-lg"
+                className="shadow-layered rounded-2xl"
               />
             </AnimateIn>
           </div>
@@ -410,14 +410,14 @@ export default function FeaturesPage() {
       </Section>
 
       {/* Comparison Table */}
-      <Section className="bg-muted/30">
+      <Section className="bg-surface">
         <Container>
           <AnimateIn>
             <div className="mb-12 text-center">
               <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
                 LNA vs. the Alternatives
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="text-fluid-lg font-bold">
                 There&apos;s a Better Way Than Copy-Paste
               </h2>
             </div>
@@ -469,29 +469,30 @@ export default function FeaturesPage() {
 
       {/* Final CTA */}
       <Section className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] text-white">
-        <Container className="text-center">
+        <Container className="mx-auto max-w-3xl text-center">
           <AnimateIn>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-fluid-lg font-bold">
               Ready to See LNA in Action?
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-blue-100">
               Book a 30-minute demo and we&apos;ll walk you through the platform
               using your document types. No slides. No scripts. Just a live
               demonstration of exactly what LNA can do for your team.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <LinkButton
                 size="lg"
-                className="bg-white px-8 text-base text-blue-600 hover:bg-blue-50"
+                className="bg-white px-8 py-3 text-base font-semibold text-blue-600 shadow-lg hover:bg-blue-50 hover:shadow-xl"
                 href="/contact"
               >
                 Request a Demo
               </LinkButton>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-1 text-sm font-medium text-blue-100 hover:text-white"
+                className="link-underline inline-flex items-center gap-1 text-sm font-medium text-blue-100 hover:text-white"
               >
-                View Pricing <ArrowRight className="size-4" />
+                View Pricing{" "}
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
           </AnimateIn>

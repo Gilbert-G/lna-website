@@ -49,7 +49,7 @@ export default function TermsPage() {
             {/* Table of Contents */}
             <AnimateIn>
               <nav className="lg:sticky lg:top-24">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest">
+                <p className="mb-3 text-xs font-semibold tracking-widest uppercase">
                   On this page
                 </p>
                 <ul className="space-y-1.5 text-sm">
@@ -81,8 +81,8 @@ export default function TermsPage() {
                 <p>
                   By creating an account or using LNA, you agree to be bound by
                   these Terms. If you are using LNA on behalf of an
-                  organization, you represent that you have the authority to bind
-                  that organization to these Terms.
+                  organization, you represent that you have the authority to
+                  bind that organization to these Terms.
                 </p>
 
                 <h2 id="description">2. Description of Service</h2>
@@ -97,10 +97,13 @@ export default function TermsPage() {
                 <h2 id="accounts">3. Accounts &amp; Registration</h2>
                 <p>To use LNA, you must:</p>
                 <ul>
-                  <li>Provide accurate and complete registration information</li>
+                  <li>
+                    Provide accurate and complete registration information
+                  </li>
                   <li>Maintain the security of your account credentials</li>
                   <li>
-                    Notify us immediately of any unauthorized use of your account
+                    Notify us immediately of any unauthorized use of your
+                    account
                   </li>
                   <li>
                     Be at least 18 years old or have legal authority to enter
@@ -148,15 +151,11 @@ export default function TermsPage() {
                   do not claim any ownership rights over your content.
                 </p>
                 <ul>
+                  <li>We do not use your documents to train AI models</li>
+                  <li>You can export or delete your data at any time</li>
                   <li>
-                    We do not use your documents to train AI models
-                  </li>
-                  <li>
-                    You can export or delete your data at any time
-                  </li>
-                  <li>
-                    Upon account termination, your data will be deleted within 30
-                    days
+                    Upon account termination, your data will be deleted within
+                    30 days
                   </li>
                 </ul>
                 <p>
@@ -198,8 +197,8 @@ export default function TermsPage() {
                     end of the current billing period
                   </li>
                   <li>
-                    <strong>Annual plans:</strong> Access continues until the end
-                    of the annual term. We do not offer pro-rata refunds on
+                    <strong>Annual plans:</strong> Access continues until the
+                    end of the annual term. We do not offer pro-rata refunds on
                     annual billing
                   </li>
                   <li>
@@ -214,8 +213,8 @@ export default function TermsPage() {
 
                 <h2 id="ip">8. Intellectual Property</h2>
                 <p>
-                  The Service, including its software, design, documentation, and
-                  branding, is the property of Manureva Solutions and is
+                  The Service, including its software, design, documentation,
+                  and branding, is the property of Manureva Solutions and is
                   protected by intellectual property laws. You may not copy,
                   modify, distribute, or create derivative works based on the
                   Service without our prior written consent.
@@ -225,10 +224,10 @@ export default function TermsPage() {
                 <p>
                   To the maximum extent permitted by law, Manureva Solutions
                   shall not be liable for any indirect, incidental, special,
-                  consequential, or punitive damages arising from your use of the
-                  Service. Our total liability for any claim arising from these
-                  Terms shall not exceed the amount paid by you to us in the 12
-                  months preceding the claim.
+                  consequential, or punitive damages arising from your use of
+                  the Service. Our total liability for any claim arising from
+                  these Terms shall not exceed the amount paid by you to us in
+                  the 12 months preceding the claim.
                 </p>
 
                 <h2 id="indemnification">10. Indemnification</h2>
@@ -241,11 +240,11 @@ export default function TermsPage() {
 
                 <h2 id="changes">11. Changes to Terms</h2>
                 <p>
-                  We may update these Terms from time to time. We will notify you
-                  of material changes via email or through the platform at least
-                  30 days before they take effect. Your continued use of the
-                  Service after changes constitutes acceptance of the updated
-                  Terms.
+                  We may update these Terms from time to time. We will notify
+                  you of material changes via email or through the platform at
+                  least 30 days before they take effect. Your continued use of
+                  the Service after changes constitutes acceptance of the
+                  updated Terms.
                 </p>
 
                 <h2 id="governing-law">12. Governing Law</h2>
@@ -256,9 +255,7 @@ export default function TermsPage() {
                 </p>
 
                 <h2 id="contact">13. Contact</h2>
-                <p>
-                  For questions about these Terms, contact us at:
-                </p>
+                <p>For questions about these Terms, contact us at:</p>
                 <ul>
                   <li>
                     Email:{" "}
@@ -270,7 +267,10 @@ export default function TermsPage() {
                   </li>
                   <li>
                     Or visit our{" "}
-                    <Link href="/contact" className="text-primary hover:underline">
+                    <Link
+                      href="/contact"
+                      className="text-primary hover:underline"
+                    >
                       Contact page
                     </Link>
                   </li>

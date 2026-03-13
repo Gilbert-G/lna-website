@@ -15,13 +15,11 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
+      <Section className="noise-overlay gradient-mesh relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative text-center">
           <AnimateIn>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Let&apos;s Talk
-            </h1>
+            <h1 className="text-fluid-xl font-extrabold">Let&apos;s Talk</h1>
           </AnimateIn>
           <AnimateIn delay={0.1}>
             <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">

@@ -53,22 +53,15 @@ const values = [
   },
 ];
 
-const teamMembers = [
-  { name: "Team Member", role: "Co-Founder & CEO", photo: "/illustrations/team/placeholder-1.svg" },
-  { name: "Team Member", role: "CTO", photo: "/illustrations/team/placeholder-2.svg" },
-  { name: "Team Member", role: "Head of Product", photo: "/illustrations/team/placeholder-3.svg" },
-  { name: "Team Member", role: "Lead AI Engineer", photo: "/illustrations/team/placeholder-4.svg" },
-];
-
 export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
+      <Section className="noise-overlay gradient-mesh relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative text-center">
           <AnimateIn>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-fluid-xl font-extrabold">
               Built to End the Copy-Paste Era
             </h1>
           </AnimateIn>
@@ -89,10 +82,10 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <AnimateIn>
               <div>
-                <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+                <span className="text-primary text-xs font-semibold tracking-widest uppercase">
                   The Problem
                 </span>
-                <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+                <h2 className="text-fluid-lg mt-3 font-bold">
                   Millions of Hours Lost to a Spreadsheet That Should Fill
                   Itself
                 </h2>
@@ -140,16 +133,16 @@ export default function AboutPage() {
       </Section>
 
       {/* Mission & Vision */}
-      <Section className="bg-muted/30">
+      <Section className="bg-surface">
         <Container>
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               Mission &amp; Vision
             </span>
           </AnimateIn>
           <div className="mt-8 grid gap-8 md:grid-cols-2">
             <AnimateIn delay={0.1}>
-              <div className="bg-card rounded-2xl border p-8">
+              <div className="glass-card shadow-layered rounded-2xl p-8">
                 <Target className="text-primary size-8" />
                 <h3 className="mt-4 text-xl font-bold">Our Mission</h3>
                 <p className="text-muted-foreground mt-3 leading-relaxed">
@@ -160,7 +153,7 @@ export default function AboutPage() {
               </div>
             </AnimateIn>
             <AnimateIn delay={0.2}>
-              <div className="bg-card rounded-2xl border p-8">
+              <div className="glass-card shadow-layered rounded-2xl p-8">
                 <Eye className="text-primary size-8" />
                 <h3 className="mt-4 text-xl font-bold">Our Vision</h3>
                 <p className="text-muted-foreground mt-3 leading-relaxed">
@@ -179,17 +172,17 @@ export default function AboutPage() {
       <Section>
         <Container>
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               What We Stand For
             </span>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+            <h2 className="text-fluid-lg mt-3 font-bold">
               The Principles Behind Every Decision We Make
             </h2>
           </AnimateIn>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, i) => (
               <AnimateIn key={value.title} delay={0.1 * i}>
-                <div className="bg-card rounded-2xl border p-6">
+                <div className="glass-card shadow-layered rounded-2xl p-6">
                   <value.icon className="text-primary size-6" />
                   <h3 className="mt-3 text-lg font-bold">{value.title}</h3>
                   <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
@@ -202,56 +195,14 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      {/* Team */}
-      <Section className="bg-muted/30">
-        <Container>
-          <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
-              The Team
-            </span>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              The People Building LNA
-            </h2>
-            <p className="text-muted-foreground mt-3 max-w-2xl text-lg">
-              We&apos;re a focused team at Manureva Solutions, working to make
-              document intelligence accessible to every organization that relies
-              on data.
-            </p>
-          </AnimateIn>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {teamMembers.map((member, i) => (
-              <AnimateIn key={i} delay={0.1 * i}>
-                <div className="bg-card overflow-hidden rounded-2xl border text-center">
-                  <div className="bg-muted flex aspect-square items-center justify-center p-8">
-                    <Image
-                      src={member.photo}
-                      alt={member.name}
-                      width={200}
-                      height={200}
-                      className="size-32"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold">{member.name}</h3>
-                    <p className="text-muted-foreground text-sm">
-                      {member.role}
-                    </p>
-                  </div>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
       {/* Built by Manureva */}
       <Section>
         <Container className="max-w-3xl">
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               The Company
             </span>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+            <h2 className="text-fluid-lg mt-3 font-bold">
               A Product by Manureva Solutions
             </h2>
           </AnimateIn>
@@ -263,8 +214,8 @@ export default function AboutPage() {
                 tools for professional workflows.
               </p>
               <p>
-                Manureva Solutions operates from two locations: Paris, France and
-                Pondicherry, India. Our team brings together expertise in AI
+                Manureva Solutions operates from two locations: Paris, France
+                and Pondicherry, India. Our team brings together expertise in AI
                 engineering, enterprise software, and product design, with a
                 shared focus on building tools that solve real operational
                 problems.
@@ -293,10 +244,10 @@ export default function AboutPage() {
       </Section>
 
       {/* Final CTA */}
-      <Section className="bg-muted/30">
+      <Section className="bg-surface">
         <Container className="text-center">
           <AnimateIn>
-            <h2 className="text-2xl font-bold sm:text-3xl">
+            <h2 className="text-fluid-lg font-bold">
               Want to See What LNA Can Do?
             </h2>
           </AnimateIn>

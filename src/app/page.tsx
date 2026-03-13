@@ -31,7 +31,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
+      <Section className="noise-overlay gradient-mesh relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
         <Container className="relative flex flex-col items-center gap-8 text-center">
           <AnimateIn>
@@ -40,7 +40,7 @@ export default function HomePage() {
             </Badge>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="text-fluid-xl max-w-4xl font-extrabold">
               Turn Any PDF Into Perfect Excel —{" "}
               <span className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] bg-clip-text text-transparent">
                 Automatically
@@ -48,7 +48,7 @@ export default function HomePage() {
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.2}>
-            <p className="text-muted-foreground max-w-2xl text-lg md:text-xl">
+            <p className="text-muted-foreground text-fluid-base max-w-2xl">
               LNA uses AI to extract, structure, and export data from your
               documents in seconds — so your team stops copying and starts
               working.
@@ -79,7 +79,7 @@ export default function HomePage() {
                 alt="LNA platform dashboard showing PDF to Excel conversion"
                 width={960}
                 height={540}
-                className="rounded-2xl shadow-xl"
+                className="shadow-layered rounded-2xl"
                 priority
               />
             </div>
@@ -141,7 +141,7 @@ export default function HomePage() {
               <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
                 How It Works
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="text-fluid-lg font-bold">
                 From Upload to Excel in Three Steps
               </h2>
               <p className="text-muted-foreground mt-3 text-lg">
@@ -177,7 +177,7 @@ export default function HomePage() {
               },
             ].map((step, i) => (
               <AnimateIn key={step.step} delay={i * 0.15}>
-                <div className="bg-card flex flex-col items-center rounded-2xl border p-6 text-center">
+                <div className="glass-card shadow-layered flex flex-col items-center rounded-2xl p-6 text-center">
                   <span className="text-primary mb-2 text-xs font-bold tracking-widest uppercase">
                     {step.step} — {step.label}
                   </span>
@@ -212,14 +212,14 @@ export default function HomePage() {
       </Section>
 
       {/* Feature Highlights */}
-      <Section className="bg-muted/30">
+      <Section className="bg-surface">
         <Container>
           <AnimateIn>
             <div className="mb-12 text-center">
               <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
                 Features
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="text-fluid-lg font-bold">
                 Everything Your Team Needs to Process Documents at Scale
               </h2>
               <p className="text-muted-foreground mt-3 text-lg">
@@ -268,7 +268,7 @@ export default function HomePage() {
               },
             ].map((feature, i) => (
               <AnimateIn key={feature.title} delay={i * 0.1}>
-                <div className="bg-card flex flex-col gap-4 rounded-2xl border p-6">
+                <div className="glass-card shadow-layered flex flex-col gap-4 rounded-2xl p-6">
                   <div className="bg-primary/10 text-primary w-fit rounded-xl p-3">
                     <feature.icon className="size-6" />
                   </div>
@@ -291,7 +291,7 @@ export default function HomePage() {
               <p className="mb-2 text-sm font-semibold tracking-wider text-blue-300 uppercase">
                 What Makes LNA Different
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="text-fluid-lg font-bold">
                 Beyond Extraction: Document Intelligence That Thinks
               </h2>
               <p className="mt-3 text-lg text-slate-300">
@@ -425,7 +425,7 @@ export default function HomePage() {
               },
             ].map((testimonial, i) => (
               <AnimateIn key={testimonial.name} delay={i * 0.1}>
-                <div className="bg-card flex flex-col gap-4 rounded-2xl border p-6">
+                <div className="glass-card shadow-layered flex flex-col gap-4 rounded-2xl p-6">
                   <div className="flex gap-1">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <Star
@@ -452,29 +452,30 @@ export default function HomePage() {
 
       {/* Final CTA */}
       <Section className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] text-white">
-        <Container className="text-center">
+        <Container className="mx-auto max-w-3xl text-center">
           <AnimateIn>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-fluid-lg font-bold">
               Stop Copying. Start Extracting.
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-blue-100">
               LNA automates the PDF-to-Excel workflows that are costing your
               team hours every week. See it in action with a personalized demo —
               we&apos;ll show you exactly how it works with your documents.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <LinkButton
                 size="lg"
-                className="bg-white px-8 text-base text-blue-600 hover:bg-blue-50"
+                className="bg-white px-8 py-3 text-base font-semibold text-blue-600 shadow-lg hover:bg-blue-50 hover:shadow-xl"
                 href="/contact"
               >
                 Request a Demo
               </LinkButton>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-1 text-sm font-medium text-blue-100 hover:text-white"
+                className="link-underline inline-flex items-center gap-1 text-sm font-medium text-blue-100 hover:text-white"
               >
-                Or explore pricing <ArrowRight className="size-4" />
+                Or explore pricing{" "}
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
             <p className="mt-4 text-sm text-blue-200">

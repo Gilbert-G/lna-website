@@ -1,4 +1,5 @@
 # Features Page Copy — LNA
+
 **File:** `features.md`
 **Page:** Features (`/features`)
 **LNAW-16**
@@ -17,12 +18,15 @@
 ## Page Hero
 
 ### Headline
+
 Every Tool You Need to Process Documents Without the Busywork
 
 ### Subheadline
+
 LNA combines intelligent data extraction, automated Excel export, and AI-powered document analysis into one platform — so your team can focus on decisions, not data entry.
 
 ### CTA
+
 **Request a Demo**
 **See Pricing →**
 
@@ -30,7 +34,7 @@ LNA combines intelligent data extraction, automated Excel export, and AI-powered
 
 ## Features Overview Intro
 
-*Optional intro paragraph below the hero — can be omitted if layout is tight.*
+_Optional intro paragraph below the hero — can be omitted if layout is tight._
 
 LNA is built for professionals who need to process large volumes of PDFs accurately and efficiently. From initial upload to final export, every step is automated. And with built-in LLM intelligence, your documents don't just get processed — they become something you can actually talk to.
 
@@ -41,12 +45,15 @@ LNA is built for professionals who need to process large volumes of PDFs accurat
 - **Icon:** `FolderOpen` (Lucide)
 
 ### Headline
+
 One Place for Every Document Your Team Processes
 
 ### Description
+
 Managing hundreds of PDFs across shared drives and email threads creates confusion. LNA gives your team a centralized document workspace where every file is organized, searchable, and accessible — from upload to archive.
 
 ### Bullet Points
+
 - Drag-and-drop multi-file upload, including bulk batches of hundreds of documents
 - Automatic document classification — LNA distinguishes invoices, reports, forms, and statements without setup
 - Built-in OCR processes scanned and image-based PDFs as accurately as digital-native files
@@ -60,12 +67,15 @@ Managing hundreds of PDFs across shared drives and email threads creates confusi
 - **Icon:** `ScanLine` (Lucide)
 
 ### Headline
+
 AI Extraction That Gets It Right the First Time
 
 ### Description
+
 Traditional OCR tools copy text. LNA understands structure. Its AI reads each document the way an analyst would — identifying tables, recognizing entities, and structuring output into clean, usable data rows without any manual configuration required.
 
 ### Bullet Points
+
 - Schema-free extraction: no templates or field mapping needed to start processing
 - Automatically detects entities — dates, monetary amounts, vendor names, addresses, and more
 - Multi-page table extraction handles complex financial and operational reports accurately
@@ -80,12 +90,15 @@ Traditional OCR tools copy text. LNA understands structure. Its AI reads each do
 - **Icon:** `GitMerge` (Lucide)
 
 ### Headline
+
 Your Excel Template. LNA's AI Does the Matching.
 
 ### Description
+
 You've already built your reporting templates. LNA respects that. Upload your existing Excel file, and the AI analyzes its structure and proposes how extracted fields should map to your columns — automatically. Tweak it once, save it forever.
 
 ### Bullet Points
+
 - Upload any `.xlsx` template as your target output format
 - AI-powered structure analysis reads your template and understands column intent
 - Auto-mapping proposals suggest field-to-column matches — accept them in one click
@@ -100,12 +113,15 @@ You've already built your reporting templates. LNA respects that. Upload your ex
 - **Icon:** `Download` (Lucide)
 
 ### Headline
+
 Export Data You Can Trust — With a Paper Trail to Prove It
 
 ### Description
+
 An extraction is only valuable if the output is reliable. LNA gives you a full preview of every export before you download it, delivers format-preserving Excel files that fit directly into your existing workflows, and logs every action for traceability.
 
 ### Bullet Points
+
 - Format-preserving Excel export maintains your template layout, column widths, and structure
 - Export preview lets you review output before it leaves the platform
 - Batch export processes and downloads multiple documents simultaneously
@@ -113,22 +129,26 @@ An extraction is only valuable if the output is reliable. LNA gives you a full p
 
 ---
 
-## Feature 5: LLM-Connected Data Q&A *(Key Differentiator)*
+## Feature 5: LLM-Connected Data Q&A _(Key Differentiator)_
 
 - **Icon:** `MessagesSquare` (Lucide)
 
 ### Headline
+
 Stop Searching. Start Asking.
 
 ### Description
+
 Spreadsheets are good at storing data. They're not good at answering questions. LNA's LLM-connected Q&A turns your document library into a conversational data source. Ask anything in plain English and get an accurate answer — grounded entirely in your own uploaded data, not generic AI knowledge.
 
-This is the feature that changes how your team works with documents. Instead of building pivot tables to find a vendor's quarterly total, you ask: *"What was the total invoice amount from Vendor X in Q3?"* — and LNA tells you, with precision.
+This is the feature that changes how your team works with documents. Instead of building pivot tables to find a vendor's quarterly total, you ask: _"What was the total invoice amount from Vendor X in Q3?"_ — and LNA tells you, with precision.
 
 ### Why This Matters
+
 Most document tools stop at extraction. They give you a spreadsheet and leave you to figure out the rest. LNA goes further — once your data is extracted, it stays live and queryable. Your documents become a database you can have a conversation with.
 
 ### Bullet Points
+
 - Ask natural-language questions across your entire document library
 - Answers are grounded in your uploaded data — not the LLM's general training
 - Get specific totals, comparisons, summaries, and anomaly flags without writing a single formula
@@ -137,22 +157,26 @@ Most document tools stop at extraction. They give you a spreadsheet and leave yo
 
 ---
 
-## Feature 6: Chat with Context Role *(Key Differentiator)*
+## Feature 6: Chat with Context Role _(Key Differentiator)_
 
 - **Icon:** `UserRoundCog` (Lucide)
 
 ### Headline
+
 An AI That Thinks Like Your Team
 
 ### Description
+
 Generic AI gives generic answers. LNA's Chat with Context Role lets you configure the AI assistant's persona and domain focus — so it responds with the expertise your work actually requires.
 
 Set the role once. Every conversation that follows is grounded in that context. A Financial Analyst role surfaces cost anomalies and cash flow patterns. A Compliance Officer role flags regulatory risks and missing documentation. An Operations Manager role focuses on process gaps and vendor performance. Same documents. Different lens. Better insights.
 
 ### Why This Matters
+
 Context roles don't just change the tone of responses — they change what the AI pays attention to. This is the difference between a general-purpose chatbot and a specialized AI partner that understands your industry.
 
 ### Bullet Points
+
 - Pre-built roles include Financial Analyst, Compliance Officer, and Operations Manager
 - The AI adapts its language, focus areas, and interpretation to match the selected role
 - Create and save custom roles tailored to your specific team, department, or use case
@@ -166,12 +190,15 @@ Context roles don't just change the tone of responses — they change what the A
 - **Icon:** `Users` (Lucide)
 
 ### Headline
+
 Secure Access, Clear Roles, Full Control
 
 ### Description
+
 LNA is built for teams. Organization-level accounts, role-based permissions, and JWT authentication ensure that the right people have access to the right documents — and the audit trail always knows who did what.
 
 ### Bullet Points
+
 - JWT-based authentication for secure, token-managed access
 - Organization-level accounts keep your team's data fully separated from other customers
 - Role-based access control with Admin, Editor, and Viewer permission levels
@@ -182,28 +209,31 @@ LNA is built for teams. Organization-level accounts, role-based permissions, and
 
 ## Why Choose LNA?
 
-*Comparison section. Display as a 3-column table or card set.*
+_Comparison section. Display as a 3-column table or card set._
 
 ### Section Label
+
 LNA VS. THE ALTERNATIVES
 
 ### Section Headline
+
 There's a Better Way Than Copy-Paste
 
-| | Manual Process | Basic OCR Tools | **LNA** |
-|---|---|---|---|
-| **Setup required** | None (just time) | Configuration needed | No — schema-free from day one |
-| **Accuracy** | Human error rate | Moderate | 99.5% with confidence scoring |
-| **Speed** | Hours per document | Minutes per document | Seconds per document, in batches |
-| **Output format** | Varies | Generic CSV or text | Matches your exact Excel template |
-| **Scanned PDFs** | Manual re-entry | Limited | Full OCR support |
-| **Multi-page tables** | Error-prone | Often fails | Extracted accurately |
-| **AI Q&A** | Not possible | Not available | Ask your documents anything |
-| **Context roles** | Not applicable | Not available | Domain-specific AI intelligence |
-| **Audit trail** | Non-existent | None | Full extraction and export log |
-| **Scalability** | Breaks at volume | Limited batch support | Hundreds of documents at once |
+|                       | Manual Process     | Basic OCR Tools       | **LNA**                           |
+| --------------------- | ------------------ | --------------------- | --------------------------------- |
+| **Setup required**    | None (just time)   | Configuration needed  | No — schema-free from day one     |
+| **Accuracy**          | Human error rate   | Moderate              | 99.5% with confidence scoring     |
+| **Speed**             | Hours per document | Minutes per document  | Seconds per document, in batches  |
+| **Output format**     | Varies             | Generic CSV or text   | Matches your exact Excel template |
+| **Scanned PDFs**      | Manual re-entry    | Limited               | Full OCR support                  |
+| **Multi-page tables** | Error-prone        | Often fails           | Extracted accurately              |
+| **AI Q&A**            | Not possible       | Not available         | Ask your documents anything       |
+| **Context roles**     | Not applicable     | Not available         | Domain-specific AI intelligence   |
+| **Audit trail**       | Non-existent       | None                  | Full extraction and export log    |
+| **Scalability**       | Breaks at volume   | Limited batch support | Hundreds of documents at once     |
 
 ### Comparison Closing Copy
+
 Manual processes don't scale. Basic OCR tools don't understand your data. LNA does both — and then gives you an AI layer on top that turns your documents into something you can actually reason over.
 
 ---
@@ -211,15 +241,19 @@ Manual processes don't scale. Basic OCR tools don't understand your data. LNA do
 ## Features Page Final CTA
 
 ### Headline
+
 Ready to See LNA in Action?
 
 ### Subtext
+
 Book a 30-minute demo and we'll walk you through the platform using your document types. No slides. No scripts. Just a live demonstration of exactly what LNA can do for your team.
 
 ### Primary CTA
+
 **Request a Demo**
 
 ### Secondary CTA
+
 **View Pricing →**
 
 ---
