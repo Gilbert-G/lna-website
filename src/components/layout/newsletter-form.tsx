@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import { showToast } from "@/components/ui/toast";
 
 export function NewsletterForm() {
+  const t = useTranslations("newsletter");
   const [status, setStatus] = useState<"idle" | "submitting">("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -16,7 +18,7 @@ export function NewsletterForm() {
     const email = formData.get("email") as string;
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showToast("Please enter a valid email address.", "error");
+      showToast(t("invalidEmail"), "error");
       return;
     }
 
@@ -34,12 +36,12 @@ export function NewsletterForm() {
         throw new Error(data.error || "Failed to subscribe");
       }
 
-      showToast("You're subscribed! Check your email to confirm.", "success");
+      showToast(t("success"), "success");
       window.gtag?.("event", "newsletter_signup", { method: "footer" });
       form.reset();
     } catch (err) {
       showToast(
-        err instanceof Error ? err.message : "Something went wrong.",
+        err instanceof Error ? err.message : t("invalidEmail"),
         "error"
       );
     } finally {
@@ -52,16 +54,16 @@ export function NewsletterForm() {
       <Input
         type="email"
         name="email"
-        placeholder="your@email.com"
+        placeholder={t("emailPlaceholder")}
         className="max-w-xs"
-        aria-label="Email for newsletter"
+        aria-label={t("emailLabel")}
         required
       />
       <Button type="submit" size="lg" disabled={status === "submitting"}>
         {status === "submitting" ? (
           <Loader2 className="size-4 animate-spin" />
         ) : (
-          "Subscribe"
+          t("subscribe")
         )}
       </Button>
     </form>

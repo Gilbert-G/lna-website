@@ -1,16 +1,23 @@
-import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { PricingContent } from "./pricing-content";
 
-export const metadata: Metadata = {
-  title: "LNA Pricing — Plans for Every Team Size",
-  description:
-    "Simple, transparent pricing for LNA's AI document processing platform. Starter from $49/mo. Free trial available on all plans. No credit card required.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo.pricing" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
-export default function PricingPage() {
+export default async function PricingPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "pricing" });
+
   return (
     <>
       {/* Hero */}
@@ -19,14 +26,12 @@ export default function PricingPage() {
         <Container className="relative text-center">
           <AnimateIn>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Simple Pricing. Serious Results.
+              {t("hero.heading")}
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.1}>
             <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
-              Every plan includes core AI extraction and Excel export. Upgrade
-              when you need LLM Q&amp;A, context roles, and deeper team
-              controls.
+              {t("hero.description")}
             </p>
           </AnimateIn>
         </Container>

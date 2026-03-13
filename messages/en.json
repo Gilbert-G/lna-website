@@ -1,0 +1,898 @@
+{
+  "seo": {
+    "title": "LNA — AI Document Processing & PDF to Excel Automation",
+    "description": "LNA extracts structured data from any PDF and exports it to Excel automatically. AI-powered document processing with 99.5% accuracy. Request a demo.",
+    "ogTitle": "LNA — AI-Powered Document Processing Platform",
+    "ogDescription": "Extract structured data from PDFs into Excel — automatically.",
+    "features": {
+      "title": "LNA Features — AI Document Processing & Intelligent Data Extraction",
+      "description": "Explore LNA's full feature set: AI data extraction, PDF to Excel export, LLM-powered Q&A, and context-aware AI roles. See what sets LNA apart."
+    },
+    "pricing": {
+      "title": "LNA Pricing — Plans for Every Team Size",
+      "description": "Simple, transparent pricing for LNA's AI document processing platform. Starter from $49/mo. Free trial available on all plans. No credit card required."
+    },
+    "about": {
+      "title": "About LNA — Intelligent Document Processing by Manureva Solutions",
+      "description": "LNA is an AI-powered document processing platform built by Manureva Solutions. Learn about our mission, our team, and why we built LNA."
+    },
+    "contact": {
+      "title": "Contact LNA — Get in Touch With Our Team",
+      "description": "Reach out to the LNA team for demos, sales inquiries, support, or partnerships. We respond within 24 hours."
+    },
+    "privacy": {
+      "title": "Privacy Policy — LNA by Manureva Solutions",
+      "description": "Learn how LNA collects, uses, and protects your data. Our privacy policy covers data processing, storage, and your rights."
+    },
+    "terms": {
+      "title": "Terms of Service — LNA by Manureva Solutions",
+      "description": "Read the Terms of Service for LNA, the AI-powered document processing platform by Manureva Solutions."
+    },
+    "blog": {
+      "title": "LNA Blog — Document AI Insights, Product Updates & Best Practices",
+      "description": "Stay up to date with the latest in AI document processing, product updates from LNA, and best practices for automating PDF to Excel workflows."
+    }
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "blog": "Blog",
+    "cta": "Request Demo",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation"
+  },
+  "footer": {
+    "description": "AI-powered document processing that turns PDFs into structured Excel data — automatically.",
+    "stayUpdated": "Stay updated",
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "features": "Features",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "email": "Email",
+    "copyright": "© 2026 Manureva Solutions. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "subscribe": "Subscribe"
+  },
+  "home": {
+    "hero": {
+      "badge": "AI Document Processing Platform",
+      "heading": "Turn Any PDF Into Perfect Excel —",
+      "headingHighlight": "Automatically",
+      "description": "LNA uses AI to extract, structure, and export data from your documents in seconds — so your team stops copying and starts working.",
+      "ctaDemo": "Request a Demo",
+      "ctaHow": "See How It Works",
+      "noCard": "No credit card required. Up and running in minutes.",
+      "imageAlt": "LNA platform dashboard showing PDF to Excel conversion"
+    },
+    "valueProp": {
+      "speed": {
+        "headline": "10x Faster Processing",
+        "description": "Replace hours of manual data entry with AI extraction that completes in seconds."
+      },
+      "accuracy": {
+        "headline": "99.5% Extraction Accuracy",
+        "description": "Confidence scoring on every field ensures your data is reliable before it ever leaves the platform."
+      },
+      "zeroManual": {
+        "headline": "Zero Manual Entry",
+        "description": "From upload to export, the entire workflow is automated — your team never touches the raw data."
+      },
+      "anyFormat": {
+        "headline": "Any Document, Any Format",
+        "description": "Invoices, reports, forms, statements — LNA handles them all, including scanned PDFs."
+      }
+    },
+    "howItWorks": {
+      "label": "How It Works",
+      "heading": "From Upload to Excel in Three Steps",
+      "subheading": "No configuration required. No templates to build. Just results.",
+      "step1": {
+        "step": "01",
+        "label": "Upload",
+        "title": "Drop In Your Documents",
+        "description": "Drag and drop single files or entire batches of PDFs directly into LNA. Bulk upload handles hundreds of documents at once. LNA auto-classifies each file so you stay organized from the start."
+      },
+      "step2": {
+        "step": "02",
+        "label": "Extract",
+        "title": "AI Does the Heavy Lifting",
+        "description": "LNA's AI reads every page, identifies tables, entities, and data fields, and structures everything into clean rows and columns. Confidence scoring flags anything that needs a second look — so nothing slips through."
+      },
+      "step3": {
+        "step": "03",
+        "label": "Export",
+        "title": "Download Perfect Excel Files",
+        "description": "Map extracted data to your own Excel template or download it as-is. Preview before you export. Every output includes a full audit trail, so your team always knows what was extracted and when."
+      },
+      "workflowAlt": "Upload, Extract, Export workflow",
+      "videoTitle": "See LNA in action"
+    },
+    "features": {
+      "label": "Features",
+      "heading": "Everything Your Team Needs to Process Documents at Scale",
+      "subheading": "Six core capabilities built for finance teams, operations managers, and anyone who lives in spreadsheets.",
+      "organize": {
+        "title": "Organize Every Document in One Place",
+        "description": "Upload, classify, search, and preview all your PDFs without leaving the platform. LNA automatically detects duplicates and keeps your library clean, with full-text search across your entire document archive."
+      },
+      "aiExtraction": {
+        "title": "AI That Reads Documents Like an Expert",
+        "description": "Schema-free extraction means you don't need to configure anything before processing starts. LNA detects dates, amounts, names, addresses, and multi-page tables automatically — with a confidence score attached to every field."
+      },
+      "templateMatch": {
+        "title": "Your Excel Format, Automatically Matched",
+        "description": "Upload your existing Excel template and LNA proposes the field mappings for you. Fine-tune with a visual drag-and-drop editor, then save the configuration for every future batch — your templates, your way."
+      },
+      "export": {
+        "title": "Export With Confidence",
+        "description": "Preview your output before downloading. Export to Excel in formats that preserve your layout and formulas. Every extraction is logged in a full audit trail, giving your team the traceability compliance requires."
+      },
+      "askDocuments": {
+        "title": "Ask Your Documents Anything",
+        "description": "Stop hunting through spreadsheets for answers. Ask LNA a plain-language question — \"What was the total invoice amount from Vendor X in Q3?\" — and get an accurate, sourced answer from your own data in seconds."
+      },
+      "aiAssistant": {
+        "title": "An AI Assistant That Speaks Your Industry",
+        "description": "Set a role — Financial Analyst, Compliance Officer, Operations Manager — and LNA's AI adapts its language, focus, and responses to match. It's not a generic chatbot. It's domain-aware intelligence built into your workflow."
+      }
+    },
+    "aiDifferentiators": {
+      "label": "What Makes LNA Different",
+      "heading": "Beyond Extraction: Document Intelligence That Thinks",
+      "subheading": "Most document tools stop at extraction. LNA keeps going — giving you the ability to question, analyze, and reason over your data using AI that understands your context.",
+      "qa": {
+        "title": "Ask Your Documents Anything",
+        "description": "Connect your document library to a powerful language model and query it in plain English. LNA grounds every answer in your actual data — no hallucinations, no guesswork.",
+        "bullet1": "Ask natural-language questions across hundreds of documents at once",
+        "bullet2": "Get specific, sourced answers — not summaries or approximations",
+        "bullet3": "Instantly surface totals, comparisons, anomalies, and trends without building a single formula"
+      },
+      "roles": {
+        "title": "AI That Adapts to Your Role",
+        "description": "Configure the AI to think and respond like an expert in your field. Whether you need financial analysis, compliance review, or operational oversight, LNA's context roles make every conversation relevant and precise.",
+        "bullet1": "Pre-built roles: Financial Analyst, Compliance Officer, Operations Manager",
+        "bullet2": "The AI speaks your industry's language — not generic output",
+        "bullet3": "Build and save custom roles tailored to your specific workflows"
+      }
+    },
+    "socialProof": {
+      "label": "Trusted by Teams Who Process Documents Every Day",
+      "stats": {
+        "documents": { "value": "500K+", "label": "Documents processed" },
+        "hours": { "value": "120+", "label": "Hours saved per team/month" },
+        "accuracy": { "value": "99.5%", "label": "Average extraction accuracy" },
+        "teams": { "value": "200+", "label": "Teams using LNA" }
+      },
+      "testimonials": {
+        "sarah": {
+          "quote": "LNA replaced our entire manual data entry workflow. What used to take our team 6 hours a day now happens in minutes — with better accuracy.",
+          "name": "Sarah Chen",
+          "title": "Finance Director",
+          "company": "Meridian Partners"
+        },
+        "james": {
+          "quote": "The accuracy improvement was immediate. We went from catching errors in every third export to near-perfect data on the first pass.",
+          "name": "James Okafor",
+          "title": "Operations Manager",
+          "company": "Apex Logistics"
+        },
+        "marie": {
+          "quote": "The LLM Q&A feature changed everything. We can now ask questions across thousands of invoices instead of manually building pivot tables.",
+          "name": "Marie Dubois",
+          "title": "Head of Data",
+          "company": "Vectis Group"
+        }
+      }
+    },
+    "cta": {
+      "heading": "Stop Copying. Start Extracting.",
+      "description": "LNA automates the PDF-to-Excel workflows that are costing your team hours every week. See it in action with a personalized demo — we'll show you exactly how it works with your documents.",
+      "ctaDemo": "Request a Demo",
+      "ctaPricing": "Or explore pricing",
+      "microcopy": "No credit card required. Setup takes minutes. Cancel anytime."
+    }
+  },
+  "features": {
+    "hero": {
+      "heading": "Every Tool You Need to Process Documents Without the Busywork",
+      "description": "LNA combines intelligent data extraction, automated Excel export, and AI-powered document analysis into one platform — so your team can focus on decisions, not data entry.",
+      "ctaDemo": "Request a Demo",
+      "ctaPricing": "See Pricing"
+    },
+    "documentManagement": {
+      "label": "Document Management",
+      "headline": "One Place for Every Document Your Team Processes",
+      "description": "Managing hundreds of PDFs across shared drives and email threads creates confusion. LNA gives your team a centralized document workspace where every file is organized, searchable, and accessible — from upload to archive.",
+      "bullet1": "Drag-and-drop multi-file upload, including bulk batches of hundreds of documents",
+      "bullet2": "Automatic document classification — LNA distinguishes invoices, reports, forms, and statements without setup",
+      "bullet3": "Built-in OCR processes scanned and image-based PDFs as accurately as digital-native files",
+      "bullet4": "Intelligent duplicate detection prevents redundant processing and keeps your library clean",
+      "bullet5": "Full-text search across your entire document archive so nothing gets buried"
+    },
+    "dataExtraction": {
+      "label": "Data Extraction",
+      "headline": "AI Extraction That Gets It Right the First Time",
+      "description": "Traditional OCR tools copy text. LNA understands structure. Its AI reads each document the way an analyst would — identifying tables, recognizing entities, and structuring output into clean, usable data rows without any manual configuration required.",
+      "bullet1": "Schema-free extraction: no templates or field mapping needed to start processing",
+      "bullet2": "Automatically detects entities — dates, monetary amounts, vendor names, addresses, and more",
+      "bullet3": "Multi-page table extraction handles complex financial and operational reports accurately",
+      "bullet4": "Confidence scoring on every extracted field so you know exactly what to trust and what to verify",
+      "bullet5": "Batch processing handles hundreds of documents in a single run, with error recovery and retry on failure",
+      "bullet6": "Structured output is ready to map and export immediately — no cleanup, no reformatting"
+    },
+    "templateMapping": {
+      "label": "Template & Mapping",
+      "headline": "Your Excel Template. LNA's AI Does the Matching.",
+      "description": "You've already built your reporting templates. LNA respects that. Upload your existing Excel file, and the AI analyzes its structure and proposes how extracted fields should map to your columns — automatically. Tweak it once, save it forever.",
+      "bullet1": "Upload any .xlsx template as your target output format",
+      "bullet2": "AI-powered structure analysis reads your template and understands column intent",
+      "bullet3": "Auto-mapping proposals suggest field-to-column matches — accept them in one click",
+      "bullet4": "Visual drag-and-drop mapping editor for manual corrections without code",
+      "bullet5": "Save mapping configurations as reusable templates for recurring document types",
+      "bullet6": "Template library lets your team standardize workflows across departments and projects"
+    },
+    "exportAudit": {
+      "label": "Export & Audit",
+      "headline": "Export Data You Can Trust — With a Paper Trail to Prove It",
+      "description": "An extraction is only valuable if the output is reliable. LNA gives you a full preview of every export before you download it, delivers format-preserving Excel files that fit directly into your existing workflows, and logs every action for traceability.",
+      "bullet1": "Format-preserving Excel export maintains your template layout, column widths, and structure",
+      "bullet2": "Export preview lets you review output before it leaves the platform",
+      "bullet3": "Batch export processes and downloads multiple documents simultaneously",
+      "bullet4": "Full audit trail captures what was extracted, what was mapped, by whom, and when — supporting compliance and review processes"
+    },
+    "llmQa": {
+      "label": "LLM-Connected Data Q&A",
+      "headline": "Stop Searching. Start Asking.",
+      "description": "Spreadsheets are good at storing data. They're not good at answering questions. LNA's LLM-connected Q&A turns your document library into a conversational data source. Ask anything in plain English and get an accurate answer — grounded entirely in your own uploaded data, not generic AI knowledge.",
+      "whyItMatters": "Why it matters",
+      "whyItMattersText": "Most document tools stop at extraction. They give you a spreadsheet and leave you to figure out the rest. LNA goes further — once your data is extracted, it stays live and queryable. Your documents become a database you can have a conversation with.",
+      "bullet1": "Ask natural-language questions across your entire document library",
+      "bullet2": "Answers are grounded in your uploaded data — not the LLM's general training",
+      "bullet3": "Get specific totals, comparisons, summaries, and anomaly flags without writing a single formula",
+      "bullet4": "Ideal for: financial reconciliation, compliance checks, vendor analysis, operational reporting",
+      "bullet5": "Powered by Gemini — a state-of-the-art language model built for accuracy at scale"
+    },
+    "chatContextRole": {
+      "label": "Chat with Context Role",
+      "headline": "An AI That Thinks Like Your Team",
+      "description": "Generic AI gives generic answers. LNA's Chat with Context Role lets you configure the AI assistant's persona and domain focus — so it responds with the expertise your work actually requires.",
+      "whyItMatters": "Why it matters",
+      "whyItMattersText": "Context roles don't just change the tone of responses — they change what the AI pays attention to. This is the difference between a general-purpose chatbot and a specialized AI partner that understands your industry.",
+      "bullet1": "Pre-built roles include Financial Analyst, Compliance Officer, and Operations Manager",
+      "bullet2": "The AI adapts its language, focus areas, and interpretation to match the selected role",
+      "bullet3": "Create and save custom roles tailored to your specific team, department, or use case",
+      "bullet4": "Combine with LLM Q&A for end-to-end document intelligence: extract, query, and analyze in one platform",
+      "bullet5": "Roles are organization-level — share them across your team for consistent AI behavior"
+    },
+    "userManagement": {
+      "label": "User Management",
+      "headline": "Secure Access, Clear Roles, Full Control",
+      "description": "LNA is built for teams. Organization-level accounts, role-based permissions, and JWT authentication ensure that the right people have access to the right documents — and the audit trail always knows who did what.",
+      "bullet1": "JWT-based authentication for secure, token-managed access",
+      "bullet2": "Organization-level accounts keep your team's data fully separated from other customers",
+      "bullet3": "Role-based access control with Admin, Editor, and Viewer permission levels",
+      "bullet4": "Admins manage team members, permissions, and billing from a central dashboard",
+      "bullet5": "Enterprise tier supports SSO/SAML for single sign-on integration with your existing identity provider"
+    },
+    "comparison": {
+      "heading": "There's a Better Way Than Copy-Paste",
+      "subheading": "LNA vs. the Alternatives",
+      "footer": "Manual processes don't scale. Basic OCR tools don't understand your data. LNA does both — and then gives you an AI layer on top that turns your documents into something you can actually reason over.",
+      "headerFeature": "Feature",
+      "headerManual": "Manual Process",
+      "headerOcr": "Basic OCR Tools",
+      "headerLna": "LNA",
+      "rows": {
+        "setup": { "feature": "Setup required", "manual": "None (just time)", "ocr": "Configuration needed", "lna": "No — schema-free from day one" },
+        "accuracy": { "feature": "Accuracy", "manual": "Human error rate", "ocr": "Moderate", "lna": "99.5% with confidence scoring" },
+        "speed": { "feature": "Speed", "manual": "Hours per document", "ocr": "Minutes per document", "lna": "Seconds per document, in batches" },
+        "output": { "feature": "Output format", "manual": "Varies", "ocr": "Generic CSV or text", "lna": "Matches your exact Excel template" },
+        "scanned": { "feature": "Scanned PDFs", "manual": "Manual re-entry", "ocr": "Limited", "lna": "Full OCR support" },
+        "multiPage": { "feature": "Multi-page tables", "manual": "Error-prone", "ocr": "Often fails", "lna": "Extracted accurately" },
+        "aiQa": { "feature": "AI Q&A", "manual": "Not possible", "ocr": "Not available", "lna": "Ask your documents anything" },
+        "contextRoles": { "feature": "Context roles", "manual": "Not applicable", "ocr": "Not available", "lna": "Domain-specific AI intelligence" },
+        "auditTrail": { "feature": "Audit trail", "manual": "Non-existent", "ocr": "None", "lna": "Full extraction and export log" },
+        "scalability": { "feature": "Scalability", "manual": "Breaks at volume", "ocr": "Limited batch support", "lna": "Hundreds of documents at once" }
+      }
+    },
+    "cta": {
+      "heading": "Ready to See LNA in Action?",
+      "description": "Book a 30-minute demo and we'll walk you through the platform using your document types. No slides. No scripts. Just a live demonstration of exactly what LNA can do for your team.",
+      "button": "Request a Demo"
+    },
+    "navLabel": "Feature sections",
+    "videoTitle": "LNA platform overview"
+  },
+  "pricing": {
+    "hero": {
+      "heading": "Simple Pricing. Serious Results.",
+      "description": "Every plan includes core AI extraction and Excel export. Upgrade when you need LLM Q&A, context roles, and deeper team controls."
+    },
+    "billing": {
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "savings": "Save up to 20%"
+    },
+    "perMonth": "/month",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "tagline": "Everything you need to stop manual data entry.",
+        "priceMonthly": "$49",
+        "priceAnnual": "$39",
+        "savings": "Save $120/year",
+        "cta": "Start Free Trial",
+        "microcopy": "14-day free trial · No credit card required",
+        "features": {
+          "f1": "Up to 500 documents/month",
+          "f2": "3 user seats",
+          "f3": "5GB document storage",
+          "f4": "AI-powered data extraction",
+          "f5": "Schema-free extraction (no templates required)",
+          "f6": "Confidence scoring per field",
+          "f7": "OCR for scanned PDFs",
+          "f8": "Excel export with audit trail",
+          "f9": "Export preview before download",
+          "f10": "Document management & full-text search",
+          "f11": "Duplicate detection",
+          "f12": "Email support"
+        }
+      },
+      "professional": {
+        "name": "Professional",
+        "badge": "Most Popular",
+        "tagline": "For growing teams that need AI intelligence, not just extraction.",
+        "priceMonthly": "$149",
+        "priceAnnual": "$119",
+        "savings": "Save $360/year",
+        "cta": "Start Free Trial",
+        "microcopy": "14-day free trial · No credit card required",
+        "features": {
+          "f1": "Up to 5,000 documents/month",
+          "f2": "15 user seats",
+          "f3": "50GB document storage",
+          "f4": "Everything in Starter, plus:",
+          "f5": "LLM-Connected Data Q&A",
+          "f6": "Chat with Context Role",
+          "f7": "Template library — save and share configurations",
+          "f8": "Batch export",
+          "f9": "Priority email and chat support"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "tagline": "Custom scale, dedicated support, and enterprise-grade security.",
+        "price": "Custom",
+        "priceDescription": "Tailored to your volume and requirements",
+        "cta": "Contact Sales",
+        "microcopy": "We'll respond within one business day.",
+        "features": {
+          "f1": "Unlimited documents/month",
+          "f2": "Unlimited user seats",
+          "f3": "Custom storage allocation",
+          "f4": "Everything in Professional, plus:",
+          "f5": "SSO/SAML single sign-on",
+          "f6": "Dedicated account manager",
+          "f7": "Custom integrations and API access",
+          "f8": "SLA guarantees (uptime and response time)",
+          "f9": "On-premise deployment option",
+          "f10": "Custom context roles",
+          "f11": "Priority onboarding and training"
+        }
+      }
+    },
+    "trust": {
+      "t1": "14-day free trial on all plans",
+      "t2": "No credit card required",
+      "t3": "Cancel anytime"
+    },
+    "comparison": {
+      "heading": "Compare Plans in Detail",
+      "headerFeature": "Feature",
+      "headerStarter": "Starter",
+      "headerProfessional": "Professional",
+      "headerEnterprise": "Enterprise",
+      "categories": {
+        "documentsStorage": "Documents & Storage",
+        "documentManagement": "Document Management",
+        "dataExtraction": "Data Extraction",
+        "templateMapping": "Template & Mapping",
+        "export": "Export",
+        "aiIntelligence": "AI Intelligence",
+        "userManagement": "User Management",
+        "support": "Support",
+        "deployment": "Deployment"
+      },
+      "rows": {
+        "docsPerMonth": "Documents per month",
+        "storage": "Storage",
+        "userSeats": "User seats",
+        "multiFileUpload": "Multi-file upload (drag & drop)",
+        "autoClassification": "Auto-classification",
+        "ocrScanned": "OCR for scanned PDFs",
+        "duplicateDetection": "Duplicate detection",
+        "fullTextSearch": "Full-text search & archive",
+        "schemaFree": "Schema-free AI extraction",
+        "entityDetection": "Entity detection (dates, amounts, names)",
+        "multiPageTable": "Multi-page table extraction",
+        "confidenceScoring": "Confidence scoring per field",
+        "batchProcessing": "Batch processing",
+        "errorRecovery": "Error recovery & retry",
+        "excelTemplate": "Excel template upload",
+        "autoMapping": "AI-powered auto-mapping",
+        "visualEditor": "Visual mapping editor",
+        "templateLibrary": "Template library (save & share)",
+        "formatPreserving": "Format-preserving Excel export",
+        "exportPreview": "Export preview",
+        "auditTrail": "Audit trail",
+        "batchExport": "Batch export",
+        "llmQa": "LLM-Connected Data Q&A",
+        "chatContextRole": "Chat with Context Role",
+        "customRoles": "Custom context roles",
+        "rbac": "Role-based access control",
+        "orgAccounts": "Organization-level accounts",
+        "ssoSaml": "SSO / SAML",
+        "emailSupport": "Email support",
+        "prioritySupport": "Priority support",
+        "dedicatedManager": "Dedicated account manager",
+        "onboarding": "Onboarding & training",
+        "slaGuarantee": "SLA guarantee",
+        "cloudHosted": "Cloud (hosted)",
+        "onPremise": "On-premise option",
+        "customApi": "Custom integrations & API"
+      },
+      "values": {
+        "starter500": "500",
+        "pro5000": "5,000",
+        "unlimited": "Unlimited",
+        "starter5gb": "5 GB",
+        "pro50gb": "50 GB",
+        "custom": "Custom",
+        "starter3seats": "3",
+        "pro15seats": "15"
+      }
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "q1": {
+        "question": "Is there a free trial?",
+        "answer": "Yes. All paid plans include a 14-day free trial. No credit card is required to start. You get full access to all features in your chosen plan during the trial period — so you can evaluate everything before committing."
+      },
+      "q2": {
+        "question": "How does billing work?",
+        "answer": "You can choose monthly or annual billing. Monthly billing is charged at the start of each billing cycle. Annual billing is charged once per year and saves you up to 20% compared to monthly rates. You'll receive an invoice by email for every payment."
+      },
+      "q3": {
+        "question": "Can I cancel at any time?",
+        "answer": "Yes. You can cancel your subscription at any time from your account settings. If you cancel a monthly plan, you retain access until the end of the current billing period. If you cancel an annual plan, your access continues until the end of the annual term — we do not offer pro-rata refunds on annual billing."
+      },
+      "q4": {
+        "question": "Can I upgrade or downgrade my plan?",
+        "answer": "Absolutely. You can upgrade at any time — the change takes effect immediately and you'll be billed a prorated amount for the remainder of your billing cycle. Downgrades take effect at the start of your next billing period."
+      },
+      "q5": {
+        "question": "Who owns my data?",
+        "answer": "You do. All documents you upload and all data extracted by LNA belong entirely to you. We do not use your documents to train AI models. Your data is stored securely and can be exported or deleted at any time. For full details, please review our Privacy Policy and Data Processing Agreement."
+      },
+      "q6": {
+        "question": "Is LNA secure and compliant?",
+        "answer": "LNA is built with security as a foundation. We use encrypted storage, secure API connections, and JWT-based authentication. Organization-level data isolation ensures your data is never accessible to other customers. Enterprise customers can request our full security documentation, and we offer a DPA for GDPR compliance requirements."
+      },
+      "q7": {
+        "question": "What counts as a \"document\"?",
+        "answer": "A document is one PDF file submitted for processing. Whether the PDF is 1 page or 100 pages, it counts as a single document. Re-processing the same file after corrections counts as a new document submission. Uploaded files that are stored but never processed do not count against your monthly limit."
+      },
+      "q8": {
+        "question": "Does LNA have an API?",
+        "answer": "API access is available on the Enterprise plan. It allows you to integrate LNA's extraction, mapping, and export capabilities directly into your own systems and workflows. Contact our sales team for API documentation and integration scoping."
+      }
+    },
+    "cta": {
+      "heading": "Not Sure Which Plan Is Right for You?",
+      "description": "Talk to our team. We'll help you figure out the right fit based on your document volume, team size, and workflow — no pressure, no sales script.",
+      "buttonSales": "Contact Sales",
+      "buttonTrial": "Start a Free Trial →"
+    }
+  },
+  "about": {
+    "hero": {
+      "heading": "Built to End the Copy-Paste Era",
+      "description": "LNA exists because professionals deserve better than spending their day re-entering data by hand. We built an AI platform that processes documents the way a careful analyst would — accurately, automatically, and at scale."
+    },
+    "problem": {
+      "label": "The Problem",
+      "heading": "Millions of Hours Lost to a Spreadsheet That Should Fill Itself",
+      "p1": "Every day, finance teams, operations managers, and data analysts sit down to do the same thing: open a PDF, look at the numbers, and type them into a spreadsheet. Invoice by invoice. Row by row. Page by page.",
+      "p2": "It's slow. It's error-prone. And it scales with headcount, not with ambition — the more documents you process, the more people you need doing it.",
+      "p3": "Organizations lose thousands of hours annually to this workflow. Errors compound — a misread digit on an invoice, a missed row in a report, a field copied to the wrong column — and the cost shows up in audits, reconciliations, and decisions made on bad data.",
+      "p4": "LNA was built specifically to solve this. Not with a workaround. Not with a complicated configuration process. With genuine AI that reads documents the way you would — and outputs structured, accurate, exportable data automatically.",
+      "imageAlt": "Document processing workflow"
+    },
+    "missionVision": {
+      "label": "Mission & Vision",
+      "mission": {
+        "title": "Our Mission",
+        "description": "To eliminate manual document processing for every organization that depends on data — by making intelligent, AI-powered extraction accessible, accurate, and immediately usable."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "A world where no professional loses productive time to data entry — where documents are not just readable, but fully queryable, analyzable, and actionable from the moment they arrive."
+      }
+    },
+    "values": {
+      "label": "What We Stand For",
+      "heading": "The Principles Behind Every Decision We Make",
+      "accuracyFirst": {
+        "title": "Accuracy First",
+        "description": "Data that can't be trusted is worse than no data at all. We build confidence scoring, audit trails, and verification mechanisms into everything LNA does — because your decisions depend on getting it right."
+      },
+      "aiPurpose": {
+        "title": "AI with Purpose",
+        "description": "We don't add AI features because they're impressive. We add them because they solve a real problem. Every AI capability in LNA — from schema-free extraction to context roles — exists because it makes your work meaningfully better."
+      },
+      "customerCentric": {
+        "title": "Customer-Centric by Default",
+        "description": "Our customers are people who process documents for a living. We build for their actual workflows — the templates they've already created, the formats their systems expect, the questions they need to ask of their data."
+      },
+      "transparency": {
+        "title": "Transparency in Every Output",
+        "description": "LNA shows its work. Every extracted field carries a confidence score. Every export includes an audit trail. We believe that automation should be explainable — so you're never in the dark about what the AI did and why."
+      },
+      "innovation": {
+        "title": "Continuous Innovation",
+        "description": "The technology behind document AI is evolving fast, and so are the needs of the teams we serve. We're committed to releasing meaningful improvements consistently — not as marketing moments, but as genuine expansions of what LNA can do for you."
+      }
+    },
+    "team": {
+      "label": "The Team",
+      "heading": "The People Building LNA",
+      "description": "We're a focused team at Manureva Solutions, working to make document intelligence accessible to every organization that relies on data.",
+      "member1": { "name": "Team Member", "role": "Co-Founder & CEO" },
+      "member2": { "name": "Team Member", "role": "CTO" },
+      "member3": { "name": "Team Member", "role": "Head of Product" },
+      "member4": { "name": "Team Member", "role": "Lead AI Engineer" }
+    },
+    "company": {
+      "label": "The Company",
+      "heading": "A Product by Manureva Solutions",
+      "p1": "LNA is developed and maintained by Manureva Solutions — a software company dedicated to building practical, AI-powered tools for professional workflows.",
+      "p2": "Manureva Solutions operates from two locations: Paris, France and Pondicherry, India. Our team brings together expertise in AI engineering, enterprise software, and product design, with a shared focus on building tools that solve real operational problems.",
+      "p3": "LNA is our flagship product — and a direct reflection of our belief that AI should reduce effort, not add complexity. Every feature we ship is designed to make the work of data-intensive professionals a little faster, a little more accurate, and a lot less frustrating.",
+      "p4": "To learn more about Manureva Solutions or explore partnership opportunities, reach out to us at hello@getlna.com"
+    },
+    "cta": {
+      "heading": "Want to See What LNA Can Do?",
+      "description": "Book a demo and we'll walk you through the platform live — using your document types, your templates, and your questions.",
+      "ctaDemo": "Request a Demo",
+      "ctaFeatures": "Explore Features"
+    }
+  },
+  "contact": {
+    "hero": {
+      "heading": "Let's Talk",
+      "description": "Whether you're ready for a demo, have a question about pricing, or want to explore a partnership — we're here. We typically respond within 24 hours."
+    },
+    "sidebar": {
+      "heading": "Other Ways to Reach Us",
+      "emailLabel": "Email",
+      "emailAddress": "hello@getlna.com",
+      "emailNote": "We respond within 24 hours on business days.",
+      "responseLabel": "Response Time",
+      "responseText": "We typically respond within 24 hours.",
+      "socialLabel": "Follow Us",
+      "linkedin": "Follow us on LinkedIn",
+      "twitter": "Follow us on X",
+      "officesLabel": "Office Locations",
+      "paris": "Paris, France",
+      "pondicherry": "Pondicherry, India"
+    }
+  },
+  "blog": {
+    "hero": {
+      "heading": "Blog & Resources",
+      "description": "Insights on document AI, product updates, and best practices for teams automating their document workflows."
+    },
+    "emptyState": "No posts yet. Check back soon!",
+    "rssLink": "Subscribe via RSS",
+    "backToBlog": "Back to Blog",
+    "backToAll": "Back to all posts"
+  },
+  "privacy": {
+    "heading": "Privacy Policy",
+    "updated": "Last updated: March 1, 2026",
+    "onThisPage": "On this page",
+    "sections": {
+      "informationWeCollect": "1. Information We Collect",
+      "howWeUse": "2. How We Use Your Information",
+      "dataProcessing": "3. Document Data Processing",
+      "dataStorage": "4. Data Storage & Security",
+      "dataSharing": "5. Data Sharing",
+      "yourRights": "6. Your Rights",
+      "cookies": "7. Cookies & Tracking",
+      "dataRetention": "8. Data Retention",
+      "changes": "9. Changes to This Policy",
+      "contact": "10. Contact Us"
+    },
+    "intro": "This Privacy Policy describes how Manureva Solutions (\"we,\" \"us,\" or \"our\") collects, uses, and protects information when you use LNA (\"the Platform\"). We are committed to protecting your privacy and handling your data responsibly.",
+    "s1": {
+      "heading": "1. Information We Collect",
+      "intro": "We collect information in the following categories:",
+      "account": "Account Information:",
+      "accountDesc": "Name, email address, company name, and role when you create an account or request a demo.",
+      "document": "Document Data:",
+      "documentDesc": "PDF files and documents you upload for processing. See Section 3 for details on how we handle document data.",
+      "usage": "Usage Data:",
+      "usageDesc": "Information about how you interact with LNA, including pages visited, features used, and session duration.",
+      "technical": "Technical Data:",
+      "technicalDesc": "Browser type, device information, IP address, and operating system."
+    },
+    "s2": {
+      "heading": "2. How We Use Your Information",
+      "intro": "We use your information to:",
+      "b1": "Provide and maintain the LNA platform",
+      "b2": "Process your documents and deliver extraction results",
+      "b3": "Send account-related communications",
+      "b4": "Improve our services and develop new features",
+      "b5": "Respond to your inquiries and provide support",
+      "b6": "Comply with legal obligations"
+    },
+    "s3": {
+      "heading": "3. Document Data Processing",
+      "intro": "Your documents are processed solely to provide extraction and analysis services. We want to be clear about how we handle your document data:",
+      "ownership": "Your Data, Your Ownership:",
+      "ownershipDesc": "All documents you upload and all data extracted by LNA belong entirely to you.",
+      "noTraining": "No AI Training:",
+      "noTrainingDesc": "We do not use your documents or extracted data to train AI models.",
+      "isolation": "Isolation:",
+      "isolationDesc": "Organization-level data isolation ensures your data is never accessible to other customers.",
+      "encryption": "Encryption:",
+      "encryptionDesc": "Documents are encrypted at rest and in transit using industry-standard encryption protocols."
+    },
+    "s4": {
+      "heading": "4. Data Storage & Security",
+      "intro": "We implement appropriate technical and organizational measures to protect your data, including:",
+      "b1": "Encrypted storage for all documents and extracted data",
+      "b2": "Secure API connections with JWT-based authentication",
+      "b3": "Regular security audits and vulnerability assessments",
+      "b4": "Role-based access control within the platform",
+      "b5": "Organization-level data isolation for multi-tenant environments"
+    },
+    "s5": {
+      "heading": "5. Data Sharing",
+      "intro": "We do not sell your personal information or document data. We may share information with:",
+      "serviceProviders": "Service Providers:",
+      "serviceProvidersDesc": "Third-party services that help us operate the platform (e.g., cloud infrastructure, analytics).",
+      "legalRequirements": "Legal Requirements:",
+      "legalRequirementsDesc": "When required by law, regulation, or legal process.",
+      "businessTransfers": "Business Transfers:",
+      "businessTransfersDesc": "In connection with a merger, acquisition, or sale of assets."
+    },
+    "s6": {
+      "heading": "6. Your Rights",
+      "intro": "Depending on your jurisdiction, you may have the following rights:",
+      "b1": "Access your personal data",
+      "b2": "Correct inaccurate data",
+      "b3": "Delete your data",
+      "b4": "Export your data in a portable format",
+      "b5": "Object to certain data processing activities",
+      "b6": "Withdraw consent where applicable",
+      "exerciseRights": "To exercise any of these rights, contact us at",
+      "gdpr": "For GDPR-related requests, we offer a Data Processing Agreement (DPA) for Enterprise customers."
+    },
+    "s7": {
+      "heading": "7. Cookies & Tracking",
+      "intro": "We use cookies and similar technologies for:",
+      "essential": "Essential Cookies:",
+      "essentialDesc": "Required for the platform to function (e.g., authentication, session management).",
+      "analytics": "Analytics Cookies:",
+      "analyticsDesc": "Help us understand how the platform is used so we can improve it.",
+      "manage": "You can manage cookie preferences through your browser settings."
+    },
+    "s8": {
+      "heading": "8. Data Retention",
+      "text": "We retain your data for as long as your account is active or as needed to provide services. Document data can be exported or deleted at any time from your account settings. After account deletion, we remove your data within 30 days, except where retention is required by law."
+    },
+    "s9": {
+      "heading": "9. Changes to This Policy",
+      "text": "We may update this Privacy Policy from time to time. We will notify you of significant changes via email or through the platform. Continued use of LNA after changes constitutes acceptance of the updated policy."
+    },
+    "s10": {
+      "heading": "10. Contact Us",
+      "intro": "If you have questions about this Privacy Policy or our data practices, contact us at:",
+      "email": "Email:",
+      "generalInquiries": "General inquiries:",
+      "orVisit": "Or visit our",
+      "contactPage": "Contact page",
+      "company": "Manureva Solutions",
+      "locations": "Paris, France & Pondicherry, India"
+    }
+  },
+  "terms": {
+    "heading": "Terms of Service",
+    "updated": "Last updated: March 1, 2026",
+    "onThisPage": "On this page",
+    "sections": {
+      "acceptance": "1. Acceptance of Terms",
+      "description": "2. Description of Service",
+      "accounts": "3. Accounts & Registration",
+      "usage": "4. Acceptable Use",
+      "dataOwnership": "5. Data Ownership",
+      "payment": "6. Payment & Billing",
+      "cancellation": "7. Cancellation & Refunds",
+      "ip": "8. Intellectual Property",
+      "liability": "9. Limitation of Liability",
+      "indemnification": "10. Indemnification",
+      "changes": "11. Changes to Terms",
+      "governingLaw": "12. Governing Law",
+      "contact": "13. Contact"
+    },
+    "intro": "These Terms of Service (\"Terms\") govern your use of the LNA platform (\"Service\") provided by Manureva Solutions (\"we,\" \"us,\" or \"our\"). By using LNA, you agree to these Terms.",
+    "s1": {
+      "text": "By creating an account or using LNA, you agree to be bound by these Terms. If you are using LNA on behalf of an organization, you represent that you have the authority to bind that organization to these Terms."
+    },
+    "s2": {
+      "text": "LNA is an AI-powered document processing platform that extracts structured data from PDF documents and exports it to Excel format. The Service includes document upload, AI-powered data extraction, template mapping, export capabilities, and related features as described on our website."
+    },
+    "s3": {
+      "intro": "To use LNA, you must:",
+      "b1": "Provide accurate and complete registration information",
+      "b2": "Maintain the security of your account credentials",
+      "b3": "Notify us immediately of any unauthorized use of your account",
+      "b4": "Be at least 18 years old or have legal authority to enter into these Terms",
+      "responsibility": "You are responsible for all activity that occurs under your account."
+    },
+    "s4": {
+      "intro": "You agree not to:",
+      "b1": "Use the Service for any unlawful purpose or in violation of any applicable laws",
+      "b2": "Upload documents containing malware or malicious content",
+      "b3": "Attempt to gain unauthorized access to the Service or its systems",
+      "b4": "Interfere with or disrupt the Service or its infrastructure",
+      "b5": "Reverse engineer, decompile, or disassemble any part of the Service",
+      "b6": "Share your account credentials with unauthorized parties",
+      "b7": "Exceed the usage limits of your plan without upgrading"
+    },
+    "s5": {
+      "intro": "Your data belongs to you. All documents you upload and all data extracted by LNA remain your property. We do not claim any ownership rights over your content.",
+      "b1": "We do not use your documents to train AI models",
+      "b2": "You can export or delete your data at any time",
+      "b3": "Upon account termination, your data will be deleted within 30 days",
+      "footer": "For details on how we handle your data, see our",
+      "privacyPolicy": "Privacy Policy"
+    },
+    "s6": {
+      "b1": "Paid plans are billed monthly or annually, depending on your selection",
+      "b2": "All prices are in USD and do not include applicable taxes",
+      "b3": "Annual plans are billed in full at the start of the annual term",
+      "b4": "We reserve the right to change pricing with 30 days' notice",
+      "b5": "All paid plans include a 14-day free trial with no credit card required"
+    },
+    "s7": {
+      "intro": "You may cancel your subscription at any time from your account settings:",
+      "monthly": "Monthly plans:",
+      "monthlyDesc": "Access continues until the end of the current billing period",
+      "annual": "Annual plans:",
+      "annualDesc": "Access continues until the end of the annual term. We do not offer pro-rata refunds on annual billing",
+      "downgrades": "Downgrades:",
+      "downgradesDesc": "Take effect at the start of your next billing period",
+      "upgrades": "Upgrades:",
+      "upgradesDesc": "Take effect immediately with prorated billing"
+    },
+    "s8": {
+      "text": "The Service, including its software, design, documentation, and branding, is the property of Manureva Solutions and is protected by intellectual property laws. You may not copy, modify, distribute, or create derivative works based on the Service without our prior written consent."
+    },
+    "s9": {
+      "text": "To the maximum extent permitted by law, Manureva Solutions shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service. Our total liability for any claim arising from these Terms shall not exceed the amount paid by you to us in the 12 months preceding the claim."
+    },
+    "s10": {
+      "text": "You agree to indemnify and hold harmless Manureva Solutions from any claims, damages, or expenses arising from your use of the Service, your violation of these Terms, or your violation of any rights of a third party."
+    },
+    "s11": {
+      "text": "We may update these Terms from time to time. We will notify you of material changes via email or through the platform at least 30 days before they take effect. Your continued use of the Service after changes constitutes acceptance of the updated Terms."
+    },
+    "s12": {
+      "text": "These Terms are governed by the laws of France. Any disputes arising from these Terms shall be resolved in the courts of Paris, France."
+    },
+    "s13": {
+      "intro": "For questions about these Terms, contact us at:",
+      "email": "Email:",
+      "generalInquiries": "General inquiries:",
+      "orVisit": "Or visit our",
+      "contactPage": "Contact page",
+      "company": "Manureva Solutions",
+      "locations": "Paris, France & Pondicherry, India"
+    }
+  },
+  "error": {
+    "notFound": {
+      "heading": "Page Not Found",
+      "description": "The page you're looking for doesn't exist or has been moved. Let's get you back on track.",
+      "goHome": "Go Home",
+      "contactSupport": "Contact Support"
+    },
+    "general": {
+      "heading": "Something Went Wrong",
+      "description": "An unexpected error occurred. Please try again, or contact support if the problem persists.",
+      "retry": "Try Again",
+      "goHome": "Go Home"
+    },
+    "global": {
+      "heading": "Something Went Wrong",
+      "description": "A critical error occurred. Please try refreshing the page.",
+      "retry": "Try Again"
+    }
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "cookieConsent": {
+      "heading": "We value your privacy",
+      "description": "We use cookies to enhance your experience and analyze site usage. You can accept all cookies or choose essential-only.",
+      "acceptAll": "Accept All",
+      "essentialOnly": "Essential Only"
+    },
+    "requestDemo": "Request a Demo"
+  },
+  "demoForm": {
+    "heading": "Request a Demo",
+    "description": "See how LNA can automate your document processing workflow.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Your full name",
+    "emailLabel": "Work Email",
+    "emailPlaceholder": "you@yourcompany.com",
+    "companyLabel": "Company",
+    "companyPlaceholder": "Your company name",
+    "roleLabel": "Your Role",
+    "rolePlaceholder": "Select your role...",
+    "messageLabel": "Message",
+    "messageOptional": "(optional)",
+    "messagePlaceholder": "Tell us about your document processing needs",
+    "submit": "Request a Demo",
+    "submitting": "Submitting...",
+    "tryAgain": "Try Again",
+    "required": "*",
+    "success": {
+      "heading": "You're on the list!",
+      "description": "Thank you for your interest in LNA. We'll reach out within 24 hours to schedule your personalized demo.",
+      "close": "Close"
+    },
+    "errors": {
+      "nameRequired": "Name is required.",
+      "emailRequired": "Email is required.",
+      "emailInvalid": "Please enter a valid email address.",
+      "companyRequired": "Company is required.",
+      "roleRequired": "Please select your role.",
+      "generic": "Something went wrong. Please try again."
+    },
+    "roles": {
+      "ceo": "CEO",
+      "cto": "CTO",
+      "vpEngineering": "VP Engineering",
+      "productManager": "Product Manager",
+      "developer": "Developer",
+      "other": "Other"
+    }
+  },
+  "newsletter": {
+    "emailPlaceholder": "your@email.com",
+    "emailLabel": "Email for newsletter",
+    "subscribe": "Subscribe",
+    "success": "You're subscribed! Check your email to confirm.",
+    "invalidEmail": "Please enter a valid email address."
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "fr": "FR",
+    "en": "EN"
+  }
+}

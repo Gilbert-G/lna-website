@@ -1,23 +1,26 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
-
-const navLinks = [
-  { href: "/features", label: "Features" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
-];
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 
 export function Header() {
   const pathname = usePathname();
+  const t = useTranslations("nav");
+
+  const navLinks = [
+    { href: "/features", label: t("features") },
+    { href: "/pricing", label: t("pricing") },
+    { href: "/about", label: t("about") },
+    { href: "/blog", label: t("blog") },
+  ];
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -67,7 +70,7 @@ export function Header() {
 
         <nav
           className="hidden items-center gap-1 md:flex"
-          aria-label="Main navigation"
+          aria-label={t("mainNavigation")}
         >
           {navLinks.map((link) => (
             <Link
@@ -86,15 +89,16 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
+          <LanguageSwitcher />
           <Button size="lg" render={<Link href="/contact" />}>
-            Request Demo
+            {t("cta")}
           </Button>
         </div>
 
         <button
           className="text-foreground md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-label={mobileOpen ? t("menuClose") : t("menuOpen")}
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X className="size-6" /> : <Menu className="size-6" />}
@@ -129,7 +133,7 @@ export function Header() {
           </Link>
           <button
             onClick={() => setMobileOpen(false)}
-            aria-label="Close menu"
+            aria-label={t("menuClose")}
             className="text-foreground"
           >
             <X className="size-6" />
@@ -137,7 +141,7 @@ export function Header() {
         </div>
         <nav
           className="flex flex-1 flex-col gap-1 p-4"
-          aria-label="Mobile navigation"
+          aria-label={t("mobileNavigation")}
         >
           {navLinks.map((link) => (
             <Link
@@ -154,7 +158,7 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <div className="mt-4">
+          <div className="mt-4 flex flex-col gap-3">
             <Button
               size="lg"
               className="w-full"
@@ -162,8 +166,11 @@ export function Header() {
                 <Link href="/contact" onClick={() => setMobileOpen(false)} />
               }
             >
-              Request Demo
+              {t("cta")}
             </Button>
+            <div className="flex justify-center">
+              <LanguageSwitcher />
+            </div>
           </div>
         </nav>
       </div>

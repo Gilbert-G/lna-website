@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { DemoRequestForm } from "./DemoRequestForm";
 
 export function DemoRequestModal() {
+  const t = useTranslations("demoForm");
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -46,7 +48,7 @@ export function DemoRequestModal() {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="Request a Demo"
+        aria-label={t("heading")}
         className="bg-card relative z-10 w-full max-w-lg rounded-2xl border p-6 shadow-xl sm:p-8"
       >
         <DemoRequestForm isModal onClose={() => setOpen(false)} />

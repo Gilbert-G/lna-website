@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 
 const CONSENT_KEY = "lna-cookie-consent";
@@ -30,6 +31,7 @@ function getServerSnapshot() {
 }
 
 export function CookieConsent() {
+  const t = useTranslations("common");
   const consent = useSyncExternalStore(
     subscribeNoop,
     getConsentSnapshot,
@@ -51,17 +53,16 @@ export function CookieConsent() {
 
   return (
     <div className="bg-card fixed right-0 bottom-0 left-0 z-50 border-t p-4 shadow-lg sm:right-auto sm:bottom-4 sm:left-4 sm:max-w-sm sm:rounded-xl sm:border">
-      <p className="text-sm font-medium">We value your privacy</p>
+      <p className="text-sm font-medium">{t("cookieConsent.heading")}</p>
       <p className="text-muted-foreground mt-1 text-xs">
-        We use cookies to enhance your experience and analyze site usage. You
-        can accept all cookies or choose essential-only.
+        {t("cookieConsent.description")}
       </p>
       <div className="mt-3 flex gap-2">
         <Button size="sm" onClick={() => accept("all")}>
-          Accept All
+          {t("cookieConsent.acceptAll")}
         </Button>
         <Button variant="outline" size="sm" onClick={() => accept("essential")}>
-          Essential Only
+          {t("cookieConsent.essentialOnly")}
         </Button>
       </div>
     </div>
