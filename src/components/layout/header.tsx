@@ -92,7 +92,7 @@ export function Header() {
         </div>
 
         <button
-          className="text-foreground md:hidden"
+          className="text-foreground -mr-2 rounded-lg p-2.5 md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}

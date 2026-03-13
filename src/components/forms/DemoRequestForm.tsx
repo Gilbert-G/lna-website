@@ -108,7 +108,7 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
           <CheckCircle2 className="text-primary size-16" />
           <span className="absolute -top-1 -right-1 text-2xl">🎉</span>
         </div>
-        <h3 className="mt-4 text-2xl font-bold">You&apos;re on the list!</h3>
+        <h2 className="mt-4 text-2xl font-bold">You&apos;re on the list!</h2>
         <p className="text-muted-foreground mt-2 max-w-sm">
           Thank you for your interest in LNA. We&apos;ll reach out within 24
           hours to schedule your personalized demo.
@@ -137,7 +137,7 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
         </button>
       )}
       <div className="mb-6">
-        <h3 className="text-xl font-bold">Request a Demo</h3>
+        <h2 className="text-xl font-bold">Request a Demo</h2>
         <p className="text-muted-foreground mt-1 text-sm">
           See how LNA can automate your document processing workflow.
         </p>

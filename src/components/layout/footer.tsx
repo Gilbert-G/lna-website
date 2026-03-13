@@ -65,7 +65,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="text-muted-foreground hover:text-foreground rounded-lg p-2 transition-colors"
+                  className="text-muted-foreground hover:text-foreground rounded-lg p-3 transition-colors"
                 >
                   <link.icon className="size-5" />
                 </a>
@@ -96,10 +96,16 @@ export function Footer() {
         <div className="text-muted-foreground mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-sm md:flex-row">
           <p>&copy; 2026 Manureva Solutions. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-foreground transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-foreground transition-colors"
+            >
               Privacy
             </Link>
-            <Link href="/terms" className="hover:text-foreground transition-colors">
+            <Link
+              href="/terms"
+              className="hover:text-foreground transition-colors"
+            >
               Terms
             </Link>
           </div>

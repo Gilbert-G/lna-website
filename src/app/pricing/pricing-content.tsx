@@ -114,82 +114,262 @@ const comparisonData: ComparisonCategory[] = [
   {
     category: "Documents & Storage",
     rows: [
-      { feature: "Documents per month", starter: "500", professional: "5,000", enterprise: "Unlimited" },
-      { feature: "Storage", starter: "5 GB", professional: "50 GB", enterprise: "Custom" },
-      { feature: "User seats", starter: "3", professional: "15", enterprise: "Unlimited" },
+      {
+        feature: "Documents per month",
+        starter: "500",
+        professional: "5,000",
+        enterprise: "Unlimited",
+      },
+      {
+        feature: "Storage",
+        starter: "5 GB",
+        professional: "50 GB",
+        enterprise: "Custom",
+      },
+      {
+        feature: "User seats",
+        starter: "3",
+        professional: "15",
+        enterprise: "Unlimited",
+      },
     ],
   },
   {
     category: "Document Management",
     rows: [
-      { feature: "Multi-file upload (drag & drop)", starter: true, professional: true, enterprise: true },
-      { feature: "Auto-classification", starter: true, professional: true, enterprise: true },
-      { feature: "OCR for scanned PDFs", starter: true, professional: true, enterprise: true },
-      { feature: "Duplicate detection", starter: true, professional: true, enterprise: true },
-      { feature: "Full-text search & archive", starter: true, professional: true, enterprise: true },
+      {
+        feature: "Multi-file upload (drag & drop)",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Auto-classification",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "OCR for scanned PDFs",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Duplicate detection",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Full-text search & archive",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
     ],
   },
   {
     category: "Data Extraction",
     rows: [
-      { feature: "Schema-free AI extraction", starter: true, professional: true, enterprise: true },
-      { feature: "Entity detection (dates, amounts, names)", starter: true, professional: true, enterprise: true },
-      { feature: "Multi-page table extraction", starter: true, professional: true, enterprise: true },
-      { feature: "Confidence scoring per field", starter: true, professional: true, enterprise: true },
-      { feature: "Batch processing", starter: true, professional: true, enterprise: true },
-      { feature: "Error recovery & retry", starter: true, professional: true, enterprise: true },
+      {
+        feature: "Schema-free AI extraction",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Entity detection (dates, amounts, names)",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Multi-page table extraction",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Confidence scoring per field",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Batch processing",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Error recovery & retry",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
     ],
   },
   {
     category: "Template & Mapping",
     rows: [
-      { feature: "Excel template upload", starter: true, professional: true, enterprise: true },
-      { feature: "AI-powered auto-mapping", starter: true, professional: true, enterprise: true },
-      { feature: "Visual mapping editor", starter: true, professional: true, enterprise: true },
-      { feature: "Template library (save & share)", starter: false, professional: true, enterprise: true },
+      {
+        feature: "Excel template upload",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "AI-powered auto-mapping",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Visual mapping editor",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Template library (save & share)",
+        starter: false,
+        professional: true,
+        enterprise: true,
+      },
     ],
   },
   {
     category: "Export",
     rows: [
-      { feature: "Format-preserving Excel export", starter: true, professional: true, enterprise: true },
-      { feature: "Export preview", starter: true, professional: true, enterprise: true },
-      { feature: "Audit trail", starter: true, professional: true, enterprise: true },
-      { feature: "Batch export", starter: false, professional: true, enterprise: true },
+      {
+        feature: "Format-preserving Excel export",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Export preview",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Audit trail",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Batch export",
+        starter: false,
+        professional: true,
+        enterprise: true,
+      },
     ],
   },
   {
     category: "AI Intelligence",
     rows: [
-      { feature: "LLM-Connected Data Q&A", starter: false, professional: true, enterprise: true },
-      { feature: "Chat with Context Role", starter: false, professional: true, enterprise: true },
-      { feature: "Custom context roles", starter: false, professional: false, enterprise: true },
+      {
+        feature: "LLM-Connected Data Q&A",
+        starter: false,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Chat with Context Role",
+        starter: false,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Custom context roles",
+        starter: false,
+        professional: false,
+        enterprise: true,
+      },
     ],
   },
   {
     category: "User Management",
     rows: [
-      { feature: "Role-based access control", starter: true, professional: true, enterprise: true },
-      { feature: "Organization-level accounts", starter: true, professional: true, enterprise: true },
-      { feature: "SSO / SAML", starter: false, professional: false, enterprise: true },
+      {
+        feature: "Role-based access control",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Organization-level accounts",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "SSO / SAML",
+        starter: false,
+        professional: false,
+        enterprise: true,
+      },
     ],
   },
   {
     category: "Support",
     rows: [
-      { feature: "Email support", starter: true, professional: true, enterprise: true },
-      { feature: "Priority support", starter: false, professional: true, enterprise: true },
-      { feature: "Dedicated account manager", starter: false, professional: false, enterprise: true },
-      { feature: "Onboarding & training", starter: false, professional: false, enterprise: true },
-      { feature: "SLA guarantee", starter: false, professional: false, enterprise: true },
+      {
+        feature: "Email support",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Priority support",
+        starter: false,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "Dedicated account manager",
+        starter: false,
+        professional: false,
+        enterprise: true,
+      },
+      {
+        feature: "Onboarding & training",
+        starter: false,
+        professional: false,
+        enterprise: true,
+      },
+      {
+        feature: "SLA guarantee",
+        starter: false,
+        professional: false,
+        enterprise: true,
+      },
     ],
   },
   {
     category: "Deployment",
     rows: [
-      { feature: "Cloud (hosted)", starter: true, professional: true, enterprise: true },
-      { feature: "On-premise option", starter: false, professional: false, enterprise: true },
-      { feature: "Custom integrations & API", starter: false, professional: false, enterprise: true },
+      {
+        feature: "Cloud (hosted)",
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      {
+        feature: "On-premise option",
+        starter: false,
+        professional: false,
+        enterprise: true,
+      },
+      {
+        feature: "Custom integrations & API",
+        starter: false,
+        professional: false,
+        enterprise: true,
+      },
     ],
   },
 ];
@@ -243,7 +423,9 @@ const faqs = [
 
 function CellContent({ value }: { value: CellValue }) {
   if (value === true) {
-    return <Check className="mx-auto size-5 text-green-600 dark:text-green-400" />;
+    return (
+      <Check className="mx-auto size-5 text-green-600 dark:text-green-400" />
+    );
   }
   if (value === false) {
     return <Minus className="text-muted-foreground/40 mx-auto size-5" />;
@@ -313,6 +495,7 @@ export function PricingContent() {
       {/* ── Tier Cards ── */}
       <Section className="pt-8 md:pt-12">
         <Container>
+          <h2 className="sr-only">Plans</h2>
           <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-3">
             {tiers.map((tier, i) => {
               const isPro = tier.name === "Professional";
@@ -428,9 +611,7 @@ export function PricingContent() {
               <table className="w-full min-w-[640px] text-sm">
                 <thead>
                   <tr className="bg-muted/50 border-b">
-                    <th className="px-4 py-3 text-left font-medium">
-                      Feature
-                    </th>
+                    <th className="px-4 py-3 text-left font-medium">Feature</th>
                     <th className="px-4 py-3 text-center font-medium">
                       Starter
                     </th>
@@ -448,13 +629,16 @@ export function PricingContent() {
                       <tr key={cat.category}>
                         <td
                           colSpan={4}
-                          className="bg-muted/30 px-4 py-2 text-xs font-semibold uppercase tracking-wide"
+                          className="bg-muted/30 px-4 py-2 text-xs font-semibold tracking-wide uppercase"
                         >
                           {cat.category}
                         </td>
                       </tr>
                       {cat.rows.map((row) => (
-                        <tr key={row.feature} className="border-b last:border-0">
+                        <tr
+                          key={row.feature}
+                          className="border-b last:border-0"
+                        >
                           <td className="px-4 py-2.5">{row.feature}</td>
                           <td className="px-4 py-2.5 text-center">
                             <CellContent value={row.starter} />
@@ -492,7 +676,7 @@ export function PricingContent() {
                     onClick={() => toggleFaq(i)}
                     onKeyDown={(e) => handleFaqKeyDown(e, i)}
                     aria-expanded={openFaq === i}
-                    className="flex w-full items-center justify-between px-5 py-4 text-left text-sm font-medium transition-colors hover:bg-muted/50"
+                    className="hover:bg-muted/50 flex w-full items-center justify-between px-5 py-4 text-left text-sm font-medium transition-colors"
                   >
                     {faq.question}
                     <ChevronDown
@@ -543,7 +727,11 @@ export function PricingContent() {
               <Button size="lg" render={<Link href="/contact" />}>
                 Contact Sales
               </Button>
-              <Button variant="outline" size="lg" render={<Link href="/contact" />}>
+              <Button
+                variant="outline"
+                size="lg"
+                render={<Link href="/contact" />}
+              >
                 Start a Free Trial →
               </Button>
             </div>
