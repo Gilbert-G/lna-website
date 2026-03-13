@@ -4,16 +4,20 @@ import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { DemoRequestForm } from "@/components/forms/DemoRequestForm";
 import { Mail, Clock, Linkedin, Twitter, MapPin } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Contact LNA — Get in Touch With Our Team",
+export const metadata: Metadata = createPageMetadata({
+  title: "Contact LNA — Get Started with AI Document Processing",
   description:
     "Reach out to the LNA team for demos, sales inquiries, support, or partnerships. We respond within 24 hours.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
     <>
+      <Breadcrumbs items={[{ name: "Contact", url: "/contact" }]} />
       {/* Hero */}
       <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />

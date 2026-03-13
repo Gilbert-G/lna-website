@@ -3,16 +3,20 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { PricingContent } from "./pricing-content";
+import { createPageMetadata } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "LNA Pricing — Plans for Every Team Size",
+export const metadata: Metadata = createPageMetadata({
+  title: "LNA Pricing — Starter, Professional & Enterprise Plans",
   description:
     "Simple, transparent pricing for LNA's AI document processing platform. Starter from $49/mo. Free trial available on all plans. No credit card required.",
-};
+  path: "/pricing",
+});
 
 export default function PricingPage() {
   return (
     <>
+      <Breadcrumbs items={[{ name: "Pricing", url: "/pricing" }]} />
       {/* Hero */}
       <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />

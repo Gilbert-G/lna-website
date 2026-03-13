@@ -13,12 +13,15 @@ import { LinkButton } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
+import { createPageMetadata } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "About LNA — Intelligent Document Processing by Manureva Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "About LNA — Our Mission to Transform Document Processing",
   description:
     "LNA is an AI-powered document processing platform built by Manureva Solutions. Learn about our mission, our team, and why we built LNA.",
-};
+  path: "/about",
+});
 
 const values = [
   {
@@ -54,15 +57,32 @@ const values = [
 ];
 
 const teamMembers = [
-  { name: "Team Member", role: "Co-Founder & CEO", photo: "/illustrations/team/placeholder-1.svg" },
-  { name: "Team Member", role: "CTO", photo: "/illustrations/team/placeholder-2.svg" },
-  { name: "Team Member", role: "Head of Product", photo: "/illustrations/team/placeholder-3.svg" },
-  { name: "Team Member", role: "Lead AI Engineer", photo: "/illustrations/team/placeholder-4.svg" },
+  {
+    name: "Team Member",
+    role: "Co-Founder & CEO",
+    photo: "/illustrations/team/placeholder-1.svg",
+  },
+  {
+    name: "Team Member",
+    role: "CTO",
+    photo: "/illustrations/team/placeholder-2.svg",
+  },
+  {
+    name: "Team Member",
+    role: "Head of Product",
+    photo: "/illustrations/team/placeholder-3.svg",
+  },
+  {
+    name: "Team Member",
+    role: "Lead AI Engineer",
+    photo: "/illustrations/team/placeholder-4.svg",
+  },
 ];
 
 export default function AboutPage() {
   return (
     <>
+      <Breadcrumbs items={[{ name: "About", url: "/about" }]} />
       {/* Hero */}
       <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
@@ -89,7 +109,7 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <AnimateIn>
               <div>
-                <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+                <span className="text-primary text-xs font-semibold tracking-widest uppercase">
                   The Problem
                 </span>
                 <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
@@ -143,7 +163,7 @@ export default function AboutPage() {
       <Section className="bg-muted/30">
         <Container>
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               Mission &amp; Vision
             </span>
           </AnimateIn>
@@ -179,7 +199,7 @@ export default function AboutPage() {
       <Section>
         <Container>
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               What We Stand For
             </span>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
@@ -206,7 +226,7 @@ export default function AboutPage() {
       <Section className="bg-muted/30">
         <Container>
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               The Team
             </span>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
@@ -248,7 +268,7 @@ export default function AboutPage() {
       <Section>
         <Container className="max-w-3xl">
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               The Company
             </span>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
@@ -263,8 +283,8 @@ export default function AboutPage() {
                 tools for professional workflows.
               </p>
               <p>
-                Manureva Solutions operates from two locations: Paris, France and
-                Pondicherry, India. Our team brings together expertise in AI
+                Manureva Solutions operates from two locations: Paris, France
+                and Pondicherry, India. Our team brings together expertise in AI
                 engineering, enterprise software, and product design, with a
                 shared focus on building tools that solve real operational
                 problems.

@@ -18,12 +18,16 @@ import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { VideoEmbed } from "@/components/media/VideoEmbed";
+import { createPageMetadata } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "LNA Features — AI Document Processing & Intelligent Data Extraction",
+export const metadata: Metadata = createPageMetadata({
+  title:
+    "LNA Features — Intelligent Data Extraction, LLM Q&A, Chat with Context",
   description:
     "Explore LNA's full feature set: AI data extraction, PDF to Excel export, LLM-powered Q&A, and context-aware AI roles. See what sets LNA apart.",
-};
+  path: "/features",
+});
 
 const features = [
   {
@@ -198,6 +202,7 @@ const comparisonRows = [
 export default function FeaturesPage() {
   return (
     <>
+      <Breadcrumbs items={[{ name: "Features", url: "/features" }]} />
       {/* Hero */}
       <Section className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />

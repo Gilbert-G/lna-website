@@ -7,6 +7,8 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { SITE_URL } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -24,10 +26,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} — LNA Blog`,
     description: post.description,
+    alternates: {
+      canonical: `${SITE_URL}/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
+      url: `${SITE_URL}/blog/${slug}`,
+      siteName: "LNA",
       images: post.image ? [{ url: post.image }] : [],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
     },
   };
 }
@@ -39,6 +52,12 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Blog", url: "/blog" },
+          { name: post.title, url: `/blog/${slug}` },
+        ]}
+      />
       {/* Header */}
       <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
         <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
@@ -51,7 +70,7 @@ export default async function BlogPostPage({ params }: Props) {
               <ArrowLeft className="size-3.5" />
               Back to Blog
             </Link>
-            <span className="text-primary mt-4 block text-xs font-semibold uppercase tracking-wide">
+            <span className="text-primary mt-4 block text-xs font-semibold tracking-wide uppercase">
               {post.category}
             </span>
             <h1 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">

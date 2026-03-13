@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { createPageMetadata } from "@/lib/metadata";
 import {
   Zap,
   ShieldCheck,
@@ -26,6 +28,13 @@ import { Badge } from "@/components/ui/badge";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { DemoModalTrigger } from "@/components/forms/DemoModalTrigger";
 import { VideoEmbed } from "@/components/media/VideoEmbed";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "LNA — AI-Powered Document Processing | PDF to Excel Automation",
+  description:
+    "LNA extracts structured data from any PDF and exports it to Excel automatically. AI-powered document processing with 99.5% accuracy. Request a demo.",
+  path: "/",
+});
 
 export default function HomePage() {
   return (
