@@ -1,24 +1,11 @@
-import Link from "next/link";
+"use client";
+
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { NewsletterForm } from "@/components/layout/newsletter-form";
-
-const footerLinks = {
-  Product: [
-    { href: "/features", label: "Features" },
-    { href: "/pricing", label: "Pricing" },
-    { href: "/blog", label: "Blog" },
-  ],
-  Company: [
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ],
-  Legal: [
-    { href: "/privacy", label: "Privacy Policy" },
-    { href: "/terms", label: "Terms of Service" },
-  ],
-};
+import { useTranslations } from "next-intl";
 
 const socialLinks = [
   { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
@@ -27,6 +14,24 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const t = useTranslations("footer");
+
+  const footerLinks = {
+    [t("product")]: [
+      { href: "/features", label: t("features") },
+      { href: "/pricing", label: t("pricing") },
+      { href: "/blog", label: t("blog") },
+    ],
+    [t("company")]: [
+      { href: "/about", label: t("about") },
+      { href: "/contact", label: t("contact") },
+    ],
+    [t("legal")]: [
+      { href: "/privacy", label: t("privacyPolicy") },
+      { href: "/terms", label: t("termsOfService") },
+    ],
+  };
+
   return (
     <footer className="bg-muted/30 border-t">
       <Container className="py-12 md:py-16">
@@ -50,11 +55,10 @@ export function Footer() {
               />
             </Link>
             <p className="text-muted-foreground mt-4 max-w-sm text-sm">
-              AI-powered document processing that turns PDFs into structured
-              Excel data — automatically.
+              {t("description")}
             </p>
             <div className="mt-6">
-              <p className="mb-2 text-sm font-medium">Stay updated</p>
+              <p className="mb-2 text-sm font-medium">{t("stayUpdated")}</p>
               <NewsletterForm />
             </div>
             <div className="mt-6 flex gap-3">
@@ -94,13 +98,13 @@ export function Footer() {
         </div>
 
         <div className="text-muted-foreground mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-sm md:flex-row">
-          <p>&copy; 2026 Manureva Solutions. All rights reserved.</p>
+          <p>{t("copyright")}</p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-foreground transition-colors">
-              Privacy
+              {t("privacy")}
             </Link>
             <Link href="/terms" className="hover:text-foreground transition-colors">
-              Terms
+              {t("terms")}
             </Link>
           </div>
         </div>

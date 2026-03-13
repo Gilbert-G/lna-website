@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -9,16 +10,20 @@ import { AnimateIn } from "@/components/ui/animate-in";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+  const locales = ["en", "fr"];
+  return locales.flatMap((locale) =>
+    posts.map((post) => ({ locale, slug: post.slug }))
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
@@ -33,7 +38,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "blog" });
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
@@ -49,7 +56,7 @@ export default async function BlogPostPage({ params }: Props) {
               className="text-muted-foreground hover:text-foreground mb-6 inline-flex items-center gap-1.5 text-sm transition-colors"
             >
               <ArrowLeft className="size-3.5" />
-              Back to Blog
+              {t("backToBlog")}
             </Link>
             <span className="text-primary mt-4 block text-xs font-semibold uppercase tracking-wide">
               {post.category}
@@ -61,7 +68,7 @@ export default async function BlogPostPage({ params }: Props) {
               <span>{post.author}</span>
               <span className="inline-flex items-center gap-1">
                 <Calendar className="size-3.5" />
-                {new Date(post.date).toLocaleDateString("en-US", {
+                {new Date(post.date).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US", {
                   month: "long",
                   day: "numeric",
                   year: "numeric",
@@ -95,7 +102,7 @@ export default async function BlogPostPage({ params }: Props) {
             className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1.5 text-sm transition-colors"
           >
             <ArrowLeft className="size-3.5" />
-            Back to all posts
+            {t("backToAll")}
           </Link>
         </Container>
       </Section>
