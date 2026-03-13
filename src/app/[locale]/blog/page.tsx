@@ -1,19 +1,32 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { getAllPosts } from "@/lib/blog";
 
-export const metadata: Metadata = {
-  title: "LNA Blog — Document AI Insights, Product Updates & Best Practices",
-  description:
-    "Stay up to date with the latest in AI document processing, product updates from LNA, and best practices for automating PDF to Excel workflows.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo.blog" });
+  return { title: t("title"), description: t("description") };
+}
 
-export default function BlogPage() {
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "blog" });
+
   const posts = getAllPosts();
 
   return (
@@ -24,13 +37,12 @@ export default function BlogPage() {
         <Container className="relative text-center">
           <AnimateIn>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Blog &amp; Resources
+              {t("hero.heading")}
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.1}>
             <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
-              Insights on document AI, product updates, and best practices for
-              teams automating their document workflows.
+              {t("hero.description")}
             </p>
           </AnimateIn>
         </Container>
@@ -41,7 +53,7 @@ export default function BlogPage() {
         <Container>
           {posts.length === 0 ? (
             <p className="text-muted-foreground text-center">
-              No posts yet. Check back soon!
+              {t("emptyState")}
             </p>
           ) : (
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -62,10 +74,10 @@ export default function BlogPage() {
                       </div>
                     )}
                     <div className="flex flex-1 flex-col p-5">
-                      <span className="text-primary text-xs font-semibold uppercase tracking-wide">
+                      <span className="text-primary text-xs font-semibold tracking-wide uppercase">
                         {post.category}
                       </span>
-                      <h2 className="mt-2 text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                      <h2 className="group-hover:text-primary mt-2 text-lg leading-snug font-bold transition-colors">
                         {post.title}
                       </h2>
                       <p className="text-muted-foreground mt-2 line-clamp-2 text-sm">
@@ -74,11 +86,14 @@ export default function BlogPage() {
                       <div className="text-muted-foreground mt-auto flex items-center gap-4 pt-4 text-xs">
                         <span className="inline-flex items-center gap-1">
                           <Calendar className="size-3" />
-                          {new Date(post.date).toLocaleDateString("en-US", {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          })}
+                          {new Date(post.date).toLocaleDateString(
+                            locale === "fr" ? "fr-FR" : "en-US",
+                            {
+                              month: "short",
+                              day: "numeric",
+                              year: "numeric",
+                            }
+                          )}
                         </span>
                         <span className="inline-flex items-center gap-1">
                           <Clock className="size-3" />
@@ -101,7 +116,7 @@ export default function BlogPage() {
             href="/feed.xml"
             className="text-muted-foreground hover:text-primary inline-flex items-center gap-2 text-sm transition-colors"
           >
-            Subscribe via RSS
+            {t("rssLink")}
             <ArrowRight className="size-3" />
           </a>
         </Container>
