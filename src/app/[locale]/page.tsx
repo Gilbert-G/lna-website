@@ -28,7 +28,11 @@ import { DemoModalTrigger } from "@/components/forms/DemoModalTrigger";
 import { VideoEmbed } from "@/components/media/VideoEmbed";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "home" });
@@ -105,7 +109,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <div className="bg-primary/10 text-primary rounded-xl p-3">
                     <tile.icon className="size-6" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t(`valueProp.${tile.key}.headline`)}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {t(`valueProp.${tile.key}.headline`)}
+                  </h3>
                   <p className="text-muted-foreground text-sm">
                     {t(`valueProp.${tile.key}.description`)}
                   </p>
@@ -141,12 +147,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <AnimateIn key={step.key} delay={i * 0.15}>
                 <div className="bg-card flex flex-col items-center rounded-2xl border p-6 text-center">
                   <span className="text-primary mb-2 text-xs font-bold tracking-widest uppercase">
-                    {t(`howItWorks.${step.key}.step`)} — {t(`howItWorks.${step.key}.label`)}
+                    {t(`howItWorks.${step.key}.step`)} —{" "}
+                    {t(`howItWorks.${step.key}.label`)}
                   </span>
                   <div className="bg-primary/10 text-primary mb-4 rounded-xl p-4">
                     <step.icon className="size-8" />
                   </div>
-                  <h3 className="mb-2 text-xl font-semibold">{t(`howItWorks.${step.key}.title`)}</h3>
+                  <h3 className="mb-2 text-xl font-semibold">
+                    {t(`howItWorks.${step.key}.title`)}
+                  </h3>
                   <p className="text-muted-foreground text-sm">
                     {t(`howItWorks.${step.key}.description`)}
                   </p>
@@ -167,7 +176,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </AnimateIn>
           <AnimateIn delay={0.4}>
             <div className="mx-auto mt-12 max-w-4xl">
-              <VideoEmbed src="dQw4w9WgXcQ" title={t("howItWorks.videoTitle")} />
+              <VideoEmbed
+                src="dQw4w9WgXcQ"
+                title={t("howItWorks.videoTitle")}
+              />
             </div>
           </AnimateIn>
         </Container>
@@ -203,7 +215,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <div className="bg-primary/10 text-primary w-fit rounded-xl p-3">
                     <feature.icon className="size-6" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t(`features.${feature.key}.title`)}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {t(`features.${feature.key}.title`)}
+                  </h3>
                   <p className="text-muted-foreground text-sm">
                     {t(`features.${feature.key}.description`)}
                   </p>
@@ -313,39 +327,47 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <div className="text-primary text-3xl font-extrabold">
                     {t(`socialProof.stats.${stat.key}.value`)}
                   </div>
-                  <p className="text-muted-foreground text-sm">{t(`socialProof.stats.${stat.key}.label`)}</p>
+                  <p className="text-muted-foreground text-sm">
+                    {t(`socialProof.stats.${stat.key}.label`)}
+                  </p>
                 </div>
               </AnimateIn>
             ))}
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {[
-              { key: "sarah" },
-              { key: "james" },
-              { key: "marie" },
-            ].map((testimonial, i) => (
-              <AnimateIn key={testimonial.key} delay={i * 0.1}>
-                <div className="bg-card flex flex-col gap-4 rounded-2xl border p-6">
-                  <div className="flex gap-1">
-                    {Array.from({ length: 5 }).map((_, j) => (
-                      <Star
-                        key={j}
-                        className="size-4 fill-amber-400 text-amber-400"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground text-sm italic">
-                    &ldquo;{t(`socialProof.testimonials.${testimonial.key}.quote`)}&rdquo;
-                  </p>
-                  <div className="mt-auto">
-                    <p className="text-sm font-semibold">{t(`socialProof.testimonials.${testimonial.key}.name`)}</p>
-                    <p className="text-muted-foreground text-xs">
-                      {t(`socialProof.testimonials.${testimonial.key}.title`)}, {t(`socialProof.testimonials.${testimonial.key}.company`)}
+            {[{ key: "sarah" }, { key: "james" }, { key: "marie" }].map(
+              (testimonial, i) => (
+                <AnimateIn key={testimonial.key} delay={i * 0.1}>
+                  <div className="bg-card flex flex-col gap-4 rounded-2xl border p-6">
+                    <div className="flex gap-1">
+                      {Array.from({ length: 5 }).map((_, j) => (
+                        <Star
+                          key={j}
+                          className="size-4 fill-amber-400 text-amber-400"
+                        />
+                      ))}
+                    </div>
+                    <p className="text-muted-foreground text-sm italic">
+                      &ldquo;
+                      {t(`socialProof.testimonials.${testimonial.key}.quote`)}
+                      &rdquo;
                     </p>
+                    <div className="mt-auto">
+                      <p className="text-sm font-semibold">
+                        {t(`socialProof.testimonials.${testimonial.key}.name`)}
+                      </p>
+                      <p className="text-muted-foreground text-xs">
+                        {t(`socialProof.testimonials.${testimonial.key}.title`)}
+                        ,{" "}
+                        {t(
+                          `socialProof.testimonials.${testimonial.key}.company`
+                        )}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </AnimateIn>
-            ))}
+                </AnimateIn>
+              )
+            )}
           </div>
         </Container>
       </Section>
@@ -375,9 +397,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 {t("cta.ctaPricing")} <ArrowRight className="size-4" />
               </Link>
             </div>
-            <p className="mt-4 text-sm text-blue-200">
-              {t("cta.microcopy")}
-            </p>
+            <p className="mt-4 text-sm text-blue-200">{t("cta.microcopy")}</p>
           </AnimateIn>
         </Container>
       </Section>

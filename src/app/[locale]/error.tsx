@@ -30,10 +30,7 @@ export default function Error({
       </p>
       <div className="mt-8 flex gap-3">
         <Button onClick={reset}>{t("general.retry")}</Button>
-        <Button
-          variant="outline"
-          onClick={() => (window.location.href = "/")}
-        >
+        <Button variant="outline" onClick={() => (window.location.href = "/")}>
           {t("general.goHome")}
         </Button>
       </div>

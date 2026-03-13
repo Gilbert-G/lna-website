@@ -24,7 +24,9 @@ type CellValue = string | boolean;
 
 function CellContent({ value }: { value: CellValue }) {
   if (value === true) {
-    return <Check className="mx-auto size-5 text-green-600 dark:text-green-400" />;
+    return (
+      <Check className="mx-auto size-5 text-green-600 dark:text-green-400" />
+    );
   }
   if (value === false) {
     return <Minus className="text-muted-foreground/40 mx-auto size-5" />;
@@ -124,74 +126,239 @@ export function PricingContent() {
     {
       category: t("comparison.categories.documentManagement"),
       rows: [
-        { feature: t("comparison.rows.multiFileUpload"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.autoClassification"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.ocrScanned"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.duplicateDetection"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.fullTextSearch"), starter: true, professional: true, enterprise: true },
+        {
+          feature: t("comparison.rows.multiFileUpload"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.autoClassification"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.ocrScanned"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.duplicateDetection"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.fullTextSearch"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
       ],
     },
     {
       category: t("comparison.categories.dataExtraction"),
       rows: [
-        { feature: t("comparison.rows.schemaFree"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.entityDetection"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.multiPageTable"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.confidenceScoring"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.batchProcessing"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.errorRecovery"), starter: true, professional: true, enterprise: true },
+        {
+          feature: t("comparison.rows.schemaFree"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.entityDetection"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.multiPageTable"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.confidenceScoring"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.batchProcessing"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.errorRecovery"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
       ],
     },
     {
       category: t("comparison.categories.templateMapping"),
       rows: [
-        { feature: t("comparison.rows.excelTemplate"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.autoMapping"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.visualEditor"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.templateLibrary"), starter: false, professional: true, enterprise: true },
+        {
+          feature: t("comparison.rows.excelTemplate"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.autoMapping"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.visualEditor"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.templateLibrary"),
+          starter: false,
+          professional: true,
+          enterprise: true,
+        },
       ],
     },
     {
       category: t("comparison.categories.export"),
       rows: [
-        { feature: t("comparison.rows.formatPreserving"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.exportPreview"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.auditTrail"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.batchExport"), starter: false, professional: true, enterprise: true },
+        {
+          feature: t("comparison.rows.formatPreserving"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.exportPreview"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.auditTrail"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.batchExport"),
+          starter: false,
+          professional: true,
+          enterprise: true,
+        },
       ],
     },
     {
       category: t("comparison.categories.aiIntelligence"),
       rows: [
-        { feature: t("comparison.rows.llmQa"), starter: false, professional: true, enterprise: true },
-        { feature: t("comparison.rows.chatContextRole"), starter: false, professional: true, enterprise: true },
-        { feature: t("comparison.rows.customRoles"), starter: false, professional: false, enterprise: true },
+        {
+          feature: t("comparison.rows.llmQa"),
+          starter: false,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.chatContextRole"),
+          starter: false,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.customRoles"),
+          starter: false,
+          professional: false,
+          enterprise: true,
+        },
       ],
     },
     {
       category: t("comparison.categories.userManagement"),
       rows: [
-        { feature: t("comparison.rows.rbac"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.orgAccounts"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.ssoSaml"), starter: false, professional: false, enterprise: true },
+        {
+          feature: t("comparison.rows.rbac"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.orgAccounts"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.ssoSaml"),
+          starter: false,
+          professional: false,
+          enterprise: true,
+        },
       ],
     },
     {
       category: t("comparison.categories.support"),
       rows: [
-        { feature: t("comparison.rows.emailSupport"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.prioritySupport"), starter: false, professional: true, enterprise: true },
-        { feature: t("comparison.rows.dedicatedManager"), starter: false, professional: false, enterprise: true },
-        { feature: t("comparison.rows.onboarding"), starter: false, professional: false, enterprise: true },
-        { feature: t("comparison.rows.slaGuarantee"), starter: false, professional: false, enterprise: true },
+        {
+          feature: t("comparison.rows.emailSupport"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.prioritySupport"),
+          starter: false,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.dedicatedManager"),
+          starter: false,
+          professional: false,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.onboarding"),
+          starter: false,
+          professional: false,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.slaGuarantee"),
+          starter: false,
+          professional: false,
+          enterprise: true,
+        },
       ],
     },
     {
       category: t("comparison.categories.deployment"),
       rows: [
-        { feature: t("comparison.rows.cloudHosted"), starter: true, professional: true, enterprise: true },
-        { feature: t("comparison.rows.onPremise"), starter: false, professional: false, enterprise: true },
-        { feature: t("comparison.rows.customApi"), starter: false, professional: false, enterprise: true },
+        {
+          feature: t("comparison.rows.cloudHosted"),
+          starter: true,
+          professional: true,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.onPremise"),
+          starter: false,
+          professional: false,
+          enterprise: true,
+        },
+        {
+          feature: t("comparison.rows.customApi"),
+          starter: false,
+          professional: false,
+          enterprise: true,
+        },
       ],
     },
   ];
@@ -384,13 +551,16 @@ export function PricingContent() {
                       <tr key={cat.category}>
                         <td
                           colSpan={4}
-                          className="bg-muted/30 px-4 py-2 text-xs font-semibold uppercase tracking-wide"
+                          className="bg-muted/30 px-4 py-2 text-xs font-semibold tracking-wide uppercase"
                         >
                           {cat.category}
                         </td>
                       </tr>
                       {cat.rows.map((row) => (
-                        <tr key={row.feature} className="border-b last:border-0">
+                        <tr
+                          key={row.feature}
+                          className="border-b last:border-0"
+                        >
                           <td className="px-4 py-2.5">{row.feature}</td>
                           <td className="px-4 py-2.5 text-center">
                             <CellContent value={row.starter} />
@@ -428,7 +598,7 @@ export function PricingContent() {
                     onClick={() => toggleFaq(i)}
                     onKeyDown={(e) => handleFaqKeyDown(e, i)}
                     aria-expanded={openFaq === i}
-                    className="flex w-full items-center justify-between px-5 py-4 text-left text-sm font-medium transition-colors hover:bg-muted/50"
+                    className="hover:bg-muted/50 flex w-full items-center justify-between px-5 py-4 text-left text-sm font-medium transition-colors"
                   >
                     {faq.question}
                     <ChevronDown
@@ -477,7 +647,11 @@ export function PricingContent() {
               <Button size="lg" render={<Link href="/contact" />}>
                 {t("cta.buttonSales")}
               </Button>
-              <Button variant="outline" size="lg" render={<Link href="/contact" />}>
+              <Button
+                variant="outline"
+                size="lg"
+                render={<Link href="/contact" />}
+              >
                 {t("cta.buttonTrial")}
               </Button>
             </div>

@@ -8,13 +8,21 @@ import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { getAllPosts } from "@/lib/blog";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "seo.blog" });
   return { title: t("title"), description: t("description") };
 }
 
-export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "blog" });
@@ -66,10 +74,10 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
                       </div>
                     )}
                     <div className="flex flex-1 flex-col p-5">
-                      <span className="text-primary text-xs font-semibold uppercase tracking-wide">
+                      <span className="text-primary text-xs font-semibold tracking-wide uppercase">
                         {post.category}
                       </span>
-                      <h2 className="mt-2 text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                      <h2 className="group-hover:text-primary mt-2 text-lg leading-snug font-bold transition-colors">
                         {post.title}
                       </h2>
                       <p className="text-muted-foreground mt-2 line-clamp-2 text-sm">
@@ -78,11 +86,14 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
                       <div className="text-muted-foreground mt-auto flex items-center gap-4 pt-4 text-xs">
                         <span className="inline-flex items-center gap-1">
                           <Calendar className="size-3" />
-                          {new Date(post.date).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US", {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          })}
+                          {new Date(post.date).toLocaleDateString(
+                            locale === "fr" ? "fr-FR" : "en-US",
+                            {
+                              month: "short",
+                              day: "numeric",
+                              year: "numeric",
+                            }
+                          )}
                         </span>
                         <span className="inline-flex items-center gap-1">
                           <Clock className="size-3" />

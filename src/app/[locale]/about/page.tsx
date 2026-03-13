@@ -15,19 +15,33 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "seo.about" });
   return { title: t("title"), description: t("description") };
 }
 
-export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "about" });
 
   const valueIcons = [ShieldCheck, Lightbulb, Users, Eye, Sparkles];
-  const valueKeys = ["accuracyFirst", "aiPurpose", "customerCentric", "transparency", "innovation"] as const;
+  const valueKeys = [
+    "accuracyFirst",
+    "aiPurpose",
+    "customerCentric",
+    "transparency",
+    "innovation",
+  ] as const;
 
   const teamPhotos = [
     "/illustrations/team/placeholder-1.svg",
@@ -62,7 +76,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <AnimateIn>
               <div>
-                <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+                <span className="text-primary text-xs font-semibold tracking-widest uppercase">
                   {t("problem.label")}
                 </span>
                 <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
@@ -95,7 +109,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <Section className="bg-muted/30">
         <Container>
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               {t("missionVision.label")}
             </span>
           </AnimateIn>
@@ -103,7 +117,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <AnimateIn delay={0.1}>
               <div className="bg-card rounded-2xl border p-8">
                 <Target className="text-primary size-8" />
-                <h3 className="mt-4 text-xl font-bold">{t("missionVision.mission.title")}</h3>
+                <h3 className="mt-4 text-xl font-bold">
+                  {t("missionVision.mission.title")}
+                </h3>
                 <p className="text-muted-foreground mt-3 leading-relaxed">
                   {t("missionVision.mission.description")}
                 </p>
@@ -112,7 +128,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <AnimateIn delay={0.2}>
               <div className="bg-card rounded-2xl border p-8">
                 <Eye className="text-primary size-8" />
-                <h3 className="mt-4 text-xl font-bold">{t("missionVision.vision.title")}</h3>
+                <h3 className="mt-4 text-xl font-bold">
+                  {t("missionVision.vision.title")}
+                </h3>
                 <p className="text-muted-foreground mt-3 leading-relaxed">
                   {t("missionVision.vision.description")}
                 </p>
@@ -126,7 +144,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <Section>
         <Container>
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               {t("values.label")}
             </span>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
@@ -140,7 +158,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 <AnimateIn key={key} delay={0.1 * i}>
                   <div className="bg-card rounded-2xl border p-6">
                     <Icon className="text-primary size-6" />
-                    <h3 className="mt-3 text-lg font-bold">{t(`values.${key}.title`)}</h3>
+                    <h3 className="mt-3 text-lg font-bold">
+                      {t(`values.${key}.title`)}
+                    </h3>
                     <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
                       {t(`values.${key}.description`)}
                     </p>
@@ -156,7 +176,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <Section className="bg-muted/30">
         <Container>
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               {t("team.label")}
             </span>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
@@ -196,7 +216,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <Section>
         <Container className="max-w-3xl">
           <AnimateIn>
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               {t("company.label")}
             </span>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
