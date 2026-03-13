@@ -1,4 +1,5 @@
 # Pricing Page Copy — LNA
+
 **File:** `pricing.md`
 **Page:** Pricing (`/pricing`)
 **LNAW-17**
@@ -17,14 +18,17 @@
 ## Page Header
 
 ### Headline
+
 Simple Pricing. Serious Results.
 
 ### Subheadline
+
 Every plan includes core AI extraction and Excel export. Upgrade when you need LLM Q&A, context roles, and deeper team controls.
 
 ### Annual Billing Toggle Note
+
 **Save up to 20% with annual billing**
-*Billed annually · Cancel anytime*
+_Billed annually · Cancel anytime_
 
 ---
 
@@ -37,10 +41,11 @@ Every plan includes core AI extraction and Excel export. Upgrade when you need L
 - **Plan Name:** Starter
 - **Tagline:** Everything you need to stop manual data entry.
 - **Monthly Price:** $49/month
-- **Annual Price:** $39/month *(billed annually — save $120/year)*
+- **Annual Price:** $39/month _(billed annually — save $120/year)_
 - **Annual Billing Badge:** Best for individuals & small teams
 
 #### Included
+
 - Up to **500 documents/month**
 - **3 user seats**
 - **5GB** document storage
@@ -55,6 +60,7 @@ Every plan includes core AI extraction and Excel export. Upgrade when you need L
 - Email support
 
 #### Not Included
+
 - LLM-Connected Data Q&A
 - Chat with Context Role
 - Template library
@@ -62,22 +68,25 @@ Every plan includes core AI extraction and Excel export. Upgrade when you need L
 - SSO/SAML
 
 #### CTA Button
+
 **Start Free Trial**
 
 #### CTA Microcopy
+
 14-day free trial · No credit card required
 
 ---
 
-### Tier 2: Professional *(Recommended)*
+### Tier 2: Professional _(Recommended)_
 
 - **Plan Name:** Professional
 - **Recommended Badge:** Most Popular
 - **Tagline:** For growing teams that need AI intelligence, not just extraction.
 - **Monthly Price:** $149/month
-- **Annual Price:** $119/month *(billed annually — save $360/year)*
+- **Annual Price:** $119/month _(billed annually — save $360/year)_
 
 #### Included
+
 - Up to **5,000 documents/month**
 - **15 user seats**
 - **50GB** document storage
@@ -89,6 +98,7 @@ Every plan includes core AI extraction and Excel export. Upgrade when you need L
 - Priority email and chat support
 
 #### Not Included
+
 - SSO/SAML
 - Dedicated account manager
 - Custom integrations
@@ -96,9 +106,11 @@ Every plan includes core AI extraction and Excel export. Upgrade when you need L
 - On-premise deployment
 
 #### CTA Button
+
 **Start Free Trial**
 
 #### CTA Microcopy
+
 14-day free trial · No credit card required
 
 ---
@@ -111,6 +123,7 @@ Every plan includes core AI extraction and Excel export. Upgrade when you need L
 - **Price Subtext:** Tailored to your volume and requirements
 
 #### Included
+
 - **Unlimited documents/month**
 - **Unlimited user seats**
 - **Custom storage** allocation
@@ -124,147 +137,165 @@ Every plan includes core AI extraction and Excel export. Upgrade when you need L
 - Priority onboarding and training
 
 #### CTA Button
+
 **Contact Sales**
 
 #### CTA Microcopy
+
 We'll respond within one business day.
 
 ---
 
 ## Annual Billing Callout
 
-*Display as a banner or highlighted note above or below the pricing cards.*
+_Display as a banner or highlighted note above or below the pricing cards._
 
 ### Headline
+
 Save Up to 20% With Annual Billing
 
 ### Body
+
 Switch to annual billing and save $120/year on Starter or $360/year on Professional. All plans include the same features — you just pay less.
 
 ### Toggle Label
-Monthly | **Annual** *(Save 20%)*
+
+Monthly | **Annual** _(Save 20%)_
 
 ---
 
 ## Feature Comparison Table
 
-*Full-width table below the pricing cards. Group features by category.*
+_Full-width table below the pricing cards. Group features by category._
 
 ### Table Header
 
-| Feature | Starter | Professional | Enterprise |
-|---|:---:|:---:|:---:|
-| **DOCUMENTS & STORAGE** | | | |
-| Documents per month | 500 | 5,000 | Unlimited |
-| Storage | 5 GB | 50 GB | Custom |
-| User seats | 3 | 15 | Unlimited |
-| **DOCUMENT MANAGEMENT** | | | |
-| Multi-file upload (drag & drop) | ✓ | ✓ | ✓ |
-| Auto-classification | ✓ | ✓ | ✓ |
-| OCR for scanned PDFs | ✓ | ✓ | ✓ |
-| Duplicate detection | ✓ | ✓ | ✓ |
-| Full-text search & archive | ✓ | ✓ | ✓ |
-| **DATA EXTRACTION** | | | |
-| Schema-free AI extraction | ✓ | ✓ | ✓ |
-| Entity detection (dates, amounts, names) | ✓ | ✓ | ✓ |
-| Multi-page table extraction | ✓ | ✓ | ✓ |
-| Confidence scoring per field | ✓ | ✓ | ✓ |
-| Batch processing | ✓ | ✓ | ✓ |
-| Error recovery & retry | ✓ | ✓ | ✓ |
-| **TEMPLATE & MAPPING** | | | |
-| Excel template upload | ✓ | ✓ | ✓ |
-| AI-powered auto-mapping | ✓ | ✓ | ✓ |
-| Visual mapping editor | ✓ | ✓ | ✓ |
-| Template library (save & share) | — | ✓ | ✓ |
-| **EXPORT** | | | |
-| Format-preserving Excel export | ✓ | ✓ | ✓ |
-| Export preview | ✓ | ✓ | ✓ |
-| Audit trail | ✓ | ✓ | ✓ |
-| Batch export | — | ✓ | ✓ |
-| **AI INTELLIGENCE** | | | |
-| LLM-Connected Data Q&A | — | ✓ | ✓ |
-| Chat with Context Role | — | ✓ | ✓ |
-| Custom context roles | — | — | ✓ |
-| **USER MANAGEMENT** | | | |
-| Role-based access control | ✓ | ✓ | ✓ |
-| Organization-level accounts | ✓ | ✓ | ✓ |
-| SSO / SAML | — | — | ✓ |
-| **SUPPORT** | | | |
-| Email support | ✓ | ✓ | ✓ |
-| Priority support | — | ✓ | ✓ |
-| Dedicated account manager | — | — | ✓ |
-| Onboarding & training | — | — | ✓ |
-| SLA guarantee | — | — | ✓ |
-| **DEPLOYMENT** | | | |
-| Cloud (hosted) | ✓ | ✓ | ✓ |
-| On-premise option | — | — | ✓ |
-| Custom integrations & API | — | — | ✓ |
+| Feature                                  | Starter | Professional | Enterprise |
+| ---------------------------------------- | :-----: | :----------: | :--------: |
+| **DOCUMENTS & STORAGE**                  |         |              |            |
+| Documents per month                      |   500   |    5,000     | Unlimited  |
+| Storage                                  |  5 GB   |    50 GB     |   Custom   |
+| User seats                               |    3    |      15      | Unlimited  |
+| **DOCUMENT MANAGEMENT**                  |         |              |            |
+| Multi-file upload (drag & drop)          |    ✓    |      ✓       |     ✓      |
+| Auto-classification                      |    ✓    |      ✓       |     ✓      |
+| OCR for scanned PDFs                     |    ✓    |      ✓       |     ✓      |
+| Duplicate detection                      |    ✓    |      ✓       |     ✓      |
+| Full-text search & archive               |    ✓    |      ✓       |     ✓      |
+| **DATA EXTRACTION**                      |         |              |            |
+| Schema-free AI extraction                |    ✓    |      ✓       |     ✓      |
+| Entity detection (dates, amounts, names) |    ✓    |      ✓       |     ✓      |
+| Multi-page table extraction              |    ✓    |      ✓       |     ✓      |
+| Confidence scoring per field             |    ✓    |      ✓       |     ✓      |
+| Batch processing                         |    ✓    |      ✓       |     ✓      |
+| Error recovery & retry                   |    ✓    |      ✓       |     ✓      |
+| **TEMPLATE & MAPPING**                   |         |              |            |
+| Excel template upload                    |    ✓    |      ✓       |     ✓      |
+| AI-powered auto-mapping                  |    ✓    |      ✓       |     ✓      |
+| Visual mapping editor                    |    ✓    |      ✓       |     ✓      |
+| Template library (save & share)          |    —    |      ✓       |     ✓      |
+| **EXPORT**                               |         |              |            |
+| Format-preserving Excel export           |    ✓    |      ✓       |     ✓      |
+| Export preview                           |    ✓    |      ✓       |     ✓      |
+| Audit trail                              |    ✓    |      ✓       |     ✓      |
+| Batch export                             |    —    |      ✓       |     ✓      |
+| **AI INTELLIGENCE**                      |         |              |            |
+| LLM-Connected Data Q&A                   |    —    |      ✓       |     ✓      |
+| Chat with Context Role                   |    —    |      ✓       |     ✓      |
+| Custom context roles                     |    —    |      —       |     ✓      |
+| **USER MANAGEMENT**                      |         |              |            |
+| Role-based access control                |    ✓    |      ✓       |     ✓      |
+| Organization-level accounts              |    ✓    |      ✓       |     ✓      |
+| SSO / SAML                               |    —    |      —       |     ✓      |
+| **SUPPORT**                              |         |              |            |
+| Email support                            |    ✓    |      ✓       |     ✓      |
+| Priority support                         |    —    |      ✓       |     ✓      |
+| Dedicated account manager                |    —    |      —       |     ✓      |
+| Onboarding & training                    |    —    |      —       |     ✓      |
+| SLA guarantee                            |    —    |      —       |     ✓      |
+| **DEPLOYMENT**                           |         |              |            |
+| Cloud (hosted)                           |    ✓    |      ✓       |     ✓      |
+| On-premise option                        |    —    |      —       |     ✓      |
+| Custom integrations & API                |    —    |      —       |     ✓      |
 
 ---
 
 ## Frequently Asked Questions
 
-*Display as an expandable accordion. 8 questions.*
+_Display as an expandable accordion. 8 questions._
 
 ---
 
 ### Q1: Is there a free trial?
+
 Yes. All paid plans include a 14-day free trial. No credit card is required to start. You get full access to all features in your chosen plan during the trial period — so you can evaluate everything before committing.
 
 ---
 
 ### Q2: How does billing work?
+
 You can choose monthly or annual billing. Monthly billing is charged at the start of each billing cycle. Annual billing is charged once per year and saves you up to 20% compared to monthly rates. You'll receive an invoice by email for every payment.
 
 ---
 
 ### Q3: Can I cancel at any time?
+
 Yes. You can cancel your subscription at any time from your account settings. If you cancel a monthly plan, you retain access until the end of the current billing period. If you cancel an annual plan, your access continues until the end of the annual term — we do not offer pro-rata refunds on annual billing.
 
 ---
 
 ### Q4: Can I upgrade or downgrade my plan?
+
 Absolutely. You can upgrade at any time — the change takes effect immediately and you'll be billed a prorated amount for the remainder of your billing cycle. Downgrades take effect at the start of your next billing period.
 
 ---
 
 ### Q5: Who owns my data?
+
 You do. All documents you upload and all data extracted by LNA belong entirely to you. We do not use your documents to train AI models. Your data is stored securely and can be exported or deleted at any time. For full details, please review our Privacy Policy and Data Processing Agreement.
 
 ---
 
 ### Q6: Is LNA secure and compliant?
+
 LNA is built with security as a foundation. We use encrypted storage, secure API connections, and JWT-based authentication. Organization-level data isolation ensures your data is never accessible to other customers. Enterprise customers can request our full security documentation, and we offer a DPA for GDPR compliance requirements.
 
 ---
 
 ### Q7: What counts as a "document"?
+
 A document is one PDF file submitted for processing. Whether the PDF is 1 page or 100 pages, it counts as a single document. Re-processing the same file after corrections counts as a new document submission. Uploaded files that are stored but never processed do not count against your monthly limit.
 
 ---
 
 ### Q8: Does LNA have an API?
+
 API access is available on the Enterprise plan. It allows you to integrate LNA's extraction, mapping, and export capabilities directly into your own systems and workflows. Contact our sales team for API documentation and integration scoping.
 
 ---
 
 ## Pricing Page Final CTA
 
-*Section at the bottom of the page before the footer.*
+_Section at the bottom of the page before the footer._
 
 ### Headline
+
 Not Sure Which Plan Is Right for You?
 
 ### Subtext
+
 Talk to our team. We'll help you figure out the right fit based on your document volume, team size, and workflow — no pressure, no sales script.
 
 ### Primary CTA
+
 **Contact Sales**
 
 ### Secondary CTA
+
 **Start a Free Trial →**
 
 ### Trust Signals
+
 - 14-day free trial on all plans
 - No credit card required
 - Cancel anytime

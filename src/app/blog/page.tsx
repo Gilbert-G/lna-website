@@ -62,10 +62,10 @@ export default function BlogPage() {
                       </div>
                     )}
                     <div className="flex flex-1 flex-col p-5">
-                      <span className="text-primary text-xs font-semibold uppercase tracking-wide">
+                      <span className="text-primary text-xs font-semibold tracking-wide uppercase">
                         {post.category}
                       </span>
-                      <h2 className="mt-2 text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                      <h2 className="group-hover:text-primary mt-2 text-lg leading-snug font-bold transition-colors">
                         {post.title}
                       </h2>
                       <p className="text-muted-foreground mt-2 line-clamp-2 text-sm">
