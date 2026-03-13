@@ -167,7 +167,9 @@ test.describe("Accessibility: keyboard navigation", () => {
     expect(focusStyle).not.toBeNull();
     // Should have some visual focus indicator (outline or box-shadow)
     const hasFocusIndicator =
-      (focusStyle!.outline && focusStyle!.outline !== "none" && focusStyle!.outlineWidth !== "0px") ||
+      (focusStyle!.outline &&
+        focusStyle!.outline !== "none" &&
+        focusStyle!.outlineWidth !== "0px") ||
       (focusStyle!.boxShadow && focusStyle!.boxShadow !== "none");
     expect(hasFocusIndicator).toBe(true);
   });

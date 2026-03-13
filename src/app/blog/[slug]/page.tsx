@@ -51,7 +51,7 @@ export default async function BlogPostPage({ params }: Props) {
               <ArrowLeft className="size-3.5" />
               Back to Blog
             </Link>
-            <span className="text-primary mt-4 block text-xs font-semibold uppercase tracking-wide">
+            <span className="text-primary mt-4 block text-xs font-semibold tracking-wide uppercase">
               {post.category}
             </span>
             <h1 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">

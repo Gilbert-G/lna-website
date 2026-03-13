@@ -13,12 +13,17 @@ const pages = [
 
 test.describe("Links: internal link validation", () => {
   for (const { path, name } of pages) {
-    test(`${name} page internal links return 200`, async ({ page, request }) => {
+    test(`${name} page internal links return 200`, async ({
+      page,
+      request,
+    }) => {
       await page.goto(path, { waitUntil: "domcontentloaded" });
 
       const internalHrefs = await page.evaluate(() => {
         const links = document.querySelectorAll('a[href^="/"]');
-        return [...new Set(Array.from(links).map((a) => a.getAttribute("href")!))];
+        return [
+          ...new Set(Array.from(links).map((a) => a.getAttribute("href")!)),
+        ];
       });
 
       for (const href of internalHrefs) {
@@ -168,9 +173,7 @@ test.describe("Forms: demo request form validation", () => {
     ).toBeVisible();
   });
 
-  test("demo form submits successfully with valid data", async ({
-    page,
-  }) => {
+  test("demo form submits successfully with valid data", async ({ page }) => {
     // Mock the API endpoint
     await page.route("/api/demo-request", (route) => {
       route.fulfill({ status: 200, body: JSON.stringify({ ok: true }) });
@@ -189,7 +192,6 @@ test.describe("Forms: demo request form validation", () => {
     await expect(page.getByText("You're on the list!")).toBeVisible();
   });
 });
-
 
 test.describe("Forms: newsletter form validation", () => {
   test("newsletter form rejects empty email", async ({ page }) => {

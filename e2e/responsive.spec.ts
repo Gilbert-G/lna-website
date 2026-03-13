@@ -26,7 +26,9 @@ async function hasNoHorizontalScroll(page: Page) {
 test.describe("Responsive: breakpoint testing", () => {
   for (const viewport of viewports) {
     test.describe(`${viewport.name} (${viewport.width}px)`, () => {
-      test.use({ viewport: { width: viewport.width, height: viewport.height } });
+      test.use({
+        viewport: { width: viewport.width, height: viewport.height },
+      });
 
       for (const { path, name } of pages) {
         test(`${name} page has no horizontal scrollbar`, async ({ page }) => {
@@ -118,7 +120,9 @@ test.describe("Responsive: mobile navigation", () => {
 
     // Click the close button via JS to bypass z-index / overlay issues in WebKit
     await page.evaluate(() => {
-      const buttons = document.querySelectorAll('button[aria-label="Close menu"]');
+      const buttons = document.querySelectorAll(
+        'button[aria-label="Close menu"]'
+      );
       if (buttons.length > 0) (buttons[0] as HTMLButtonElement).click();
     });
     // Verify the menu closed by checking the hamburger button returns to "Open menu" state.
