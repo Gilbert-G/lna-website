@@ -16,7 +16,7 @@ export function hasFullConsent(): boolean {
   return getConsent() === "all";
 }
 
-function subscribeNoop(cb: () => void) {
+function subscribeNoop(_cb: () => void) {
   // No external subscription needed — consent only changes via user action
   return () => {};
 }

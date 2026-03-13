@@ -28,10 +28,6 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -69,7 +65,10 @@ export function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
+        <nav
+          className="hidden items-center gap-1 md:flex"
+          aria-label="Main navigation"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -136,7 +135,10 @@ export function Header() {
             <X className="size-6" />
           </button>
         </div>
-        <nav className="flex flex-1 flex-col gap-1 p-4" aria-label="Mobile navigation">
+        <nav
+          className="flex flex-1 flex-col gap-1 p-4"
+          aria-label="Mobile navigation"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -153,7 +155,13 @@ export function Header() {
             </Link>
           ))}
           <div className="mt-4">
-            <Button size="lg" className="w-full" render={<Link href="/contact" onClick={() => setMobileOpen(false)} />}>
+            <Button
+              size="lg"
+              className="w-full"
+              render={
+                <Link href="/contact" onClick={() => setMobileOpen(false)} />
+              }
+            >
               Request Demo
             </Button>
           </div>
