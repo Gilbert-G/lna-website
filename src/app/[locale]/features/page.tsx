@@ -19,7 +19,11 @@ import { AnimateIn } from "@/components/ui/animate-in";
 import { VideoEmbed } from "@/components/media/VideoEmbed";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "seo.features" });
   return {
@@ -28,7 +32,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const featureKeys = ["documentManagement", "dataExtraction", "templateMapping", "exportAudit"] as const;
+const featureKeys = [
+  "documentManagement",
+  "dataExtraction",
+  "templateMapping",
+  "exportAudit",
+] as const;
 type FeatureKey = (typeof featureKeys)[number];
 
 const featureIcons: Record<FeatureKey, React.ElementType> = {
@@ -96,7 +105,11 @@ const comparisonRowKeys = [
 ] as const;
 type ComparisonRowKey = (typeof comparisonRowKeys)[number];
 
-export default async function FeaturesPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function FeaturesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "features" });
@@ -175,8 +188,9 @@ export default async function FeaturesPage({ params }: { params: Promise<{ local
       {/* Standard Features */}
       {featureKeys.map((key, i) => {
         const Icon = featureIcons[key];
-        const bullets = Array.from({ length: featureBulletCounts[key] }, (_, idx) =>
-          t(`${key}.bullet${idx + 1}`)
+        const bullets = Array.from(
+          { length: featureBulletCounts[key] },
+          (_, idx) => t(`${key}.bullet${idx + 1}`)
         );
 
         return (
@@ -201,7 +215,10 @@ export default async function FeaturesPage({ params }: { params: Promise<{ local
                   </p>
                   <ul className="mt-6 space-y-3">
                     {bullets.map((bullet) => (
-                      <li key={bullet} className="flex items-start gap-3 text-sm">
+                      <li
+                        key={bullet}
+                        className="flex items-start gap-3 text-sm"
+                      >
                         <Check className="text-primary mt-0.5 size-4 shrink-0" />
                         <span>{bullet}</span>
                       </li>
@@ -229,8 +246,9 @@ export default async function FeaturesPage({ params }: { params: Promise<{ local
       {/* AI Features - Differentiators */}
       {aiFeatureKeys.map((key, i) => {
         const Icon = aiFeatureIcons[key];
-        const bullets = Array.from({ length: aiFeatureBulletCounts[key] }, (_, idx) =>
-          t(`${key}.bullet${idx + 1}`)
+        const bullets = Array.from(
+          { length: aiFeatureBulletCounts[key] },
+          (_, idx) => t(`${key}.bullet${idx + 1}`)
         );
 
         return (
@@ -346,7 +364,9 @@ export default async function FeaturesPage({ params }: { params: Promise<{ local
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b">
-                    <th className="p-3 text-left font-semibold">{t("comparison.headerFeature")}</th>
+                    <th className="p-3 text-left font-semibold">
+                      {t("comparison.headerFeature")}
+                    </th>
                     <th className="text-muted-foreground p-3 text-center font-medium">
                       {t("comparison.headerManual")}
                     </th>
@@ -361,7 +381,9 @@ export default async function FeaturesPage({ params }: { params: Promise<{ local
                 <tbody>
                   {comparisonRowKeys.map((rowKey: ComparisonRowKey) => (
                     <tr key={rowKey} className="border-b">
-                      <td className="p-3 font-medium">{t(`comparison.rows.${rowKey}.feature`)}</td>
+                      <td className="p-3 font-medium">
+                        {t(`comparison.rows.${rowKey}.feature`)}
+                      </td>
                       <td className="text-muted-foreground p-3 text-center">
                         {t(`comparison.rows.${rowKey}.manual`)}
                       </td>

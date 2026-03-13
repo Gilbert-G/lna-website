@@ -78,7 +78,7 @@ export function ContactForm() {
         <h2 className="mt-4 text-2xl font-bold">Message received.</h2>
         <p className="text-muted-foreground mt-3 max-w-md">
           Thanks for reaching out. We&apos;ll get back to you at{" "}
-          <span className="font-medium text-foreground">{emailValue}</span>{" "}
+          <span className="text-foreground font-medium">{emailValue}</span>{" "}
           within 24 hours. In the meantime, feel free to explore the{" "}
           <Link href="/features" className="text-primary hover:underline">
             Features page
@@ -106,7 +106,7 @@ export function ContactForm() {
             name="name"
             type="text"
             placeholder="Your full name"
-            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm outline-none transition-shadow focus:ring-2"
+            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm transition-shadow outline-none focus:ring-2"
           />
           {errors.name && (
             <p className="text-destructive mt-1 text-xs">{errors.name}</p>
@@ -122,7 +122,7 @@ export function ContactForm() {
             name="email"
             type="email"
             placeholder="you@yourcompany.com"
-            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm outline-none transition-shadow focus:ring-2"
+            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm transition-shadow outline-none focus:ring-2"
           />
           {errors.email && (
             <p className="text-destructive mt-1 text-xs">{errors.email}</p>
@@ -130,10 +130,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label
-            htmlFor="company"
-            className="mb-1.5 block text-sm font-medium"
-          >
+          <label htmlFor="company" className="mb-1.5 block text-sm font-medium">
             Company
           </label>
           <input
@@ -141,7 +138,7 @@ export function ContactForm() {
             name="company"
             type="text"
             placeholder="Your company name"
-            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm outline-none transition-shadow focus:ring-2"
+            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm transition-shadow outline-none focus:ring-2"
           />
         </div>
 
@@ -154,7 +151,7 @@ export function ContactForm() {
             id="reason"
             name="reason"
             defaultValue=""
-            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm outline-none transition-shadow focus:ring-2"
+            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm transition-shadow outline-none focus:ring-2"
           >
             <option value="" disabled>
               Select a reason...
@@ -171,10 +168,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label
-            htmlFor="message"
-            className="mb-1.5 block text-sm font-medium"
-          >
+          <label htmlFor="message" className="mb-1.5 block text-sm font-medium">
             Message <span className="text-destructive">*</span>
           </label>
           <textarea
@@ -182,7 +176,7 @@ export function ContactForm() {
             name="message"
             rows={4}
             placeholder="Tell us what you're working on or what you'd like to know"
-            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm outline-none transition-shadow focus:ring-2"
+            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm transition-shadow outline-none focus:ring-2"
           />
           {errors.message && (
             <p className="text-destructive mt-1 text-xs">{errors.message}</p>

@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: Props) {
               <ArrowLeft className="size-3.5" />
               {t("backToBlog")}
             </Link>
-            <span className="text-primary mt-4 block text-xs font-semibold uppercase tracking-wide">
+            <span className="text-primary mt-4 block text-xs font-semibold tracking-wide uppercase">
               {post.category}
             </span>
             <h1 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
@@ -68,11 +68,14 @@ export default async function BlogPostPage({ params }: Props) {
               <span>{post.author}</span>
               <span className="inline-flex items-center gap-1">
                 <Calendar className="size-3.5" />
-                {new Date(post.date).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}
+                {new Date(post.date).toLocaleDateString(
+                  locale === "fr" ? "fr-FR" : "en-US",
+                  {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  }
+                )}
               </span>
               <span className="inline-flex items-center gap-1">
                 <Clock className="size-3.5" />

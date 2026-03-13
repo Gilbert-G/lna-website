@@ -171,8 +171,14 @@
       "label": "Approuvé par les équipes qui traitent des documents au quotidien",
       "stats": {
         "documents": { "value": "500K+", "label": "Documents traités" },
-        "hours": { "value": "120+", "label": "Heures économisées par équipe/mois" },
-        "accuracy": { "value": "99,5 %", "label": "Précision d'extraction moyenne" },
+        "hours": {
+          "value": "120+",
+          "label": "Heures économisées par équipe/mois"
+        },
+        "accuracy": {
+          "value": "99,5 %",
+          "label": "Précision d'extraction moyenne"
+        },
         "teams": { "value": "200+", "label": "Équipes utilisant LNA" }
       },
       "testimonials": {
@@ -295,16 +301,66 @@
       "headerOcr": "Outils OCR basiques",
       "headerLna": "LNA",
       "rows": {
-        "setup": { "feature": "Configuration requise", "manual": "Aucune (juste du temps)", "ocr": "Configuration nécessaire", "lna": "Non — sans schéma dès le premier jour" },
-        "accuracy": { "feature": "Précision", "manual": "Taux d'erreur humain", "ocr": "Modérée", "lna": "99,5 % avec score de confiance" },
-        "speed": { "feature": "Rapidité", "manual": "Heures par document", "ocr": "Minutes par document", "lna": "Secondes par document, en lots" },
-        "output": { "feature": "Format de sortie", "manual": "Variable", "ocr": "CSV ou texte générique", "lna": "Correspond à votre modèle Excel exact" },
-        "scanned": { "feature": "PDF numérisés", "manual": "Ressaisie manuelle", "ocr": "Limité", "lna": "Support OCR complet" },
-        "multiPage": { "feature": "Tableaux multi-pages", "manual": "Sujet aux erreurs", "ocr": "Échoue souvent", "lna": "Extraits avec précision" },
-        "aiQa": { "feature": "Q&R IA", "manual": "Impossible", "ocr": "Non disponible", "lna": "Interrogez vos documents" },
-        "contextRoles": { "feature": "Rôles contextuels", "manual": "Non applicable", "ocr": "Non disponible", "lna": "Intelligence IA spécialisée par domaine" },
-        "auditTrail": { "feature": "Piste d'audit", "manual": "Inexistante", "ocr": "Aucune", "lna": "Journal complet d'extraction et d'export" },
-        "scalability": { "feature": "Scalabilité", "manual": "Atteint ses limites en volume", "ocr": "Support de lots limité", "lna": "Des centaines de documents à la fois" }
+        "setup": {
+          "feature": "Configuration requise",
+          "manual": "Aucune (juste du temps)",
+          "ocr": "Configuration nécessaire",
+          "lna": "Non — sans schéma dès le premier jour"
+        },
+        "accuracy": {
+          "feature": "Précision",
+          "manual": "Taux d'erreur humain",
+          "ocr": "Modérée",
+          "lna": "99,5 % avec score de confiance"
+        },
+        "speed": {
+          "feature": "Rapidité",
+          "manual": "Heures par document",
+          "ocr": "Minutes par document",
+          "lna": "Secondes par document, en lots"
+        },
+        "output": {
+          "feature": "Format de sortie",
+          "manual": "Variable",
+          "ocr": "CSV ou texte générique",
+          "lna": "Correspond à votre modèle Excel exact"
+        },
+        "scanned": {
+          "feature": "PDF numérisés",
+          "manual": "Ressaisie manuelle",
+          "ocr": "Limité",
+          "lna": "Support OCR complet"
+        },
+        "multiPage": {
+          "feature": "Tableaux multi-pages",
+          "manual": "Sujet aux erreurs",
+          "ocr": "Échoue souvent",
+          "lna": "Extraits avec précision"
+        },
+        "aiQa": {
+          "feature": "Q&R IA",
+          "manual": "Impossible",
+          "ocr": "Non disponible",
+          "lna": "Interrogez vos documents"
+        },
+        "contextRoles": {
+          "feature": "Rôles contextuels",
+          "manual": "Non applicable",
+          "ocr": "Non disponible",
+          "lna": "Intelligence IA spécialisée par domaine"
+        },
+        "auditTrail": {
+          "feature": "Piste d'audit",
+          "manual": "Inexistante",
+          "ocr": "Aucune",
+          "lna": "Journal complet d'extraction et d'export"
+        },
+        "scalability": {
+          "feature": "Scalabilité",
+          "manual": "Atteint ses limites en volume",
+          "ocr": "Support de lots limité",
+          "lna": "Des centaines de documents à la fois"
+        }
       }
     },
     "cta": {
@@ -561,8 +617,14 @@
       "description": "Nous sommes une équipe dédiée chez Manureva Solutions, qui travaille à rendre l'intelligence documentaire accessible à toute organisation qui s'appuie sur les données.",
       "member1": { "name": "Membre de l'équipe", "role": "Co-fondateur & CEO" },
       "member2": { "name": "Membre de l'équipe", "role": "CTO" },
-      "member3": { "name": "Membre de l'équipe", "role": "Responsable Produit" },
-      "member4": { "name": "Membre de l'équipe", "role": "Ingénieur IA Principal" }
+      "member3": {
+        "name": "Membre de l'équipe",
+        "role": "Responsable Produit"
+      },
+      "member4": {
+        "name": "Membre de l'équipe",
+        "role": "Ingénieur IA Principal"
+      }
     },
     "company": {
       "label": "L'entreprise",

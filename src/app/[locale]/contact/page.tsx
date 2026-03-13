@@ -6,13 +6,21 @@ import { AnimateIn } from "@/components/ui/animate-in";
 import { DemoRequestForm } from "@/components/forms/DemoRequestForm";
 import { Mail, Clock, Linkedin, Twitter, MapPin } from "lucide-react";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "seo.contact" });
   return { title: t("title"), description: t("description") };
 }
 
-export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "contact" });
@@ -54,7 +62,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   <div className="flex gap-3">
                     <Mail className="text-primary mt-0.5 size-5 shrink-0" />
                     <div>
-                      <p className="text-sm font-medium">{t("sidebar.emailLabel")}</p>
+                      <p className="text-sm font-medium">
+                        {t("sidebar.emailLabel")}
+                      </p>
                       <a
                         href={`mailto:${t("sidebar.emailAddress")}`}
                         className="text-primary text-sm hover:underline"
@@ -70,7 +80,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   <div className="flex gap-3">
                     <Clock className="text-primary mt-0.5 size-5 shrink-0" />
                     <div>
-                      <p className="text-sm font-medium">{t("sidebar.responseLabel")}</p>
+                      <p className="text-sm font-medium">
+                        {t("sidebar.responseLabel")}
+                      </p>
                       <p className="text-muted-foreground text-sm">
                         {t("sidebar.responseText")}
                       </p>
@@ -78,7 +90,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   </div>
 
                   <div className="border-t pt-6">
-                    <p className="mb-3 text-sm font-medium">{t("sidebar.socialLabel")}</p>
+                    <p className="mb-3 text-sm font-medium">
+                      {t("sidebar.socialLabel")}
+                    </p>
                     <div className="flex gap-4">
                       <a
                         href="#"
@@ -98,12 +112,16 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   </div>
 
                   <div className="border-t pt-6">
-                    <p className="mb-3 text-sm font-medium">{t("sidebar.officesLabel")}</p>
+                    <p className="mb-3 text-sm font-medium">
+                      {t("sidebar.officesLabel")}
+                    </p>
                     <div className="space-y-4">
                       <div className="flex gap-3">
                         <MapPin className="text-primary mt-0.5 size-5 shrink-0" />
                         <div>
-                          <p className="text-sm font-medium">{t("sidebar.paris")}</p>
+                          <p className="text-sm font-medium">
+                            {t("sidebar.paris")}
+                          </p>
                         </div>
                       </div>
                       <div className="flex gap-3">

@@ -51,9 +51,7 @@ export default async function TermsPage({
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
               {t("heading")}
             </h1>
-            <p className="text-muted-foreground mt-4">
-              {t("updated")}
-            </p>
+            <p className="text-muted-foreground mt-4">{t("updated")}</p>
           </AnimateIn>
         </Container>
       </Section>
@@ -64,7 +62,7 @@ export default async function TermsPage({
             {/* Table of Contents */}
             <AnimateIn>
               <nav className="lg:sticky lg:top-24">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest">
+                <p className="mb-3 text-xs font-semibold tracking-widest uppercase">
                   {t("onThisPage")}
                 </p>
                 <ul className="space-y-1.5 text-sm">
@@ -126,10 +124,7 @@ export default async function TermsPage({
                 </ul>
                 <p>
                   {t("s5.footer")}{" "}
-                  <Link href="/privacy">
-                    {t("s5.privacyPolicy")}
-                  </Link>
-                  .
+                  <Link href="/privacy">{t("s5.privacyPolicy")}</Link>.
                 </p>
 
                 <h2 id="payment">{t("sections.payment")}</h2>
@@ -151,7 +146,8 @@ export default async function TermsPage({
                     <strong>{t("s7.annual")}</strong> {t("s7.annualDesc")}
                   </li>
                   <li>
-                    <strong>{t("s7.downgrades")}</strong> {t("s7.downgradesDesc")}
+                    <strong>{t("s7.downgrades")}</strong>{" "}
+                    {t("s7.downgradesDesc")}
                   </li>
                   <li>
                     <strong>{t("s7.upgrades")}</strong> {t("s7.upgradesDesc")}
@@ -186,7 +182,10 @@ export default async function TermsPage({
                   </li>
                   <li>
                     {t("s13.orVisit")}{" "}
-                    <Link href="/contact" className="text-primary hover:underline">
+                    <Link
+                      href="/contact"
+                      className="text-primary hover:underline"
+                    >
                       {t("s13.contactPage")}
                     </Link>
                   </li>

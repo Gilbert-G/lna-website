@@ -1,4 +1,5 @@
 # Homepage Copy — LNA
+
 **File:** `homepage.md`
 **Page:** Home (`/`)
 **LNAW-15**
@@ -17,29 +18,35 @@
 ## Section 1: Hero
 
 ### Headline
+
 Turn Any PDF Into Perfect Excel — Automatically
 
 ### Subheadline
+
 LNA uses AI to extract, structure, and export data from your documents in seconds — so your team stops copying and starts working.
 
 ### Primary CTA
+
 **Request a Demo**
 
 ### Secondary CTA
+
 **See How It Works**
 
 ### Hero Supporting Microcopy (below CTAs)
+
 No credit card required. Up and running in minutes.
 
 ---
 
 ## Section 2: Value Proposition Strip
 
-*4 benefit tiles displayed horizontally. Each has an icon, a stat/claim, and a one-line description.*
+_4 benefit tiles displayed horizontally. Each has an icon, a stat/claim, and a one-line description._
 
 ---
 
 ### Tile 1
+
 - **Icon suggestion:** `Zap` (Lucide)
 - **Headline:** 10x Faster Processing
 - **Description:** Replace hours of manual data entry with AI extraction that completes in seconds.
@@ -47,6 +54,7 @@ No credit card required. Up and running in minutes.
 ---
 
 ### Tile 2
+
 - **Icon suggestion:** `ShieldCheck` (Lucide)
 - **Headline:** 99.5% Extraction Accuracy
 - **Description:** Confidence scoring on every field ensures your data is reliable before it ever leaves the platform.
@@ -54,6 +62,7 @@ No credit card required. Up and running in minutes.
 ---
 
 ### Tile 3
+
 - **Icon suggestion:** `MousePointerClick` (Lucide)
 - **Headline:** Zero Manual Entry
 - **Description:** From upload to export, the entire workflow is automated — your team never touches the raw data.
@@ -61,6 +70,7 @@ No credit card required. Up and running in minutes.
 ---
 
 ### Tile 4
+
 - **Icon suggestion:** `Layers` (Lucide)
 - **Headline:** Any Document, Any Format
 - **Description:** Invoices, reports, forms, statements — LNA handles them all, including scanned PDFs.
@@ -69,20 +79,24 @@ No credit card required. Up and running in minutes.
 
 ## Section 3: How It Works
 
-*3-step visual workflow. Display as a numbered progression with connecting lines or arrows.*
+_3-step visual workflow. Display as a numbered progression with connecting lines or arrows._
 
 ### Section Label
+
 HOW IT WORKS
 
 ### Section Headline
+
 From Upload to Excel in Three Steps
 
 ### Section Subheadline
+
 No configuration required. No templates to build. Just results.
 
 ---
 
 ### Step 1: Upload
+
 - **Icon suggestion:** `Upload` (Lucide)
 - **Step Label:** 01 — Upload
 - **Title:** Drop In Your Documents
@@ -91,6 +105,7 @@ No configuration required. No templates to build. Just results.
 ---
 
 ### Step 2: Extract
+
 - **Icon suggestion:** `ScanLine` (Lucide)
 - **Step Label:** 02 — Extract
 - **Title:** AI Does the Heavy Lifting
@@ -99,6 +114,7 @@ No configuration required. No templates to build. Just results.
 ---
 
 ### Step 3: Export
+
 - **Icon suggestion:** `FileSpreadsheet` (Lucide)
 - **Step Label:** 03 — Export
 - **Title:** Download Perfect Excel Files
@@ -109,17 +125,21 @@ No configuration required. No templates to build. Just results.
 ## Section 4: Feature Highlights
 
 ### Section Label
+
 FEATURES
 
 ### Section Headline
+
 Everything Your Team Needs to Process Documents at Scale
 
 ### Section Subheadline
+
 Six core capabilities built for finance teams, operations managers, and anyone who lives in spreadsheets.
 
 ---
 
 ### Feature 1: Document Management
+
 - **Icon suggestion:** `FolderOpen` (Lucide)
 - **Headline:** Organize Every Document in One Place
 - **Description:** Upload, classify, search, and preview all your PDFs without leaving the platform. LNA automatically detects duplicates and keeps your library clean, with full-text search across your entire document archive.
@@ -127,6 +147,7 @@ Six core capabilities built for finance teams, operations managers, and anyone w
 ---
 
 ### Feature 2: Intelligent Data Extraction
+
 - **Icon suggestion:** `BrainCircuit` (Lucide)
 - **Headline:** AI That Reads Documents Like an Expert
 - **Description:** Schema-free extraction means you don't need to configure anything before processing starts. LNA detects dates, amounts, names, addresses, and multi-page tables automatically — with a confidence score attached to every field.
@@ -134,6 +155,7 @@ Six core capabilities built for finance teams, operations managers, and anyone w
 ---
 
 ### Feature 3: Template Mapping
+
 - **Icon suggestion:** `GitMerge` (Lucide)
 - **Headline:** Your Excel Format, Automatically Matched
 - **Description:** Upload your existing Excel template and LNA proposes the field mappings for you. Fine-tune with a visual drag-and-drop editor, then save the configuration for every future batch — your templates, your way.
@@ -141,6 +163,7 @@ Six core capabilities built for finance teams, operations managers, and anyone w
 ---
 
 ### Feature 4: Export & Audit
+
 - **Icon suggestion:** `Download` (Lucide)
 - **Headline:** Export With Confidence
 - **Description:** Preview your output before downloading. Export to Excel in formats that preserve your layout and formulas. Every extraction is logged in a full audit trail, giving your team the traceability compliance requires.
@@ -148,6 +171,7 @@ Six core capabilities built for finance teams, operations managers, and anyone w
 ---
 
 ### Feature 5: LLM-Connected Data Q&A
+
 - **Icon suggestion:** `MessageSquareText` (Lucide)
 - **Headline:** Ask Your Documents Anything
 - **Description:** Stop hunting through spreadsheets for answers. Ask LNA a plain-language question — "What was the total invoice amount from Vendor X in Q3?" — and get an accurate, sourced answer from your own data in seconds.
@@ -155,6 +179,7 @@ Six core capabilities built for finance teams, operations managers, and anyone w
 ---
 
 ### Feature 6: Chat with Context Role
+
 - **Icon suggestion:** `UserCog` (Lucide)
 - **Headline:** An AI Assistant That Speaks Your Industry
 - **Description:** Set a role — Financial Analyst, Compliance Officer, Operations Manager — and LNA's AI adapts its language, focus, and responses to match. It's not a generic chatbot. It's domain-aware intelligence built into your workflow.
@@ -163,20 +188,24 @@ Six core capabilities built for finance teams, operations managers, and anyone w
 
 ## Section 5: AI Differentiators Spotlight
 
-*Full-width section with two-column layout or card pair. Visually distinct from the features grid — use a dark or accent background to separate it.*
+_Full-width section with two-column layout or card pair. Visually distinct from the features grid — use a dark or accent background to separate it._
 
 ### Section Label
+
 WHAT MAKES LNA DIFFERENT
 
 ### Section Headline
+
 Beyond Extraction: Document Intelligence That Thinks
 
 ### Section Subheadline
+
 Most document tools stop at extraction. LNA keeps going — giving you the ability to question, analyze, and reason over your data using AI that understands your context.
 
 ---
 
 ### Differentiator Card 1: LLM-Connected Data Q&A
+
 - **Icon suggestion:** `MessagesSquare` (Lucide)
 - **Feature Name:** Ask Your Documents Anything
 - **Description:** Connect your document library to a powerful language model and query it in plain English. LNA grounds every answer in your actual data — no hallucinations, no guesswork.
@@ -188,6 +217,7 @@ Most document tools stop at extraction. LNA keeps going — giving you the abili
 ---
 
 ### Differentiator Card 2: Chat with Context Role
+
 - **Icon suggestion:** `UserRoundCog` (Lucide)
 - **Feature Name:** AI That Adapts to Your Role
 - **Description:** Configure the AI to think and respond like an expert in your field. Whether you need financial analysis, compliance review, or operational oversight, LNA's context roles make every conversation relevant and precise.
@@ -200,25 +230,27 @@ Most document tools stop at extraction. LNA keeps going — giving you the abili
 
 ## Section 6: Social Proof
 
-*3 testimonial cards + 3 stats. Use placeholder structure for development handoff.*
+_3 testimonial cards + 3 stats. Use placeholder structure for development handoff._
 
 ### Section Label
+
 TRUSTED BY TEAMS WHO PROCESS DOCUMENTS EVERY DAY
 
 ### Stats Bar
 
-| Stat | Value | Label |
-|------|-------|-------|
-| Stat 1 | [X]+ | Documents processed |
-| Stat 2 | [Y]+ | Hours saved per team/month |
+| Stat   | Value | Label                       |
+| ------ | ----- | --------------------------- |
+| Stat 1 | [X]+  | Documents processed         |
+| Stat 2 | [Y]+  | Hours saved per team/month  |
 | Stat 3 | 99.5% | Average extraction accuracy |
-| Stat 4 | [Z]+ | Teams using LNA |
+| Stat 4 | [Z]+  | Teams using LNA             |
 
-*Note for dev: Replace bracketed values with real metrics once available.*
+_Note for dev: Replace bracketed values with real metrics once available._
 
 ---
 
 ### Testimonial 1
+
 - **Quote:** "[Placeholder testimonial — describe how LNA replaced a manual data entry workflow and saved significant time]"
 - **Name:** [First Name Last Name]
 - **Title:** [Job Title]
@@ -228,6 +260,7 @@ TRUSTED BY TEAMS WHO PROCESS DOCUMENTS EVERY DAY
 ---
 
 ### Testimonial 2
+
 - **Quote:** "[Placeholder testimonial — describe accuracy improvement and confidence in exported data]"
 - **Name:** [First Name Last Name]
 - **Title:** [Job Title]
@@ -237,6 +270,7 @@ TRUSTED BY TEAMS WHO PROCESS DOCUMENTS EVERY DAY
 ---
 
 ### Testimonial 3
+
 - **Quote:** "[Placeholder testimonial — describe the LLM Q&A feature and how it changed the way the team works with documents]"
 - **Name:** [First Name Last Name]
 - **Title:** [Job Title]
@@ -248,18 +282,23 @@ TRUSTED BY TEAMS WHO PROCESS DOCUMENTS EVERY DAY
 ## Section 7: Final CTA
 
 ### Section Headline
+
 Stop Copying. Start Extracting.
 
 ### Subtext
+
 LNA automates the PDF-to-Excel workflows that are costing your team hours every week. See it in action with a personalized demo — we'll show you exactly how it works with your documents.
 
 ### Primary CTA Button
+
 **Request a Demo**
 
 ### Secondary CTA (text link)
+
 Or explore pricing →
 
 ### Trust Signal (below CTA)
+
 No credit card required. Setup takes minutes. Cancel anytime.
 
 ---

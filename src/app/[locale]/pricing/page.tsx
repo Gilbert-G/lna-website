@@ -4,7 +4,11 @@ import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { PricingContent } from "./pricing-content";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "seo.pricing" });
   return {
@@ -13,7 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function PricingPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function PricingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "pricing" });

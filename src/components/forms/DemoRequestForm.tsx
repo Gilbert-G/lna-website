@@ -81,9 +81,7 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
       });
     } catch (err) {
       setStatus("error");
-      setErrorMessage(
-        err instanceof Error ? err.message : t("errors.generic")
-      );
+      setErrorMessage(err instanceof Error ? err.message : t("errors.generic"));
     }
   }
 
@@ -132,17 +130,13 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
       )}
       <div className="mb-6">
         <h3 className="text-xl font-bold">{t("heading")}</h3>
-        <p className="text-muted-foreground mt-1 text-sm">
-          {t("description")}
-        </p>
+        <p className="text-muted-foreground mt-1 text-sm">{t("description")}</p>
       </div>
 
       {status === "error" && (
         <div className="mb-4 flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-800 dark:bg-red-950 dark:text-red-300">
           <AlertCircle className="size-4 shrink-0" />
-          <span>
-            {errorMessage || t("errors.generic")}
-          </span>
+          <span>{errorMessage || t("errors.generic")}</span>
         </div>
       )}
 
@@ -169,7 +163,8 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
             htmlFor="demo-name"
             className="mb-1.5 block text-sm font-medium"
           >
-            {t("nameLabel")} <span className="text-destructive">{t("required")}</span>
+            {t("nameLabel")}{" "}
+            <span className="text-destructive">{t("required")}</span>
           </label>
           <input
             id="demo-name"
@@ -188,7 +183,8 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
             htmlFor="demo-email"
             className="mb-1.5 block text-sm font-medium"
           >
-            {t("emailLabel")} <span className="text-destructive">{t("required")}</span>
+            {t("emailLabel")}{" "}
+            <span className="text-destructive">{t("required")}</span>
           </label>
           <input
             id="demo-email"
@@ -207,7 +203,8 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
             htmlFor="demo-company"
             className="mb-1.5 block text-sm font-medium"
           >
-            {t("companyLabel")} <span className="text-destructive">{t("required")}</span>
+            {t("companyLabel")}{" "}
+            <span className="text-destructive">{t("required")}</span>
           </label>
           <input
             id="demo-company"
@@ -226,7 +223,8 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
             htmlFor="demo-role"
             className="mb-1.5 block text-sm font-medium"
           >
-            {t("roleLabel")} <span className="text-destructive">{t("required")}</span>
+            {t("roleLabel")}{" "}
+            <span className="text-destructive">{t("required")}</span>
           </label>
           <select
             id="demo-role"
@@ -253,7 +251,10 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
             htmlFor="demo-message"
             className="mb-1.5 block text-sm font-medium"
           >
-            {t("messageLabel")} <span className="text-muted-foreground">{t("messageOptional")}</span>
+            {t("messageLabel")}{" "}
+            <span className="text-muted-foreground">
+              {t("messageOptional")}
+            </span>
           </label>
           <textarea
             id="demo-message"

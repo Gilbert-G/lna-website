@@ -48,9 +48,7 @@ export default async function PrivacyPage({
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
               {t("heading")}
             </h1>
-            <p className="text-muted-foreground mt-4">
-              {t("updated")}
-            </p>
+            <p className="text-muted-foreground mt-4">{t("updated")}</p>
           </AnimateIn>
         </Container>
       </Section>
@@ -61,7 +59,7 @@ export default async function PrivacyPage({
             {/* Table of Contents */}
             <AnimateIn>
               <nav className="lg:sticky lg:top-24">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest">
+                <p className="mb-3 text-xs font-semibold tracking-widest uppercase">
                   {t("onThisPage")}
                 </p>
                 <ul className="space-y-1.5 text-sm">
@@ -119,13 +117,15 @@ export default async function PrivacyPage({
                     <strong>{t("s3.ownership")}</strong> {t("s3.ownershipDesc")}
                   </li>
                   <li>
-                    <strong>{t("s3.noTraining")}</strong> {t("s3.noTrainingDesc")}
+                    <strong>{t("s3.noTraining")}</strong>{" "}
+                    {t("s3.noTrainingDesc")}
                   </li>
                   <li>
                     <strong>{t("s3.isolation")}</strong> {t("s3.isolationDesc")}
                   </li>
                   <li>
-                    <strong>{t("s3.encryption")}</strong> {t("s3.encryptionDesc")}
+                    <strong>{t("s3.encryption")}</strong>{" "}
+                    {t("s3.encryptionDesc")}
                   </li>
                 </ul>
 
@@ -203,7 +203,10 @@ export default async function PrivacyPage({
                   </li>
                   <li>
                     {t("s10.orVisit")}{" "}
-                    <Link href="/contact" className="text-primary hover:underline">
+                    <Link
+                      href="/contact"
+                      className="text-primary hover:underline"
+                    >
                       {t("s10.contactPage")}
                     </Link>
                   </li>

@@ -172,7 +172,10 @@
       "stats": {
         "documents": { "value": "500K+", "label": "Documents processed" },
         "hours": { "value": "120+", "label": "Hours saved per team/month" },
-        "accuracy": { "value": "99.5%", "label": "Average extraction accuracy" },
+        "accuracy": {
+          "value": "99.5%",
+          "label": "Average extraction accuracy"
+        },
         "teams": { "value": "200+", "label": "Teams using LNA" }
       },
       "testimonials": {
@@ -295,16 +298,66 @@
       "headerOcr": "Basic OCR Tools",
       "headerLna": "LNA",
       "rows": {
-        "setup": { "feature": "Setup required", "manual": "None (just time)", "ocr": "Configuration needed", "lna": "No — schema-free from day one" },
-        "accuracy": { "feature": "Accuracy", "manual": "Human error rate", "ocr": "Moderate", "lna": "99.5% with confidence scoring" },
-        "speed": { "feature": "Speed", "manual": "Hours per document", "ocr": "Minutes per document", "lna": "Seconds per document, in batches" },
-        "output": { "feature": "Output format", "manual": "Varies", "ocr": "Generic CSV or text", "lna": "Matches your exact Excel template" },
-        "scanned": { "feature": "Scanned PDFs", "manual": "Manual re-entry", "ocr": "Limited", "lna": "Full OCR support" },
-        "multiPage": { "feature": "Multi-page tables", "manual": "Error-prone", "ocr": "Often fails", "lna": "Extracted accurately" },
-        "aiQa": { "feature": "AI Q&A", "manual": "Not possible", "ocr": "Not available", "lna": "Ask your documents anything" },
-        "contextRoles": { "feature": "Context roles", "manual": "Not applicable", "ocr": "Not available", "lna": "Domain-specific AI intelligence" },
-        "auditTrail": { "feature": "Audit trail", "manual": "Non-existent", "ocr": "None", "lna": "Full extraction and export log" },
-        "scalability": { "feature": "Scalability", "manual": "Breaks at volume", "ocr": "Limited batch support", "lna": "Hundreds of documents at once" }
+        "setup": {
+          "feature": "Setup required",
+          "manual": "None (just time)",
+          "ocr": "Configuration needed",
+          "lna": "No — schema-free from day one"
+        },
+        "accuracy": {
+          "feature": "Accuracy",
+          "manual": "Human error rate",
+          "ocr": "Moderate",
+          "lna": "99.5% with confidence scoring"
+        },
+        "speed": {
+          "feature": "Speed",
+          "manual": "Hours per document",
+          "ocr": "Minutes per document",
+          "lna": "Seconds per document, in batches"
+        },
+        "output": {
+          "feature": "Output format",
+          "manual": "Varies",
+          "ocr": "Generic CSV or text",
+          "lna": "Matches your exact Excel template"
+        },
+        "scanned": {
+          "feature": "Scanned PDFs",
+          "manual": "Manual re-entry",
+          "ocr": "Limited",
+          "lna": "Full OCR support"
+        },
+        "multiPage": {
+          "feature": "Multi-page tables",
+          "manual": "Error-prone",
+          "ocr": "Often fails",
+          "lna": "Extracted accurately"
+        },
+        "aiQa": {
+          "feature": "AI Q&A",
+          "manual": "Not possible",
+          "ocr": "Not available",
+          "lna": "Ask your documents anything"
+        },
+        "contextRoles": {
+          "feature": "Context roles",
+          "manual": "Not applicable",
+          "ocr": "Not available",
+          "lna": "Domain-specific AI intelligence"
+        },
+        "auditTrail": {
+          "feature": "Audit trail",
+          "manual": "Non-existent",
+          "ocr": "None",
+          "lna": "Full extraction and export log"
+        },
+        "scalability": {
+          "feature": "Scalability",
+          "manual": "Breaks at volume",
+          "ocr": "Limited batch support",
+          "lna": "Hundreds of documents at once"
+        }
       }
     },
     "cta": {
