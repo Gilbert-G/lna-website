@@ -13,9 +13,10 @@ type OptimizedImageProps = Omit<ImageProps, "alt"> & {
  * - Required alt text (TypeScript-enforced)
  */
 export function OptimizedImage({
+  alt,
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
   quality = 85,
   ...props
 }: OptimizedImageProps) {
-  return <Image sizes={sizes} quality={quality} {...props} />;
+  return <Image alt={alt} sizes={sizes} quality={quality} {...props} />;
 }
