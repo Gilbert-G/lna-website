@@ -34,9 +34,13 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "seo" });
 
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://lna.manurevasolutions.net";
+
   return {
     title: t("title"),
     description: t("description"),
+    metadataBase: new URL(siteUrl),
     icons: {
       icon: [
         { url: "/favicon.svg", type: "image/svg+xml" },
@@ -47,13 +51,23 @@ export async function generateMetadata({
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
+      url: siteUrl,
+      siteName: "LNA",
       images: [{ url: "/brand/og-default.svg", width: 1200, height: 630 }],
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("ogTitle"),
+      description: t("ogDescription"),
+      images: ["/brand/og-default.svg"],
     },
     alternates: {
-      canonical: `https://lna.ai/${locale}`,
+      canonical: `${siteUrl}/${locale}`,
       languages: {
-        fr: "https://lna.ai/fr",
-        en: "https://lna.ai/en",
+        fr: `${siteUrl}/fr`,
+        en: `${siteUrl}/en`,
       },
     },
   };

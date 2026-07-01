@@ -51,7 +51,7 @@ export default async function HomePage({
           <AnimateIn delay={0.1}>
             <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
               {t("hero.heading")}{" "}
-              <span className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#0F1B4C] via-[#1E3A8A] to-[#2563EB] bg-clip-text text-transparent">
                 {t("hero.headingHighlight")}
               </span>
             </h1>
@@ -373,7 +373,7 @@ export default async function HomePage({
       </Section>
 
       {/* Final CTA */}
-      <Section className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] text-white">
+      <Section className="bg-gradient-to-r from-[#0F1B4C] via-[#1E3A8A] to-[#2563EB] text-white">
         <Container className="text-center">
           <AnimateIn>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
