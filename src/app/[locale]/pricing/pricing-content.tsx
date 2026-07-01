@@ -69,7 +69,9 @@ export function PricingContent() {
       annualSavings: isEnterprise ? null : t(`tiers.${key}.savings`),
       badge: key === "professional" ? t("tiers.professional.badge") : null,
       cta: t(`tiers.${key}.cta`),
-      ctaHref: "/contact",
+      ctaHref: isEnterprise
+        ? "/contact"
+        : "https://lna.manurevasolutions.com/register",
       ctaMicrocopy: t(`tiers.${key}.microcopy`),
       features,
       isEnterprise,
