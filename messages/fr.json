@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "LNA — Traitement Documentaire IA & Automatisation PDF vers Excel",
-    "description": "LNA extrait les données structurées de vos PDF et les exporte automatiquement vers Excel. Traitement documentaire propulsé par l'IA avec 99,5 % de précision. Demandez une démo.",
+    "description": "LNA extrait les données structurées de vos PDF et les exporte automatiquement vers Excel. Traitement documentaire propulsé par l'IA avec un score de confiance sur chaque champ. Demandez une démo.",
     "ogTitle": "LNA — Plateforme de Traitement Documentaire par IA",
     "ogDescription": "Extrayez automatiquement les données structurées de vos PDF vers Excel.",
     "features": {
@@ -82,7 +82,7 @@
         "description": "Remplacez des heures de saisie manuelle par une extraction IA qui s'exécute en quelques secondes."
       },
       "accuracy": {
-        "headline": "99,5 % de précision d'extraction",
+        "headline": "Extraction avec score de confiance",
         "description": "Un score de confiance sur chaque champ garantit la fiabilité de vos données avant qu'elles ne quittent la plateforme."
       },
       "zeroManual": {
@@ -139,67 +139,13 @@
         "title": "Exportez en toute confiance",
         "description": "Prévisualisez votre sortie avant le téléchargement. Exportez vers Excel dans des formats qui préservent votre mise en page et vos formules. Chaque extraction est consignée dans une piste d'audit complète, offrant à votre équipe la traçabilité requise par la conformité."
       },
-      "askDocuments": {
-        "title": "Interrogez vos documents",
-        "description": "Arrêtez de fouiller dans les tableurs pour trouver des réponses. Posez une question en langage naturel à LNA — « Quel était le montant total facturé par le fournisseur X au T3 ? » — et obtenez une réponse précise et sourcée à partir de vos propres données en quelques secondes."
+      "team": {
+        "title": "Conçu pour les équipes",
+        "description": "Comptes organisation avec rôles admin et membre. Chaque utilisateur ne voit que ses propres documents, tandis que l'Analytics offre une vue d'équipe partagée. Authentification JWT et journal d'audit complet pour tout tracer."
       },
-      "aiAssistant": {
-        "title": "Un assistant IA qui parle le langage de votre secteur",
-        "description": "Définissez un rôle — Analyste financier, Responsable conformité, Directeur des opérations — et l'IA de LNA adapte son langage, son focus et ses réponses en conséquence. Ce n'est pas un chatbot générique. C'est une intelligence métier intégrée à votre flux de travail."
-      }
-    },
-    "aiDifferentiators": {
-      "label": "Ce qui distingue LNA",
-      "heading": "Au-delà de l'extraction : une intelligence documentaire qui raisonne",
-      "subheading": "La plupart des outils documentaires s'arrêtent à l'extraction. LNA va plus loin — en vous donnant la capacité d'interroger, d'analyser et de raisonner sur vos données grâce à une IA qui comprend votre contexte.",
-      "qa": {
-        "title": "Interrogez vos documents",
-        "description": "Connectez votre bibliothèque documentaire à un modèle de langage puissant et interrogez-la en français. LNA ancre chaque réponse dans vos données réelles — pas d'hallucinations, pas d'approximations.",
-        "bullet1": "Posez des questions en langage naturel sur des centaines de documents à la fois",
-        "bullet2": "Obtenez des réponses précises et sourcées — pas des résumés ou des approximations",
-        "bullet3": "Identifiez instantanément des totaux, comparaisons, anomalies et tendances sans construire une seule formule"
-      },
-      "roles": {
-        "title": "Une IA qui s'adapte à votre rôle",
-        "description": "Configurez l'IA pour penser et répondre comme un expert de votre domaine. Que vous ayez besoin d'analyse financière, de revue de conformité ou de supervision opérationnelle, les rôles contextuels de LNA rendent chaque échange pertinent et précis.",
-        "bullet1": "Rôles pré-configurés : Analyste financier, Responsable conformité, Directeur des opérations",
-        "bullet2": "L'IA parle le langage de votre secteur — pas de réponses génériques",
-        "bullet3": "Créez et enregistrez des rôles personnalisés adaptés à vos flux de travail spécifiques"
-      }
-    },
-    "socialProof": {
-      "label": "Approuvé par les équipes qui traitent des documents au quotidien",
-      "stats": {
-        "documents": { "value": "500K+", "label": "Documents traités" },
-        "hours": {
-          "value": "120+",
-          "label": "Heures économisées par équipe/mois"
-        },
-        "accuracy": {
-          "value": "99,5 %",
-          "label": "Précision d'extraction moyenne"
-        },
-        "teams": { "value": "200+", "label": "Équipes utilisant LNA" }
-      },
-      "testimonials": {
-        "sarah": {
-          "quote": "LNA a remplacé l'intégralité de notre flux de saisie manuelle. Ce qui prenait 6 heures par jour à notre équipe se fait désormais en quelques minutes — avec une meilleure précision.",
-          "name": "Sarah Chen",
-          "title": "Directrice financière",
-          "company": "Meridian Partners"
-        },
-        "james": {
-          "quote": "L'amélioration de la précision a été immédiate. Nous sommes passés d'erreurs dans un export sur trois à des données quasi parfaites dès le premier passage.",
-          "name": "James Okafor",
-          "title": "Responsable des opérations",
-          "company": "Apex Logistics"
-        },
-        "marie": {
-          "quote": "La fonctionnalité Q&R par LLM a tout changé. Nous pouvons désormais poser des questions sur des milliers de factures au lieu de construire manuellement des tableaux croisés dynamiques.",
-          "name": "Marie Dubois",
-          "title": "Responsable Data",
-          "company": "Vectis Group"
-        }
+      "realtime": {
+        "title": "Progression en temps réel",
+        "description": "Suivez chaque document dans le pipeline grâce aux mises à jour WebSocket en direct. Traitez des documents par lots et récupérez proprement en cas d'échec — plus besoin de rafraîchir pour vérifier un statut."
       }
     },
     "cta": {
@@ -258,39 +204,15 @@
       "bullet3": "L'export par lots traite et télécharge plusieurs documents simultanément",
       "bullet4": "La piste d'audit complète enregistre ce qui a été extrait, mappé, par qui et quand — pour la conformité et les processus de révision"
     },
-    "llmQa": {
-      "label": "Q&R connecté au LLM",
-      "headline": "Arrêtez de chercher. Commencez à demander.",
-      "description": "Les tableurs sont efficaces pour stocker des données. Pas pour répondre aux questions. Le Q&R de LNA connecté au LLM transforme votre bibliothèque documentaire en source de données conversationnelle. Posez n'importe quelle question en français et obtenez une réponse précise — ancrée uniquement dans vos données importées, pas dans des connaissances IA génériques.",
-      "whyItMatters": "Pourquoi c'est important",
-      "whyItMattersText": "La plupart des outils documentaires s'arrêtent à l'extraction. Ils vous donnent un tableur et vous laissent vous débrouiller. LNA va plus loin — une fois vos données extraites, elles restent vivantes et interrogeables. Vos documents deviennent une base de données avec laquelle vous pouvez converser.",
-      "bullet1": "Posez des questions en langage naturel sur l'ensemble de votre bibliothèque documentaire",
-      "bullet2": "Les réponses sont ancrées dans vos données importées — pas dans l'entraînement général du LLM",
-      "bullet3": "Obtenez des totaux, comparaisons, résumés et alertes d'anomalies sans écrire une seule formule",
-      "bullet4": "Idéal pour : rapprochement financier, vérifications de conformité, analyse fournisseurs, reporting opérationnel",
-      "bullet5": "Propulsé par Gemini — un modèle de langage de pointe conçu pour la précision à grande échelle"
-    },
-    "chatContextRole": {
-      "label": "Chat avec rôle contextuel",
-      "headline": "Une IA qui pense comme votre équipe",
-      "description": "Une IA générique donne des réponses génériques. Le Chat avec rôle contextuel de LNA vous permet de configurer la personnalité et le domaine d'expertise de l'assistant IA — pour qu'il réponde avec la compétence que votre travail exige réellement.",
-      "whyItMatters": "Pourquoi c'est important",
-      "whyItMattersText": "Les rôles contextuels ne changent pas seulement le ton des réponses — ils changent ce à quoi l'IA prête attention. C'est la différence entre un chatbot généraliste et un partenaire IA spécialisé qui comprend votre secteur.",
-      "bullet1": "Rôles pré-configurés : Analyste financier, Responsable conformité et Directeur des opérations",
-      "bullet2": "L'IA adapte son langage, ses axes d'analyse et son interprétation au rôle sélectionné",
-      "bullet3": "Créez et enregistrez des rôles personnalisés adaptés à votre équipe, département ou cas d'usage",
-      "bullet4": "Combinez avec le Q&R LLM pour une intelligence documentaire de bout en bout : extraire, interroger et analyser sur une seule plateforme",
-      "bullet5": "Les rôles sont au niveau de l'organisation — partagez-les dans votre équipe pour un comportement IA cohérent"
-    },
     "userManagement": {
       "label": "Gestion des utilisateurs",
       "headline": "Accès sécurisé, rôles clairs, contrôle total",
       "description": "LNA est conçu pour les équipes. Les comptes au niveau de l'organisation, les permissions par rôle et l'authentification JWT garantissent que les bonnes personnes accèdent aux bons documents — et la piste d'audit sait toujours qui a fait quoi.",
       "bullet1": "Authentification JWT pour un accès sécurisé et géré par jetons",
       "bullet2": "Les comptes organisationnels séparent complètement les données de votre équipe de celles des autres clients",
-      "bullet3": "Contrôle d'accès par rôle avec les niveaux de permission Administrateur, Éditeur et Lecteur",
+      "bullet3": "Contrôle d'accès par rôle avec les rôles Administrateur et Membre",
       "bullet4": "Les administrateurs gèrent les membres de l'équipe, les permissions et la facturation depuis un tableau de bord centralisé",
-      "bullet5": "L'offre Enterprise prend en charge le SSO/SAML pour l'intégration avec votre fournisseur d'identité existant"
+      "bullet5": "Isolation des données par utilisateur — chaque membre ne voit que ses propres documents"
     },
     "comparison": {
       "heading": "Il existe une meilleure méthode que le copier-coller",
@@ -311,7 +233,7 @@
           "feature": "Précision",
           "manual": "Taux d'erreur humain",
           "ocr": "Modérée",
-          "lna": "99,5 % avec score de confiance"
+          "lna": "Score de confiance sur chaque champ"
         },
         "speed": {
           "feature": "Rapidité",
@@ -336,18 +258,6 @@
           "manual": "Sujet aux erreurs",
           "ocr": "Échoue souvent",
           "lna": "Extraits avec précision"
-        },
-        "aiQa": {
-          "feature": "Q&R IA",
-          "manual": "Impossible",
-          "ocr": "Non disponible",
-          "lna": "Interrogez vos documents"
-        },
-        "contextRoles": {
-          "feature": "Rôles contextuels",
-          "manual": "Non applicable",
-          "ocr": "Non disponible",
-          "lna": "Intelligence IA spécialisée par domaine"
         },
         "auditTrail": {
           "feature": "Piste d'audit",
@@ -374,7 +284,7 @@
   "pricing": {
     "hero": {
       "heading": "Des tarifs simples. Des résultats sérieux.",
-      "description": "Chaque offre inclut l'extraction IA et l'export Excel. Passez à la vitesse supérieure quand vous avez besoin du Q&R LLM, des rôles contextuels et de contrôles d'équipe avancés."
+      "description": "Chaque offre inclut l'extraction IA et l'export Excel. Passez à la vitesse supérieure pour des volumes plus importants, plus de sièges et des contrôles d'équipe avancés."
     },
     "billing": {
       "monthly": "Mensuel",
@@ -420,11 +330,9 @@
           "f2": "15 postes utilisateurs",
           "f3": "50 Go de stockage documentaire",
           "f4": "Tout le contenu de Starter, plus :",
-          "f5": "Q&R connecté au LLM",
-          "f6": "Chat avec rôle contextuel",
-          "f7": "Bibliothèque de modèles — enregistrez et partagez les configurations",
-          "f8": "Export par lots",
-          "f9": "Support prioritaire par email et chat"
+          "f5": "Bibliothèque de modèles — enregistrez et partagez les configurations",
+          "f6": "Export par lots",
+          "f7": "Support prioritaire par email et chat"
         }
       },
       "enterprise": {
@@ -439,13 +347,10 @@
           "f2": "Postes utilisateurs illimités",
           "f3": "Allocation de stockage personnalisée",
           "f4": "Tout le contenu de Professional, plus :",
-          "f5": "Authentification unique SSO/SAML",
-          "f6": "Account manager dédié",
-          "f7": "Intégrations personnalisées et accès API",
-          "f8": "Garanties SLA (disponibilité et temps de réponse)",
-          "f9": "Option de déploiement on-premise",
-          "f10": "Rôles contextuels personnalisés",
-          "f11": "Onboarding et formation prioritaires"
+          "f5": "Account manager dédié",
+          "f6": "Intégrations personnalisées et accès API",
+          "f7": "Garanties SLA (disponibilité et temps de réponse)",
+          "f8": "Onboarding et formation prioritaires"
         }
       }
     },
@@ -466,7 +371,6 @@
         "dataExtraction": "Extraction de données",
         "templateMapping": "Modèles & Mapping",
         "export": "Export",
-        "aiIntelligence": "Intelligence IA",
         "userManagement": "Gestion des utilisateurs",
         "support": "Support",
         "deployment": "Déploiement"
@@ -494,19 +398,14 @@
         "exportPreview": "Prévisualisation d'export",
         "auditTrail": "Piste d'audit",
         "batchExport": "Export par lots",
-        "llmQa": "Q&R connecté au LLM",
-        "chatContextRole": "Chat avec rôle contextuel",
-        "customRoles": "Rôles contextuels personnalisés",
         "rbac": "Contrôle d'accès par rôle",
         "orgAccounts": "Comptes organisationnels",
-        "ssoSaml": "SSO / SAML",
         "emailSupport": "Support par email",
         "prioritySupport": "Support prioritaire",
         "dedicatedManager": "Account manager dédié",
         "onboarding": "Onboarding & formation",
         "slaGuarantee": "Garantie SLA",
         "cloudHosted": "Cloud (hébergé)",
-        "onPremise": "Option on-premise",
         "customApi": "Intégrations personnalisées & API"
       },
       "values": {
@@ -596,7 +495,7 @@
       },
       "aiPurpose": {
         "title": "L'IA au service d'un objectif",
-        "description": "Nous n'ajoutons pas de fonctionnalités IA parce qu'elles sont impressionnantes. Nous les ajoutons parce qu'elles résolvent un vrai problème. Chaque capacité IA de LNA — de l'extraction sans schéma aux rôles contextuels — existe parce qu'elle améliore concrètement votre travail."
+        "description": "Nous n'ajoutons pas de fonctionnalités IA parce qu'elles sont impressionnantes. Nous les ajoutons parce qu'elles résolvent un vrai problème. Chaque capacité IA de LNA — de l'extraction sans schéma à l'isolation des données par utilisateur — existe parce qu'elle améliore concrètement votre travail."
       },
       "customerCentric": {
         "title": "Le client au centre par défaut",
@@ -615,8 +514,14 @@
       "label": "L'équipe",
       "heading": "Les personnes qui construisent LNA",
       "description": "Nous sommes une équipe dédiée chez Manureva Solutions, qui travaille à rendre l'intelligence documentaire accessible à toute organisation qui s'appuie sur les données.",
-      "member1": { "name": "Membre de l'équipe", "role": "Co-fondateur & CEO" },
-      "member2": { "name": "Membre de l'équipe", "role": "CTO" },
+      "member1": {
+        "name": "Membre de l'équipe",
+        "role": "Co-fondateur & CEO"
+      },
+      "member2": {
+        "name": "Membre de l'équipe",
+        "role": "CTO"
+      },
       "member3": {
         "name": "Membre de l'équipe",
         "role": "Responsable Produit"

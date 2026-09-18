@@ -258,29 +258,6 @@ export function PricingContent() {
       ],
     },
     {
-      category: t("comparison.categories.aiIntelligence"),
-      rows: [
-        {
-          feature: t("comparison.rows.llmQa"),
-          starter: false,
-          professional: true,
-          enterprise: true,
-        },
-        {
-          feature: t("comparison.rows.chatContextRole"),
-          starter: false,
-          professional: true,
-          enterprise: true,
-        },
-        {
-          feature: t("comparison.rows.customRoles"),
-          starter: false,
-          professional: false,
-          enterprise: true,
-        },
-      ],
-    },
-    {
       category: t("comparison.categories.userManagement"),
       rows: [
         {
@@ -293,12 +270,6 @@ export function PricingContent() {
           feature: t("comparison.rows.orgAccounts"),
           starter: true,
           professional: true,
-          enterprise: true,
-        },
-        {
-          feature: t("comparison.rows.ssoSaml"),
-          starter: false,
-          professional: false,
           enterprise: true,
         },
       ],
@@ -345,12 +316,6 @@ export function PricingContent() {
           feature: t("comparison.rows.cloudHosted"),
           starter: true,
           professional: true,
-          enterprise: true,
-        },
-        {
-          feature: t("comparison.rows.onPremise"),
-          starter: false,
-          professional: false,
           enterprise: true,
         },
         {

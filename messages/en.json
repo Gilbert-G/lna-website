@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "LNA — AI Document Processing & PDF to Excel Automation",
-    "description": "LNA extracts structured data from any PDF and exports it to Excel automatically. AI-powered document processing with 99.5% accuracy. Request a demo.",
+    "description": "LNA extracts structured data from any PDF and exports it to Excel automatically. AI-powered document processing with confidence-scored extraction. Request a demo.",
     "ogTitle": "LNA — AI-Powered Document Processing Platform",
     "ogDescription": "Extract structured data from PDFs into Excel — automatically.",
     "features": {
@@ -82,7 +82,7 @@
         "description": "Replace hours of manual data entry with AI extraction that completes in seconds."
       },
       "accuracy": {
-        "headline": "99.5% Extraction Accuracy",
+        "headline": "Confidence-Scored Extraction",
         "description": "Confidence scoring on every field ensures your data is reliable before it ever leaves the platform."
       },
       "zeroManual": {
@@ -139,64 +139,13 @@
         "title": "Export With Confidence",
         "description": "Preview your output before downloading. Export to Excel in formats that preserve your layout and formulas. Every extraction is logged in a full audit trail, giving your team the traceability compliance requires."
       },
-      "askDocuments": {
-        "title": "Ask Your Documents Anything",
-        "description": "Stop hunting through spreadsheets for answers. Ask LNA a plain-language question — \"What was the total invoice amount from Vendor X in Q3?\" — and get an accurate, sourced answer from your own data in seconds."
+      "team": {
+        "title": "Built for Teams",
+        "description": "Organization-level accounts with admin and member roles. Each user sees only their own documents, while Analytics gives a shared team view. JWT authentication and a full audit log keep everything traceable."
       },
-      "aiAssistant": {
-        "title": "An AI Assistant That Speaks Your Industry",
-        "description": "Set a role — Financial Analyst, Compliance Officer, Operations Manager — and LNA's AI adapts its language, focus, and responses to match. It's not a generic chatbot. It's domain-aware intelligence built into your workflow."
-      }
-    },
-    "aiDifferentiators": {
-      "label": "What Makes LNA Different",
-      "heading": "Beyond Extraction: Document Intelligence That Thinks",
-      "subheading": "Most document tools stop at extraction. LNA keeps going — giving you the ability to question, analyze, and reason over your data using AI that understands your context.",
-      "qa": {
-        "title": "Ask Your Documents Anything",
-        "description": "Connect your document library to a powerful language model and query it in plain English. LNA grounds every answer in your actual data — no hallucinations, no guesswork.",
-        "bullet1": "Ask natural-language questions across hundreds of documents at once",
-        "bullet2": "Get specific, sourced answers — not summaries or approximations",
-        "bullet3": "Instantly surface totals, comparisons, anomalies, and trends without building a single formula"
-      },
-      "roles": {
-        "title": "AI That Adapts to Your Role",
-        "description": "Configure the AI to think and respond like an expert in your field. Whether you need financial analysis, compliance review, or operational oversight, LNA's context roles make every conversation relevant and precise.",
-        "bullet1": "Pre-built roles: Financial Analyst, Compliance Officer, Operations Manager",
-        "bullet2": "The AI speaks your industry's language — not generic output",
-        "bullet3": "Build and save custom roles tailored to your specific workflows"
-      }
-    },
-    "socialProof": {
-      "label": "Trusted by Teams Who Process Documents Every Day",
-      "stats": {
-        "documents": { "value": "500K+", "label": "Documents processed" },
-        "hours": { "value": "120+", "label": "Hours saved per team/month" },
-        "accuracy": {
-          "value": "99.5%",
-          "label": "Average extraction accuracy"
-        },
-        "teams": { "value": "200+", "label": "Teams using LNA" }
-      },
-      "testimonials": {
-        "sarah": {
-          "quote": "LNA replaced our entire manual data entry workflow. What used to take our team 6 hours a day now happens in minutes — with better accuracy.",
-          "name": "Sarah Chen",
-          "title": "Finance Director",
-          "company": "Meridian Partners"
-        },
-        "james": {
-          "quote": "The accuracy improvement was immediate. We went from catching errors in every third export to near-perfect data on the first pass.",
-          "name": "James Okafor",
-          "title": "Operations Manager",
-          "company": "Apex Logistics"
-        },
-        "marie": {
-          "quote": "The LLM Q&A feature changed everything. We can now ask questions across thousands of invoices instead of manually building pivot tables.",
-          "name": "Marie Dubois",
-          "title": "Head of Data",
-          "company": "Vectis Group"
-        }
+      "realtime": {
+        "title": "Real-Time Progress",
+        "description": "Watch every document move through the pipeline with live WebSocket updates. Process documents in batches and recover cleanly from failures — no more refreshing to check a status."
       }
     },
     "cta": {
@@ -255,39 +204,15 @@
       "bullet3": "Batch export processes and downloads multiple documents simultaneously",
       "bullet4": "Full audit trail captures what was extracted, what was mapped, by whom, and when — supporting compliance and review processes"
     },
-    "llmQa": {
-      "label": "LLM-Connected Data Q&A",
-      "headline": "Stop Searching. Start Asking.",
-      "description": "Spreadsheets are good at storing data. They're not good at answering questions. LNA's LLM-connected Q&A turns your document library into a conversational data source. Ask anything in plain English and get an accurate answer — grounded entirely in your own uploaded data, not generic AI knowledge.",
-      "whyItMatters": "Why it matters",
-      "whyItMattersText": "Most document tools stop at extraction. They give you a spreadsheet and leave you to figure out the rest. LNA goes further — once your data is extracted, it stays live and queryable. Your documents become a database you can have a conversation with.",
-      "bullet1": "Ask natural-language questions across your entire document library",
-      "bullet2": "Answers are grounded in your uploaded data — not the LLM's general training",
-      "bullet3": "Get specific totals, comparisons, summaries, and anomaly flags without writing a single formula",
-      "bullet4": "Ideal for: financial reconciliation, compliance checks, vendor analysis, operational reporting",
-      "bullet5": "Powered by Gemini — a state-of-the-art language model built for accuracy at scale"
-    },
-    "chatContextRole": {
-      "label": "Chat with Context Role",
-      "headline": "An AI That Thinks Like Your Team",
-      "description": "Generic AI gives generic answers. LNA's Chat with Context Role lets you configure the AI assistant's persona and domain focus — so it responds with the expertise your work actually requires.",
-      "whyItMatters": "Why it matters",
-      "whyItMattersText": "Context roles don't just change the tone of responses — they change what the AI pays attention to. This is the difference between a general-purpose chatbot and a specialized AI partner that understands your industry.",
-      "bullet1": "Pre-built roles include Financial Analyst, Compliance Officer, and Operations Manager",
-      "bullet2": "The AI adapts its language, focus areas, and interpretation to match the selected role",
-      "bullet3": "Create and save custom roles tailored to your specific team, department, or use case",
-      "bullet4": "Combine with LLM Q&A for end-to-end document intelligence: extract, query, and analyze in one platform",
-      "bullet5": "Roles are organization-level — share them across your team for consistent AI behavior"
-    },
     "userManagement": {
       "label": "User Management",
       "headline": "Secure Access, Clear Roles, Full Control",
       "description": "LNA is built for teams. Organization-level accounts, role-based permissions, and JWT authentication ensure that the right people have access to the right documents — and the audit trail always knows who did what.",
       "bullet1": "JWT-based authentication for secure, token-managed access",
       "bullet2": "Organization-level accounts keep your team's data fully separated from other customers",
-      "bullet3": "Role-based access control with Admin, Editor, and Viewer permission levels",
+      "bullet3": "Role-based access control with Admin and Member roles",
       "bullet4": "Admins manage team members, permissions, and billing from a central dashboard",
-      "bullet5": "Enterprise tier supports SSO/SAML for single sign-on integration with your existing identity provider"
+      "bullet5": "Per-user data isolation — each member sees only their own documents"
     },
     "comparison": {
       "heading": "There's a Better Way Than Copy-Paste",
@@ -308,7 +233,7 @@
           "feature": "Accuracy",
           "manual": "Human error rate",
           "ocr": "Moderate",
-          "lna": "99.5% with confidence scoring"
+          "lna": "Confidence scoring on every field"
         },
         "speed": {
           "feature": "Speed",
@@ -333,18 +258,6 @@
           "manual": "Error-prone",
           "ocr": "Often fails",
           "lna": "Extracted accurately"
-        },
-        "aiQa": {
-          "feature": "AI Q&A",
-          "manual": "Not possible",
-          "ocr": "Not available",
-          "lna": "Ask your documents anything"
-        },
-        "contextRoles": {
-          "feature": "Context roles",
-          "manual": "Not applicable",
-          "ocr": "Not available",
-          "lna": "Domain-specific AI intelligence"
         },
         "auditTrail": {
           "feature": "Audit trail",
@@ -371,7 +284,7 @@
   "pricing": {
     "hero": {
       "heading": "Simple Pricing. Serious Results.",
-      "description": "Every plan includes core AI extraction and Excel export. Upgrade when you need LLM Q&A, context roles, and deeper team controls."
+      "description": "Every plan includes core AI extraction and Excel export. Upgrade for larger volumes, more seats, and deeper team controls."
     },
     "billing": {
       "monthly": "Monthly",
@@ -417,11 +330,9 @@
           "f2": "15 user seats",
           "f3": "50GB document storage",
           "f4": "Everything in Starter, plus:",
-          "f5": "LLM-Connected Data Q&A",
-          "f6": "Chat with Context Role",
-          "f7": "Template library — save and share configurations",
-          "f8": "Batch export",
-          "f9": "Priority email and chat support"
+          "f5": "Template library — save and share configurations",
+          "f6": "Batch export",
+          "f7": "Priority email and chat support"
         }
       },
       "enterprise": {
@@ -436,13 +347,10 @@
           "f2": "Unlimited user seats",
           "f3": "Custom storage allocation",
           "f4": "Everything in Professional, plus:",
-          "f5": "SSO/SAML single sign-on",
-          "f6": "Dedicated account manager",
-          "f7": "Custom integrations and API access",
-          "f8": "SLA guarantees (uptime and response time)",
-          "f9": "On-premise deployment option",
-          "f10": "Custom context roles",
-          "f11": "Priority onboarding and training"
+          "f5": "Dedicated account manager",
+          "f6": "Custom integrations and API access",
+          "f7": "SLA guarantees (uptime and response time)",
+          "f8": "Priority onboarding and training"
         }
       }
     },
@@ -463,7 +371,6 @@
         "dataExtraction": "Data Extraction",
         "templateMapping": "Template & Mapping",
         "export": "Export",
-        "aiIntelligence": "AI Intelligence",
         "userManagement": "User Management",
         "support": "Support",
         "deployment": "Deployment"
@@ -491,19 +398,14 @@
         "exportPreview": "Export preview",
         "auditTrail": "Audit trail",
         "batchExport": "Batch export",
-        "llmQa": "LLM-Connected Data Q&A",
-        "chatContextRole": "Chat with Context Role",
-        "customRoles": "Custom context roles",
         "rbac": "Role-based access control",
         "orgAccounts": "Organization-level accounts",
-        "ssoSaml": "SSO / SAML",
         "emailSupport": "Email support",
         "prioritySupport": "Priority support",
         "dedicatedManager": "Dedicated account manager",
         "onboarding": "Onboarding & training",
         "slaGuarantee": "SLA guarantee",
         "cloudHosted": "Cloud (hosted)",
-        "onPremise": "On-premise option",
         "customApi": "Custom integrations & API"
       },
       "values": {
@@ -593,7 +495,7 @@
       },
       "aiPurpose": {
         "title": "AI with Purpose",
-        "description": "We don't add AI features because they're impressive. We add them because they solve a real problem. Every AI capability in LNA — from schema-free extraction to context roles — exists because it makes your work meaningfully better."
+        "description": "We don't add AI features because they're impressive. We add them because they solve a real problem. Every AI capability in LNA — from schema-free extraction to per-user data isolation — exists because it makes your work meaningfully better."
       },
       "customerCentric": {
         "title": "Customer-Centric by Default",
@@ -612,10 +514,22 @@
       "label": "The Team",
       "heading": "The People Building LNA",
       "description": "We're a focused team at Manureva Solutions, working to make document intelligence accessible to every organization that relies on data.",
-      "member1": { "name": "Team Member", "role": "Co-Founder & CEO" },
-      "member2": { "name": "Team Member", "role": "CTO" },
-      "member3": { "name": "Team Member", "role": "Head of Product" },
-      "member4": { "name": "Team Member", "role": "Lead AI Engineer" }
+      "member1": {
+        "name": "Team Member",
+        "role": "Co-Founder & CEO"
+      },
+      "member2": {
+        "name": "Team Member",
+        "role": "CTO"
+      },
+      "member3": {
+        "name": "Team Member",
+        "role": "Head of Product"
+      },
+      "member4": {
+        "name": "Team Member",
+        "role": "Lead AI Engineer"
+      }
     },
     "company": {
       "label": "The Company",

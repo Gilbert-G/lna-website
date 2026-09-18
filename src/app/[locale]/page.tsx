@@ -12,12 +12,8 @@ import {
   BrainCircuit,
   GitMerge,
   Download,
-  MessageSquareText,
-  UserCog,
-  MessagesSquare,
-  UserRoundCog,
+  Users,
   ArrowRight,
-  Star,
 } from "lucide-react";
 import { LinkButton } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -25,7 +21,6 @@ import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { DemoModalTrigger } from "@/components/forms/DemoModalTrigger";
-import { VideoEmbed } from "@/components/media/VideoEmbed";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export default async function HomePage({
@@ -174,14 +169,6 @@ export default async function HomePage({
               />
             </div>
           </AnimateIn>
-          <AnimateIn delay={0.4}>
-            <div className="mx-auto mt-12 max-w-4xl">
-              <VideoEmbed
-                src="dQw4w9WgXcQ"
-                title={t("howItWorks.videoTitle")}
-              />
-            </div>
-          </AnimateIn>
         </Container>
       </Section>
 
@@ -207,8 +194,8 @@ export default async function HomePage({
               { icon: BrainCircuit, key: "aiExtraction" },
               { icon: GitMerge, key: "templateMatch" },
               { icon: Download, key: "export" },
-              { icon: MessageSquareText, key: "askDocuments" },
-              { icon: UserCog, key: "aiAssistant" },
+              { icon: Users, key: "team" },
+              { icon: Zap, key: "realtime" },
             ].map((feature, i) => (
               <AnimateIn key={feature.key} delay={i * 0.1}>
                 <div className="bg-card flex flex-col gap-4 rounded-2xl border p-6">
@@ -224,150 +211,6 @@ export default async function HomePage({
                 </div>
               </AnimateIn>
             ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* AI Differentiators */}
-      <Section className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white">
-        <Container>
-          <AnimateIn>
-            <div className="mb-12 text-center">
-              <p className="mb-2 text-sm font-semibold tracking-wider text-blue-300 uppercase">
-                {t("aiDifferentiators.label")}
-              </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                {t("aiDifferentiators.heading")}
-              </h2>
-              <p className="mt-3 text-lg text-slate-300">
-                {t("aiDifferentiators.subheading")}
-              </p>
-            </div>
-          </AnimateIn>
-          <div className="grid gap-8 md:grid-cols-2">
-            <AnimateIn delay={0.1}>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="rounded-xl bg-blue-500/20 p-3">
-                    <MessagesSquare className="size-7 text-blue-300" />
-                  </div>
-                  <h3 className="text-xl font-bold">
-                    {t("aiDifferentiators.qa.title")}
-                  </h3>
-                </div>
-                <p className="mb-4 text-slate-300">
-                  {t("aiDifferentiators.qa.description")}
-                </p>
-                <ul className="space-y-2 text-sm text-slate-300">
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-blue-400">&#x2713;</span>
-                    {t("aiDifferentiators.qa.bullet1")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-blue-400">&#x2713;</span>
-                    {t("aiDifferentiators.qa.bullet2")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-blue-400">&#x2713;</span>
-                    {t("aiDifferentiators.qa.bullet3")}
-                  </li>
-                </ul>
-              </div>
-            </AnimateIn>
-            <AnimateIn delay={0.2}>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="rounded-xl bg-indigo-500/20 p-3">
-                    <UserRoundCog className="size-7 text-indigo-300" />
-                  </div>
-                  <h3 className="text-xl font-bold">
-                    {t("aiDifferentiators.roles.title")}
-                  </h3>
-                </div>
-                <p className="mb-4 text-slate-300">
-                  {t("aiDifferentiators.roles.description")}
-                </p>
-                <ul className="space-y-2 text-sm text-slate-300">
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-indigo-400">&#x2713;</span>
-                    {t("aiDifferentiators.roles.bullet1")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-indigo-400">&#x2713;</span>
-                    {t("aiDifferentiators.roles.bullet2")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-indigo-400">&#x2713;</span>
-                    {t("aiDifferentiators.roles.bullet3")}
-                  </li>
-                </ul>
-              </div>
-            </AnimateIn>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Social Proof */}
-      <Section>
-        <Container>
-          <AnimateIn>
-            <p className="text-primary mb-8 text-center text-sm font-semibold tracking-wider uppercase">
-              {t("socialProof.label")}
-            </p>
-          </AnimateIn>
-          <div className="mb-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { key: "documents" },
-              { key: "hours" },
-              { key: "accuracy" },
-              { key: "teams" },
-            ].map((stat, i) => (
-              <AnimateIn key={stat.key} delay={i * 0.1}>
-                <div className="text-center">
-                  <div className="text-primary text-3xl font-extrabold">
-                    {t(`socialProof.stats.${stat.key}.value`)}
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    {t(`socialProof.stats.${stat.key}.label`)}
-                  </p>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {[{ key: "sarah" }, { key: "james" }, { key: "marie" }].map(
-              (testimonial, i) => (
-                <AnimateIn key={testimonial.key} delay={i * 0.1}>
-                  <div className="bg-card flex flex-col gap-4 rounded-2xl border p-6">
-                    <div className="flex gap-1">
-                      {Array.from({ length: 5 }).map((_, j) => (
-                        <Star
-                          key={j}
-                          className="size-4 fill-amber-400 text-amber-400"
-                        />
-                      ))}
-                    </div>
-                    <p className="text-muted-foreground text-sm italic">
-                      &ldquo;
-                      {t(`socialProof.testimonials.${testimonial.key}.quote`)}
-                      &rdquo;
-                    </p>
-                    <div className="mt-auto">
-                      <p className="text-sm font-semibold">
-                        {t(`socialProof.testimonials.${testimonial.key}.name`)}
-                      </p>
-                      <p className="text-muted-foreground text-xs">
-                        {t(`socialProof.testimonials.${testimonial.key}.title`)}
-                        ,{" "}
-                        {t(
-                          `socialProof.testimonials.${testimonial.key}.company`
-                        )}
-                      </p>
-                    </div>
-                  </div>
-                </AnimateIn>
-              )
-            )}
           </div>
         </Container>
       </Section>

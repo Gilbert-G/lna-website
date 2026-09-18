@@ -5,8 +5,6 @@ import {
   ScanLine,
   GitMerge,
   Download,
-  MessagesSquare,
-  UserRoundCog,
   Users,
   ArrowRight,
   Check,
@@ -68,29 +66,6 @@ const featureBulletCounts: Record<FeatureKey, number> = {
   exportAudit: 4,
 };
 
-const aiFeatureKeys = ["llmQa", "chatContextRole"] as const;
-type AiFeatureKey = (typeof aiFeatureKeys)[number];
-
-const aiFeatureIcons: Record<AiFeatureKey, React.ElementType> = {
-  llmQa: MessagesSquare,
-  chatContextRole: UserRoundCog,
-};
-
-const aiFeatureIllustrations: Record<AiFeatureKey, string> = {
-  llmQa: "/illustrations/llm-qa-illustration.svg",
-  chatContextRole: "/illustrations/chat-context-illustration.svg",
-};
-
-const aiFeatureIds: Record<AiFeatureKey, string> = {
-  llmQa: "llm-qa",
-  chatContextRole: "chat-context-role",
-};
-
-const aiFeatureBulletCounts: Record<AiFeatureKey, number> = {
-  llmQa: 5,
-  chatContextRole: 5,
-};
-
 const comparisonRowKeys = [
   "setup",
   "accuracy",
@@ -98,8 +73,6 @@ const comparisonRowKeys = [
   "output",
   "scanned",
   "multiPage",
-  "aiQa",
-  "contextRoles",
   "auditTrail",
   "scalability",
 ] as const;
@@ -155,15 +128,6 @@ export default async function FeaturesPage({
                 <a
                   key={featureIds[key]}
                   href={`#${featureIds[key]}`}
-                  className="text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-full border px-4 py-1.5 text-sm transition-colors"
-                >
-                  {t(`${key}.label`)}
-                </a>
-              ))}
-              {aiFeatureKeys.map((key) => (
-                <a
-                  key={aiFeatureIds[key]}
-                  href={`#${aiFeatureIds[key]}`}
                   className="text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-full border px-4 py-1.5 text-sm transition-colors"
                 >
                   {t(`${key}.label`)}
@@ -235,73 +199,6 @@ export default async function FeaturesPage({
                     width={600}
                     height={400}
                     className="rounded-2xl shadow-lg"
-                  />
-                </AnimateIn>
-              </div>
-            </Container>
-          </Section>
-        );
-      })}
-
-      {/* AI Features - Differentiators */}
-      {aiFeatureKeys.map((key, i) => {
-        const Icon = aiFeatureIcons[key];
-        const bullets = Array.from(
-          { length: aiFeatureBulletCounts[key] },
-          (_, idx) => t(`${key}.bullet${idx + 1}`)
-        );
-
-        return (
-          <Section
-            key={key}
-            id={aiFeatureIds[key]}
-            className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white"
-          >
-            <Container>
-              <div className="grid items-center gap-12 lg:grid-cols-2">
-                <AnimateIn className={i % 2 === 1 ? "lg:order-2" : ""}>
-                  <Badge className="mb-4 border-blue-400/30 bg-blue-500/20 text-blue-200">
-                    Key Differentiator
-                  </Badge>
-                  <div className="mb-4 w-fit rounded-xl bg-blue-500/20 p-3">
-                    <Icon className="size-7 text-blue-300" />
-                  </div>
-                  <h2 className="text-3xl font-bold tracking-tight">
-                    {t(`${key}.headline`)}
-                  </h2>
-                  <p className="mt-4 text-lg text-slate-300">
-                    {t(`${key}.description`)}
-                  </p>
-                  <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
-                    <p className="mb-1 text-sm font-semibold text-blue-200">
-                      {t(`${key}.whyItMatters`)}
-                    </p>
-                    <p className="text-sm text-slate-400">
-                      {t(`${key}.whyItMattersText`)}
-                    </p>
-                  </div>
-                  <ul className="mt-6 space-y-3">
-                    {bullets.map((bullet) => (
-                      <li
-                        key={bullet}
-                        className="flex items-start gap-3 text-sm text-slate-300"
-                      >
-                        <Check className="mt-0.5 size-4 shrink-0 text-blue-400" />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </AnimateIn>
-                <AnimateIn
-                  delay={0.2}
-                  className={i % 2 === 1 ? "lg:order-1" : ""}
-                >
-                  <Image
-                    src={aiFeatureIllustrations[key]}
-                    alt={t(`${key}.headline`)}
-                    width={600}
-                    height={400}
-                    className="rounded-2xl"
                   />
                 </AnimateIn>
               </div>
