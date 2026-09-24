@@ -10,6 +10,7 @@ import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { appUrls } from "@/lib/app-urls";
 
 export function Header() {
   const pathname = usePathname();
@@ -90,7 +91,13 @@ export function Header() {
 
         <div className="hidden items-center gap-3 md:flex">
           <LanguageSwitcher />
-          <Button size="lg" render={<Link href="/contact" />}>
+          <a
+            href={appUrls.login}
+            className="text-muted-foreground hover:text-foreground rounded-lg px-3 py-2 text-sm font-medium transition-colors"
+          >
+            {t("signIn")}
+          </a>
+          <Button size="lg" render={<a href={appUrls.register} />}>
             {t("cta")}
           </Button>
         </div>
@@ -161,13 +168,23 @@ export function Header() {
           <div className="mt-4 flex flex-col gap-3">
             <Button
               size="lg"
-              className="w-full"
+              className="h-11 w-full"
               render={
-                <Link href="/contact" onClick={() => setMobileOpen(false)} />
+                <a
+                  href={appUrls.register}
+                  onClick={() => setMobileOpen(false)}
+                />
               }
             >
               {t("cta")}
             </Button>
+            <a
+              href={appUrls.login}
+              onClick={() => setMobileOpen(false)}
+              className="text-muted-foreground hover:text-foreground flex min-h-11 items-center justify-center rounded-lg px-4 text-base font-medium transition-colors"
+            >
+              {t("signIn")}
+            </a>
             <div className="flex justify-center">
               <LanguageSwitcher />
             </div>

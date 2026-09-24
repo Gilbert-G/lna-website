@@ -6,6 +6,7 @@ import { Linkedin, Twitter, Mail } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { NewsletterForm } from "@/components/layout/newsletter-form";
 import { useTranslations } from "next-intl";
+import { appUrls } from "@/lib/app-urls";
 
 const socialLinks = [
   { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
@@ -21,6 +22,7 @@ export function Footer() {
       { href: "/features", label: t("features") },
       { href: "/pricing", label: t("pricing") },
       { href: "/blog", label: t("blog") },
+      { href: appUrls.login, label: t("signIn"), external: true },
     ],
     [t("company")]: [
       { href: "/about", label: t("about") },
@@ -84,12 +86,21 @@ export function Footer() {
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-muted-foreground hover:text-foreground text-sm transition-colors"
-                    >
-                      {link.label}
-                    </Link>
+                    {"external" in link && link.external ? (
+                      <a
+                        href={link.href}
+                        className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

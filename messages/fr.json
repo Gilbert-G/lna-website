@@ -1,9 +1,9 @@
 {
   "seo": {
-    "title": "LNA — Traitement Documentaire IA & Automatisation PDF vers Excel",
-    "description": "LNA extrait les données structurées de vos PDF et les exporte automatiquement vers Excel. Traitement documentaire propulsé par l'IA avec un score de confiance sur chaque champ. Demandez une démo.",
-    "ogTitle": "LNA — Plateforme de Traitement Documentaire par IA",
-    "ogDescription": "Extrayez automatiquement les données structurées de vos PDF vers Excel.",
+    "title": "LNA — vos PDF remplissent votre tableau Excel",
+    "description": "Déposez vos devis, tableaux d'amortissement ou décomptes de charges. LNA remplit votre propre modèle Excel, avec un niveau de fiabilité sur chaque champ.",
+    "ogTitle": "LNA — vos PDF remplissent votre tableau Excel",
+    "ogDescription": "Déposez vos devis, tableaux d'amortissement ou décomptes de charges. LNA remplit votre propre modèle Excel, avec un niveau de fiabilité sur chaque champ.",
     "features": {
       "title": "Fonctionnalités LNA — Traitement Documentaire IA & Extraction Intelligente",
       "description": "Découvrez toutes les fonctionnalités de LNA : extraction IA, export PDF vers Excel, Q&R propulsé par LLM et rôles contextuels IA. Découvrez ce qui distingue LNA."
@@ -38,11 +38,12 @@
     "pricing": "Tarifs",
     "about": "À propos",
     "blog": "Blog",
-    "cta": "Demander une démo",
+    "cta": "Tester sur mes documents",
     "menuOpen": "Ouvrir le menu",
     "menuClose": "Fermer le menu",
     "mainNavigation": "Navigation principale",
-    "mobileNavigation": "Navigation mobile"
+    "mobileNavigation": "Navigation mobile",
+    "signIn": "Se connecter"
   },
   "footer": {
     "description": "Traitement documentaire propulsé par l'IA qui transforme vos PDF en données Excel structurées — automatiquement.",
@@ -63,97 +64,98 @@
     "copyright": "© 2026 Manureva Solutions. Tous droits réservés.",
     "privacy": "Confidentialité",
     "terms": "Conditions",
-    "subscribe": "S'abonner"
+    "subscribe": "S'abonner",
+    "signIn": "Se connecter"
   },
   "home": {
     "hero": {
-      "badge": "Plateforme de Traitement Documentaire IA",
-      "heading": "Transformez n'importe quel PDF en Excel parfait —",
-      "headingHighlight": "Automatiquement",
-      "description": "LNA utilise l'IA pour extraire, structurer et exporter les données de vos documents en quelques secondes — pour que votre équipe arrête de copier et commence à travailler.",
-      "ctaDemo": "Demander une démo",
-      "ctaHow": "Voir comment ça marche",
-      "noCard": "Sans carte bancaire. Opérationnel en quelques minutes.",
-      "imageAlt": "Tableau de bord de la plateforme LNA montrant la conversion PDF vers Excel"
+      "heading": "Vos PDF entrent. Votre tableau Excel sort, déjà rempli.",
+      "description": "Vous déposez votre modèle Excel et les devis. Vous récupérez le même fichier, complété, avec le niveau de fiabilité de chaque champ.",
+      "ctaPrimary": "Tester sur mes documents",
+      "ctaNote": "Vous créez un compte, puis vous déposez vos premiers documents.",
+      "visual": {
+        "description": "Quatre documents PDF — deux devis d'assurance emprunteur, un tableau d'amortissement, un devis de complémentaire santé — alimentent un tableau comparatif Excel dont les colonnes sont les assureurs et les lignes les garanties : taux, coût total, quotité.",
+        "roleAdp": "Devis assurance emprunteur",
+        "roleAmortization": "Tableau d'amortissement",
+        "roleHealth": "Devis complémentaire santé"
+      }
     },
-    "valueProp": {
-      "speed": {
-        "headline": "Traitement 10x plus rapide",
-        "description": "Remplacez des heures de saisie manuelle par une extraction IA qui s'exécute en quelques secondes."
+    "bands": {
+      "heading": "Ce que vous obtenez, et ce qui le rend fiable",
+      "template": {
+        "heading": "Votre modèle Excel, pas le nôtre",
+        "body": "Vous récupérez le fichier que vous avez déposé, rempli. LNA écrit cellule par cellule dans votre modèle : la mise en forme, les colonnes calculées et les formules restent celles que vous avez construites.",
+        "before": "Votre modèle, tel que vous l'avez déposé",
+        "after": "Le même fichier, rempli"
       },
-      "accuracy": {
-        "headline": "Extraction avec score de confiance",
-        "description": "Un score de confiance sur chaque champ garantit la fiabilité de vos données avant qu'elles ne quittent la plateforme."
+      "mixed": {
+        "heading": "Déposez le paquet entier, mélangé",
+        "body": "Vous n'avez pas à trier vos PDF avant de les envoyer. Chaque document est classé automatiquement, et plusieurs émetteurs alimentent les mêmes lignes du même tableau.",
+        "roleAdp": "Devis assurance emprunteur",
+        "roleAmortization": "Tableau d'amortissement",
+        "roleHealth": "Devis complémentaire santé",
+        "roleContract": "Contrat / conditions générales",
+        "roleOther": "Autre"
       },
-      "zeroManual": {
-        "headline": "Zéro saisie manuelle",
-        "description": "De l'import à l'export, tout le processus est automatisé — votre équipe ne touche jamais aux données brutes."
+      "confidence": {
+        "heading": "Vous voyez ce dont l'IA n'est pas sûre",
+        "body": "Chaque champ extrait porte son niveau de fiabilité, en pourcentage. Sous le seuil de relecture, la valeur part marquée dans le fichier exporté au lieu d'être noyée dans le reste.",
+        "tableCaption": "Grille de vérification : une ligne par garantie, une colonne par émetteur, avec le niveau de fiabilité de chaque valeur extraite.",
+        "levelHigh": "Élevée",
+        "levelMedium": "Moyenne",
+        "levelLow": "Faible",
+        "reviewLegend": "[REVIEW] — écrit dans la cellule exportée sous 0,6"
       },
-      "anyFormat": {
-        "headline": "Tout document, tout format",
-        "description": "Factures, rapports, formulaires, relevés — LNA les traite tous, y compris les PDF numérisés."
+      "validation": {
+        "heading": "Rien ne part sans votre validation",
+        "body": "L'export est une décision, pas un effet de bord : vous relisez les champs signalés, puis vous déclenchez le téléchargement. Chaque export est inscrit dans une piste d'audit.",
+        "stepLabel": "Étape 3 — Vérifier & Télécharger",
+        "checkbox": "J'ai relu les champs signalés",
+        "checkboxReview": "Conserver le marqueur [REVIEW] dans le fichier exporté",
+        "downloadButton": "Télécharger Excel",
+        "auditNote": "L'export est inscrit dans la piste d'audit."
       }
     },
     "howItWorks": {
-      "label": "Comment ça marche",
-      "heading": "De l'import à Excel en trois étapes",
-      "subheading": "Aucune configuration requise. Aucun modèle à construire. Juste des résultats.",
-      "step1": {
-        "step": "01",
-        "label": "Importer",
-        "title": "Déposez vos documents",
-        "description": "Glissez-déposez des fichiers individuels ou des lots entiers de PDF directement dans LNA. L'import en masse gère des centaines de documents à la fois. LNA classifie automatiquement chaque fichier pour que vous restiez organisé dès le départ."
+      "heading": "Trois étapes, les mêmes que dans l'application",
+      "template": {
+        "label": "Choisir un modèle",
+        "description": "Déposez le fichier Excel que vous remplissez déjà, ou reprenez-en un des précédents."
       },
-      "step2": {
-        "step": "02",
-        "label": "Extraire",
-        "title": "L'IA fait le gros du travail",
-        "description": "L'IA de LNA lit chaque page, identifie les tableaux, les entités et les champs de données, et structure le tout en lignes et colonnes propres. Le score de confiance signale tout ce qui nécessite une vérification — rien ne passe entre les mailles du filet."
+      "documents": {
+        "label": "Déposer les documents",
+        "description": "Glissez vos documents ensemble ; la lecture démarre sans autre réglage."
       },
-      "step3": {
-        "step": "03",
-        "label": "Exporter",
-        "title": "Téléchargez des fichiers Excel parfaits",
-        "description": "Mappez les données extraites sur votre propre modèle Excel ou téléchargez-les telles quelles. Prévisualisez avant d'exporter. Chaque sortie inclut une piste d'audit complète, pour que votre équipe sache toujours ce qui a été extrait et quand."
-      },
-      "workflowAlt": "Flux de travail : Importer, Extraire, Exporter",
-      "videoTitle": "Voir LNA en action"
-    },
-    "features": {
-      "label": "Fonctionnalités",
-      "heading": "Tout ce dont votre équipe a besoin pour traiter des documents à grande échelle",
-      "subheading": "Six capacités essentielles conçues pour les équipes finance, les responsables opérationnels et tous ceux qui vivent dans les tableurs.",
-      "organize": {
-        "title": "Centralisez tous vos documents au même endroit",
-        "description": "Importez, classifiez, recherchez et prévisualisez tous vos PDF sans quitter la plateforme. LNA détecte automatiquement les doublons et maintient votre bibliothèque propre, avec une recherche plein texte dans l'ensemble de vos archives documentaires."
-      },
-      "aiExtraction": {
-        "title": "Une IA qui lit les documents comme un expert",
-        "description": "L'extraction sans schéma signifie que vous n'avez rien à configurer avant de commencer le traitement. LNA détecte automatiquement les dates, montants, noms, adresses et tableaux multi-pages — avec un score de confiance associé à chaque champ."
-      },
-      "templateMatch": {
-        "title": "Votre format Excel, automatiquement adapté",
-        "description": "Importez votre modèle Excel existant et LNA vous propose le mapping des champs. Affinez avec un éditeur visuel par glisser-déposer, puis enregistrez la configuration pour tous les lots futurs — vos modèles, à votre façon."
-      },
-      "export": {
-        "title": "Exportez en toute confiance",
-        "description": "Prévisualisez votre sortie avant le téléchargement. Exportez vers Excel dans des formats qui préservent votre mise en page et vos formules. Chaque extraction est consignée dans une piste d'audit complète, offrant à votre équipe la traçabilité requise par la conformité."
-      },
-      "team": {
-        "title": "Conçu pour les équipes",
-        "description": "Comptes organisation avec rôles admin et membre. Chaque utilisateur ne voit que ses propres documents, tandis que l'Analytics offre une vue d'équipe partagée. Authentification JWT et journal d'audit complet pour tout tracer."
-      },
-      "realtime": {
-        "title": "Progression en temps réel",
-        "description": "Suivez chaque document dans le pipeline grâce aux mises à jour WebSocket en direct. Traitez des documents par lots et récupérez proprement en cas d'échec — plus besoin de rafraîchir pour vérifier un statut."
+      "review": {
+        "label": "Vérifier & Télécharger",
+        "description": "Relisez les champs signalés, puis récupérez votre fichier."
       }
     },
-    "cta": {
-      "heading": "Arrêtez de copier. Commencez à extraire.",
-      "description": "LNA automatise les flux PDF-vers-Excel qui coûtent des heures chaque semaine à votre équipe. Découvrez-le en action avec une démo personnalisée — nous vous montrerons exactement comment il fonctionne avec vos documents.",
-      "ctaDemo": "Demander une démo",
-      "ctaPricing": "Ou découvrir les tarifs",
-      "microcopy": "Sans carte bancaire. Installation en quelques minutes. Résiliation à tout moment."
+    "useCases": {
+      "heading": "Trois situations que LNA traite aujourd'hui",
+      "adp": {
+        "title": "Comparer des devis d'assurance emprunteur",
+        "description": "Les taux, coûts totaux et quotités de chaque devis atterrissent dans les lignes de votre tableau de comparaison."
+      },
+      "health": {
+        "title": "Suivre une complémentaire santé",
+        "description": "Les postes hospitalisation, optique et dentaire de chaque devis remplissent votre trame de suivi."
+      },
+      "condo": {
+        "title": "Reprendre un décompte de charges de copropriété",
+        "description": "Poste, montant et clé de répartition, ligne à ligne, dans votre fichier de suivi d'immeuble."
+      }
+    },
+    "trust": {
+      "heading": "Vos documents clients restent les vôtres",
+      "isolation": "Les données de votre organisation sont isolées de celles des autres clients.",
+      "audit": "Chaque export est consigné : qui a exporté quoi, et quand.",
+      "deletion": "Vos documents sont supprimés sur demande (RGPD)."
+    },
+    "finalCta": {
+      "heading": "Tester sur mes documents",
+      "reassurance": "Vous créez un compte, vous déposez un modèle et deux ou trois PDF. Vous voyez le résultat avant de décider quoi que ce soit.",
+      "cta": "Tester sur mes documents"
     }
   },
   "features": {

@@ -1,9 +1,9 @@
 {
   "seo": {
-    "title": "LNA — AI Document Processing & PDF to Excel Automation",
-    "description": "LNA extracts structured data from any PDF and exports it to Excel automatically. AI-powered document processing with confidence-scored extraction. Request a demo.",
-    "ogTitle": "LNA — AI-Powered Document Processing Platform",
-    "ogDescription": "Extract structured data from PDFs into Excel — automatically.",
+    "title": "LNA — your PDFs fill in your Excel sheet",
+    "description": "Drop in your quotes, amortisation schedules or service-charge statements. LNA fills your own Excel template, with a confidence level on every field.",
+    "ogTitle": "LNA — your PDFs fill in your Excel sheet",
+    "ogDescription": "Drop in your quotes, amortisation schedules or service-charge statements. LNA fills your own Excel template, with a confidence level on every field.",
     "features": {
       "title": "LNA Features — AI Document Processing & Intelligent Data Extraction",
       "description": "Explore LNA's full feature set: AI data extraction, PDF to Excel export, LLM-powered Q&A, and context-aware AI roles. See what sets LNA apart."
@@ -38,11 +38,12 @@
     "pricing": "Pricing",
     "about": "About",
     "blog": "Blog",
-    "cta": "Request Demo",
+    "cta": "Try it on my documents",
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
     "mainNavigation": "Main navigation",
-    "mobileNavigation": "Mobile navigation"
+    "mobileNavigation": "Mobile navigation",
+    "signIn": "Sign in"
   },
   "footer": {
     "description": "AI-powered document processing that turns PDFs into structured Excel data — automatically.",
@@ -63,97 +64,98 @@
     "copyright": "© 2026 Manureva Solutions. All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "signIn": "Sign in"
   },
   "home": {
     "hero": {
-      "badge": "AI Document Processing Platform",
-      "heading": "Turn Any PDF Into Perfect Excel —",
-      "headingHighlight": "Automatically",
-      "description": "LNA uses AI to extract, structure, and export data from your documents in seconds — so your team stops copying and starts working.",
-      "ctaDemo": "Request a Demo",
-      "ctaHow": "See How It Works",
-      "noCard": "No credit card required. Up and running in minutes.",
-      "imageAlt": "LNA platform dashboard showing PDF to Excel conversion"
+      "heading": "Your PDFs go in. Your Excel sheet comes out, already filled.",
+      "description": "You drop in your Excel template and the quotes. You get the same file back, completed, with a confidence level on every field.",
+      "ctaPrimary": "Try it on my documents",
+      "ctaNote": "Create an account, then drop in your first documents.",
+      "visual": {
+        "description": "Four PDF documents feed an Excel comparison sheet whose columns are the insurers and whose rows are the guarantees.",
+        "roleAdp": "Loan insurance quote",
+        "roleAmortization": "Amortisation schedule",
+        "roleHealth": "Health cover quote"
+      }
     },
-    "valueProp": {
-      "speed": {
-        "headline": "10x Faster Processing",
-        "description": "Replace hours of manual data entry with AI extraction that completes in seconds."
+    "bands": {
+      "heading": "What you get, and what makes it trustworthy",
+      "template": {
+        "heading": "Your Excel template, not ours",
+        "body": "You get back the file you dropped in, filled. LNA writes cell by cell into your template: formatting, calculated columns and formulas stay exactly as you built them.",
+        "before": "Your template, as you dropped it in",
+        "after": "The same file, filled"
       },
-      "accuracy": {
-        "headline": "Confidence-Scored Extraction",
-        "description": "Confidence scoring on every field ensures your data is reliable before it ever leaves the platform."
+      "mixed": {
+        "heading": "Drop in the whole mixed batch",
+        "body": "You don't have to sort your PDFs before sending them. Each document is classified automatically, and several issuers feed the same rows of the same sheet.",
+        "roleAdp": "Loan insurance quote",
+        "roleAmortization": "Amortisation schedule",
+        "roleHealth": "Health cover quote",
+        "roleContract": "Contract / terms",
+        "roleOther": "Other"
       },
-      "zeroManual": {
-        "headline": "Zero Manual Entry",
-        "description": "From upload to export, the entire workflow is automated — your team never touches the raw data."
+      "confidence": {
+        "heading": "You see what the AI is unsure about",
+        "body": "Every extracted field carries its confidence level, as a percentage. Below the review threshold, the value is flagged in the exported file instead of being lost in the rest.",
+        "tableCaption": "Review grid: one row per guarantee, one column per issuer, with the confidence level of each extracted value.",
+        "levelHigh": "High",
+        "levelMedium": "Medium",
+        "levelLow": "Low",
+        "reviewLegend": "[REVIEW] — written into the exported cell below 0.6"
       },
-      "anyFormat": {
-        "headline": "Any Document, Any Format",
-        "description": "Invoices, reports, forms, statements — LNA handles them all, including scanned PDFs."
+      "validation": {
+        "heading": "Nothing leaves without your approval",
+        "body": "Exporting is a decision, not a side effect: you review the flagged fields, then you trigger the download. Every export is recorded in an audit trail.",
+        "stepLabel": "Step 3 — Review & Download",
+        "checkbox": "I have reviewed the flagged fields",
+        "checkboxReview": "Keep the [REVIEW] marker in the exported file",
+        "downloadButton": "Download Excel",
+        "auditNote": "The export is recorded in the audit trail."
       }
     },
     "howItWorks": {
-      "label": "How It Works",
-      "heading": "From Upload to Excel in Three Steps",
-      "subheading": "No configuration required. No templates to build. Just results.",
-      "step1": {
-        "step": "01",
-        "label": "Upload",
-        "title": "Drop In Your Documents",
-        "description": "Drag and drop single files or entire batches of PDFs directly into LNA. Bulk upload handles hundreds of documents at once. LNA auto-classifies each file so you stay organized from the start."
+      "heading": "Three steps, the same as in the app",
+      "template": {
+        "label": "Choose a template",
+        "description": "Drop in the Excel file you already fill in, or reuse a previous one."
       },
-      "step2": {
-        "step": "02",
-        "label": "Extract",
-        "title": "AI Does the Heavy Lifting",
-        "description": "LNA's AI reads every page, identifies tables, entities, and data fields, and structures everything into clean rows and columns. Confidence scoring flags anything that needs a second look — so nothing slips through."
+      "documents": {
+        "label": "Drop documents",
+        "description": "Drag your documents in together; reading starts with no further setup."
       },
-      "step3": {
-        "step": "03",
-        "label": "Export",
-        "title": "Download Perfect Excel Files",
-        "description": "Map extracted data to your own Excel template or download it as-is. Preview before you export. Every output includes a full audit trail, so your team always knows what was extracted and when."
-      },
-      "workflowAlt": "Upload, Extract, Export workflow",
-      "videoTitle": "See LNA in action"
-    },
-    "features": {
-      "label": "Features",
-      "heading": "Everything Your Team Needs to Process Documents at Scale",
-      "subheading": "Six core capabilities built for finance teams, operations managers, and anyone who lives in spreadsheets.",
-      "organize": {
-        "title": "Organize Every Document in One Place",
-        "description": "Upload, classify, search, and preview all your PDFs without leaving the platform. LNA automatically detects duplicates and keeps your library clean, with full-text search across your entire document archive."
-      },
-      "aiExtraction": {
-        "title": "AI That Reads Documents Like an Expert",
-        "description": "Schema-free extraction means you don't need to configure anything before processing starts. LNA detects dates, amounts, names, addresses, and multi-page tables automatically — with a confidence score attached to every field."
-      },
-      "templateMatch": {
-        "title": "Your Excel Format, Automatically Matched",
-        "description": "Upload your existing Excel template and LNA proposes the field mappings for you. Fine-tune with a visual drag-and-drop editor, then save the configuration for every future batch — your templates, your way."
-      },
-      "export": {
-        "title": "Export With Confidence",
-        "description": "Preview your output before downloading. Export to Excel in formats that preserve your layout and formulas. Every extraction is logged in a full audit trail, giving your team the traceability compliance requires."
-      },
-      "team": {
-        "title": "Built for Teams",
-        "description": "Organization-level accounts with admin and member roles. Each user sees only their own documents, while Analytics gives a shared team view. JWT authentication and a full audit log keep everything traceable."
-      },
-      "realtime": {
-        "title": "Real-Time Progress",
-        "description": "Watch every document move through the pipeline with live WebSocket updates. Process documents in batches and recover cleanly from failures — no more refreshing to check a status."
+      "review": {
+        "label": "Review & Download",
+        "description": "Check the flagged fields, then collect your file."
       }
     },
-    "cta": {
-      "heading": "Stop Copying. Start Extracting.",
-      "description": "LNA automates the PDF-to-Excel workflows that are costing your team hours every week. See it in action with a personalized demo — we'll show you exactly how it works with your documents.",
-      "ctaDemo": "Request a Demo",
-      "ctaPricing": "Or explore pricing",
-      "microcopy": "No credit card required. Setup takes minutes. Cancel anytime."
+    "useCases": {
+      "heading": "Three situations LNA handles today",
+      "adp": {
+        "title": "Compare loan insurance quotes",
+        "description": "Rates, total costs and coverage shares from each quote land in the rows of your comparison sheet."
+      },
+      "health": {
+        "title": "Track health cover",
+        "description": "Hospital, optical and dental items from each quote fill in your tracking sheet."
+      },
+      "condo": {
+        "title": "Transfer a condo service-charge statement",
+        "description": "Item, amount and apportionment key, line by line, into your building tracking file."
+      }
+    },
+    "trust": {
+      "heading": "Your client documents stay yours",
+      "isolation": "Your organisation's data is isolated from that of other customers.",
+      "audit": "Every export is logged: who exported what, and when.",
+      "deletion": "Your documents are deleted on request (GDPR)."
+    },
+    "finalCta": {
+      "heading": "Try it on my documents",
+      "reassurance": "Create an account, drop in a template and two or three PDFs. You see the result before deciding anything.",
+      "cta": "Try it on my documents"
     }
   },
   "features": {

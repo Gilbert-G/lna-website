@@ -50,8 +50,10 @@
 /*
  * LNA Brand Design Tokens
  *
- * Primary: Blue (#2563EB) — main brand color
- * Secondary: Indigo (#6366F1) — complementary accent
+ * Primary: Blue (#2563EB) — seule couleur d'accent, réservée aux CTA
+ * Secondary: gris bleuté très clair — surface, pas une couleur d'accent
+ * Fiabilité: vert #22C55E / ambre #EAB308 / rouge #EF4444 (valeurs de l'app produit),
+ *   la seule zone où la couleur porte du sens — toujours doublée d'un libellé texte
  * Destructive: Red — for errors and danger actions
  * Neutral: Slate gray scale
  *
