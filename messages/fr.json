@@ -69,7 +69,7 @@
   },
   "home": {
     "hero": {
-      "heading": "Vos PDF entrent. Votre tableau Excel sort, déjà rempli.",
+      "heading": "Vos PDF entrent.",
       "description": "Vous déposez votre modèle Excel et les devis. Vous récupérez le même fichier, complété, avec le niveau de fiabilité de chaque champ.",
       "ctaPrimary": "Tester sur mes documents",
       "ctaNote": "Vous créez un compte, puis vous déposez vos premiers documents.",
@@ -78,7 +78,8 @@
         "roleAdp": "Devis assurance emprunteur",
         "roleAmortization": "Tableau d'amortissement",
         "roleHealth": "Devis complémentaire santé"
-      }
+      },
+      "headingHighlight": "Votre tableau Excel sort, déjà rempli."
     },
     "bands": {
       "heading": "Ce que vous obtenez, et ce qui le rend fiable",

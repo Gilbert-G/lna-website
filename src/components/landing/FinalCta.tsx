@@ -14,10 +14,16 @@ import { appUrls } from "@/lib/app-urls";
 export function FinalCta() {
   const t = useTranslations("home.finalCta");
   return (
-    <Section className="bg-muted/30 border-t">
-      <Container className="flex flex-col items-start gap-5">
+    <Section className="bg-muted/30 relative overflow-hidden border-t">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10"
+      >
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-[radial-gradient(60%_60%_at_50%_100%,rgba(37,99,235,0.10),transparent_70%)]" />
+      </div>
+      <Container className="flex flex-col items-start gap-6">
         <AnimateIn>
-          <h2 className="max-w-[30rem] text-3xl font-semibold tracking-tight text-balance">
+          <h2 className="max-w-[30rem] text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
             {t("heading")}
           </h2>
         </AnimateIn>
@@ -30,7 +36,7 @@ export function FinalCta() {
           <LinkButton
             size="lg"
             href={appUrls.register}
-            className="h-11 px-5 text-base"
+            className="h-11 bg-gradient-to-b from-blue-500 to-blue-600 px-6 text-base text-white shadow-md shadow-blue-500/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30"
           >
             {t("cta")}
           </LinkButton>

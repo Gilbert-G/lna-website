@@ -97,7 +97,11 @@ export function Header() {
           >
             {t("signIn")}
           </a>
-          <Button size="lg" render={<a href={appUrls.register} />}>
+          <Button
+            size="lg"
+            render={<a href={appUrls.register} />}
+            className="bg-gradient-to-b from-blue-500 to-blue-600 text-white shadow-sm shadow-blue-500/20 hover:shadow-md hover:shadow-blue-500/30"
+          >
             {t("cta")}
           </Button>
         </div>
@@ -168,7 +172,7 @@ export function Header() {
           <div className="mt-4 flex flex-col gap-3">
             <Button
               size="lg"
-              className="h-11 w-full"
+              className="h-11 w-full bg-gradient-to-b from-blue-500 to-blue-600 text-white shadow-sm shadow-blue-500/20"
               render={
                 <a
                   href={appUrls.register}

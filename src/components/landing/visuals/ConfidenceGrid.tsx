@@ -143,7 +143,9 @@ export function ConfidenceGrid() {
                     <span
                       className={cn(
                         "inline-flex items-center gap-1.5 rounded border px-1.5 py-0.5",
-                        LEVEL_CLASS[level].cell
+                        LEVEL_CLASS[level].cell,
+                        cell.score < REVIEW_THRESHOLD &&
+                          "ring-1 ring-red-400/60"
                       )}
                     >
                       <span

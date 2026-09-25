@@ -69,7 +69,7 @@
   },
   "home": {
     "hero": {
-      "heading": "Your PDFs go in. Your Excel sheet comes out, already filled.",
+      "heading": "Your PDFs go in.",
       "description": "You drop in your Excel template and the quotes. You get the same file back, completed, with a confidence level on every field.",
       "ctaPrimary": "Try it on my documents",
       "ctaNote": "Create an account, then drop in your first documents.",
@@ -78,7 +78,8 @@
         "roleAdp": "Loan insurance quote",
         "roleAmortization": "Amortisation schedule",
         "roleHealth": "Health cover quote"
-      }
+      },
+      "headingHighlight": "Your Excel sheet comes out, already filled."
     },
     "bands": {
       "heading": "What you get, and what makes it trustworthy",
