@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { mailjetConfigured, addToContactList } from "@/lib/mailjet";
 
 export async function POST(request: Request) {
   try {
@@ -12,44 +13,17 @@ export async function POST(request: Request) {
       );
     }
 
-    const brevoApiKey = process.env.BREVO_API_KEY;
-    const brevoListId = process.env.BREVO_LIST_ID;
+    if (!mailjetConfigured()) {
+      console.log("Newsletter signup (Mailjet keys not set):", { email });
+      return NextResponse.json({ success: true, delivered: false });
+    }
 
-    if (brevoApiKey && brevoListId) {
-      const res = await fetch("https://api.brevo.com/v3/contacts", {
-        method: "POST",
-        headers: {
-          "api-key": brevoApiKey,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          listIds: [parseInt(brevoListId, 10)],
-          updateEnabled: true,
-          attributes: {
-            DOUBLE_OPT_IN: true,
-            OPT_IN_DATE: new Date().toISOString(),
-          },
-        }),
-      });
-
-      if (!res.ok) {
-        const errorData = await res.json().catch(() => ({}));
-
-        // Brevo returns "duplicate_parameter" for existing contacts
-        if (errorData.code === "duplicate_parameter") {
-          return NextResponse.json({ success: true, already_subscribed: true });
-        }
-
-        console.error("Brevo API error:", errorData);
-        return NextResponse.json(
-          { error: "Failed to subscribe. Please try again." },
-          { status: 500 }
-        );
-      }
-    } else {
-      // Dev/testing fallback
-      console.log("Newsletter signup (BREVO_API_KEY not set):", { email });
+    const result = await addToContactList(email);
+    if (!result.ok) {
+      return NextResponse.json(
+        { error: "Failed to subscribe. Please try again." },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json({ success: true });

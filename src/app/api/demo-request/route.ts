@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import {
-  brevoConfigured,
+  mailjetConfigured,
   escapeHtml,
   sendTransactionalEmail,
-  BREVO_CONTACT_INBOX,
-} from "@/lib/brevo";
+  MAILJET_CONTACT_INBOX,
+} from "@/lib/mailjet";
 
 interface DemoRequestBody {
   name: string;
@@ -35,17 +35,16 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!brevoConfigured()) {
-      // Dev/testing fallback — log to console
+    if (!mailjetConfigured()) {
       console.warn(
-        "Demo request received but BREVO_API_KEY is not set — email NOT sent:",
+        "Demo request received but Mailjet keys are not set — email NOT sent:",
         { name, email, company, role, message }
       );
       return NextResponse.json({ success: true, delivered: false });
     }
 
     const result = await sendTransactionalEmail({
-      to: BREVO_CONTACT_INBOX,
+      to: MAILJET_CONTACT_INBOX,
       replyTo: { email, name },
       subject: `Demande de démo — ${name} (${company})`,
       html: `
