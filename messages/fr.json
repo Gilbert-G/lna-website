@@ -540,7 +540,7 @@
       "p1": "LNA est développé et maintenu par Manureva Solutions — une entreprise de logiciels dédiée à la création d'outils pratiques propulsés par l'IA pour les flux de travail professionnels.",
       "p2": "Manureva Solutions opère depuis deux sites : Paris, France et Pondichéry, Inde. Notre équipe réunit des expertises en ingénierie IA, logiciel d'entreprise et design produit, avec un objectif commun : construire des outils qui résolvent de vrais problèmes opérationnels.",
       "p3": "LNA est notre produit phare — et le reflet direct de notre conviction que l'IA doit réduire l'effort, pas ajouter de la complexité. Chaque fonctionnalité que nous livrons est conçue pour rendre le travail des professionnels intensifs en données un peu plus rapide, un peu plus précis et beaucoup moins frustrant.",
-      "p4": "Pour en savoir plus sur Manureva Solutions ou explorer des opportunités de partenariat, contactez-nous à hello@getlna.com"
+      "p4": "Pour en savoir plus sur Manureva Solutions ou explorer des opportunités de partenariat, contactez-nous à hello@lnaflow.com"
     },
     "cta": {
       "heading": "Vous voulez voir ce que LNA peut faire ?",
@@ -557,7 +557,7 @@
     "sidebar": {
       "heading": "Autres moyens de nous contacter",
       "emailLabel": "Email",
-      "emailAddress": "hello@getlna.com",
+      "emailAddress": "hello@lnaflow.com",
       "emailNote": "Nous répondons sous 24 heures les jours ouvrés.",
       "responseLabel": "Délai de réponse",
       "responseText": "Nous répondons généralement sous 24 heures.",

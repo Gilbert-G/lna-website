@@ -11,7 +11,7 @@ import { appUrls } from "@/lib/app-urls";
 const socialLinks = [
   { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
   { href: "https://twitter.com", label: "Twitter", icon: Twitter },
-  { href: "mailto:hello@getlna.com", label: "Email", icon: Mail },
+  { href: "mailto:hello@lnaflow.com", label: "Email", icon: Mail },
 ];
 
 export function Footer() {

@@ -174,11 +174,11 @@ export default async function TermsPage({
                 <ul>
                   <li>
                     {t("s13.email")}{" "}
-                    <a href="mailto:legal@getlna.com">legal@getlna.com</a>
+                    <a href="mailto:legal@lnaflow.com">legal@lnaflow.com</a>
                   </li>
                   <li>
                     {t("s13.generalInquiries")}{" "}
-                    <a href="mailto:hello@getlna.com">hello@getlna.com</a>
+                    <a href="mailto:hello@lnaflow.com">hello@lnaflow.com</a>
                   </li>
                   <li>
                     {t("s13.orVisit")}{" "}

@@ -168,7 +168,7 @@ export default async function PrivacyPage({
                 </ul>
                 <p>
                   {t("s6.exerciseRights")}{" "}
-                  <a href="mailto:privacy@getlna.com">privacy@getlna.com</a>.{" "}
+                  <a href="mailto:privacy@lnaflow.com">privacy@lnaflow.com</a>.{" "}
                   {t("s6.gdpr")}
                 </p>
 
@@ -195,11 +195,11 @@ export default async function PrivacyPage({
                 <ul>
                   <li>
                     {t("s10.email")}{" "}
-                    <a href="mailto:privacy@getlna.com">privacy@getlna.com</a>
+                    <a href="mailto:privacy@lnaflow.com">privacy@lnaflow.com</a>
                   </li>
                   <li>
                     {t("s10.generalInquiries")}{" "}
-                    <a href="mailto:hello@getlna.com">hello@getlna.com</a>
+                    <a href="mailto:hello@lnaflow.com">hello@lnaflow.com</a>
                   </li>
                   <li>
                     {t("s10.orVisit")}{" "}
