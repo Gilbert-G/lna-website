@@ -1,7 +1,6 @@
 import RSS from "rss";
 import { getAllPosts } from "@/lib/blog";
-
-const SITE_URL = "https://getlna.com";
+import { SITE_URL } from "@/lib/site";
 
 export async function GET() {
   const posts = getAllPosts();

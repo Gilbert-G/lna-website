@@ -11,6 +11,7 @@ import { CookieConsent } from "@/components/integrations/CookieConsent";
 import { ToastProvider } from "@/components/ui/toast";
 import { DemoRequestModal } from "@/components/forms/DemoRequestModal";
 import { routing } from "@/i18n/routing";
+import { SITE_URL, PRELAUNCH } from "@/lib/site";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -49,11 +50,14 @@ export async function generateMetadata({
       description: t("ogDescription"),
       images: [{ url: "/brand/og-default.svg", width: 1200, height: 630 }],
     },
+    metadataBase: new URL(SITE_URL),
+    // Pre-launch: keep the site out of search indexes until launch day.
+    robots: PRELAUNCH ? { index: false, follow: false } : undefined,
     alternates: {
-      canonical: `https://lna.ai/${locale}`,
+      canonical: `${SITE_URL}/${locale}`,
       languages: {
-        fr: "https://lna.ai/fr",
-        en: "https://lna.ai/en",
+        fr: `${SITE_URL}/fr`,
+        en: `${SITE_URL}/en`,
       },
     },
   };
