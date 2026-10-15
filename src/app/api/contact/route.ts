@@ -1,10 +1,5 @@
 import { NextResponse } from "next/server";
-import {
-  mailjetConfigured,
-  escapeHtml,
-  sendTransactionalEmail,
-  MAILJET_CONTACT_INBOX,
-} from "@/lib/mailjet";
+import { mailConfigured, escapeHtml, sendMail } from "@/lib/mailer";
 
 export async function POST(request: Request) {
   try {
@@ -25,16 +20,15 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!mailjetConfigured()) {
+    if (!mailConfigured()) {
       console.warn(
-        "Contact form received but Mailjet keys are not set — email NOT sent:",
+        "Contact form received but SMTP_HOST is not set — email NOT sent:",
         { name, email, reason, message }
       );
       return NextResponse.json({ success: true, delivered: false });
     }
 
-    const result = await sendTransactionalEmail({
-      to: MAILJET_CONTACT_INBOX,
+    const result = await sendMail({
       replyTo: { email, name },
       subject: `Contact — ${name} (${reason})`,
       html: `

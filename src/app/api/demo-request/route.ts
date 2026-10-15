@@ -1,10 +1,5 @@
 import { NextResponse } from "next/server";
-import {
-  mailjetConfigured,
-  escapeHtml,
-  sendTransactionalEmail,
-  MAILJET_CONTACT_INBOX,
-} from "@/lib/mailjet";
+import { mailConfigured, escapeHtml, sendMail } from "@/lib/mailer";
 
 interface DemoRequestBody {
   name: string;
@@ -19,7 +14,6 @@ export async function POST(request: Request) {
     const body: DemoRequestBody = await request.json();
     const { name, email, company, role, message } = body;
 
-    // Validate required fields
     if (!name || !email || !company || !role) {
       return NextResponse.json(
         { error: "Missing required fields" },
@@ -27,7 +21,6 @@ export async function POST(request: Request) {
       );
     }
 
-    // Validate email format
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json(
         { error: "Invalid email address" },
@@ -35,16 +28,15 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!mailjetConfigured()) {
+    if (!mailConfigured()) {
       console.warn(
-        "Demo request received but Mailjet keys are not set — email NOT sent:",
+        "Demo request received but SMTP_HOST is not set — email NOT sent:",
         { name, email, company, role, message }
       );
       return NextResponse.json({ success: true, delivered: false });
     }
 
-    const result = await sendTransactionalEmail({
-      to: MAILJET_CONTACT_INBOX,
+    const result = await sendMail({
       replyTo: { email, name },
       subject: `Demande de démo — ${name} (${company})`,
       html: `
