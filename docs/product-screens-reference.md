@@ -8,11 +8,11 @@ Tout ce qui suit est vérifié dans le code. Ne rien inventer au-delà.
 
 `src/features/rapprochement/RapprochementPage.tsx` (objet i18n `t.steps`) :
 
-| Étape | FR |
-|---|---|
-| 1 | Choisir un modèle |
-| 2 | Déposer les documents |
-| 3 | Vérifier & Télécharger |
+| Étape | FR                     |
+| ----- | ---------------------- |
+| 1     | Choisir un modèle      |
+| 2     | Déposer les documents  |
+| 3     | Vérifier & Télécharger |
 
 (EN : Choose a template · Drop documents · Review & Download — non utilisé pour la landing.)
 
@@ -35,11 +35,11 @@ document source, page, position, « Double-click to edit »).
 
 Trois cartes côte à côte, nombre + libellé :
 
-| Bande | Libellé FR réel | Couleur |
-|---|---|---|
-| green (≥ 0.8) | Élevée | vert |
-| yellow (≥ 0.5) | Moyenne | ambre |
-| red (< 0.5) | Faible | rouge |
+| Bande          | Libellé FR réel | Couleur |
+| -------------- | --------------- | ------- |
+| green (≥ 0.8)  | Élevée          | vert    |
+| yellow (≥ 0.5) | Moyenne         | ambre   |
+| red (< 0.5)    | Faible          | rouge   |
 
 ⚠️ Les libellés FR réels sont « Élevée / Moyenne / Faible ». « Fiable / À confirmer /
 À relire » n'existe pas dans l'app — c'est une copy landing, à assumer comme divergence
@@ -47,11 +47,11 @@ ou à backporter dans l'app.
 
 ## 3. Seuils — attention, trois échelles distinctes dans le code
 
-| Où | Vert / haut | Ambre / moyen | Rouge / bas |
-|---|---|---|---|
-| `ConfidenceCell` + `MultiRecordPreviewGrid` (grille d'étape 3) | ≥ 0.8 | ≥ 0.5 | < 0.5 |
-| `ConfidenceBadge` (pastille isolée, ailleurs) | ≥ 0.9 | ≥ 0.7 | < 0.7 |
-| Seuil de relecture / marqueur [REVIEW] (export) | — | — | 0.6 |
+| Où                                                             | Vert / haut | Ambre / moyen | Rouge / bas |
+| -------------------------------------------------------------- | ----------- | ------------- | ----------- |
+| `ConfidenceCell` + `MultiRecordPreviewGrid` (grille d'étape 3) | ≥ 0.8       | ≥ 0.5         | < 0.5       |
+| `ConfidenceBadge` (pastille isolée, ailleurs)                  | ≥ 0.9       | ≥ 0.7         | < 0.7       |
+| Seuil de relecture / marqueur [REVIEW] (export)                | —           | —             | 0.6         |
 
 Pour la landing, retenir : les trois niveaux visuels = **0.8 / 0.5** (la grille d'étape 3) ;
 le « seuil de relecture » = **0.6**, qui déclenche le marqueur `[REVIEW]` écrit dans le
@@ -69,11 +69,11 @@ avec `[REVIEW]` écrit — pas un badge qui n'existe pas.
 
 Base : `relative flex flex-col items-center justify-center rounded-xl border-2 border-dashed p-10 text-center transition-all cursor-pointer select-none`
 
-| État | Classes Tailwind |
-|---|---|
-| Repos | `border-border bg-card` + hover `hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900 dark:bg-blue-950` |
-| Survol (fichier au-dessus) | `border-blue-400 bg-blue-50 dark:bg-blue-950` |
-| Désactivé | `border-border bg-background cursor-not-allowed` |
+| État                       | Classes Tailwind                                                                                                 |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Repos                      | `border-border bg-card` + hover `hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900 dark:bg-blue-950` |
+| Survol (fichier au-dessus) | `border-blue-400 bg-blue-50 dark:bg-blue-950`                                                                    |
+| Désactivé                  | `border-border bg-background cursor-not-allowed`                                                                 |
 
 Contenu : icône `Upload` (`h-10 w-10`) + « Glissez vos documents ici » (`font-medium
 text-foreground`) + « ou cliquez pour sélectionner vos fichiers PDF » (`text-sm`).
@@ -95,11 +95,11 @@ green » et « Export ».)
 
 ## 7. Couleurs de fiabilité (valeurs réelles)
 
-| Niveau | Classe | Hex |
-|---|---|---|
-| Vert | `bg-green-500` | #22C55E |
-| Ambre | `bg-yellow-500` | #EAB308 |
-| Rouge | `bg-red-500` | #EF4444 |
+| Niveau | Classe          | Hex     |
+| ------ | --------------- | ------- |
+| Vert   | `bg-green-500`  | #22C55E |
+| Ambre  | `bg-yellow-500` | #EAB308 |
+| Rouge  | `bg-red-500`    | #EF4444 |
 
 Fonds légers : `bg-green-50 dark:bg-green-950` / `bg-yellow-50 dark:bg-yellow-950` /
 `bg-red-50 dark:bg-red-950`. Bordures : `border-green-200 dark:border-green-800`, idem
@@ -119,7 +119,7 @@ La réalité (seed `backend/prisma/seed/domain-templates.ts`) :
 - « Comparatif Assurance Santé » (matrice) : colonnes `Garantie · Assureur 1 … Assureur 5`,
   lignes = garanties (Hospitalisation, Soins courants, Optique, Dentaire, Autres).
 - « Régularisation Charges Copropriété » (colonnes) : `N° Lot · Type de charge ·
-  Montant à répartir · Base de répartition · Quote-part TTC · TVA · Récupérable`.
+Montant à répartir · Base de répartition · Quote-part TTC · TVA · Récupérable`.
 
 → Pour un hero fidèle au cas assurance emprunteur (ADP), les **assureurs sont les
 colonnes** et les **garanties (Taux, Coût total, Quotité) sont les lignes**. En-têtes à
