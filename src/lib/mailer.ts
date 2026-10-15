@@ -17,6 +17,13 @@
  */
 
 import nodemailer from "nodemailer";
+import dns from "node:dns";
+
+// This host has both IPv4 (137.74.172.61) and an IPv6 address. The Google Workspace
+// SMTP relay allowlist is IPv4-only, so if Node resolves the relay to its AAAA record
+// the source address is unauthorised and Google answers "421 4.7.0 Try again later"
+// at EHLO. Prefer IPv4 for outbound lookups.
+dns.setDefaultResultOrder("ipv4first");
 
 function env(key: string, fallback: string): string {
   const v = process.env[key];
