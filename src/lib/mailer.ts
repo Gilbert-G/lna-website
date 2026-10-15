@@ -7,6 +7,8 @@
  * Env:
  *   SMTP_HOST          — relay host (default smtp-relay.gmail.com)
  *   SMTP_PORT          — default 587 (STARTTLS)
+ *   SMTP_NAME          — EHLO/HELO greeting name; must be an FQDN (default lnaflow.com)
+ *   SMTP_LOCAL_ADDRESS — bind outbound socket to a source IP (e.g. the allowlisted IPv4)
  *   SMTP_USER/PASS     — only if the relay requires SMTP AUTH (leave unset for IP auth)
  *   SMTP_FROM          — verified sender (default noreply@lnaflow.com)
  *   SMTP_FROM_NAME     — display name (default "LNA")
@@ -60,12 +62,20 @@ function transporter(): Transporter {
 
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
+  // Bind the outbound socket to a specific source address (the relay's IP allowlist
+  // is IPv4-only). nodemailer has no `family` option; localAddress is the supported
+  // way to guarantee the IPv4 source.
+  const localAddress = process.env.SMTP_LOCAL_ADDRESS;
 
   cached = nodemailer.createTransport({
     host: smtpHost(),
     port: Number(env("SMTP_PORT", "587")),
     secure: false, // 587 = STARTTLS
     requireTLS: true,
+    // Greeting name sent with EHLO/HELO. MUST be an FQDN: the default is the machine
+    // hostname (e.g. "vps-bc2f4201"), which Google's relay rejects with 421 4.7.0.
+    name: env("SMTP_NAME", "lnaflow.com"),
+    ...(localAddress ? { localAddress } : {}),
     ...(user && pass ? { auth: { user, pass } } : {}),
     connectionTimeout: 15000,
     greetingTimeout: 15000,
