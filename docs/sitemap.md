@@ -88,7 +88,7 @@ This document defines every page on the LNA marketing website, its purpose, call
 **Key Sections:**
 
 1. **Hero** — Mission statement headline and subtext
-2. **Our Story** — How Manureva Solutions identified the document processing problem
+2. **Our Story** — How Lemon Tree SAS identified the document processing problem
 3. **Mission & Vision** — What drives the team
 4. **By the Numbers** — Key stats (documents processed, time saved, accuracy rate)
 5. **Team Section** — Founders / leadership with photos and bios

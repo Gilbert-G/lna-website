@@ -79,7 +79,7 @@ Expanded:
 │  └──────────────┴────────────┴────────────┴────────────────┘ │
 │                                                               │
 │  ─────────────────────────────────────────────────────────── │
-│  © 2026 Manureva Solutions. All rights reserved.              │
+│  © 2026 Lemon Tree SAS. All rights reserved.                  │
 │                                                               │
 └──────────────────────────────────────────────────────────────┘
 ```
@@ -116,7 +116,7 @@ Expanded:
 
 **Bottom Bar**
 
-- Copyright: "© 2026 Manureva Solutions. All rights reserved."
+- Copyright: "© 2026 Lemon Tree SAS. All rights reserved."
 
 ### Mobile Footer
 
@@ -143,7 +143,7 @@ Expanded:
 │    Terms of Service               │
 │                                   │
 │  ──────────────────────────────  │
-│  © 2026 Manureva Solutions.       │
+│  © 2026 Lemon Tree SAS.           │
 │  All rights reserved.             │
 │                                   │
 └──────────────────────────────────┘

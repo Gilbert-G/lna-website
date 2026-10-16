@@ -8,8 +8,8 @@
 
 ## Meta — About Page
 
-- **Title Tag:** About LNA — Intelligent Document Processing by Manureva Solutions
-- **Meta Description:** LNA is an AI-powered document processing platform built by Manureva Solutions. Learn about our mission, our team, and why we built LNA.
+- **Title Tag:** About LNA — Intelligent Document Processing by Lemon Tree SAS
+- **Meta Description:** LNA is an AI-powered document processing platform published by Lemon Tree SAS. Learn about our mission, our team, and why we built LNA.
 
 ## Meta — Contact Page
 
@@ -134,7 +134,7 @@ The People Building LNA
 
 ### Section Subheadline
 
-We're a focused team at Manureva Solutions, working to make document intelligence accessible to every organization that relies on data.
+We're a focused team at Lemon Tree SAS, working to make document intelligence accessible to every organization that relies on data.
 
 ---
 
@@ -180,7 +180,7 @@ _Note for dev: Team member cards should be 3–4 per row on desktop, 2 per row o
 
 ---
 
-## Section 6: Built by Manureva Solutions
+## Section 6: Built by Lemon Tree SAS
 
 ### Section Label
 
@@ -188,17 +188,17 @@ THE COMPANY
 
 ### Headline
 
-A Product by Manureva Solutions
+A Product by Lemon Tree SAS
 
 ### Body Copy
 
-LNA is developed and maintained by Manureva Solutions — a software company dedicated to building practical, AI-powered tools for professional workflows.
+LNA is developed and maintained by Lemon Tree SAS — a software company dedicated to building practical, AI-powered tools for professional workflows.
 
-Manureva Solutions operates from two locations: Paris, France and Pondicherry, India. Our team brings together expertise in AI engineering, enterprise software, and product design, with a shared focus on building tools that solve real operational problems.
+Lemon Tree SAS operates from two locations: Paris, France and Pondicherry, India. Our team brings together expertise in AI engineering, enterprise software, and product design, with a shared focus on building tools that solve real operational problems.
 
 LNA is our flagship product — and a direct reflection of our belief that AI should reduce effort, not add complexity. Every feature we ship is designed to make the work of data-intensive professionals a little faster, a little more accurate, and a lot less frustrating.
 
-To learn more about Manureva Solutions or explore partnership opportunities, reach out to us at hello@getlna.com.
+To learn more about Lemon Tree SAS or explore partnership opportunities, reach out to us at hello@lnaflow.com.
 
 ---
 
@@ -295,7 +295,7 @@ Other Ways to Reach Us
 
 - **Label:** Email
 - **Icon:** `Mail` (Lucide)
-- **Value:** hello@getlna.com
+- **Value:** hello@lnaflow.com
 - **Note:** We respond within 24 hours on business days.
 
 ---
@@ -362,10 +362,11 @@ _(Link to Calendly or equivalent scheduling tool — placeholder URL)_
 
 ### About Page
 
+- **Branding:** the site publisher is Lemon Tree SAS and the product brand is LNA — never "Manureva Solutions". Manureva Solutions acts as a processor (sub-processor) for the hosting and technical operation of the Platform, on behalf of Lemon Tree SAS.
 - Team member cards should use placeholder avatar images in a consistent style (monogram initials or silhouette) until real photos are provided. Avoid leaving empty image containers.
 - The "Problem We Solve" section can be broken into a two-column layout with a visual element (e.g., a document-to-spreadsheet illustration) on one side and the text on the other.
 - Values can be displayed as an icon grid (4 or 5 cards, 2 columns on desktop) or as a vertical list with large typographic numbering.
-- The Manureva Solutions section should link to the company's main website once available.
+- The company section (Section 6) covers Lemon Tree SAS, the publisher of the site; contact goes to hello@lnaflow.com.
 
 ### Contact Page
 

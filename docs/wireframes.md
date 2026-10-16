@@ -341,7 +341,7 @@ All pages share this structure:
 │  ┌─────────────────────┬────────────────────────┐    │
 │  │  Text block:         │  Company / team photo  │    │
 │  │  Founded by           │                        │    │
-│  │  Manureva Solutions   │                        │    │
+│  │  Lemon Tree SAS       │                        │    │
 │  │  to solve...          │                        │    │
 │  └─────────────────────┴────────────────────────┘    │
 │                                                       │
@@ -412,7 +412,7 @@ All pages share this structure:
 │  ┌──────────────────────┬───────────────────────┐    │
 │  │  DEMO REQUEST FORM    │  CONTACT INFO         │    │
 │  │                       │                       │    │
-│  │  Name      [_______]  │  📧 hello@lna.ai     │    │
+│  │  Name      [_______]  │  📧 hello@lnaflow.com │    │
 │  │  Email     [_______]  │                       │    │
 │  │  Company   [_______]  │  📍 Location           │    │
 │  │  Role      [▾ Select] │                       │    │
