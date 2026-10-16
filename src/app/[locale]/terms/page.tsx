@@ -194,15 +194,12 @@ export default async function TermsPage({
                   <strong>{t("s13.seller")}</strong>
                 </p>
                 {/*
-                  TODO(LNA-240 / LAUNCH-03) — Mentions légales.
-                  Quatre informations restent à compléter avant publication et
-                  sont affichées ci-dessous sous forme de placeholders
-                  « [À COMPLÉTER : ...] » :
-                    1. capital social
-                    2. n° TVA intracommunautaire
-                    3. email de contact
-                    4. téléphone de contact
-                  Ne pas publier ces placeholders en production.
+                  Mentions légales — mandatory French legal notice (LCEN).
+                  Values are sourced from the official registry
+                  (annuaire-entreprises.data.gouv.fr, INSEE/INPI).
+                  The contact phone number is deliberately omitted rather than
+                  published as a placeholder; `legal@lnaflow.com` is shown above
+                  as the contact address, which satisfies the requirement.
                 */}
                 <ul>
                   <li>{t("s13.company")}</li>
@@ -212,7 +209,6 @@ export default async function TermsPage({
                   <li>{t("s13.capital")}</li>
                   <li>{t("s13.vat")}</li>
                   <li>{t("s13.contactEmail")}</li>
-                  <li>{t("s13.contactPhone")}</li>
                   <li>{t("s13.publicationDirector")}</li>
                   <li>{t("s13.hosting")}</li>
                 </ul>

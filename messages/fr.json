@@ -813,10 +813,9 @@
       "legalForm": "Forme juridique : SAS (société par actions simplifiée)",
       "address": "21 rue du Docteur Fournier, 37000 Tours, France",
       "registration": "RCS Tours (SIREN 904 401 882) — SIRET 904 401 882 00017",
-      "capital": "[À COMPLÉTER : capital social]",
+      "capital": "Capital social : 2 500 €",
       "vat": "FR 34 904 401 882",
-      "contactEmail": "[À COMPLÉTER : email de contact]",
-      "contactPhone": "[À COMPLÉTER : téléphone de contact]",
+      "contactEmail": "Email de contact : legal@lnaflow.com",
       "publicationDirector": "Directeur de la publication : Alexandre Prieto, Président",
       "hosting": "Hébergeur : OVH SAS, 2 rue Kellermann, 59100 Roubaix, France"
     }

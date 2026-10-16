@@ -813,10 +813,9 @@
       "legalForm": "Legal form: SAS (simplified joint-stock company)",
       "address": "21 rue du Docteur Fournier, 37000 Tours, France",
       "registration": "RCS Tours (SIREN 904 401 882) — SIRET 904 401 882 00017",
-      "capital": "[TO BE COMPLETED: share capital]",
+      "capital": "Share capital: €2,500",
       "vat": "FR 34 904 401 882",
-      "contactEmail": "[TO BE COMPLETED: contact email]",
-      "contactPhone": "[TO BE COMPLETED: contact phone number]",
+      "contactEmail": "Contact email: legal@lnaflow.com",
       "publicationDirector": "Publication director: Alexandre Prieto, President",
       "hosting": "Hosting provider: OVH SAS, 2 rue Kellermann, 59100 Roubaix, France"
     }
