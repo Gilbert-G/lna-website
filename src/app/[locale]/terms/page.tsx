@@ -191,10 +191,31 @@ export default async function TermsPage({
                   </li>
                 </ul>
                 <p>
-                  {t("s13.company")}
-                  <br />
-                  {t("s13.locations")}
+                  <strong>{t("s13.seller")}</strong>
                 </p>
+                {/*
+                  TODO(LNA-240 / LAUNCH-03) — Mentions légales.
+                  Quatre informations restent à compléter avant publication et
+                  sont affichées ci-dessous sous forme de placeholders
+                  « [À COMPLÉTER : ...] » :
+                    1. capital social
+                    2. n° TVA intracommunautaire
+                    3. email de contact
+                    4. téléphone de contact
+                  Ne pas publier ces placeholders en production.
+                */}
+                <ul>
+                  <li>{t("s13.company")}</li>
+                  <li>{t("s13.legalForm")}</li>
+                  <li>{t("s13.address")}</li>
+                  <li>{t("s13.registration")}</li>
+                  <li>{t("s13.capital")}</li>
+                  <li>{t("s13.vat")}</li>
+                  <li>{t("s13.contactEmail")}</li>
+                  <li>{t("s13.contactPhone")}</li>
+                  <li>{t("s13.publicationDirector")}</li>
+                  <li>{t("s13.hosting")}</li>
+                </ul>
               </div>
             </AnimateIn>
           </div>

@@ -13,20 +13,20 @@
       "description": "Des tarifs simples et transparents pour la plateforme de traitement documentaire IA de LNA. À partir de 39 €/mois. Essai gratuit de 14 jours sur toutes les offres, carte bancaire requise."
     },
     "about": {
-      "title": "À propos de LNA — Traitement Documentaire Intelligent par Manureva Solutions",
-      "description": "LNA est une plateforme de traitement documentaire propulsée par l'IA, développée par Manureva Solutions. Découvrez notre mission, notre équipe et pourquoi nous avons créé LNA."
+      "title": "À propos de LNA — Traitement Documentaire Intelligent par Lemon Tree SAS",
+      "description": "LNA est une plateforme de traitement documentaire propulsée par l'IA, éditée par Lemon Tree SAS. Découvrez notre mission, notre équipe et pourquoi nous avons créé LNA."
     },
     "contact": {
       "title": "Contact LNA — Contactez notre équipe",
       "description": "Contactez l'équipe LNA pour des démos, des questions commerciales, du support ou des partenariats. Nous répondons sous 24 heures."
     },
     "privacy": {
-      "title": "Politique de confidentialité — LNA par Manureva Solutions",
+      "title": "Politique de confidentialité — LNA par Lemon Tree SAS",
       "description": "Découvrez comment LNA collecte, utilise et protège vos données. Notre politique de confidentialité couvre le traitement des données, le stockage et vos droits."
     },
     "terms": {
-      "title": "Conditions d'utilisation — LNA par Manureva Solutions",
-      "description": "Consultez les Conditions d'utilisation de LNA, la plateforme de traitement documentaire propulsée par l'IA de Manureva Solutions."
+      "title": "Conditions d'utilisation — LNA par Lemon Tree SAS",
+      "description": "Consultez les Conditions d'utilisation de LNA, la plateforme de traitement documentaire propulsée par l'IA éditée par Lemon Tree SAS."
     },
     "blog": {
       "title": "Blog LNA — Actualités IA documentaire, mises à jour produit & bonnes pratiques",
@@ -61,7 +61,7 @@
     "linkedin": "LinkedIn",
     "twitter": "Twitter",
     "email": "Email",
-    "copyright": "© 2026 Manureva Solutions. Tous droits réservés.",
+    "copyright": "© 2026 Lemon Tree SAS. Tous droits réservés.",
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "subscribe": "S'abonner",
@@ -293,7 +293,8 @@
       "monthly": "Mensuel",
       "annual": "Annuel",
       "savings": "2 mois offerts",
-      "taxNote": "TVA appliquée selon le pays du client"
+      "taxNote": "TVA appliquée selon le pays du client",
+      "sellerNote": "Abonnements vendus par Lemon Tree SAS, 21 rue du Docteur Fournier, 37000 Tours, France — RCS Tours (SIREN 904 401 882)."
     },
     "perMonth": "/mois HT",
     "tiers": {
@@ -540,7 +541,7 @@
     "team": {
       "label": "L'équipe",
       "heading": "Les personnes qui construisent LNA",
-      "description": "Nous sommes une équipe dédiée chez Manureva Solutions, qui travaille à rendre l'intelligence documentaire accessible à toute organisation qui s'appuie sur les données.",
+      "description": "Nous sommes une équipe dédiée chez Lemon Tree SAS, qui travaille à rendre l'intelligence documentaire accessible à toute organisation qui s'appuie sur les données.",
       "member1": {
         "name": "Membre de l'équipe",
         "role": "Co-fondateur & CEO"
@@ -560,11 +561,11 @@
     },
     "company": {
       "label": "L'entreprise",
-      "heading": "Un produit de Manureva Solutions",
-      "p1": "LNA est développé et maintenu par Manureva Solutions — une entreprise de logiciels dédiée à la création d'outils pratiques propulsés par l'IA pour les flux de travail professionnels.",
-      "p2": "Manureva Solutions opère depuis deux sites : Paris, France et Pondichéry, Inde. Notre équipe réunit des expertises en ingénierie IA, logiciel d'entreprise et design produit, avec un objectif commun : construire des outils qui résolvent de vrais problèmes opérationnels.",
+      "heading": "Un produit de Lemon Tree SAS",
+      "p1": "LNA est développé et maintenu par Lemon Tree SAS — une entreprise de logiciels dédiée à la création d'outils pratiques propulsés par l'IA pour les flux de travail professionnels.",
+      "p2": "Lemon Tree SAS opère depuis deux sites : Paris, France et Pondichéry, Inde. Notre équipe réunit des expertises en ingénierie IA, logiciel d'entreprise et design produit, avec un objectif commun : construire des outils qui résolvent de vrais problèmes opérationnels.",
       "p3": "LNA est notre produit phare — et le reflet direct de notre conviction que l'IA doit réduire l'effort, pas ajouter de la complexité. Chaque fonctionnalité que nous livrons est conçue pour rendre le travail des professionnels intensifs en données un peu plus rapide, un peu plus précis et beaucoup moins frustrant.",
-      "p4": "Pour en savoir plus sur Manureva Solutions ou explorer des opportunités de partenariat, contactez-nous à hello@lnaflow.com"
+      "p4": "Pour en savoir plus sur Lemon Tree SAS ou explorer des opportunités de partenariat, contactez-nous à hello@lnaflow.com"
     },
     "cta": {
       "heading": "Vous voulez voir ce que LNA peut faire ?",
@@ -619,7 +620,7 @@
       "changes": "9. Modifications de cette politique",
       "contact": "10. Nous contacter"
     },
-    "intro": "Cette Politique de confidentialité décrit comment Manureva Solutions (« nous » ou « notre ») collecte, utilise et protège les informations lorsque vous utilisez LNA (« la Plateforme »). Nous nous engageons à protéger votre vie privée et à traiter vos données de manière responsable.",
+    "intro": "Cette Politique de confidentialité décrit comment Lemon Tree SAS (« nous » ou « notre »), société éditrice de LNA, collecte, utilise et protège les informations lorsque vous utilisez LNA (« la Plateforme »). Nous nous engageons à protéger votre vie privée et à traiter vos données de manière responsable.",
     "s1": {
       "heading": "1. Informations que nous collectons",
       "intro": "Nous collectons des informations dans les catégories suivantes :",
@@ -667,7 +668,7 @@
       "heading": "5. Partage des données",
       "intro": "Nous ne vendons pas vos informations personnelles ni vos données documentaires. Nous pouvons partager des informations avec :",
       "serviceProviders": "Prestataires de services :",
-      "serviceProvidersDesc": "Services tiers qui nous aident à exploiter la plateforme (ex. : infrastructure cloud, analytics).",
+      "serviceProvidersDesc": "Services tiers qui nous aident à exploiter la plateforme (ex. : infrastructure cloud, analytics). Manureva Solutions intervient en qualité de sous-traitant (processeur) pour l'hébergement et l'exploitation technique de la Plateforme, pour le compte de Lemon Tree SAS.",
       "legalRequirements": "Obligations légales :",
       "legalRequirementsDesc": "Lorsque la loi, la réglementation ou une procédure judiciaire l'exige.",
       "businessTransfers": "Transferts d'entreprise :",
@@ -709,8 +710,12 @@
       "generalInquiries": "Demandes générales :",
       "orVisit": "Ou visitez notre",
       "contactPage": "page Contact",
-      "company": "Manureva Solutions",
-      "locations": "Paris, France & Pondichéry, Inde"
+      "controllerLabel": "Responsable du traitement :",
+      "company": "Lemon Tree SAS, société par actions simplifiée (SAS)",
+      "legalIds": "Siège social : 21 rue du Docteur Fournier, 37000 Tours, France — RCS Tours (SIREN 904 401 882) — SIRET 904 401 882 00017",
+      "locations": "21 rue du Docteur Fournier, 37000 Tours, France",
+      "hostingLabel": "Hébergeur :",
+      "hosting": "OVH SAS, 2 rue Kellermann, 59100 Roubaix, France"
     }
   },
   "terms": {
@@ -732,7 +737,7 @@
       "governingLaw": "12. Droit applicable",
       "contact": "13. Contact"
     },
-    "intro": "Ces Conditions d'utilisation (« Conditions ») régissent votre utilisation de la plateforme LNA (« Service ») fournie par Manureva Solutions (« nous » ou « notre »). En utilisant LNA, vous acceptez ces Conditions.",
+    "intro": "Ces Conditions d'utilisation (« Conditions ») régissent votre utilisation de la plateforme LNA (« Service ») fournie par Lemon Tree SAS (« nous » ou « notre »), société par actions simplifiée, immatriculée au RCS de Tours sous le numéro SIREN 904 401 882, dont le siège social est situé 21 rue du Docteur Fournier, 37000 Tours, France. En utilisant LNA, vous acceptez ces Conditions.",
     "s1": {
       "text": "En créant un compte ou en utilisant LNA, vous acceptez d'être lié par ces Conditions. Si vous utilisez LNA au nom d'une organisation, vous déclarez avoir l'autorité nécessaire pour engager cette organisation par ces Conditions."
     },
@@ -784,13 +789,13 @@
       "upgradesDesc": "Prennent effet immédiatement avec facturation au prorata"
     },
     "s8": {
-      "text": "Le Service, y compris ses logiciels, son design, sa documentation et son image de marque, est la propriété de Manureva Solutions et est protégé par les lois sur la propriété intellectuelle. Vous ne pouvez pas copier, modifier, distribuer ou créer des œuvres dérivées basées sur le Service sans notre consentement écrit préalable."
+      "text": "Le Service, y compris ses logiciels, son design, sa documentation et son image de marque, est la propriété de Lemon Tree SAS et est protégé par les lois sur la propriété intellectuelle. Vous ne pouvez pas copier, modifier, distribuer ou créer des œuvres dérivées basées sur le Service sans notre consentement écrit préalable."
     },
     "s9": {
-      "text": "Dans la mesure maximale permise par la loi, Manureva Solutions ne saurait être tenue responsable de tout dommage indirect, accessoire, spécial, consécutif ou punitif résultant de votre utilisation du Service. Notre responsabilité totale pour toute réclamation découlant de ces Conditions ne saurait excéder le montant que vous nous avez versé au cours des 12 mois précédant la réclamation."
+      "text": "Dans la mesure maximale permise par la loi, Lemon Tree SAS ne saurait être tenue responsable de tout dommage indirect, accessoire, spécial, consécutif ou punitif résultant de votre utilisation du Service. Notre responsabilité totale pour toute réclamation découlant de ces Conditions ne saurait excéder le montant que vous nous avez versé au cours des 12 mois précédant la réclamation."
     },
     "s10": {
-      "text": "Vous acceptez d'indemniser et de tenir Manureva Solutions indemne de toute réclamation, dommage ou dépense résultant de votre utilisation du Service, de votre violation de ces Conditions ou de votre violation des droits d'un tiers."
+      "text": "Vous acceptez d'indemniser et de tenir Lemon Tree SAS indemne de toute réclamation, dommage ou dépense résultant de votre utilisation du Service, de votre violation de ces Conditions ou de votre violation des droits d'un tiers."
     },
     "s11": {
       "text": "Nous pouvons mettre à jour ces Conditions de temps à autre. Nous vous informerons des modifications substantielles par email ou via la plateforme au moins 30 jours avant leur entrée en vigueur. Votre utilisation continue du Service après les modifications vaut acceptation des Conditions mises à jour."
@@ -804,8 +809,18 @@
       "generalInquiries": "Demandes générales :",
       "orVisit": "Ou visitez notre",
       "contactPage": "page Contact",
-      "company": "Manureva Solutions",
-      "locations": "Paris, France & Pondichéry, Inde"
+      "seller": "Vendeur / éditeur du site : Lemon Tree SAS",
+      "company": "Lemon Tree SAS",
+      "legalForm": "Forme juridique : SAS (société par actions simplifiée)",
+      "address": "21 rue du Docteur Fournier, 37000 Tours, France",
+      "registration": "RCS Tours (SIREN 904 401 882) — SIRET 904 401 882 00017",
+      "capital": "[À COMPLÉTER : capital social]",
+      "vat": "[À COMPLÉTER : n° TVA intracommunautaire]",
+      "contactEmail": "[À COMPLÉTER : email de contact]",
+      "contactPhone": "[À COMPLÉTER : téléphone de contact]",
+      "publicationDirector": "Directeur de la publication : Alexandre Prieto, Président",
+      "hosting": "Hébergeur : OVH SAS, 2 rue Kellermann, 59100 Roubaix, France",
+      "locations": "21 rue du Docteur Fournier, 37000 Tours, France"
     }
   },
   "error": {

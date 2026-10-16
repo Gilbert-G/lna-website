@@ -212,9 +212,11 @@ export default async function PrivacyPage({
                   </li>
                 </ul>
                 <p>
-                  {t("s10.company")}
+                  <strong>{t("s10.controllerLabel")}</strong> {t("s10.company")}
                   <br />
-                  {t("s10.locations")}
+                  {t("s10.legalIds")}
+                  <br />
+                  <strong>{t("s10.hostingLabel")}</strong> {t("s10.hosting")}
                 </p>
               </div>
             </AnimateIn>
