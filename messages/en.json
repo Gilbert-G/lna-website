@@ -713,7 +713,6 @@
       "controllerLabel": "Data controller:",
       "company": "Lemon Tree SAS, a French simplified joint-stock company (SAS)",
       "legalIds": "Registered office: 21 rue du Docteur Fournier, 37000 Tours, France — RCS Tours (SIREN 904 401 882) — SIRET 904 401 882 00017",
-      "locations": "21 rue du Docteur Fournier, 37000 Tours, France",
       "hostingLabel": "Hosting provider:",
       "hosting": "OVH SAS, 2 rue Kellermann, 59100 Roubaix, France"
     }
@@ -819,8 +818,7 @@
       "contactEmail": "[TO BE COMPLETED: contact email]",
       "contactPhone": "[TO BE COMPLETED: contact phone number]",
       "publicationDirector": "Publication director: Alexandre Prieto, President",
-      "hosting": "Hosting provider: OVH SAS, 2 rue Kellermann, 59100 Roubaix, France",
-      "locations": "21 rue du Docteur Fournier, 37000 Tours, France"
+      "hosting": "Hosting provider: OVH SAS, 2 rue Kellermann, 59100 Roubaix, France"
     }
   },
   "error": {

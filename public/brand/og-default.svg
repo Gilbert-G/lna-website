@@ -49,6 +49,6 @@
 
   <!-- Bottom branding bar -->
   <rect x="0" y="580" width="1200" height="50" fill="#000000" opacity="0.2"/>
-  <text x="82" y="612" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#FFFFFF" opacity="0.6">lna.ai</text>
-  <text x="1118" y="612" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#FFFFFF" opacity="0.4" text-anchor="end">Manureva Solutions</text>
+  <text x="82" y="612" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#FFFFFF" opacity="0.6">lnaflow.com</text>
+  <text x="1118" y="612" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#FFFFFF" opacity="0.4" text-anchor="end">LNA</text>
 </svg>

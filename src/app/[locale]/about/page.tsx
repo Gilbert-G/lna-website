@@ -212,7 +212,7 @@ export default async function AboutPage({
         </Container>
       </Section>
 
-      {/* Built by Manureva */}
+      {/* The Company — Lemon Tree SAS */}
       <Section>
         <Container className="max-w-3xl">
           <AnimateIn>
