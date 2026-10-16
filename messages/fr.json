@@ -292,9 +292,10 @@
     "billing": {
       "monthly": "Mensuel",
       "annual": "Annuel",
-      "savings": "2 mois offerts"
+      "savings": "2 mois offerts",
+      "taxNote": "TVA appliquée selon le pays du client"
     },
-    "perMonth": "/mois",
+    "perMonth": "/mois HT",
     "tiers": {
       "starter": {
         "name": "Starter",
@@ -766,7 +767,7 @@
     },
     "s6": {
       "b1": "Les offres payantes sont facturées mensuellement ou annuellement, selon votre choix",
-      "b2": "Tous les prix sont en EUR et n'incluent pas les taxes applicables",
+      "b2": "Tous les prix sont en EUR et hors taxes (HT). La TVA est appliquée selon le pays du client (20 % en France).",
       "b3": "Les offres annuelles sont facturées en totalité au début du terme annuel",
       "b4": "Nous nous réservons le droit de modifier les tarifs avec un préavis de 30 jours",
       "b5": "Toutes les offres payantes incluent un essai gratuit de 14 jours, carte bancaire requise"

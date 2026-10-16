@@ -292,9 +292,10 @@
     "billing": {
       "monthly": "Monthly",
       "annual": "Annual",
-      "savings": "2 months free"
+      "savings": "2 months free",
+      "taxNote": "VAT applied according to the customer's country"
     },
-    "perMonth": "/month",
+    "perMonth": "/month excl. VAT",
     "tiers": {
       "starter": {
         "name": "Starter",
@@ -766,7 +767,7 @@
     },
     "s6": {
       "b1": "Paid plans are billed monthly or annually, depending on your selection",
-      "b2": "All prices are in EUR and do not include applicable taxes",
+      "b2": "All prices are in EUR and exclude tax. VAT is applied according to the customer's country (20% in France).",
       "b3": "Annual plans are billed in full at the start of the annual term",
       "b4": "We reserve the right to change pricing with 30 days' notice",
       "b5": "All paid plans include a 14-day free trial, credit card required"

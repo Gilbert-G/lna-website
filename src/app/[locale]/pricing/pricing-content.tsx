@@ -381,6 +381,9 @@ export function PricingContent() {
                   {t("billing.savings")}
                 </span>
               )}
+              <p className="text-muted-foreground text-xs">
+                {t("billing.taxNote")}
+              </p>
             </div>
           </AnimateIn>
         </Container>
