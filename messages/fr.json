@@ -10,7 +10,7 @@
     },
     "pricing": {
       "title": "Tarifs LNA — Des offres pour chaque taille d'équipe",
-      "description": "Des tarifs simples et transparents pour la plateforme de traitement documentaire IA de LNA. À partir de 49 $/mois. Essai gratuit sur toutes les offres. Sans carte bancaire."
+      "description": "Des tarifs simples et transparents pour la plateforme de traitement documentaire IA de LNA. À partir de 39 €/mois. Essai gratuit de 14 jours sur toutes les offres, carte bancaire requise."
     },
     "about": {
       "title": "À propos de LNA — Traitement Documentaire Intelligent par Manureva Solutions",
@@ -292,18 +292,18 @@
     "billing": {
       "monthly": "Mensuel",
       "annual": "Annuel",
-      "savings": "Économisez jusqu'à 20 %"
+      "savings": "2 mois offerts"
     },
     "perMonth": "/mois",
     "tiers": {
       "starter": {
         "name": "Starter",
         "tagline": "Tout ce qu'il vous faut pour en finir avec la saisie manuelle.",
-        "priceMonthly": "49 $",
-        "priceAnnual": "39 $",
-        "savings": "Économisez 120 $/an",
+        "priceMonthly": "39 €",
+        "priceAnnual": "32,50 €",
+        "savings": "Économisez 78 €/an",
         "cta": "Démarrer l'essai gratuit",
-        "microcopy": "Essai gratuit de 14 jours · Sans carte bancaire",
+        "microcopy": "Essai gratuit de 14 jours · Carte bancaire requise",
         "features": {
           "f1": "Jusqu'à 500 documents/mois",
           "f2": "3 postes utilisateurs",
@@ -323,11 +323,11 @@
         "name": "Professional",
         "badge": "Le plus populaire",
         "tagline": "Pour les équipes en croissance qui ont besoin d'intelligence IA, pas seulement d'extraction.",
-        "priceMonthly": "149 $",
-        "priceAnnual": "119 $",
-        "savings": "Économisez 360 $/an",
+        "priceMonthly": "99 €",
+        "priceAnnual": "82,50 €",
+        "savings": "Économisez 198 €/an",
         "cta": "Démarrer l'essai gratuit",
-        "microcopy": "Essai gratuit de 14 jours · Sans carte bancaire",
+        "microcopy": "Essai gratuit de 14 jours · Carte bancaire requise",
         "features": {
           "f1": "Jusqu'à 5 000 documents/mois",
           "f2": "15 postes utilisateurs",
@@ -336,6 +336,25 @@
           "f5": "Bibliothèque de modèles — enregistrez et partagez les configurations",
           "f6": "Export par lots",
           "f7": "Support prioritaire par email et chat"
+        }
+      },
+      "high": {
+        "name": "High",
+        "tagline": "Pour les volumes importants et les équipes qui ont besoin de contrôles avancés.",
+        "priceMonthly": "249 €",
+        "priceAnnual": "207,50 €",
+        "savings": "Économisez 498 €/an",
+        "cta": "Démarrer l'essai gratuit",
+        "microcopy": "Essai gratuit de 14 jours · Carte bancaire requise",
+        "features": {
+          "f1": "Jusqu'à 20 000 documents/mois",
+          "f2": "50 postes utilisateurs",
+          "f3": "250 Go de stockage documentaire",
+          "f4": "Tout le contenu de Professional, plus :",
+          "f5": "Traitement par lots à grande échelle",
+          "f6": "Contrôles d'équipe avancés et périmètres organisationnels",
+          "f7": "Journaux d'audit étendus et conservation prolongée",
+          "f8": "Support prioritaire renforcé avec interlocuteur dédié"
         }
       },
       "enterprise": {
@@ -359,7 +378,7 @@
     },
     "trust": {
       "t1": "Essai gratuit de 14 jours sur toutes les offres",
-      "t2": "Sans carte bancaire",
+      "t2": "Carte bancaire requise pour l'essai",
       "t3": "Résiliation à tout moment"
     },
     "comparison": {
@@ -367,6 +386,7 @@
       "headerFeature": "Fonctionnalité",
       "headerStarter": "Starter",
       "headerProfessional": "Professional",
+      "headerHigh": "High",
       "headerEnterprise": "Enterprise",
       "categories": {
         "documentsStorage": "Documents & Stockage",
@@ -417,20 +437,23 @@
         "unlimited": "Illimité",
         "starter5gb": "5 Go",
         "pro50gb": "50 Go",
+        "high250gb": "250 Go",
         "custom": "Sur mesure",
         "starter3seats": "3",
-        "pro15seats": "15"
+        "pro15seats": "15",
+        "high50seats": "50",
+        "high20000": "20 000"
       }
     },
     "faq": {
       "heading": "Questions fréquentes",
       "q1": {
         "question": "Y a-t-il un essai gratuit ?",
-        "answer": "Oui. Toutes les offres payantes incluent un essai gratuit de 14 jours. Aucune carte bancaire n'est requise pour commencer. Vous bénéficiez d'un accès complet à toutes les fonctionnalités de l'offre choisie pendant la période d'essai — pour tout évaluer avant de vous engager."
+        "answer": "Oui. Toutes les offres payantes incluent un essai gratuit de 14 jours. Une carte bancaire est requise pour démarrer l'essai. Vous bénéficiez d'un accès complet à toutes les fonctionnalités de l'offre choisie pendant la période d'essai — pour tout évaluer avant de vous engager."
       },
       "q2": {
         "question": "Comment fonctionne la facturation ?",
-        "answer": "Vous pouvez choisir une facturation mensuelle ou annuelle. La facturation mensuelle est prélevée au début de chaque cycle. La facturation annuelle est prélevée une fois par an et vous fait économiser jusqu'à 20 % par rapport aux tarifs mensuels. Vous recevez une facture par email pour chaque paiement."
+        "answer": "Vous pouvez choisir une facturation mensuelle ou annuelle. La facturation mensuelle est prélevée au début de chaque cycle. La facturation annuelle est prélevée une fois par an et vous offre 2 mois gratuits par rapport aux tarifs mensuels. Vous recevez une facture par email pour chaque paiement."
       },
       "q3": {
         "question": "Puis-je résilier à tout moment ?",
@@ -743,10 +766,10 @@
     },
     "s6": {
       "b1": "Les offres payantes sont facturées mensuellement ou annuellement, selon votre choix",
-      "b2": "Tous les prix sont en USD et n'incluent pas les taxes applicables",
+      "b2": "Tous les prix sont en EUR et n'incluent pas les taxes applicables",
       "b3": "Les offres annuelles sont facturées en totalité au début du terme annuel",
       "b4": "Nous nous réservons le droit de modifier les tarifs avec un préavis de 30 jours",
-      "b5": "Toutes les offres payantes incluent un essai gratuit de 14 jours sans carte bancaire"
+      "b5": "Toutes les offres payantes incluent un essai gratuit de 14 jours, carte bancaire requise"
     },
     "s7": {
       "intro": "Vous pouvez résilier votre abonnement à tout moment depuis les paramètres de votre compte :",

@@ -10,7 +10,7 @@
     },
     "pricing": {
       "title": "LNA Pricing — Plans for Every Team Size",
-      "description": "Simple, transparent pricing for LNA's AI document processing platform. Starter from $49/mo. Free trial available on all plans. No credit card required."
+      "description": "Simple, transparent pricing for LNA's AI document processing platform. Starter from €39/mo. 14-day free trial on all plans, credit card required."
     },
     "about": {
       "title": "About LNA — Intelligent Document Processing by Manureva Solutions",
@@ -292,18 +292,18 @@
     "billing": {
       "monthly": "Monthly",
       "annual": "Annual",
-      "savings": "Save up to 20%"
+      "savings": "2 months free"
     },
     "perMonth": "/month",
     "tiers": {
       "starter": {
         "name": "Starter",
         "tagline": "Everything you need to stop manual data entry.",
-        "priceMonthly": "$49",
-        "priceAnnual": "$39",
-        "savings": "Save $120/year",
+        "priceMonthly": "€39",
+        "priceAnnual": "€32.50",
+        "savings": "Save €78/year",
         "cta": "Start Free Trial",
-        "microcopy": "14-day free trial · No credit card required",
+        "microcopy": "14-day free trial · Credit card required",
         "features": {
           "f1": "Up to 500 documents/month",
           "f2": "3 user seats",
@@ -323,11 +323,11 @@
         "name": "Professional",
         "badge": "Most Popular",
         "tagline": "For growing teams that need AI intelligence, not just extraction.",
-        "priceMonthly": "$149",
-        "priceAnnual": "$119",
-        "savings": "Save $360/year",
+        "priceMonthly": "€99",
+        "priceAnnual": "€82.50",
+        "savings": "Save €198/year",
         "cta": "Start Free Trial",
-        "microcopy": "14-day free trial · No credit card required",
+        "microcopy": "14-day free trial · Credit card required",
         "features": {
           "f1": "Up to 5,000 documents/month",
           "f2": "15 user seats",
@@ -336,6 +336,25 @@
           "f5": "Template library — save and share configurations",
           "f6": "Batch export",
           "f7": "Priority email and chat support"
+        }
+      },
+      "high": {
+        "name": "High",
+        "tagline": "For high-volume teams that need advanced controls.",
+        "priceMonthly": "€249",
+        "priceAnnual": "€207.50",
+        "savings": "Save €498/year",
+        "cta": "Start Free Trial",
+        "microcopy": "14-day free trial · Credit card required",
+        "features": {
+          "f1": "Up to 20,000 documents/month",
+          "f2": "50 user seats",
+          "f3": "250 GB document storage",
+          "f4": "Everything in Professional, plus:",
+          "f5": "Large-scale batch processing",
+          "f6": "Advanced team controls and organization-level scopes",
+          "f7": "Extended audit logs with longer retention",
+          "f8": "Enhanced priority support with a dedicated contact"
         }
       },
       "enterprise": {
@@ -359,7 +378,7 @@
     },
     "trust": {
       "t1": "14-day free trial on all plans",
-      "t2": "No credit card required",
+      "t2": "Credit card required for the trial",
       "t3": "Cancel anytime"
     },
     "comparison": {
@@ -367,6 +386,7 @@
       "headerFeature": "Feature",
       "headerStarter": "Starter",
       "headerProfessional": "Professional",
+      "headerHigh": "High",
       "headerEnterprise": "Enterprise",
       "categories": {
         "documentsStorage": "Documents & Storage",
@@ -417,20 +437,23 @@
         "unlimited": "Unlimited",
         "starter5gb": "5 GB",
         "pro50gb": "50 GB",
+        "high250gb": "250 GB",
         "custom": "Custom",
         "starter3seats": "3",
-        "pro15seats": "15"
+        "pro15seats": "15",
+        "high50seats": "50",
+        "high20000": "20,000"
       }
     },
     "faq": {
       "heading": "Frequently Asked Questions",
       "q1": {
         "question": "Is there a free trial?",
-        "answer": "Yes. All paid plans include a 14-day free trial. No credit card is required to start. You get full access to all features in your chosen plan during the trial period — so you can evaluate everything before committing."
+        "answer": "Yes. All paid plans include a 14-day free trial. A credit card is required to start the trial. You get full access to all features in your chosen plan during the trial period — so you can evaluate everything before committing."
       },
       "q2": {
         "question": "How does billing work?",
-        "answer": "You can choose monthly or annual billing. Monthly billing is charged at the start of each billing cycle. Annual billing is charged once per year and saves you up to 20% compared to monthly rates. You'll receive an invoice by email for every payment."
+        "answer": "You can choose monthly or annual billing. Monthly billing is charged at the start of each billing cycle. Annual billing is charged once per year and gives you 2 months free compared to monthly rates. You'll receive an invoice by email for every payment."
       },
       "q3": {
         "question": "Can I cancel at any time?",
@@ -743,10 +766,10 @@
     },
     "s6": {
       "b1": "Paid plans are billed monthly or annually, depending on your selection",
-      "b2": "All prices are in USD and do not include applicable taxes",
+      "b2": "All prices are in EUR and do not include applicable taxes",
       "b3": "Annual plans are billed in full at the start of the annual term",
       "b4": "We reserve the right to change pricing with 30 days' notice",
-      "b5": "All paid plans include a 14-day free trial with no credit card required"
+      "b5": "All paid plans include a 14-day free trial, credit card required"
     },
     "s7": {
       "intro": "You may cancel your subscription at any time from your account settings:",

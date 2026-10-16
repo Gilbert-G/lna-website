@@ -54,7 +54,7 @@ export function PricingContent() {
 
   /* ─── Tier data ──────────────────────────────────────────── */
 
-  const tierKeys = ["starter", "professional", "enterprise"] as const;
+  const tierKeys = ["starter", "professional", "high", "enterprise"] as const;
 
   const tiers = tierKeys.map((key) => {
     const isEnterprise = key === "enterprise";
@@ -91,6 +91,7 @@ export function PricingContent() {
     feature: string;
     starter: CellValue;
     professional: CellValue;
+    high?: CellValue;
     enterprise: CellValue;
   }
 
@@ -107,18 +108,21 @@ export function PricingContent() {
           feature: t("comparison.rows.docsPerMonth"),
           starter: t("comparison.values.starter500"),
           professional: t("comparison.values.pro5000"),
+          high: t("comparison.values.high20000"),
           enterprise: t("comparison.values.unlimited"),
         },
         {
           feature: t("comparison.rows.storage"),
           starter: t("comparison.values.starter5gb"),
           professional: t("comparison.values.pro50gb"),
+          high: t("comparison.values.high250gb"),
           enterprise: t("comparison.values.custom"),
         },
         {
           feature: t("comparison.rows.userSeats"),
           starter: t("comparison.values.starter3seats"),
           professional: t("comparison.values.pro15seats"),
+          high: t("comparison.values.high50seats"),
           enterprise: t("comparison.values.unlimited"),
         },
       ],
@@ -385,7 +389,7 @@ export function PricingContent() {
       {/* ── Tier Cards ── */}
       <Section className="pt-8 md:pt-12">
         <Container>
-          <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-7xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {tiers.map((tier, i) => {
               const isPro = tier.key === "professional";
               return (
@@ -506,6 +510,9 @@ export function PricingContent() {
                       {t("comparison.headerProfessional")}
                     </th>
                     <th className="px-4 py-3 text-center font-medium">
+                      {t("comparison.headerHigh")}
+                    </th>
+                    <th className="px-4 py-3 text-center font-medium">
                       {t("comparison.headerEnterprise")}
                     </th>
                   </tr>
@@ -515,7 +522,7 @@ export function PricingContent() {
                     <>
                       <tr key={cat.category}>
                         <td
-                          colSpan={4}
+                          colSpan={5}
                           className="bg-muted/30 px-4 py-2 text-xs font-semibold tracking-wide uppercase"
                         >
                           {cat.category}
@@ -532,6 +539,9 @@ export function PricingContent() {
                           </td>
                           <td className="border-primary/10 bg-primary/[0.02] px-4 py-2.5 text-center">
                             <CellContent value={row.professional} />
+                          </td>
+                          <td className="px-4 py-2.5 text-center">
+                            <CellContent value={row.high ?? row.professional} />
                           </td>
                           <td className="px-4 py-2.5 text-center">
                             <CellContent value={row.enterprise} />
