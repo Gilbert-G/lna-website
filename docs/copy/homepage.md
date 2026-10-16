@@ -35,7 +35,7 @@ LNA uses AI to extract, structure, and export data from your documents in second
 
 ### Hero Supporting Microcopy (below CTAs)
 
-No credit card required. Up and running in minutes.
+14-day free trial. Credit card required. Up and running in minutes.
 
 ---
 
@@ -299,7 +299,7 @@ Or explore pricing →
 
 ### Trust Signal (below CTA)
 
-No credit card required. Setup takes minutes. Cancel anytime.
+14-day free trial. Credit card required. Setup takes minutes. Cancel anytime.
 
 ---
 

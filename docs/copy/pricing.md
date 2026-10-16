@@ -9,7 +9,7 @@
 ## Meta
 
 - **Title Tag:** LNA Pricing — Plans for Every Team Size
-- **Meta Description:** Simple, transparent pricing for LNA's AI document processing platform. Starter from $49/mo. Free trial available on all plans. No credit card required.
+- **Meta Description:** Simple, transparent pricing for LNA's AI document processing platform. Starter from €39/month. 14-day free trial on all plans. Credit card required.
 - **Primary Keyword:** AI document processing pricing
 - **Secondary Keywords:** PDF to Excel automation plans, document AI platform pricing
 
@@ -27,7 +27,7 @@ Every plan includes core AI extraction and Excel export. Upgrade when you need L
 
 ### Annual Billing Toggle Note
 
-**Save up to 20% with annual billing**
+**Get 2 months free with annual billing**
 _Billed annually · Cancel anytime_
 
 ---
@@ -40,8 +40,8 @@ _Billed annually · Cancel anytime_
 
 - **Plan Name:** Starter
 - **Tagline:** Everything you need to stop manual data entry.
-- **Monthly Price:** $49/month
-- **Annual Price:** $39/month _(billed annually — save $120/year)_
+- **Monthly Price:** €39/month
+- **Annual Price:** €32.50/month _(billed annually — save €78/year)_
 - **Annual Billing Badge:** Best for individuals & small teams
 
 #### Included
@@ -73,7 +73,7 @@ _Billed annually · Cancel anytime_
 
 #### CTA Microcopy
 
-14-day free trial · No credit card required
+14-day free trial · Credit card required
 
 ---
 
@@ -82,8 +82,8 @@ _Billed annually · Cancel anytime_
 - **Plan Name:** Professional
 - **Recommended Badge:** Most Popular
 - **Tagline:** For growing teams that need AI intelligence, not just extraction.
-- **Monthly Price:** $149/month
-- **Annual Price:** $119/month _(billed annually — save $360/year)_
+- **Monthly Price:** €99/month
+- **Annual Price:** €82.50/month _(billed annually — save €198/year)_
 
 #### Included
 
@@ -111,11 +111,46 @@ _Billed annually · Cancel anytime_
 
 #### CTA Microcopy
 
-14-day free trial · No credit card required
+14-day free trial · Credit card required
 
 ---
 
-### Tier 3: Enterprise
+### Tier 3: High
+
+- **Plan Name:** High
+- **Tagline:** For high-volume teams that need advanced controls.
+- **Monthly Price:** €249/month
+- **Annual Price:** €207.50/month _(billed annually — save €498/year)_
+
+#### Included
+
+- Up to **20,000 documents/month**
+- **50 user seats**
+- **250GB** document storage
+- Everything in Professional, plus:
+- Large-scale batch processing
+- Advanced team controls and organization-level scopes
+- Extended audit logs with longer retention
+- Enhanced priority support with a dedicated contact
+
+#### Not Included
+
+- SSO/SAML
+- Custom integrations and API access
+- SLA guarantees
+- On-premise deployment
+
+#### CTA Button
+
+**Start Free Trial**
+
+#### CTA Microcopy
+
+14-day free trial · Credit card required
+
+---
+
+### Tier 4: Enterprise
 
 - **Plan Name:** Enterprise
 - **Tagline:** Custom scale, dedicated support, and enterprise-grade security.
@@ -152,15 +187,15 @@ _Display as a banner or highlighted note above or below the pricing cards._
 
 ### Headline
 
-Save Up to 20% With Annual Billing
+Get 2 Months Free With Annual Billing
 
 ### Body
 
-Switch to annual billing and save $120/year on Starter or $360/year on Professional. All plans include the same features — you just pay less.
+Switch to annual billing and get 2 months free — save €78/year on Starter, €198/year on Professional, or €498/year on High. All plans include the same features — you just pay less.
 
 ### Toggle Label
 
-Monthly | **Annual** _(Save 20%)_
+Monthly | **Annual** _(2 months free)_
 
 ---
 
@@ -170,53 +205,53 @@ _Full-width table below the pricing cards. Group features by category._
 
 ### Table Header
 
-| Feature                                  | Starter | Professional | Enterprise |
-| ---------------------------------------- | :-----: | :----------: | :--------: |
-| **DOCUMENTS & STORAGE**                  |         |              |            |
-| Documents per month                      |   500   |    5,000     | Unlimited  |
-| Storage                                  |  5 GB   |    50 GB     |   Custom   |
-| User seats                               |    3    |      15      | Unlimited  |
-| **DOCUMENT MANAGEMENT**                  |         |              |            |
-| Multi-file upload (drag & drop)          |    ✓    |      ✓       |     ✓      |
-| Auto-classification                      |    ✓    |      ✓       |     ✓      |
-| OCR for scanned PDFs                     |    ✓    |      ✓       |     ✓      |
-| Duplicate detection                      |    ✓    |      ✓       |     ✓      |
-| Full-text search & archive               |    ✓    |      ✓       |     ✓      |
-| **DATA EXTRACTION**                      |         |              |            |
-| Schema-free AI extraction                |    ✓    |      ✓       |     ✓      |
-| Entity detection (dates, amounts, names) |    ✓    |      ✓       |     ✓      |
-| Multi-page table extraction              |    ✓    |      ✓       |     ✓      |
-| Confidence scoring per field             |    ✓    |      ✓       |     ✓      |
-| Batch processing                         |    ✓    |      ✓       |     ✓      |
-| Error recovery & retry                   |    ✓    |      ✓       |     ✓      |
-| **TEMPLATE & MAPPING**                   |         |              |            |
-| Excel template upload                    |    ✓    |      ✓       |     ✓      |
-| AI-powered auto-mapping                  |    ✓    |      ✓       |     ✓      |
-| Visual mapping editor                    |    ✓    |      ✓       |     ✓      |
-| Template library (save & share)          |    —    |      ✓       |     ✓      |
-| **EXPORT**                               |         |              |            |
-| Format-preserving Excel export           |    ✓    |      ✓       |     ✓      |
-| Export preview                           |    ✓    |      ✓       |     ✓      |
-| Audit trail                              |    ✓    |      ✓       |     ✓      |
-| Batch export                             |    —    |      ✓       |     ✓      |
-| **AI INTELLIGENCE**                      |         |              |            |
-| LLM-Connected Data Q&A                   |    —    |      ✓       |     ✓      |
-| Chat with Context Role                   |    —    |      ✓       |     ✓      |
-| Custom context roles                     |    —    |      —       |     ✓      |
-| **USER MANAGEMENT**                      |         |              |            |
-| Role-based access control                |    ✓    |      ✓       |     ✓      |
-| Organization-level accounts              |    ✓    |      ✓       |     ✓      |
-| SSO / SAML                               |    —    |      —       |     ✓      |
-| **SUPPORT**                              |         |              |            |
-| Email support                            |    ✓    |      ✓       |     ✓      |
-| Priority support                         |    —    |      ✓       |     ✓      |
-| Dedicated account manager                |    —    |      —       |     ✓      |
-| Onboarding & training                    |    —    |      —       |     ✓      |
-| SLA guarantee                            |    —    |      —       |     ✓      |
-| **DEPLOYMENT**                           |         |              |            |
-| Cloud (hosted)                           |    ✓    |      ✓       |     ✓      |
-| On-premise option                        |    —    |      —       |     ✓      |
-| Custom integrations & API                |    —    |      —       |     ✓      |
+| Feature                                  | Starter | Professional |  High  | Enterprise |
+| ---------------------------------------- | :-----: | :----------: | :----: | :--------: |
+| **DOCUMENTS & STORAGE**                  |         |              |        |            |
+| Documents per month                      |   500   |    5,000     | 20,000 | Unlimited  |
+| Storage                                  |  5 GB   |    50 GB     | 250 GB |   Custom   |
+| User seats                               |    3    |      15      |   50   | Unlimited  |
+| **DOCUMENT MANAGEMENT**                  |         |              |        |            |
+| Multi-file upload (drag & drop)          |    ✓    |      ✓       |   ✓    |     ✓      |
+| Auto-classification                      |    ✓    |      ✓       |   ✓    |     ✓      |
+| OCR for scanned PDFs                     |    ✓    |      ✓       |   ✓    |     ✓      |
+| Duplicate detection                      |    ✓    |      ✓       |   ✓    |     ✓      |
+| Full-text search & archive               |    ✓    |      ✓       |   ✓    |     ✓      |
+| **DATA EXTRACTION**                      |         |              |        |            |
+| Schema-free AI extraction                |    ✓    |      ✓       |   ✓    |     ✓      |
+| Entity detection (dates, amounts, names) |    ✓    |      ✓       |   ✓    |     ✓      |
+| Multi-page table extraction              |    ✓    |      ✓       |   ✓    |     ✓      |
+| Confidence scoring per field             |    ✓    |      ✓       |   ✓    |     ✓      |
+| Batch processing                         |    ✓    |      ✓       |   ✓    |     ✓      |
+| Error recovery & retry                   |    ✓    |      ✓       |   ✓    |     ✓      |
+| **TEMPLATE & MAPPING**                   |         |              |        |            |
+| Excel template upload                    |    ✓    |      ✓       |   ✓    |     ✓      |
+| AI-powered auto-mapping                  |    ✓    |      ✓       |   ✓    |     ✓      |
+| Visual mapping editor                    |    ✓    |      ✓       |   ✓    |     ✓      |
+| Template library (save & share)          |    —    |      ✓       |   ✓    |     ✓      |
+| **EXPORT**                               |         |              |        |            |
+| Format-preserving Excel export           |    ✓    |      ✓       |   ✓    |     ✓      |
+| Export preview                           |    ✓    |      ✓       |   ✓    |     ✓      |
+| Audit trail                              |    ✓    |      ✓       |   ✓    |     ✓      |
+| Batch export                             |    —    |      ✓       |   ✓    |     ✓      |
+| **AI INTELLIGENCE**                      |         |              |        |            |
+| LLM-Connected Data Q&A                   |    —    |      ✓       |   ✓    |     ✓      |
+| Chat with Context Role                   |    —    |      ✓       |   ✓    |     ✓      |
+| Custom context roles                     |    —    |      —       |   —    |     ✓      |
+| **USER MANAGEMENT**                      |         |              |        |            |
+| Role-based access control                |    ✓    |      ✓       |   ✓    |     ✓      |
+| Organization-level accounts              |    ✓    |      ✓       |   ✓    |     ✓      |
+| SSO / SAML                               |    —    |      —       |   —    |     ✓      |
+| **SUPPORT**                              |         |              |        |            |
+| Email support                            |    ✓    |      ✓       |   ✓    |     ✓      |
+| Priority support                         |    —    |      ✓       |   ✓    |     ✓      |
+| Dedicated account manager                |    —    |      —       |   —    |     ✓      |
+| Onboarding & training                    |    —    |      —       |   —    |     ✓      |
+| SLA guarantee                            |    —    |      —       |   —    |     ✓      |
+| **DEPLOYMENT**                           |         |              |        |            |
+| Cloud (hosted)                           |    ✓    |      ✓       |   ✓    |     ✓      |
+| On-premise option                        |    —    |      —       |   —    |     ✓      |
+| Custom integrations & API                |    —    |      —       |   —    |     ✓      |
 
 ---
 
@@ -228,13 +263,13 @@ _Display as an expandable accordion. 8 questions._
 
 ### Q1: Is there a free trial?
 
-Yes. All paid plans include a 14-day free trial. No credit card is required to start. You get full access to all features in your chosen plan during the trial period — so you can evaluate everything before committing.
+Yes. All paid plans include a 14-day free trial. A credit card is required to start the trial. You get full access to all features in your chosen plan during the trial period — so you can evaluate everything before committing.
 
 ---
 
 ### Q2: How does billing work?
 
-You can choose monthly or annual billing. Monthly billing is charged at the start of each billing cycle. Annual billing is charged once per year and saves you up to 20% compared to monthly rates. You'll receive an invoice by email for every payment.
+You can choose monthly or annual billing. Monthly billing is charged at the start of each billing cycle. Annual billing is charged once per year and gives you 2 months free compared to monthly rates. You'll receive an invoice by email for every payment.
 
 ---
 
@@ -297,7 +332,7 @@ Talk to our team. We'll help you figure out the right fit based on your document
 ### Trust Signals
 
 - 14-day free trial on all plans
-- No credit card required
+- Credit card required for the trial
 - Cancel anytime
 
 ---
@@ -305,7 +340,7 @@ Talk to our team. We'll help you figure out the right fit based on your document
 ## Copy Notes for Development
 
 - The "Professional" tier should have a visual "Most Popular" badge and be visually elevated (slightly larger card, accent border, or darker header).
-- The annual/monthly billing toggle should update all three prices simultaneously. The annual savings amount can be shown as a small tag beneath each price (e.g., "Save $120/year").
+- The annual/monthly billing toggle should update all four prices simultaneously. The annual savings amount can be shown as a small tag beneath each price (e.g., "Save €78/year").
 - The comparison table checkmarks should use a consistent icon — recommend `Check` (Lucide, green) for included and a dash `—` or `X` (muted color) for not included.
 - FAQ accordion should default to all items closed on page load.
-- Trust signals (14-day free trial, no credit card required, cancel anytime) should appear at minimum twice: near the top of the page and again at the bottom CTA.
+- Trust signals (14-day free trial, credit card required, cancel anytime) should appear at minimum twice: near the top of the page and again at the bottom CTA.

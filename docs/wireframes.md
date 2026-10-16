@@ -265,7 +265,7 @@ All pages share this structure:
 │  H1: Simple, transparent pricing                      │
 │  Subhead: Start free. Scale as you grow.              │
 │                                                       │
-│  [Monthly]  [Annual — Save 20%]  ← Toggle             │
+│  [Monthly]  [Annual — 2 months free]  ← Toggle    │
 │                                                       │
 ├──────────────────────────────────────────────────────┤
 │                                                       │
@@ -273,7 +273,7 @@ All pages share this structure:
 │  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ │
 │  │  Starter     │ │ Professional │ │  Enterprise  │  │
 │  │              │ │  ★ Popular   │ │              │  │
-│  │  $XX/mo      │ │  $XX/mo      │ │  Custom      │  │
+│  │  €XX/mo      │ │  €XX/mo      │ │  Custom      │  │
 │  │              │ │              │ │              │  │
 │  │  • 100 docs  │ │  • 1,000 docs│ │  • Unlimited │  │
 │  │  • 5 tmpl    │ │  • Unlimited │ │  • Dedicated │  │
