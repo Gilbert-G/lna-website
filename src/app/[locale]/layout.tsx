@@ -14,7 +14,10 @@ import { routing } from "@/i18n/routing";
 import { SITE_URL, PRELAUNCH } from "@/lib/site";
 
 const inter = Inter({
-  variable: "--font-sans",
+  // Must match `--font-sans: var(--font-inter)` in globals.css. It was
+  // "--font-sans", the same name as the theme token it feeds, which made the
+  // token circular and dropped the site back to Times.
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -79,10 +82,17 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
-      >
+    /* The font variables MUST be on <html>: globals.css applies `font-sans` to
+       the html element via @layer base. Defining them on <body> left html
+       resolving an undefined var, which is invalid at computed-value time and
+       fell back to the browser default (Times) — with the webfonts downloaded
+       but never used. */
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
+    >
+      <body className="antialiased">
         <NextIntlClientProvider>
           <SkipToContent />
           <Header />
