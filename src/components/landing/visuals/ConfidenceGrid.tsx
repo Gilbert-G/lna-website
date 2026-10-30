@@ -108,7 +108,7 @@ export function ConfidenceGrid() {
   };
 
   return (
-    <div className="bg-card overflow-x-auto rounded-lg border">
+    <div className="bg-card overflow-x-auto rounded-lg border [contain:paint]">
       <table className="w-full border-collapse text-left text-xs tabular-nums">
         <caption className="sr-only">{t("tableCaption")}</caption>
         <thead>

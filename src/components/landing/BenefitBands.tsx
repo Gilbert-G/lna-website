@@ -30,13 +30,15 @@ function Band({
       <div
         className={
           featured
-            ? "grid items-center gap-8 rounded-2xl border border-blue-100 bg-gradient-to-b from-blue-50/80 to-transparent p-6 shadow-sm md:p-10 lg:grid-cols-2 lg:gap-16 dark:border-blue-900/40 dark:from-blue-950/30"
-            : "grid items-center gap-8 lg:grid-cols-2 lg:gap-16"
+            ? "grid min-w-0 items-center gap-8 rounded-2xl border border-blue-100 bg-gradient-to-b from-blue-50/80 to-transparent p-6 shadow-sm md:p-10 lg:grid-cols-2 lg:gap-16 dark:border-blue-900/40 dark:from-blue-950/30"
+            : "grid min-w-0 items-center gap-8 lg:grid-cols-2 lg:gap-16"
         }
       >
         <div
           className={
-            reversed ? "flex flex-col gap-3 lg:order-2" : "flex flex-col gap-3"
+            reversed
+              ? "flex min-w-0 flex-col gap-3 lg:order-2"
+              : "flex min-w-0 flex-col gap-3"
           }
         >
           <h3 className="text-2xl font-semibold tracking-tight text-balance">
@@ -46,7 +48,11 @@ function Band({
             {body}
           </p>
         </div>
-        <div className={reversed ? "lg:order-1" : undefined}>{visual}</div>
+        {/* min-w-0: grid items default to min-width:auto, so the Excel table's
+            min-content width would otherwise widen this column and the page. */}
+        <div className={reversed ? "min-w-0 lg:order-1" : "min-w-0"}>
+          {visual}
+        </div>
       </div>
     </AnimateIn>
   );
