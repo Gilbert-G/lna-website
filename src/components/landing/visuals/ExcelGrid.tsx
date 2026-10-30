@@ -27,57 +27,62 @@ export function ExcelGrid({
       <div className="bg-muted/60 text-muted-foreground border-b px-3 py-1.5 font-mono text-[11px]">
         {caption ?? "comparatif-adp.xlsx"}
       </div>
-      <table className="w-full border-collapse text-left text-xs tabular-nums">
-        <thead>
-          <tr>
-            {columns.map((col, i) => (
-              <th
-                key={col}
-                scope="col"
-                className={cn(
-                  "text-muted-foreground border-b px-3 py-2 font-semibold",
-                  i > 0 && "border-l text-right"
-                )}
-              >
-                {col}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, rowIdx) => (
-            <tr key={row.label}>
-              <th
-                scope="row"
-                className="text-foreground border-b px-3 py-2 font-medium"
-              >
-                {row.label}
-              </th>
-              {row.values.map((value, i) => {
-                const cellIndex = rowIdx * row.values.length + i;
-                const hidden =
-                  empty ||
-                  (typeof revealed === "number" && cellIndex >= revealed);
-                return (
-                  <td
-                    key={row.label + "-" + i}
-                    className="border-b border-l px-3 py-2 text-right"
-                  >
-                    <span
-                      className={cn(
-                        "inline-block transition-opacity duration-200",
-                        hidden ? "opacity-0" : "opacity-100"
-                      )}
-                    >
-                      {value}
-                    </span>
-                  </td>
-                );
-              })}
+      {/* overflow-x-auto: the table has a min-content width (numbers + currency
+          symbols) that exceeds a 390px phone. Without this the table forces the
+          whole page wider and the document gets horizontal scroll. */}
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-left text-xs tabular-nums">
+          <thead>
+            <tr>
+              {columns.map((col, i) => (
+                <th
+                  key={col}
+                  scope="col"
+                  className={cn(
+                    "text-muted-foreground border-b px-3 py-2 font-semibold",
+                    i > 0 && "border-l text-right"
+                  )}
+                >
+                  {col}
+                </th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {rows.map((row, rowIdx) => (
+              <tr key={row.label}>
+                <th
+                  scope="row"
+                  className="text-foreground border-b px-3 py-2 font-medium"
+                >
+                  {row.label}
+                </th>
+                {row.values.map((value, i) => {
+                  const cellIndex = rowIdx * row.values.length + i;
+                  const hidden =
+                    empty ||
+                    (typeof revealed === "number" && cellIndex >= revealed);
+                  return (
+                    <td
+                      key={row.label + "-" + i}
+                      className="border-b border-l px-3 py-2 text-right"
+                    >
+                      <span
+                        className={cn(
+                          "inline-block transition-opacity duration-200",
+                          hidden ? "opacity-0" : "opacity-100"
+                        )}
+                      >
+                        {value}
+                      </span>
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
