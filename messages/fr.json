@@ -33,6 +33,12 @@
       "description": "Restez informé des dernières avancées en traitement documentaire IA, des mises à jour produit de LNA et des bonnes pratiques pour automatiser vos flux PDF vers Excel."
     }
   },
+  "grid": {
+    "colGuarantee": "Garantie",
+    "rowRate": "Taux",
+    "rowTotalCost": "Coût total",
+    "rowQuota": "Quotité"
+  },
   "nav": {
     "features": "Fonctionnalités",
     "pricing": "Tarifs",
@@ -77,11 +83,7 @@
         "description": "Quatre documents PDF — deux devis d'assurance emprunteur, un tableau d'amortissement, un devis de complémentaire santé — alimentent un tableau comparatif Excel dont les colonnes sont les assureurs et les lignes les garanties : taux, coût total, quotité.",
         "roleAdp": "Devis assurance emprunteur",
         "roleAmortization": "Tableau d'amortissement",
-        "roleHealth": "Devis complémentaire santé",
-        "colGuarantee": "Garantie",
-        "rowRate": "Taux",
-        "rowTotalCost": "Coût total",
-        "rowQuota": "Quotité"
+        "roleHealth": "Devis complémentaire santé"
       },
       "headingHighlight": "Votre tableau Excel sort, déjà rempli."
     },

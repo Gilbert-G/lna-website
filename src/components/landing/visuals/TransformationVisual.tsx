@@ -18,6 +18,7 @@ const STEP_MS = 120;
  */
 export function TransformationVisual() {
   const t = useTranslations("home.hero.visual");
+  const g = useTranslations("grid");
   const locale = useLocale();
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
@@ -26,7 +27,7 @@ export function TransformationVisual() {
   // Labels follow the active locale — the grid used to be hardcoded French, so the
   // English page showed "Garantie / Taux / Coût total / Quotité" with comma decimals.
   // Insurer names are proper nouns and stay as-is.
-  const columns = [t("colGuarantee"), "Generali", "April", "MetLife"];
+  const columns = [g("colGuarantee"), "Generali", "April", "MetLife"];
 
   const pct = (v: number, digits = 2) =>
     new Intl.NumberFormat(locale, {
@@ -42,9 +43,9 @@ export function TransformationVisual() {
     }).format(v);
 
   const rows = [
-    { label: t("rowRate"), values: [pct(0.34), pct(0.29), pct(0.41)] },
-    { label: t("rowTotalCost"), values: [eur(4218), eur(3640), eur(5102)] },
-    { label: t("rowQuota"), values: [pct(100, 0), pct(50, 0), pct(100, 0)] },
+    { label: g("rowRate"), values: [pct(0.34), pct(0.29), pct(0.41)] },
+    { label: g("rowTotalCost"), values: [eur(4218), eur(3640), eur(5102)] },
+    { label: g("rowQuota"), values: [pct(100, 0), pct(50, 0), pct(100, 0)] },
   ];
 
   useEffect(() => {

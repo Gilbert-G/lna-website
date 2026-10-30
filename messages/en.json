@@ -33,6 +33,12 @@
       "description": "Stay up to date with the latest in AI document processing, product updates from LNA, and best practices for automating PDF to Excel workflows."
     }
   },
+  "grid": {
+    "colGuarantee": "Guarantee",
+    "rowRate": "Rate",
+    "rowTotalCost": "Total cost",
+    "rowQuota": "Cover ratio"
+  },
   "nav": {
     "features": "Features",
     "pricing": "Pricing",
@@ -77,11 +83,7 @@
         "description": "Four PDF documents feed an Excel comparison sheet whose columns are the insurers and whose rows are the guarantees.",
         "roleAdp": "Loan insurance quote",
         "roleAmortization": "Amortisation schedule",
-        "roleHealth": "Health cover quote",
-        "colGuarantee": "Guarantee",
-        "rowRate": "Rate",
-        "rowTotalCost": "Total cost",
-        "rowQuota": "Cover ratio"
+        "roleHealth": "Health cover quote"
       },
       "headingHighlight": "Your Excel sheet comes out, already filled."
     },

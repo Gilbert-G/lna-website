@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 
 /** Bandes visuelles de la grille d'étape 3 de l'app. */
@@ -31,12 +31,17 @@ const LEVEL_CLASS: Record<Level, { cell: string; dot: string }> = {
 };
 
 interface Cell {
-  value: string;
+  /** Raw number — formatted per locale at render (see `format`). */
+  value: number;
   score: number;
 }
 
+type RowLabelKey = "rowRate" | "rowTotalCost" | "rowQuota";
+
 interface Row {
-  rowKey: string;
+  /** Translation key in the `grid` namespace, never a display string. */
+  labelKey: RowLabelKey;
+  format: "pct" | "eur";
   confidence: number;
   cells: readonly Cell[];
 }
@@ -45,30 +50,33 @@ const COLUMNS = ["Generali", "April", "MetLife"] as const;
 
 const ROWS: readonly Row[] = [
   {
-    rowKey: "Taux",
+    labelKey: "rowRate",
+    format: "pct",
     confidence: 0.91,
     cells: [
-      { value: "0,34 %", score: 0.93 },
-      { value: "0,29 %", score: 0.71 },
-      { value: "0,41 %", score: 0.42 },
+      { value: 0.34, score: 0.93 },
+      { value: 0.29, score: 0.71 },
+      { value: 0.41, score: 0.42 },
     ],
   },
   {
-    rowKey: "Coût total",
+    labelKey: "rowTotalCost",
+    format: "eur",
     confidence: 0.86,
     cells: [
-      { value: "4 218,00 €", score: 0.91 },
-      { value: "3 640,00 €", score: 0.82 },
-      { value: "5 102,00 €", score: 0.88 },
+      { value: 4218, score: 0.91 },
+      { value: 3640, score: 0.82 },
+      { value: 5102, score: 0.88 },
     ],
   },
   {
-    rowKey: "Quotité",
+    labelKey: "rowQuota",
+    format: "pct",
     confidence: 0.64,
     cells: [
-      { value: "100 %", score: 0.88 },
-      { value: "50 %", score: 0.48 },
-      { value: "100 %", score: 0.86 },
+      { value: 100, score: 0.88 },
+      { value: 50, score: 0.48 },
+      { value: 100, score: 0.86 },
     ],
   },
 ];
@@ -80,6 +88,19 @@ const ROWS: readonly Row[] = [
  */
 export function ConfidenceGrid() {
   const t = useTranslations("home.bands.confidence");
+  const g = useTranslations("grid");
+  const locale = useLocale();
+  const fmt = (v: number, kind: "pct" | "eur") =>
+    kind === "eur"
+      ? new Intl.NumberFormat(locale, {
+          style: "currency",
+          currency: "EUR",
+        }).format(v)
+      : new Intl.NumberFormat(locale, {
+          style: "percent",
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }).format(v / 100);
   const levelLabel: Record<Level, string> = {
     high: t("levelHigh"),
     medium: t("levelMedium"),
@@ -114,7 +135,7 @@ export function ConfidenceGrid() {
         </thead>
         <tbody>
           {ROWS.map((row, i) => (
-            <tr key={row.rowKey}>
+            <tr key={row.labelKey}>
               <td className="text-muted-foreground border-b px-2 py-2 font-mono">
                 {i + 1}
               </td>
@@ -122,7 +143,7 @@ export function ConfidenceGrid() {
                 scope="row"
                 className="text-foreground border-b px-3 py-2 font-medium"
               >
-                {row.rowKey}
+                {g(row.labelKey)}
               </th>
               <td className="border-b px-3 py-2">
                 <span className="inline-flex items-center gap-1.5 font-mono">
@@ -139,7 +160,10 @@ export function ConfidenceGrid() {
               {row.cells.map((cell, j) => {
                 const level = levelOf(cell.score);
                 return (
-                  <td key={row.rowKey + "-" + j} className="border-b px-3 py-2">
+                  <td
+                    key={row.labelKey + "-" + j}
+                    className="border-b px-3 py-2"
+                  >
                     <span
                       className={cn(
                         "inline-flex items-center gap-1.5 rounded border px-1.5 py-0.5",
@@ -155,7 +179,7 @@ export function ConfidenceGrid() {
                         )}
                         aria-hidden="true"
                       />
-                      {cell.value}
+                      {fmt(cell.value, row.format)}
                       <span className="sr-only"> — {levelLabel[level]}</span>
                       {cell.score < REVIEW_THRESHOLD ? (
                         <span className="font-mono text-[10px] text-red-700 dark:text-red-300">
