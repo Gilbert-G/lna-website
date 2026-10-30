@@ -8,6 +8,7 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { pageAlternates } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -29,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} — LNA Blog`,
     description: post.description,
+    alternates: pageAlternates(locale, `/blog/${slug}`),
     openGraph: {
       title: post.title,
       description: post.description,

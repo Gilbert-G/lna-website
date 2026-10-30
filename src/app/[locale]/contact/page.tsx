@@ -5,6 +5,8 @@ import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { DemoRequestForm } from "@/components/forms/DemoRequestForm";
 import { Mail, Clock, Linkedin, Twitter, MapPin } from "lucide-react";
+import { pageAlternates } from "@/lib/seo";
+import { SOCIAL_LINKS } from "@/lib/site";
 
 export async function generateMetadata({
   params,
@@ -13,7 +15,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "seo.contact" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: pageAlternates(locale, "/contact"),
+  };
 }
 
 export default async function ContactPage({
@@ -89,27 +95,35 @@ export default async function ContactPage({
                     </div>
                   </div>
 
-                  <div className="border-t pt-6">
-                    <p className="mb-3 text-sm font-medium">
-                      {t("sidebar.socialLabel")}
-                    </p>
-                    <div className="flex gap-4">
-                      <a
-                        href="#"
-                        className="text-muted-foreground hover:text-foreground transition-colors"
-                        aria-label={t("sidebar.linkedin")}
-                      >
-                        <Linkedin className="size-5" />
-                      </a>
-                      <a
-                        href="#"
-                        className="text-muted-foreground hover:text-foreground transition-colors"
-                        aria-label={t("sidebar.twitter")}
-                      >
-                        <Twitter className="size-5" />
-                      </a>
+                  {SOCIAL_LINKS.length > 0 && (
+                    <div className="border-t pt-6">
+                      <p className="mb-3 text-sm font-medium">
+                        {t("sidebar.socialLabel")}
+                      </p>
+                      <div className="flex gap-4">
+                        {SOCIAL_LINKS.map((s) => (
+                          <a
+                            key={s.key}
+                            href={s.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-foreground transition-colors"
+                            aria-label={
+                              s.key === "linkedin"
+                                ? t("sidebar.linkedin")
+                                : t("sidebar.twitter")
+                            }
+                          >
+                            {s.key === "linkedin" ? (
+                              <Linkedin className="size-5" />
+                            ) : (
+                              <Twitter className="size-5" />
+                            )}
+                          </a>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   <div className="border-t pt-6">
                     <p className="mb-3 text-sm font-medium">

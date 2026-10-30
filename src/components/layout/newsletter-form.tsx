@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
@@ -9,6 +9,7 @@ import { showToast } from "@/components/ui/toast";
 
 export function NewsletterForm() {
   const t = useTranslations("newsletter");
+  const locale = useLocale();
   const [status, setStatus] = useState<"idle" | "submitting">("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -28,7 +29,7 @@ export function NewsletterForm() {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, locale }),
       });
 
       if (!res.ok) {

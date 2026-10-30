@@ -77,7 +77,11 @@
         "description": "Quatre documents PDF — deux devis d'assurance emprunteur, un tableau d'amortissement, un devis de complémentaire santé — alimentent un tableau comparatif Excel dont les colonnes sont les assureurs et les lignes les garanties : taux, coût total, quotité.",
         "roleAdp": "Devis assurance emprunteur",
         "roleAmortization": "Tableau d'amortissement",
-        "roleHealth": "Devis complémentaire santé"
+        "roleHealth": "Devis complémentaire santé",
+        "colGuarantee": "Garantie",
+        "rowRate": "Taux",
+        "rowTotalCost": "Coût total",
+        "rowQuota": "Quotité"
       },
       "headingHighlight": "Votre tableau Excel sort, déjà rempli."
     },

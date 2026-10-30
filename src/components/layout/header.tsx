@@ -43,86 +43,94 @@ export function Header() {
   }, [mobileOpen]);
 
   return (
-    <header
-      className={cn(
-        "bg-background/80 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-md transition-all duration-300",
-        scrolled ? "border-border py-2" : "border-transparent py-4"
-      )}
-    >
-      <Container className="flex items-center justify-between">
-        <Link href="/" className="flex shrink-0 items-center gap-2">
-          <Image
-            src="/brand/logo.svg"
-            alt="LNA"
-            width={100}
-            height={32}
-            className="dark:hidden"
-            priority
-          />
-          <Image
-            src="/brand/logo-white.svg"
-            alt="LNA"
-            width={100}
-            height={32}
-            className="hidden dark:block"
-            priority
-          />
-        </Link>
+    <>
+      <header
+        className={cn(
+          "bg-background/80 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-md transition-all duration-300",
+          scrolled ? "border-border py-2" : "border-transparent py-4"
+        )}
+      >
+        <Container className="flex items-center justify-between">
+          <Link href="/" className="flex shrink-0 items-center gap-2">
+            <Image
+              src="/brand/logo.svg"
+              alt="LNA"
+              width={100}
+              height={32}
+              className="dark:hidden"
+              priority
+            />
+            <Image
+              src="/brand/logo-white.svg"
+              alt="LNA"
+              width={100}
+              height={32}
+              className="hidden dark:block"
+              priority
+            />
+          </Link>
 
-        <nav
-          className="hidden items-center gap-1 md:flex"
-          aria-label={t("mainNavigation")}
-        >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
-                pathname === link.href || pathname.startsWith(link.href + "/")
-                  ? "text-primary bg-primary/5"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
-              )}
+          <nav
+            className="hidden items-center gap-1 md:flex"
+            aria-label={t("mainNavigation")}
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                  pathname === link.href || pathname.startsWith(link.href + "/")
+                    ? "text-primary bg-primary/5"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden items-center gap-3 md:flex">
+            <LanguageSwitcher />
+            <a
+              href={appUrls.login}
+              className="text-muted-foreground hover:text-foreground rounded-lg px-3 py-2 text-sm font-medium transition-colors"
             >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+              {t("signIn")}
+            </a>
+            <Button
+              size="lg"
+              render={<a href={appUrls.register} />}
+              className="bg-gradient-to-b from-blue-500 to-blue-600 text-white shadow-sm shadow-blue-500/20 hover:shadow-md hover:shadow-blue-500/30"
+            >
+              {t("cta")}
+            </Button>
+          </div>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <LanguageSwitcher />
-          <a
-            href={appUrls.login}
-            className="text-muted-foreground hover:text-foreground rounded-lg px-3 py-2 text-sm font-medium transition-colors"
+          <button
+            className="text-foreground md:hidden"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? t("menuClose") : t("menuOpen")}
+            aria-expanded={mobileOpen}
           >
-            {t("signIn")}
-          </a>
-          <Button
-            size="lg"
-            render={<a href={appUrls.register} />}
-            className="bg-gradient-to-b from-blue-500 to-blue-600 text-white shadow-sm shadow-blue-500/20 hover:shadow-md hover:shadow-blue-500/30"
-          >
-            {t("cta")}
-          </Button>
-        </div>
+            {mobileOpen ? (
+              <X className="size-6" />
+            ) : (
+              <Menu className="size-6" />
+            )}
+          </button>
+        </Container>
+      </header>
 
-        <button
-          className="text-foreground md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? t("menuClose") : t("menuOpen")}
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? <X className="size-6" /> : <Menu className="size-6" />}
-        </button>
-      </Container>
-
-      {/* Mobile nav overlay */}
+      {/* Mobile nav overlay. It must live OUTSIDE <header>: the header's
+          backdrop-blur-md creates a containing block, which traps a `fixed inset-0`
+          child inside the 56px header box instead of covering the viewport. */}
       <div
         className={cn(
-          "bg-background fixed inset-0 top-0 z-40 flex flex-col transition-all duration-300 md:hidden",
+          "bg-background fixed inset-0 z-40 flex flex-col overflow-y-auto transition-opacity duration-300 md:hidden",
           mobileOpen
-            ? "visible translate-x-0 opacity-100"
-            : "invisible translate-x-full opacity-0"
+            ? "visible opacity-100"
+            : "pointer-events-none invisible opacity-0"
         )}
       >
         <div className="flex items-center justify-between border-b px-4 py-4">
@@ -195,6 +203,6 @@ export function Header() {
           </div>
         </nav>
       </div>
-    </header>
+    </>
   );
 }

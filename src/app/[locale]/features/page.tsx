@@ -16,6 +16,7 @@ import { Badge } from "@/components/ui/badge";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { VideoEmbed } from "@/components/media/VideoEmbed";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { pageAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -27,6 +28,7 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
+    alternates: pageAlternates(locale, "/features"),
   };
 }
 

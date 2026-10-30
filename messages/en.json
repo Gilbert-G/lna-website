@@ -77,7 +77,11 @@
         "description": "Four PDF documents feed an Excel comparison sheet whose columns are the insurers and whose rows are the guarantees.",
         "roleAdp": "Loan insurance quote",
         "roleAmortization": "Amortisation schedule",
-        "roleHealth": "Health cover quote"
+        "roleHealth": "Health cover quote",
+        "colGuarantee": "Guarantee",
+        "rowRate": "Rate",
+        "rowTotalCost": "Total cost",
+        "rowQuota": "Cover ratio"
       },
       "headingHighlight": "Your Excel sheet comes out, already filled."
     },

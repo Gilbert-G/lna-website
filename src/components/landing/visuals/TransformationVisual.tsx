@@ -3,17 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { PdfStack } from "@/components/landing/visuals/PdfStack";
 import { ExcelGrid } from "@/components/landing/visuals/ExcelGrid";
-
-const COLUMNS = ["Garantie", "Generali", "April", "MetLife"] as const;
-
-const ROWS = [
-  { label: "Taux", values: ["0,34 %", "0,29 %", "0,41 %"] },
-  { label: "Coût total", values: ["4 218,00 €", "3 640,00 €", "5 102,00 €"] },
-  { label: "Quotité", values: ["100 %", "50 %", "100 %"] },
-] as const;
 
 const CELL_COUNT = 9;
 /** 9 cellules x 120 ms = 1,08 s — sous la limite de 1,2 s du brief. */
@@ -26,9 +18,34 @@ const STEP_MS = 120;
  */
 export function TransformationVisual() {
   const t = useTranslations("home.hero.visual");
+  const locale = useLocale();
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
   const [revealed, setRevealed] = useState(0);
+
+  // Labels follow the active locale — the grid used to be hardcoded French, so the
+  // English page showed "Garantie / Taux / Coût total / Quotité" with comma decimals.
+  // Insurer names are proper nouns and stay as-is.
+  const columns = [t("colGuarantee"), "Generali", "April", "MetLife"];
+
+  const pct = (v: number, digits = 2) =>
+    new Intl.NumberFormat(locale, {
+      style: "percent",
+      minimumFractionDigits: digits,
+      maximumFractionDigits: digits,
+    }).format(v / 100);
+
+  const eur = (v: number) =>
+    new Intl.NumberFormat(locale, {
+      style: "currency",
+      currency: "EUR",
+    }).format(v);
+
+  const rows = [
+    { label: t("rowRate"), values: [pct(0.34), pct(0.29), pct(0.41)] },
+    { label: t("rowTotalCost"), values: [eur(4218), eur(3640), eur(5102)] },
+    { label: t("rowQuota"), values: [pct(100, 0), pct(50, 0), pct(100, 0)] },
+  ];
 
   useEffect(() => {
     const node = ref.current;
@@ -77,7 +94,7 @@ export function TransformationVisual() {
         className="text-muted-foreground mx-auto size-5 rotate-90 sm:rotate-0"
         aria-hidden="true"
       />
-      <ExcelGrid columns={COLUMNS} rows={ROWS} revealed={shown} />
+      <ExcelGrid columns={columns} rows={rows} revealed={shown} />
       <p className="sr-only sm:col-span-3">{t("description")}</p>
     </div>
   );

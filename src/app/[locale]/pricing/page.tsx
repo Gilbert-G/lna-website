@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { PricingContent } from "./pricing-content";
+import { pageAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -14,6 +15,7 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
+    alternates: pageAlternates(locale, "/pricing"),
   };
 }
 

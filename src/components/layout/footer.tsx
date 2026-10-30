@@ -7,10 +7,14 @@ import { Container } from "@/components/ui/container";
 import { NewsletterForm } from "@/components/layout/newsletter-form";
 import { useTranslations } from "next-intl";
 import { appUrls } from "@/lib/app-urls";
+import { SOCIAL_LINKS } from "@/lib/site";
 
 const socialLinks = [
-  { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
-  { href: "https://twitter.com", label: "Twitter", icon: Twitter },
+  ...SOCIAL_LINKS.map((s) => ({
+    href: s.href,
+    label: s.key === "linkedin" ? "LinkedIn" : "X",
+    icon: s.key === "linkedin" ? Linkedin : Twitter,
+  })),
   { href: "mailto:hello@lnaflow.com", label: "Email", icon: Mail },
 ];
 
