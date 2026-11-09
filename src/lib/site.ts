@@ -12,7 +12,7 @@ export const SOCIAL_LINKS: ReadonlyArray<{
 
 /** Pre-launch: the site is publicly reachable but must NOT be indexed until launch day.
  *  Flip to `false` on launch — it drives both robots.txt and the per-page noindex meta. */
-export const PRELAUNCH = false;
+export const PRELAUNCH = true;
 
 /** Last substantive content change to the static pages. Bump this when page copy
  *  changes so sitemap `lastModified` reflects reality instead of the build time. */
