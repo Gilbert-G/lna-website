@@ -7,12 +7,13 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 /**
- * v4 buttons: 0 radius, no shadow.
- * Default (primary): 48px, padding 13/64/13/16, navy fill.
- * Ghost: navy text, Gray 10 hover.
+ * v4 buttons: 0 radius, no shadow, 48px default.
+ * Spec padding 13/64/13/16 applies when a trailing icon is present
+ * (`data-icon="inline-end"`). Without an icon, use balanced 16px sides so
+ * full-width and compact header CTAs are not clipped.
  */
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-start rounded-none border border-transparent text-sm font-normal whitespace-nowrap transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex items-center justify-center rounded-none border border-transparent text-sm font-normal whitespace-nowrap transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
@@ -29,15 +30,15 @@ const buttonVariants = cva(
       },
       size: {
         default:
-          "h-12 gap-4 pt-[13px] pr-16 pb-[13px] pl-4 has-data-[icon=inline-end]:pr-16 has-data-[icon=inline-start]:pl-4",
+          "h-12 gap-4 px-4 py-[13px] has-data-[icon=inline-end]:justify-between has-data-[icon=inline-end]:pr-16 has-data-[icon=inline-end]:pl-4 has-data-[icon=inline-start]:pl-4 has-data-[icon=inline-start]:pr-4",
         xs: "h-8 gap-2 px-3 text-xs [&_svg:not([class*='size-'])]:size-3",
         sm: "h-10 gap-3 px-4 text-sm [&_svg:not([class*='size-'])]:size-3.5",
-        lg: "h-12 gap-4 pt-[13px] pr-16 pb-[13px] pl-4 text-sm",
-        icon: "size-12 justify-center p-0",
+        lg: "h-12 gap-4 px-4 py-[13px] text-sm has-data-[icon=inline-end]:justify-between has-data-[icon=inline-end]:pr-16 has-data-[icon=inline-end]:pl-4 has-data-[icon=inline-start]:pl-4 has-data-[icon=inline-start]:pr-4",
+        icon: "size-12 shrink-0 justify-center p-0",
         "icon-xs":
-          "size-8 justify-center p-0 [&_svg:not([class*='size-'])]:size-3",
-        "icon-sm": "size-10 justify-center p-0",
-        "icon-lg": "size-12 justify-center p-0",
+          "size-8 shrink-0 justify-center p-0 [&_svg:not([class*='size-'])]:size-3",
+        "icon-sm": "size-10 shrink-0 justify-center p-0",
+        "icon-lg": "size-12 shrink-0 justify-center p-0",
       },
     },
     defaultVariants: {

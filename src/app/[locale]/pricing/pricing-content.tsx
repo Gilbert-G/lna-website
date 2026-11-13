@@ -446,10 +446,7 @@ export function PricingContent() {
                     </div>
 
                     <Button
-                      className={cn(
-                        "mt-6 w-full",
-                        isPro ? "h-10 text-base" : "h-9"
-                      )}
+                      className="mt-6 w-full"
                       variant={isPro ? "default" : "outline"}
                       render={<Link href={tier.ctaHref} />}
                     >

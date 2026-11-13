@@ -2,7 +2,7 @@
   "ticket": "LNAW-83",
   "capturedAt": "2026-11-13",
   "viewport": "1440x900",
-  "url": "http://localhost:3000/lnaw-83-ac-proof.html (and /en/design-system)",
+  "url": "http://localhost:3000/en/design-system (proofs under docs/lnaw-83-proofs/)",
   "acceptanceCriteria": {
     "1_same_origin_fonts": {
       "googleFontsRequests": 0,
