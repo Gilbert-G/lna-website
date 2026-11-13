@@ -14,10 +14,10 @@ export function PdfStack({ docs, className }: PdfStackProps) {
       {docs.map((doc) => (
         <li
           key={doc.name}
-          className="bg-card flex items-center gap-3 rounded-lg border px-3 py-2"
+          className="bg-card border-border flex items-center gap-3 rounded-none border px-3 py-2 shadow-none"
         >
           <FileText
-            className="size-4 shrink-0 text-red-600 dark:text-red-400"
+            className="text-status-low size-4 shrink-0"
             aria-hidden="true"
           />
           <span className="min-w-0 flex-1">

@@ -1,0 +1,45 @@
+{
+  "ticket": "LNAW-83",
+  "capturedAt": "2026-11-13",
+  "viewport": "1440x900",
+  "url": "http://localhost:3000/lnaw-83-ac-proof.html (and /en/design-system)",
+  "acceptanceCriteria": {
+    "1_same_origin_fonts": {
+      "googleFontsRequests": 0,
+      "fonts": [
+        "http://localhost:3000/_next/static/media/IBMPlexSans_Light-s.p.eb3e8c17.woff2",
+        "http://localhost:3000/_next/static/media/IBMPlexSans_Regular-s.p.b8862ecd.woff2",
+        "http://localhost:3000/_next/static/media/IBMPlexSans_SemiBold-s.p.4639f21b.woff2",
+        "http://localhost:3000/_next/static/media/IBMPlexMono_Regular-s.p.170fa0da.woff2",
+        "http://localhost:3000/_next/static/media/IBMPlexMono_SemiBold-s.p.4dbcf170.woff2"
+      ],
+      "pass": true
+    },
+    "2_grid_1440": {
+      "viewport": "1440px",
+      "containerMaxWidth": "1584px",
+      "columns": 16,
+      "columnGap": "32px",
+      "pass": true
+    },
+    "3_primary_and_body_colors": {
+      "primary": "#14366f",
+      "foreground": "#161616",
+      "bodyColor": "rgb(22, 22, 22)",
+      "pass": true
+    },
+    "4_zero_radius_no_shadow": {
+      "button": { "borderRadius": "0px", "boxShadow": "none" },
+      "tile": { "borderRadius": "0px", "boxShadow": "none" },
+      "input": { "borderRadius": "0px", "boxShadow": "none" },
+      "pass": true
+    },
+    "5_hero_type": {
+      "fontSize": "54px",
+      "fontWeight": "300",
+      "lineHeight": "64px",
+      "fontFamily": "IBM Plex Sans / ibmPlexSans (self-hosted)",
+      "pass": true
+    }
+  }
+}

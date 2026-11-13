@@ -73,9 +73,9 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bg-card flex flex-col items-center rounded-2xl border p-12 text-center">
+      <div className="bg-card border-border flex flex-col items-center rounded-none border p-12 text-center shadow-none">
         <CheckCircle2 className="text-primary size-12" />
-        <h2 className="mt-4 text-2xl font-bold">Message received.</h2>
+        <h2 className="text-h3 text-foreground mt-4">Message received.</h2>
         <p className="text-muted-foreground mt-3 max-w-md">
           Thanks for reaching out. We&apos;ll get back to you at{" "}
           <span className="text-foreground font-medium">{emailValue}</span>{" "}
@@ -94,8 +94,8 @@ export function ContactForm() {
   }
 
   return (
-    <div className="bg-card rounded-2xl border p-6 sm:p-8">
-      <h2 className="text-lg font-bold">Send Us a Message</h2>
+    <div className="bg-card border-border rounded-none border p-6 shadow-none sm:p-8">
+      <h2 className="text-tile text-foreground">Send Us a Message</h2>
       <form onSubmit={handleSubmit} className="mt-6 space-y-5" noValidate>
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium">
@@ -106,7 +106,7 @@ export function ContactForm() {
             name="name"
             type="text"
             placeholder="Your full name"
-            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm transition-shadow outline-none focus:ring-2"
+            className="border-border bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-none border px-3 py-2 text-sm shadow-none transition-colors outline-none focus:ring-2"
           />
           {errors.name && (
             <p className="text-destructive mt-1 text-xs">{errors.name}</p>
@@ -122,7 +122,7 @@ export function ContactForm() {
             name="email"
             type="email"
             placeholder="you@yourcompany.com"
-            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm transition-shadow outline-none focus:ring-2"
+            className="border-border bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-none border px-3 py-2 text-sm shadow-none transition-colors outline-none focus:ring-2"
           />
           {errors.email && (
             <p className="text-destructive mt-1 text-xs">{errors.email}</p>
@@ -138,7 +138,7 @@ export function ContactForm() {
             name="company"
             type="text"
             placeholder="Your company name"
-            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm transition-shadow outline-none focus:ring-2"
+            className="border-border bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-none border px-3 py-2 text-sm shadow-none transition-colors outline-none focus:ring-2"
           />
         </div>
 
@@ -151,7 +151,7 @@ export function ContactForm() {
             id="reason"
             name="reason"
             defaultValue=""
-            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm transition-shadow outline-none focus:ring-2"
+            className="border-border bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-none border px-3 py-2 text-sm shadow-none transition-colors outline-none focus:ring-2"
           >
             <option value="" disabled>
               Select a reason...
@@ -176,7 +176,7 @@ export function ContactForm() {
             name="message"
             rows={4}
             placeholder="Tell us what you're working on or what you'd like to know"
-            className="border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm transition-shadow outline-none focus:ring-2"
+            className="border-border bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-none border px-3 py-2 text-sm shadow-none transition-colors outline-none focus:ring-2"
           />
           {errors.message && (
             <p className="text-destructive mt-1 text-xs">{errors.message}</p>

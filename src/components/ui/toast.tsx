@@ -51,10 +51,10 @@ export function ToastProvider() {
       {toasts.map((toast) => (
         <div
           key={toast.id}
-          className={`animate-in fade-in slide-in-from-bottom-2 flex items-center gap-2 rounded-lg border px-4 py-3 text-sm shadow-lg ${
+          className={`animate-in fade-in slide-in-from-bottom-2 flex items-center gap-2 rounded-none border px-4 py-3 text-sm shadow-none ${
             toast.type === "success"
-              ? "border-green-200 bg-green-50 text-green-800 dark:border-green-800 dark:bg-green-950 dark:text-green-200"
-              : "border-red-200 bg-red-50 text-red-800 dark:border-red-800 dark:bg-red-950 dark:text-red-200"
+              ? "border-status-high/30 bg-gray-10 text-status-high"
+              : "border-status-low/30 bg-gray-10 text-status-low"
           }`}
         >
           {toast.type === "success" ? (

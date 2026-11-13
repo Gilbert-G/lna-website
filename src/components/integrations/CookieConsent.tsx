@@ -52,8 +52,8 @@ export function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="bg-card fixed right-0 bottom-0 left-0 z-50 border-t p-4 shadow-lg sm:right-auto sm:bottom-4 sm:left-4 sm:max-w-sm sm:rounded-xl sm:border">
-      <p className="text-sm font-medium">{t("cookieConsent.heading")}</p>
+    <div className="bg-card border-border fixed right-0 bottom-0 left-0 z-50 border-t p-4 shadow-none sm:right-auto sm:bottom-4 sm:left-4 sm:max-w-sm sm:rounded-none sm:border">
+      <p className="text-sm font-semibold">{t("cookieConsent.heading")}</p>
       <p className="text-muted-foreground mt-1 text-xs">
         {t("cookieConsent.description")}
       </p>

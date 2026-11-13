@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Inter, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -12,19 +11,7 @@ import { ToastProvider } from "@/components/ui/toast";
 import { DemoRequestModal } from "@/components/forms/DemoRequestModal";
 import { routing } from "@/i18n/routing";
 import { SITE_URL, PRELAUNCH } from "@/lib/site";
-
-const inter = Inter({
-  // Must match `--font-sans: var(--font-inter)` in globals.css. It was
-  // "--font-sans", the same name as the theme token it feeds, which made the
-  // token circular and dropped the site back to Times.
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { ibmPlexMono, ibmPlexSans } from "@/lib/fonts";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -83,17 +70,13 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    /* The font variables MUST be on <html>: globals.css applies `font-sans` to
-       the html element via @layer base. Defining them on <body> left html
-       resolving an undefined var, which is invalid at computed-value time and
-       fell back to the browser default (Times) — with the webfonts downloaded
-       but never used. */
+    /* Font CSS variables must live on <html>: @layer base applies font-sans there. */
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
     >
-      <body className="antialiased">
+      <body>
         <NextIntlClientProvider>
           <SkipToContent />
           <Header />

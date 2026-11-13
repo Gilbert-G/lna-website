@@ -23,24 +23,26 @@ export function ExcelGrid({
   caption,
 }: ExcelGridProps) {
   return (
-    <div className={cn("bg-card overflow-hidden rounded-lg border", className)}>
-      <div className="bg-muted/60 text-muted-foreground border-b px-3 py-1.5 font-mono text-[11px]">
+    <div
+      className={cn(
+        "bg-card border-border overflow-hidden rounded-none border shadow-none",
+        className
+      )}
+    >
+      <div className="bg-excel-green px-3 py-1.5 font-mono text-[11px] text-white">
         {caption ?? "comparatif-adp.xlsx"}
       </div>
-      {/* overflow-x-auto: the table has a min-content width (numbers + currency
-          symbols) that exceeds a 390px phone. Without this the table forces the
-          whole page wider and the document gets horizontal scroll. */}
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-left text-xs tabular-nums">
           <thead>
-            <tr>
+            <tr className="bg-sheet-header">
               {columns.map((col, i) => (
                 <th
                   key={col}
                   scope="col"
                   className={cn(
-                    "text-muted-foreground border-b px-3 py-2 font-semibold",
-                    i > 0 && "border-l text-right"
+                    "border-b border-white/20 px-3 py-2 font-semibold text-white",
+                    i > 0 && "border-l border-white/20 text-right"
                   )}
                 >
                   {col}
@@ -53,7 +55,7 @@ export function ExcelGrid({
               <tr key={row.label}>
                 <th
                   scope="row"
-                  className="text-foreground border-b px-3 py-2 font-medium"
+                  className="text-foreground border-border border-b px-3 py-2 font-semibold"
                 >
                   {row.label}
                 </th>
@@ -65,7 +67,7 @@ export function ExcelGrid({
                   return (
                     <td
                       key={row.label + "-" + i}
-                      className="border-b border-l px-3 py-2 text-right"
+                      className="border-border border-b border-l px-3 py-2 text-right"
                     >
                       <span
                         className={cn(

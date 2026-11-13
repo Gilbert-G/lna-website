@@ -34,13 +34,13 @@ export function BeforeAfterExcel() {
   return (
     <div className="flex min-w-0 flex-col gap-3">
       <div className="min-w-0">
-        <p className="text-muted-foreground mb-1.5 text-xs font-medium">
+        <p className="text-muted-foreground mb-1.5 font-mono text-xs">
           {t("before")}
         </p>
         <ExcelGrid columns={columns} rows={rows} empty />
       </div>
       <div className="min-w-0">
-        <p className="text-muted-foreground mb-1.5 text-xs font-medium">
+        <p className="text-muted-foreground mb-1.5 font-mono text-xs">
           {t("after")}
         </p>
         <ExcelGrid columns={columns} rows={rows} />

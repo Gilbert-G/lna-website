@@ -56,7 +56,7 @@ export function NewsletterForm() {
         type="email"
         name="email"
         placeholder={t("emailPlaceholder")}
-        className="max-w-xs"
+        className="border-gray-70 text-foreground max-w-xs bg-white"
         aria-label={t("emailLabel")}
         required
       />

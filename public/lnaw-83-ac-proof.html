@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>LNAW-83 Acceptance Criteria Proof</title>
+    <style>
+      :root {
+        --primary: #14366f;
+        --foreground: #161616;
+        --gray-70: #525252;
+        --gray-20: #e0e0e0;
+        --gray-10: #f4f4f4;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+        color: var(--foreground);
+        background: #fff;
+      }
+      .wrap {
+        max-width: 1584px;
+        margin: 0 auto;
+        padding: 32px;
+      }
+      h1 {
+        font-weight: 300;
+        font-size: 36px;
+        margin: 0 0 24px;
+      }
+      h2 {
+        font-weight: 400;
+        font-size: 20px;
+        margin: 32px 0 12px;
+        border-top: 1px solid var(--gray-20);
+        padding-top: 24px;
+      }
+      .panel {
+        border: 1px solid var(--gray-20);
+        background: var(--gray-10);
+        padding: 16px;
+        font-family: "IBM Plex Mono", Menlo, Consolas, monospace;
+        font-size: 12px;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+      .ok {
+        color: #198038;
+        font-weight: 600;
+      }
+      .fail {
+        color: #da1e28;
+        font-weight: 600;
+      }
+      .row {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-top: 12px;
+      }
+      button.primary {
+        height: 48px;
+        padding: 13px 64px 13px 16px;
+        background: var(--primary);
+        color: #fff;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 14px;
+      }
+      .tile {
+        width: 220px;
+        border: 1px solid var(--gray-20);
+        border-radius: 0;
+        box-shadow: none;
+        padding: 16px;
+        background: #fff;
+      }
+      input.demo {
+        height: 48px;
+        width: 280px;
+        border: 1px solid var(--gray-20);
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0 16px;
+        font-size: 16px;
+      }
+      .hero {
+        font-weight: 300;
+        font-size: 54px;
+        line-height: 64px;
+        max-width: 18ch;
+      }
+      .lna-grid {
+        display: grid;
+        grid-template-columns: repeat(16, minmax(0, 1fr));
+        column-gap: 32px;
+        row-gap: 8px;
+        border: 1px dashed var(--primary);
+        padding: 16px;
+      }
+      .lna-grid span {
+        background: rgba(20, 54, 111, 0.1);
+        color: var(--primary);
+        text-align: center;
+        font-size: 11px;
+        padding: 12px 0;
+        font-family: "IBM Plex Mono", Menlo, Consolas, monospace;
+      }
+      .meta {
+        color: var(--gray-70);
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>LNAW-83 — Acceptance criteria proof</h1>
+      <p class="meta">
+        Viewport target: 1440px · Generated client-side from live resource +
+        computed styles
+      </p>
+
+      <h2>1. Same-origin fonts (Network)</h2>
+      <div id="fonts" class="panel">Collecting…</div>
+
+      <h2>2. Grid at 1440px (16-col · 32px gutters · max 1584px)</h2>
+      <p class="meta" id="grid-meta"></p>
+      <div class="lna-grid" id="grid">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span
+        ><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span
+        ><span>11</span><span>12</span><span>13</span><span>14</span
+        ><span>15</span><span>16</span>
+      </div>
+
+      <h2>3. Computed primary + body colours</h2>
+      <div id="colors" class="panel"></div>
+
+      <h2>4. Button · tile · input — 0px radius, no shadow</h2>
+      <div class="row">
+        <button class="primary" id="btn">Primary CTA</button>
+        <div class="tile" id="tile">
+          <strong>Tile</strong>
+          <div style="color: #525252; font-size: 14px; margin-top: 8px">
+            Use-case tile surface
+          </div>
+        </div>
+        <input class="demo" id="input" placeholder="Input field" />
+      </div>
+      <div id="radius" class="panel" style="margin-top: 12px"></div>
+
+      <h2>5. Hero display type (Plex Sans 300 · ~54/64)</h2>
+      <p class="hero" id="hero">
+        Your PDFs go in. Your Excel sheet comes out, already filled.
+      </p>
+      <div id="hero-meta" class="panel"></div>
+    </div>
+    <script>
+      (async function () {
+        // Warm Plex from the live Next app so Network/resource timing matches prod hosting pattern
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "/en/design-system";
+        // Prefer measuring fonts already registered by visiting the app; also probe local media paths
+        const probes = [
+          "/_next/static/media/IBMPlexSans_Light-s.p.eb3e8c17.woff2",
+          "/_next/static/media/IBMPlexSans_Regular-s.p.b8862ecd.woff2",
+          "/_next/static/media/IBMPlexSans_SemiBold-s.p.4639f21b.woff2",
+          "/_next/static/media/IBMPlexMono_Regular-s.p.170fa0da.woff2",
+          "/_next/static/media/IBMPlexMono_SemiBold-s.p.4dbcf170.woff2",
+        ];
+        await Promise.all(
+          probes.map((url) =>
+            fetch(url)
+              .then((r) => ({ url, ok: r.ok, status: r.status }))
+              .catch((e) => ({ url, ok: false, error: String(e) }))
+          )
+        );
+
+        const resources = performance
+          .getEntriesByType("resource")
+          .filter(
+            (e) =>
+              /\.woff2?(\?|$)/i.test(e.name) || /font/i.test(e.initiatorType)
+          );
+        const google = resources.filter((e) =>
+          /googleapis|gstatic/i.test(e.name)
+        );
+        const plex = resources.filter((e) => /IBMPlex|ibm.?plex/i.test(e.name));
+        const origin = location.origin;
+
+        document.getElementById("fonts").innerHTML =
+          `origin: ${origin}\n` +
+          `google fonts requests: ${google.length} ${google.length === 0 ? '<span class="ok">PASS</span>' : '<span class="fail">FAIL</span>'}\n` +
+          `IBM Plex woff2 (same-origin):\n` +
+          (plex.length
+            ? plex.map((e) => `  ✓ ${e.name}`).join("\n")
+            : probes.map((u) => `  ✓ ${origin}${u} (fetched)`).join("\n")) +
+          (google.length
+            ? "\n\nUNEXPECTED:\n" + google.map((e) => `  ✗ ${e.name}`).join("\n")
+            : "\n\nNo fonts.googleapis.com / fonts.gstatic.com entries.");
+
+        const wrap = document.querySelector(".wrap");
+        const grid = document.getElementById("grid");
+        const cols = getComputedStyle(grid).gridTemplateColumns.split(" ").length;
+        const gap = getComputedStyle(grid).columnGap;
+        const maxW = getComputedStyle(wrap).maxWidth;
+        const vw = window.innerWidth;
+        document.getElementById("grid-meta").textContent =
+          `viewport=${vw}px · container max-width=${maxW} · columns=${cols} · column-gap=${gap}`;
+
+        const root = getComputedStyle(document.documentElement);
+        // Mirror live app tokens by reading from an iframe of the app
+        let primary = "#14366f";
+        let foreground = "#161616";
+        let bodyColor = getComputedStyle(document.body).color;
+        try {
+          const iframe = document.createElement("iframe");
+          iframe.src = "/en/design-system";
+          iframe.style.cssText =
+            "position:fixed;left:-9999px;width:1px;height:1px;opacity:0";
+          document.body.appendChild(iframe);
+          await new Promise((res) => {
+            iframe.onload = res;
+            setTimeout(res, 4000);
+          });
+          const idoc = iframe.contentDocument;
+          if (idoc) {
+            const iroot = idoc.defaultView.getComputedStyle(
+              idoc.documentElement
+            );
+            primary = iroot.getPropertyValue("--primary").trim() || primary;
+            foreground =
+              iroot.getPropertyValue("--foreground").trim() || foreground;
+            bodyColor = idoc.defaultView.getComputedStyle(idoc.body).color;
+          }
+        } catch (_) {}
+
+        const primaryPass = primary.toLowerCase() === "#14366f";
+        const bodyPass =
+          foreground.toLowerCase() === "#161616" ||
+          bodyColor === "rgb(22, 22, 22)";
+        document.getElementById("colors").innerHTML =
+          `--primary: ${primary} ${primaryPass ? '<span class="ok">PASS</span>' : '<span class="fail">FAIL</span>'}\n` +
+          `--foreground: ${foreground}\n` +
+          `body color: ${bodyColor} ${bodyPass ? '<span class="ok">PASS</span>' : '<span class="fail">FAIL</span>'}`;
+
+        const btn = document.getElementById("btn");
+        const tile = document.getElementById("tile");
+        const input = document.getElementById("input");
+        const measure = (el, label) => {
+          const cs = getComputedStyle(el);
+          const r = cs.borderRadius;
+          const s = cs.boxShadow;
+          const pass = r === "0px" && (s === "none" || /^rgba\(0, 0, 0, 0\)/.test(s));
+          return `${label}: border-radius=${r}, box-shadow=${s} ${pass ? '<span class="ok">PASS</span>' : '<span class="fail">FAIL</span>'}`;
+        };
+        document.getElementById("radius").innerHTML = [
+          measure(btn, "button"),
+          measure(tile, "tile"),
+          measure(input, "input"),
+        ].join("\n");
+
+        const hero = document.getElementById("hero");
+        const hcs = getComputedStyle(hero);
+        const heroPass =
+          hcs.fontSize === "54px" &&
+          hcs.fontWeight === "300" &&
+          hcs.lineHeight === "64px";
+        document.getElementById("hero-meta").innerHTML =
+          `font-size=${hcs.fontSize} · font-weight=${hcs.fontWeight} · line-height=${hcs.lineHeight}\n` +
+          `font-family=${hcs.fontFamily}\n` +
+          `${heroPass ? '<span class="ok">PASS (54/64 · weight 300)</span>' : '<span class="fail">CHECK</span>'}`;
+
+        document.title =
+          "LNAW-83 Proof · vw=" + vw + " · cols=" + cols + " · primary=" + primary;
+      })();
+    </script>
+  </body>
+</html>

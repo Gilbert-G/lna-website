@@ -49,9 +49,8 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       {/* Header */}
-      <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
-        <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
-        <Container className="relative max-w-3xl">
+      <Section className="overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
+        <Container className="max-w-3xl">
           <AnimateIn>
             <Link
               href="/blog"
@@ -63,7 +62,7 @@ export default async function BlogPostPage({ params }: Props) {
             <span className="text-primary mt-4 block text-xs font-semibold tracking-wide uppercase">
               {post.category}
             </span>
-            <h1 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-hero text-foreground mt-3 text-balance">
               {post.title}
             </h1>
             <div className="text-muted-foreground mt-4 flex flex-wrap items-center gap-4 text-sm">
@@ -92,7 +91,7 @@ export default async function BlogPostPage({ params }: Props) {
       <Section className="pt-0 md:pt-0">
         <Container className="max-w-3xl">
           <AnimateIn>
-            <article className="prose prose-neutral dark:prose-invert prose-headings:font-bold prose-a:text-primary max-w-none">
+            <article className="prose prose-neutral dark:prose-invert prose-headings:font-normal prose-headings:text-foreground prose-a:text-primary max-w-none">
               <MDXRemote source={post.content} />
             </article>
           </AnimateIn>

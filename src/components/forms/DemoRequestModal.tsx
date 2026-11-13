@@ -40,7 +40,7 @@ export function DemoRequestModal() {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/50"
         onClick={() => setOpen(false)}
         aria-hidden="true"
       />
@@ -49,7 +49,7 @@ export function DemoRequestModal() {
         role="dialog"
         aria-modal="true"
         aria-label={t("heading")}
-        className="bg-card relative z-10 w-full max-w-lg rounded-2xl border p-6 shadow-xl sm:p-8"
+        className="bg-card border-border relative z-10 w-full max-w-lg rounded-none border p-6 shadow-none sm:p-8"
       >
         <DemoRequestForm isModal onClose={() => setOpen(false)} />
       </div>

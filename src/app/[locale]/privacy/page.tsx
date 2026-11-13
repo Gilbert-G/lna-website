@@ -43,14 +43,13 @@ export default async function PrivacyPage({
 
   return (
     <>
-      <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
-        <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
-        <Container className="relative max-w-4xl">
+      <Section className="overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
+        <Container className="max-w-4xl">
           <AnimateIn>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-hero text-foreground text-balance">
               {t("heading")}
             </h1>
-            <p className="text-muted-foreground mt-4">{t("updated")}</p>
+            <p className="text-body mt-4">{t("updated")}</p>
           </AnimateIn>
         </Container>
       </Section>
@@ -81,7 +80,7 @@ export default async function PrivacyPage({
 
             {/* Content */}
             <AnimateIn delay={0.1}>
-              <div className="prose prose-neutral dark:prose-invert prose-headings:font-bold prose-a:text-primary max-w-none text-sm leading-relaxed">
+              <div className="prose prose-neutral dark:prose-invert prose-headings:font-normal prose-headings:text-foreground prose-a:text-primary text-body max-w-none">
                 <p>{t("intro")}</p>
 
                 <h2 id="information-we-collect">{t("s1.heading")}</h2>

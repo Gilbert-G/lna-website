@@ -17,16 +17,16 @@ function levelOf(score: number): Level {
 
 const LEVEL_CLASS: Record<Level, { cell: string; dot: string }> = {
   high: {
-    cell: "border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950",
-    dot: "bg-green-500",
+    cell: "border-status-high/30 bg-status-high/10",
+    dot: "bg-status-high",
   },
   medium: {
-    cell: "border-yellow-200 bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-950",
-    dot: "bg-yellow-500",
+    cell: "border-status-medium/30 bg-status-medium/10",
+    dot: "bg-status-medium",
   },
   low: {
-    cell: "border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950",
-    dot: "bg-red-500",
+    cell: "border-status-low/30 bg-status-low/10",
+    dot: "bg-status-low",
   },
 };
 
@@ -108,25 +108,34 @@ export function ConfidenceGrid() {
   };
 
   return (
-    <div className="bg-card overflow-x-auto rounded-lg border [contain:paint]">
+    <div className="bg-card border-border overflow-x-auto rounded-none border shadow-none [contain:paint]">
       <table className="w-full border-collapse text-left text-xs tabular-nums">
         <caption className="sr-only">{t("tableCaption")}</caption>
         <thead>
-          <tr className="text-muted-foreground">
-            <th scope="col" className="border-b px-2 py-2 font-semibold">
+          <tr className="bg-gray-10 text-foreground">
+            <th
+              scope="col"
+              className="border-border border-b px-2 py-2 font-semibold"
+            >
               #
             </th>
-            <th scope="col" className="border-b px-3 py-2 font-semibold">
+            <th
+              scope="col"
+              className="border-border border-b px-3 py-2 font-semibold"
+            >
               Row Key
             </th>
-            <th scope="col" className="border-b px-3 py-2 font-semibold">
+            <th
+              scope="col"
+              className="border-border border-b px-3 py-2 font-semibold"
+            >
               Conf.
             </th>
             {COLUMNS.map((col) => (
               <th
                 key={col}
                 scope="col"
-                className="border-b px-3 py-2 font-semibold"
+                className="border-border border-b px-3 py-2 font-semibold"
               >
                 {col}
               </th>
@@ -136,20 +145,20 @@ export function ConfidenceGrid() {
         <tbody>
           {ROWS.map((row, i) => (
             <tr key={row.labelKey}>
-              <td className="text-muted-foreground border-b px-2 py-2 font-mono">
+              <td className="text-muted-foreground border-border border-b px-2 py-2 font-mono">
                 {i + 1}
               </td>
               <th
                 scope="row"
-                className="text-foreground border-b px-3 py-2 font-medium"
+                className="text-foreground border-border border-b px-3 py-2 font-semibold"
               >
                 {g(row.labelKey)}
               </th>
-              <td className="border-b px-3 py-2">
+              <td className="border-border border-b px-3 py-2">
                 <span className="inline-flex items-center gap-1.5 font-mono">
                   <span
                     className={cn(
-                      "size-2 shrink-0 rounded-full",
+                      "size-2 shrink-0 rounded-none",
                       LEVEL_CLASS[levelOf(row.confidence)].dot
                     )}
                     aria-hidden="true"
@@ -162,19 +171,19 @@ export function ConfidenceGrid() {
                 return (
                   <td
                     key={row.labelKey + "-" + j}
-                    className="border-b px-3 py-2"
+                    className="border-border border-b px-3 py-2"
                   >
                     <span
                       className={cn(
-                        "inline-flex items-center gap-1.5 rounded border px-1.5 py-0.5",
+                        "inline-flex items-center gap-1.5 rounded-none border px-1.5 py-0.5",
                         LEVEL_CLASS[level].cell,
                         cell.score < REVIEW_THRESHOLD &&
-                          "ring-1 ring-red-400/60"
+                          "ring-status-low/60 ring-1"
                       )}
                     >
                       <span
                         className={cn(
-                          "size-2 shrink-0 rounded-full",
+                          "size-2 shrink-0 rounded-none",
                           LEVEL_CLASS[level].dot
                         )}
                         aria-hidden="true"
@@ -182,7 +191,7 @@ export function ConfidenceGrid() {
                       {fmt(cell.value, row.format)}
                       <span className="sr-only"> — {levelLabel[level]}</span>
                       {cell.score < REVIEW_THRESHOLD ? (
-                        <span className="font-mono text-[10px] text-red-700 dark:text-red-300">
+                        <span className="text-status-low font-mono text-[10px]">
                           [REVIEW]
                         </span>
                       ) : null}
@@ -194,11 +203,11 @@ export function ConfidenceGrid() {
           ))}
         </tbody>
       </table>
-      <ul className="text-muted-foreground flex flex-wrap items-center gap-x-4 gap-y-1.5 border-t px-3 py-2 text-xs">
+      <ul className="text-muted-foreground border-border flex flex-wrap items-center gap-x-4 gap-y-1.5 border-t px-3 py-2 text-xs">
         {(["high", "medium", "low"] as const).map((level) => (
           <li key={level} className="inline-flex items-center gap-1.5">
             <span
-              className={cn("size-2 rounded-full", LEVEL_CLASS[level].dot)}
+              className={cn("size-2 rounded-none", LEVEL_CLASS[level].dot)}
               aria-hidden="true"
             />
             {levelLabel[level]}
