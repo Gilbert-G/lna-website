@@ -71,7 +71,7 @@ export function Header() {
           </Link>
 
           <nav
-            className="hidden items-center gap-1 md:flex"
+            className="hidden items-center gap-1 lg:flex"
             aria-label={t("mainNavigation")}
           >
             {navLinks.map((link) => (
@@ -90,7 +90,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-3 md:flex">
+          <div className="hidden items-center gap-3 lg:flex">
             <LanguageSwitcher />
             <a
               href={appUrls.login}
@@ -105,7 +105,7 @@ export function Header() {
           </div>
 
           <button
-            className="text-foreground md:hidden"
+            className="text-foreground lg:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? t("menuClose") : t("menuOpen")}
             aria-expanded={mobileOpen}
@@ -122,7 +122,7 @@ export function Header() {
       {/* Mobile nav overlay lives outside <header> so fixed inset-0 covers the viewport. */}
       <div
         className={cn(
-          "bg-background fixed inset-0 z-40 flex flex-col overflow-y-auto transition-opacity duration-300 md:hidden",
+          "bg-background fixed inset-0 z-40 flex flex-col overflow-y-auto transition-opacity duration-300 lg:hidden",
           mobileOpen
             ? "visible opacity-100"
             : "pointer-events-none invisible opacity-0"
