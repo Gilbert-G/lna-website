@@ -16,18 +16,18 @@ export default function GlobalError({
 
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100">
+      <body className="bg-background text-foreground antialiased">
         <div className="flex min-h-screen flex-col items-center justify-center px-4 text-center">
-          <AlertTriangle className="size-16 text-red-500/50" />
-          <h1 className="mt-6 text-4xl font-extrabold tracking-tight">
+          <AlertTriangle className="text-destructive/50 size-16" />
+          <h1 className="text-hero text-foreground mt-6 text-balance">
             Something Went Wrong
           </h1>
-          <p className="mt-3 max-w-md text-gray-600 dark:text-gray-400">
+          <p className="text-body mt-3 max-w-md">
             A critical error occurred. Please try refreshing the page.
           </p>
           <button
             onClick={reset}
-            className="mt-8 rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+            className="bg-primary text-primary-foreground hover:bg-primary-hover mt-8 rounded-none px-6 py-2.5 text-sm font-normal transition-colors"
           >
             Try Again
           </button>

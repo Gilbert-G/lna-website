@@ -17,8 +17,8 @@ export default async function HomePage({
   return (
     <>
       <Hero />
-      <BenefitBands />
       <HowItWorks />
+      <BenefitBands />
       <UseCases />
       <TrustSection />
       <FinalCta />

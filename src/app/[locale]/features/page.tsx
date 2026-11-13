@@ -1,4 +1,3 @@
-import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import {
   FolderOpen,
@@ -12,7 +11,6 @@ import {
 import { LinkButton } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
-import { Badge } from "@/components/ui/badge";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { VideoEmbed } from "@/components/media/VideoEmbed";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -92,16 +90,15 @@ export default async function FeaturesPage({
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
-        <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
-        <Container className="relative text-center">
+      <Section className="overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
+        <Container className="text-center">
           <AnimateIn>
-            <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-hero text-foreground mx-auto max-w-4xl text-balance">
               {t("hero.heading")}
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-3xl text-lg">
+            <p className="text-lead mx-auto mt-4 max-w-3xl text-pretty">
               {t("hero.description")}
             </p>
           </AnimateIn>
@@ -109,6 +106,7 @@ export default async function FeaturesPage({
             <div className="mt-8 flex justify-center gap-3">
               <LinkButton size="lg" className="px-6" href="/contact">
                 {t("hero.ctaDemo")}
+                <ArrowRight data-icon="inline-end" aria-hidden="true" />
               </LinkButton>
               <LinkButton
                 variant="outline"
@@ -130,14 +128,14 @@ export default async function FeaturesPage({
                 <a
                   key={featureIds[key]}
                   href={`#${featureIds[key]}`}
-                  className="text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-full border px-4 py-1.5 text-sm transition-colors"
+                  className="border-border text-muted-foreground hover:text-primary hover:bg-gray-10 rounded-none border px-4 py-1.5 text-sm transition-colors"
                 >
                   {t(`${key}.label`)}
                 </a>
               ))}
               <a
                 href="#user-management"
-                className="text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-full border px-4 py-1.5 text-sm transition-colors"
+                className="border-border text-muted-foreground hover:text-primary hover:bg-gray-10 rounded-none border px-4 py-1.5 text-sm transition-colors"
               >
                 {t("userManagement.label")}
               </a>
@@ -163,27 +161,25 @@ export default async function FeaturesPage({
           <Section
             key={key}
             id={featureIds[key]}
-            className={i % 2 === 1 ? "bg-muted/30" : ""}
+            className={i % 2 === 1 ? "bg-gray-10" : ""}
           >
             <Container>
               <div
                 className={`grid items-center gap-12 lg:grid-cols-2 ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}
               >
                 <AnimateIn className={i % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="bg-primary/10 text-primary mb-4 w-fit rounded-xl p-3">
+                  <div className="bg-primary/10 text-primary mb-4 w-fit rounded-none p-3">
                     <Icon className="size-7" />
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tight">
+                  <h2 className="text-h2 text-foreground">
                     {t(`${key}.headline`)}
                   </h2>
-                  <p className="text-muted-foreground mt-4 text-lg">
-                    {t(`${key}.description`)}
-                  </p>
+                  <p className="text-body mt-4">{t(`${key}.description`)}</p>
                   <ul className="mt-6 space-y-3">
                     {bullets.map((bullet) => (
                       <li
                         key={bullet}
-                        className="flex items-start gap-3 text-sm"
+                        className="text-body flex items-start gap-3 text-sm"
                       >
                         <Check className="text-primary mt-0.5 size-4 shrink-0" />
                         <span>{bullet}</span>
@@ -200,7 +196,7 @@ export default async function FeaturesPage({
                     alt={t(`${key}.headline`)}
                     width={600}
                     height={400}
-                    className="rounded-2xl shadow-lg"
+                    className="border-border rounded-none border shadow-none"
                   />
                 </AnimateIn>
               </div>
@@ -214,13 +210,13 @@ export default async function FeaturesPage({
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <AnimateIn>
-              <div className="bg-primary/10 text-primary mb-4 w-fit rounded-xl p-3">
+              <div className="bg-primary/10 text-primary mb-4 w-fit rounded-none p-3">
                 <Users className="size-7" />
               </div>
-              <h2 className="text-3xl font-bold tracking-tight">
+              <h2 className="text-h2 text-foreground">
                 {t("userManagement.headline")}
               </h2>
-              <p className="text-muted-foreground mt-4 text-lg">
+              <p className="text-body mt-4">
                 {t("userManagement.description")}
               </p>
               <ul className="mt-6 space-y-3">
@@ -238,7 +234,7 @@ export default async function FeaturesPage({
                 alt={t("userManagement.headline")}
                 width={600}
                 height={400}
-                className="rounded-2xl shadow-lg"
+                className="border-border rounded-none border shadow-none"
               />
             </AnimateIn>
           </div>
@@ -246,14 +242,14 @@ export default async function FeaturesPage({
       </Section>
 
       {/* Comparison Table */}
-      <Section className="bg-muted/30">
+      <Section className="bg-gray-10 border-border border-t">
         <Container>
           <AnimateIn>
             <div className="mb-12 text-center">
               <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
                 {t("comparison.subheading")}
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="text-h2 text-foreground">
                 {t("comparison.heading")}
               </h2>
             </div>
@@ -262,7 +258,7 @@ export default async function FeaturesPage({
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b">
+                  <tr className="border-border border-b">
                     <th className="p-3 text-left font-semibold">
                       {t("comparison.headerFeature")}
                     </th>
@@ -305,29 +301,20 @@ export default async function FeaturesPage({
       </Section>
 
       {/* Final CTA */}
-      <Section className="bg-gradient-to-r from-[#2563EB] to-[#6366F1] text-white">
+      <Section className="bg-gray-10 border-border border-t">
         <Container className="text-center">
           <AnimateIn>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              {t("cta.heading")}
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
+            <h2 className="text-h2 text-foreground">{t("cta.heading")}</h2>
+            <p className="text-body mx-auto mt-4 max-w-2xl text-pretty">
               {t("cta.description")}
             </p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <LinkButton
-                size="lg"
-                className="bg-white px-8 text-base text-blue-600 hover:bg-blue-50"
-                href="/contact"
-              >
+              <LinkButton size="lg" href="/contact">
                 {t("cta.button")}
               </LinkButton>
-              <Link
-                href="/pricing"
-                className="inline-flex items-center gap-1 text-sm font-medium text-blue-100 hover:text-white"
-              >
+              <LinkButton variant="outline" size="lg" href="/pricing">
                 {t("hero.ctaPricing")} <ArrowRight className="size-4" />
-              </Link>
+              </LinkButton>
             </div>
           </AnimateIn>
         </Container>

@@ -101,7 +101,7 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
           <CheckCircle2 className="text-primary size-16" />
           <span className="absolute -top-1 -right-1 text-2xl">🎉</span>
         </div>
-        <h3 className="mt-4 text-2xl font-bold">{t("success.heading")}</h3>
+        <h3 className="text-h3 text-foreground mt-4">{t("success.heading")}</h3>
         <p className="text-muted-foreground mt-2 max-w-sm">
           {t("success.description")}
         </p>
@@ -115,7 +115,7 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
   }
 
   const inputClassName =
-    "border-input bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-lg border px-3 py-2 text-sm outline-none transition-shadow focus:ring-2";
+    "border-border bg-background ring-ring/10 focus:ring-primary/30 w-full rounded-none border px-3 py-2 text-sm shadow-none outline-none transition-colors focus:ring-2";
 
   return (
     <div className="relative">
@@ -129,12 +129,12 @@ export function DemoRequestForm({ onClose, isModal }: DemoRequestFormProps) {
         </button>
       )}
       <div className="mb-6">
-        <h3 className="text-xl font-bold">{t("heading")}</h3>
+        <h3 className="text-tile text-foreground">{t("heading")}</h3>
         <p className="text-muted-foreground mt-1 text-sm">{t("description")}</p>
       </div>
 
       {status === "error" && (
-        <div className="mb-4 flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-800 dark:bg-red-950 dark:text-red-300">
+        <div className="border-destructive/30 bg-gray-10 text-destructive mb-4 flex items-center gap-2 rounded-none border px-4 py-3 text-sm">
           <AlertCircle className="size-4 shrink-0" />
           <span>{errorMessage || t("errors.generic")}</span>
         </div>

@@ -30,7 +30,7 @@ function Band({
       <div
         className={
           featured
-            ? "grid min-w-0 items-center gap-8 rounded-2xl border border-blue-100 bg-gradient-to-b from-blue-50/80 to-transparent p-6 shadow-sm md:p-10 lg:grid-cols-2 lg:gap-16 dark:border-blue-900/40 dark:from-blue-950/30"
+            ? "border-border bg-gray-10 grid min-w-0 items-center gap-8 rounded-none border p-6 md:p-10 lg:grid-cols-2 lg:gap-16"
             : "grid min-w-0 items-center gap-8 lg:grid-cols-2 lg:gap-16"
         }
       >
@@ -41,15 +41,9 @@ function Band({
               : "flex min-w-0 flex-col gap-3"
           }
         >
-          <h3 className="text-2xl font-semibold tracking-tight text-balance">
-            {heading}
-          </h3>
-          <p className="text-muted-foreground max-w-[62ch] text-pretty">
-            {body}
-          </p>
+          <h3 className="text-h3 text-foreground text-balance">{heading}</h3>
+          <p className="text-body max-w-[62ch] text-pretty">{body}</p>
         </div>
-        {/* min-w-0: grid items default to min-width:auto, so the Excel table's
-            min-content width would otherwise widen this column and the page. */}
         <div className={reversed ? "min-w-0 lg:order-1" : "min-w-0"}>
           {visual}
         </div>
@@ -62,10 +56,10 @@ function Band({
 export function BenefitBands() {
   const t = useTranslations("home.bands");
   return (
-    <Section className="border-t">
+    <Section className="border-border border-t">
       <Container className="flex flex-col gap-20 md:gap-28">
         <AnimateIn>
-          <h2 className="max-w-[34rem] text-3xl font-semibold tracking-tight text-balance">
+          <h2 className="text-h2 text-foreground max-w-[34rem] text-balance">
             {t("heading")}
           </h2>
         </AnimateIn>
