@@ -24,9 +24,7 @@ type CellValue = string | boolean;
 
 function CellContent({ value }: { value: CellValue }) {
   if (value === true) {
-    return (
-      <Check className="mx-auto size-5 text-green-600 dark:text-green-400" />
-    );
+    return <Check className="text-status-high mx-auto size-5" />;
   }
   if (value === false) {
     return <Minus className="text-muted-foreground/40 mx-auto size-5" />;
@@ -351,14 +349,17 @@ export function PricingContent() {
         <Container>
           <AnimateIn delay={0.2}>
             <div className="flex flex-col items-center gap-3">
-              <div className="bg-muted inline-flex items-center gap-1 rounded-full p-1">
+              <div
+                className="border-border inline-flex items-center border"
+                role="group"
+              >
                 <button
                   onClick={() => setAnnual(false)}
                   className={cn(
-                    "rounded-full px-5 py-2 text-sm font-medium transition-colors",
+                    "rounded-none px-5 py-2 text-sm font-normal transition-colors",
                     !annual
-                      ? "bg-background text-foreground shadow-sm"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:bg-gray-10 hover:text-foreground"
                   )}
                 >
                   {t("billing.monthly")}
@@ -366,17 +367,17 @@ export function PricingContent() {
                 <button
                   onClick={() => setAnnual(true)}
                   className={cn(
-                    "rounded-full px-5 py-2 text-sm font-medium transition-colors",
+                    "rounded-none px-5 py-2 text-sm font-normal transition-colors",
                     annual
-                      ? "bg-background text-foreground shadow-sm"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:bg-gray-10 hover:text-foreground"
                   )}
                 >
                   {t("billing.annual")}
                 </button>
               </div>
               {annual && (
-                <span className="bg-primary/10 text-primary inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium">
+                <span className="bg-primary/10 text-primary border-border inline-flex items-center gap-1 rounded-none border px-3 py-1 text-xs font-normal">
                   <Sparkles className="size-3" />
                   {t("billing.savings")}
                 </span>
@@ -402,19 +403,17 @@ export function PricingContent() {
                 <AnimateIn key={tier.key} delay={0.1 * i}>
                   <div
                     className={cn(
-                      "bg-card relative flex flex-col rounded-2xl border p-6 lg:p-8",
-                      isPro
-                        ? "border-primary shadow-primary/20 scale-[1.02] shadow-xl lg:scale-105"
-                        : "shadow-sm"
+                      "bg-card border-border relative flex flex-col rounded-none border p-6 shadow-none lg:p-8",
+                      isPro && "border-primary"
                     )}
                   >
                     {tier.badge && (
-                      <div className="bg-primary text-primary-foreground absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-4 py-1 text-xs font-semibold">
+                      <div className="bg-primary text-primary-foreground absolute -top-3 left-1/2 -translate-x-1/2 rounded-none px-4 py-1 text-xs font-semibold">
                         {tier.badge}
                       </div>
                     )}
 
-                    <h3 className="text-xl font-bold">{tier.name}</h3>
+                    <h3 className="text-tile text-foreground">{tier.name}</h3>
                     <p className="text-muted-foreground mt-1 text-sm">
                       {tier.tagline}
                     </p>
@@ -422,7 +421,7 @@ export function PricingContent() {
                     <div className="mt-6">
                       {!tier.isEnterprise ? (
                         <>
-                          <span className="text-4xl font-extrabold tracking-tight">
+                          <span className="text-h2 text-foreground">
                             {annual ? tier.annualPrice : tier.monthlyPrice}
                           </span>
                           <span className="text-muted-foreground text-sm">
@@ -436,7 +435,7 @@ export function PricingContent() {
                         </>
                       ) : (
                         <>
-                          <span className="text-4xl font-extrabold tracking-tight">
+                          <span className="text-h2 text-foreground">
                             {t("tiers.enterprise.price")}
                           </span>
                           <p className="text-muted-foreground mt-1 text-xs">
@@ -447,10 +446,7 @@ export function PricingContent() {
                     </div>
 
                     <Button
-                      className={cn(
-                        "mt-6 w-full",
-                        isPro ? "h-10 text-base" : "h-9"
-                      )}
+                      className="mt-6 w-full"
                       variant={isPro ? "default" : "outline"}
                       render={<Link href={tier.ctaHref} />}
                     >
@@ -463,7 +459,7 @@ export function PricingContent() {
                     <ul className="mt-6 space-y-2.5 border-t pt-6">
                       {tier.features.map((f) => (
                         <li key={f} className="flex items-start gap-2 text-sm">
-                          <Check className="mt-0.5 size-4 shrink-0 text-green-600 dark:text-green-400" />
+                          <Check className="text-status-high mt-0.5 size-4 shrink-0" />
                           <span>{f}</span>
                         </li>
                       ))}
@@ -497,28 +493,28 @@ export function PricingContent() {
       <Section>
         <Container>
           <AnimateIn>
-            <h2 className="mb-8 text-center text-2xl font-bold sm:text-3xl">
+            <h2 className="text-h2 text-foreground mb-8 text-center">
               {t("comparison.heading")}
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <div className="overflow-x-auto rounded-xl border">
+            <div className="border-border overflow-x-auto rounded-none border">
               <table className="w-full min-w-[640px] text-sm">
                 <thead>
-                  <tr className="bg-muted/50 border-b">
-                    <th className="px-4 py-3 text-left font-medium">
+                  <tr className="bg-gray-10 border-border border-b">
+                    <th className="px-4 py-3 text-left font-semibold">
                       {t("comparison.headerFeature")}
                     </th>
-                    <th className="px-4 py-3 text-center font-medium">
+                    <th className="px-4 py-3 text-center font-semibold">
                       {t("comparison.headerStarter")}
                     </th>
-                    <th className="border-primary/20 bg-primary/5 px-4 py-3 text-center font-medium">
+                    <th className="border-primary bg-primary/5 px-4 py-3 text-center font-semibold">
                       {t("comparison.headerProfessional")}
                     </th>
-                    <th className="px-4 py-3 text-center font-medium">
+                    <th className="px-4 py-3 text-center font-semibold">
                       {t("comparison.headerHigh")}
                     </th>
-                    <th className="px-4 py-3 text-center font-medium">
+                    <th className="px-4 py-3 text-center font-semibold">
                       {t("comparison.headerEnterprise")}
                     </th>
                   </tr>
@@ -529,7 +525,7 @@ export function PricingContent() {
                       <tr key={cat.category}>
                         <td
                           colSpan={5}
-                          className="bg-muted/30 px-4 py-2 text-xs font-semibold tracking-wide uppercase"
+                          className="bg-gray-10 px-4 py-2 text-xs font-semibold tracking-wide uppercase"
                         >
                           {cat.category}
                         </td>
@@ -537,7 +533,7 @@ export function PricingContent() {
                       {cat.rows.map((row) => (
                         <tr
                           key={row.feature}
-                          className="border-b last:border-0"
+                          className="border-border border-b last:border-0"
                         >
                           <td className="px-4 py-2.5">{row.feature}</td>
                           <td className="px-4 py-2.5 text-center">
@@ -567,19 +563,19 @@ export function PricingContent() {
       <Section>
         <Container className="max-w-3xl">
           <AnimateIn>
-            <h2 className="mb-8 text-center text-2xl font-bold sm:text-3xl">
+            <h2 className="text-h2 text-foreground mb-8 text-center">
               {t("faq.heading")}
             </h2>
           </AnimateIn>
           <div className="space-y-2">
             {faqs.map((faq, i) => (
               <AnimateIn key={i} delay={0.05 * i}>
-                <div className="rounded-lg border">
+                <div className="border-border rounded-none border">
                   <button
                     onClick={() => toggleFaq(i)}
                     onKeyDown={(e) => handleFaqKeyDown(e, i)}
                     aria-expanded={openFaq === i}
-                    className="hover:bg-muted/50 flex w-full items-center justify-between px-5 py-4 text-left text-sm font-medium transition-colors"
+                    className="hover:bg-gray-10 flex w-full items-center justify-between px-5 py-4 text-left text-sm font-normal transition-colors"
                   >
                     {faq.question}
                     <ChevronDown
@@ -611,15 +607,13 @@ export function PricingContent() {
       </Section>
 
       {/* ── Final CTA ── */}
-      <Section className="bg-muted/30">
+      <Section className="bg-gray-10 border-border border-t">
         <Container className="text-center">
           <AnimateIn>
-            <h2 className="text-2xl font-bold sm:text-3xl">
-              {t("cta.heading")}
-            </h2>
+            <h2 className="text-h2 text-foreground">{t("cta.heading")}</h2>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-lg">
+            <p className="text-body mx-auto mt-4 max-w-xl text-pretty">
               {t("cta.description")}
             </p>
           </AnimateIn>
@@ -641,7 +635,7 @@ export function PricingContent() {
             <div className="text-muted-foreground mt-6 flex flex-wrap items-center justify-center gap-4 text-sm">
               {ctaTrustSignals.map((s) => (
                 <span key={s} className="inline-flex items-center gap-1.5">
-                  <Check className="size-3.5 text-green-600 dark:text-green-400" />
+                  <Check className="text-status-high size-3.5" />
                   {s}
                 </span>
               ))}

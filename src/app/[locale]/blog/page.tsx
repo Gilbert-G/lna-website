@@ -37,16 +37,15 @@ export default async function BlogPage({
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
-        <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
-        <Container className="relative text-center">
+      <Section className="overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
+        <Container className="text-center">
           <AnimateIn>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-hero text-foreground text-balance">
               {t("hero.heading")}
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
+            <p className="text-lead mx-auto mt-4 max-w-2xl text-pretty">
               {t("hero.description")}
             </p>
           </AnimateIn>
@@ -66,7 +65,7 @@ export default async function BlogPage({
                 <AnimateIn key={post.slug} delay={0.1 * i}>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="group bg-card flex flex-col overflow-hidden rounded-2xl border transition-shadow hover:shadow-lg"
+                    className="group bg-card border-border hover:border-primary flex flex-col overflow-hidden rounded-none border shadow-none transition-colors"
                   >
                     {post.image && (
                       <div className="bg-muted relative aspect-[16/9] overflow-hidden">
@@ -74,7 +73,7 @@ export default async function BlogPage({
                           src={post.image}
                           alt={post.title}
                           fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          className="object-cover"
                         />
                       </div>
                     )}
@@ -82,7 +81,7 @@ export default async function BlogPage({
                       <span className="text-primary text-xs font-semibold tracking-wide uppercase">
                         {post.category}
                       </span>
-                      <h2 className="group-hover:text-primary mt-2 text-lg leading-snug font-bold transition-colors">
+                      <h2 className="text-tile text-foreground group-hover:text-primary mt-2 leading-snug transition-colors">
                         {post.title}
                       </h2>
                       <p className="text-muted-foreground mt-2 line-clamp-2 text-sm">

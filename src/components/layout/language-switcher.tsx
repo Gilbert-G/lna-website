@@ -27,7 +27,7 @@ export function LanguageSwitcher() {
   return (
     <div
       className={cn(
-        "bg-muted/60 inline-flex items-center rounded-full p-0.5 text-xs font-medium backdrop-blur-sm",
+        "border-border inline-flex items-center border text-xs font-normal",
         isPending && "pointer-events-none opacity-60"
       )}
       role="radiogroup"
@@ -40,10 +40,10 @@ export function LanguageSwitcher() {
           aria-checked={loc === locale}
           onClick={() => switchLocale(loc)}
           className={cn(
-            "rounded-full px-2.5 py-1 transition-all duration-200",
+            "rounded-none px-2.5 py-1 transition-colors",
             loc === locale
-              ? "bg-primary text-primary-foreground shadow-sm"
-              : "text-muted-foreground hover:text-foreground"
+              ? "bg-primary text-primary-foreground"
+              : "text-muted-foreground hover:bg-gray-10 hover:text-foreground"
           )}
         >
           {localeLabels[loc]}

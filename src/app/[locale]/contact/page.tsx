@@ -34,16 +34,15 @@ export default async function ContactPage({
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
-        <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
-        <Container className="relative text-center">
+      <Section className="overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
+        <Container className="text-center">
           <AnimateIn>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-hero text-foreground text-balance">
               {t("hero.heading")}
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
+            <p className="text-lead mx-auto mt-4 max-w-2xl text-pretty">
               {t("hero.description")}
             </p>
           </AnimateIn>
@@ -62,7 +61,9 @@ export default async function ContactPage({
             {/* Sidebar */}
             <AnimateIn delay={0.2}>
               <div className="space-y-8">
-                <h2 className="text-lg font-bold">{t("sidebar.heading")}</h2>
+                <h2 className="text-tile text-foreground">
+                  {t("sidebar.heading")}
+                </h2>
 
                 <div className="space-y-6">
                   <div className="flex gap-3">
@@ -96,7 +97,7 @@ export default async function ContactPage({
                   </div>
 
                   {SOCIAL_LINKS.length > 0 && (
-                    <div className="border-t pt-6">
+                    <div className="border-border border-t pt-6">
                       <p className="mb-3 text-sm font-medium">
                         {t("sidebar.socialLabel")}
                       </p>
@@ -125,7 +126,7 @@ export default async function ContactPage({
                     </div>
                   )}
 
-                  <div className="border-t pt-6">
+                  <div className="border-border border-t pt-6">
                     <p className="mb-3 text-sm font-medium">
                       {t("sidebar.officesLabel")}
                     </p>

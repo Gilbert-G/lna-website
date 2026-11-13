@@ -73,17 +73,18 @@ src/
 
 Visit `/design-system` in the running app to see a live showcase of all components, colors, and typography.
 
-### Brand Colors
+### Brand Colors (Website v4)
 
-- **Primary**: Blue (#2563EB) — main brand color
-- **Secondary**: Indigo accent — complementary color
-- **Destructive**: Red — errors and danger actions
-- **Neutral**: Slate gray scale
+- **Primary**: LNA navy `#14366F` (hover `#0F2A57`, pressed `#0A1F42`)
+- **Neutrals**: Carbon Gray 100/70/30/20/10 (`#161616` … `#F4F4F4`)
+- **Status** (tables only): high `#198038`, medium `#B28600`, low `#DA1E28`
+- **Radius**: 0px · no shadows / gradients / pills
 
 ### Typography
 
-- **Sans**: Inter (via next/font)
-- **Mono**: JetBrains Mono (via next/font)
+- **Sans**: IBM Plex Sans 300/400/600 (self-hosted woff2, SIL OFL)
+- **Mono**: IBM Plex Mono 400/600 (self-hosted woff2)
+- Fallbacks: `"Helvetica Neue", Arial, sans-serif` / `Menlo, Consolas, monospace`
 
 ### Adding shadcn/ui Components
 

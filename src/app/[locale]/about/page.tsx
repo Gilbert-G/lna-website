@@ -59,16 +59,15 @@ export default async function AboutPage({
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
-        <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
-        <Container className="relative text-center">
+      <Section className="overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
+        <Container className="text-center">
           <AnimateIn>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-hero text-foreground text-balance">
               {t("hero.heading")}
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-3xl text-lg">
+            <p className="text-lead mx-auto mt-4 max-w-3xl text-pretty">
               {t("hero.description")}
             </p>
           </AnimateIn>
@@ -84,10 +83,10 @@ export default async function AboutPage({
                 <span className="text-primary text-xs font-semibold tracking-widest uppercase">
                   {t("problem.label")}
                 </span>
-                <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+                <h2 className="text-h2 text-foreground mt-3">
                   {t("problem.heading")}
                 </h2>
-                <div className="text-muted-foreground mt-6 space-y-4 text-base leading-relaxed">
+                <div className="text-body mt-6 space-y-4">
                   <p>{t("problem.p1")}</p>
                   <p>{t("problem.p2")}</p>
                   <p>{t("problem.p3")}</p>
@@ -96,7 +95,7 @@ export default async function AboutPage({
               </div>
             </AnimateIn>
             <AnimateIn delay={0.2}>
-              <div className="bg-muted/50 flex items-center justify-center rounded-2xl p-8">
+              <div className="border-border bg-gray-10 flex items-center justify-center rounded-none border p-8">
                 <Image
                   src="/illustrations/workflow-diagram.svg"
                   alt={t("problem.imageAlt")}
@@ -111,7 +110,7 @@ export default async function AboutPage({
       </Section>
 
       {/* Mission & Vision */}
-      <Section className="bg-muted/30">
+      <Section className="bg-gray-10 border-border border-t">
         <Container>
           <AnimateIn>
             <span className="text-primary text-xs font-semibold tracking-widest uppercase">
@@ -120,23 +119,23 @@ export default async function AboutPage({
           </AnimateIn>
           <div className="mt-8 grid gap-8 md:grid-cols-2">
             <AnimateIn delay={0.1}>
-              <div className="bg-card rounded-2xl border p-8">
+              <div className="bg-card border-border rounded-none border p-8 shadow-none">
                 <Target className="text-primary size-8" />
-                <h3 className="mt-4 text-xl font-bold">
+                <h3 className="text-tile text-foreground mt-4">
                   {t("missionVision.mission.title")}
                 </h3>
-                <p className="text-muted-foreground mt-3 leading-relaxed">
+                <p className="text-body mt-3">
                   {t("missionVision.mission.description")}
                 </p>
               </div>
             </AnimateIn>
             <AnimateIn delay={0.2}>
-              <div className="bg-card rounded-2xl border p-8">
+              <div className="bg-card border-border rounded-none border p-8 shadow-none">
                 <Eye className="text-primary size-8" />
-                <h3 className="mt-4 text-xl font-bold">
+                <h3 className="text-tile text-foreground mt-4">
                   {t("missionVision.vision.title")}
                 </h3>
-                <p className="text-muted-foreground mt-3 leading-relaxed">
+                <p className="text-body mt-3">
                   {t("missionVision.vision.description")}
                 </p>
               </div>
@@ -152,7 +151,7 @@ export default async function AboutPage({
             <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               {t("values.label")}
             </span>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+            <h2 className="text-h2 text-foreground mt-3">
               {t("values.heading")}
             </h2>
           </AnimateIn>
@@ -161,12 +160,12 @@ export default async function AboutPage({
               const Icon = valueIcons[i];
               return (
                 <AnimateIn key={key} delay={0.1 * i}>
-                  <div className="bg-card rounded-2xl border p-6">
+                  <div className="bg-card border-border rounded-none border p-6 shadow-none">
                     <Icon className="text-primary size-6" />
-                    <h3 className="mt-3 text-lg font-bold">
+                    <h3 className="text-tile text-foreground mt-3">
                       {t(`values.${key}.title`)}
                     </h3>
-                    <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+                    <p className="text-body mt-2 text-sm">
                       {t(`values.${key}.description`)}
                     </p>
                   </div>
@@ -178,24 +177,22 @@ export default async function AboutPage({
       </Section>
 
       {/* Team */}
-      <Section className="bg-muted/30">
+      <Section className="bg-gray-10 border-border border-t">
         <Container>
           <AnimateIn>
             <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               {t("team.label")}
             </span>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+            <h2 className="text-h2 text-foreground mt-3">
               {t("team.heading")}
             </h2>
-            <p className="text-muted-foreground mt-3 max-w-2xl text-lg">
-              {t("team.description")}
-            </p>
+            <p className="text-body mt-3 max-w-2xl">{t("team.description")}</p>
           </AnimateIn>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {teamMemberKeys.map((key, i) => (
               <AnimateIn key={key} delay={0.1 * i}>
-                <div className="bg-card overflow-hidden rounded-2xl border text-center">
-                  <div className="bg-muted flex aspect-square items-center justify-center p-8">
+                <div className="bg-card border-border overflow-hidden rounded-none border text-center shadow-none">
+                  <div className="bg-gray-10 flex aspect-square items-center justify-center p-8">
                     <Image
                       src={teamPhotos[i]}
                       alt={t(`team.${key}.name`)}
@@ -205,7 +202,9 @@ export default async function AboutPage({
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-bold">{t(`team.${key}.name`)}</h3>
+                    <h3 className="text-tile text-foreground">
+                      {t(`team.${key}.name`)}
+                    </h3>
                     <p className="text-muted-foreground text-sm">
                       {t(`team.${key}.role`)}
                     </p>
@@ -224,12 +223,12 @@ export default async function AboutPage({
             <span className="text-primary text-xs font-semibold tracking-widest uppercase">
               {t("company.label")}
             </span>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+            <h2 className="text-h2 text-foreground mt-3">
               {t("company.heading")}
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <div className="text-muted-foreground mt-6 space-y-4 leading-relaxed">
+            <div className="text-body mt-6 space-y-4">
               <p>{t("company.p1")}</p>
               <p>{t("company.p2")}</p>
               <p>{t("company.p3")}</p>
@@ -249,15 +248,13 @@ export default async function AboutPage({
       </Section>
 
       {/* Final CTA */}
-      <Section className="bg-muted/30">
+      <Section className="bg-gray-10 border-border border-t">
         <Container className="text-center">
           <AnimateIn>
-            <h2 className="text-2xl font-bold sm:text-3xl">
-              {t("cta.heading")}
-            </h2>
+            <h2 className="text-h2 text-foreground">{t("cta.heading")}</h2>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-lg">
+            <p className="text-body mx-auto mt-4 max-w-xl text-pretty">
               {t("cta.description")}
             </p>
           </AnimateIn>

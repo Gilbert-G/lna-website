@@ -4,16 +4,26 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/*
+ * LNA Website v4 — Design tokens
+ *
+ * Primary: LNA navy #14366F (never Microsoft #0067B8 or IBM Blue 60 #0F62FE)
+ * Neutrals: Carbon Gray 100 / 70 / 30 / 20 / 10
+ * Radius: 0 everywhere. No box-shadows, gradients, pills or glass.
+ * Fonts: self-hosted IBM Plex (see src/lib/fonts.ts + src/fonts/)
+ */
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /* The webfont variable from next/font is --font-inter (see layout.tsx).
-     This was `var(--font-sans)`, i.e. a self-reference: the token resolved to
-     nothing, `font-sans` emitted an invalid font-family, and the whole site
-     rendered in the browser default serif (Times) — with Inter and JetBrains
-     Mono downloading unused. Keep the two names in sync. */
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-geist-mono);
+
+  /* next/font/local CSS variables — keep names in sync with src/lib/fonts.ts */
+  --font-sans:
+    var(--font-ibm-plex-sans), "IBM Plex Sans", "Helvetica Neue", Arial,
+    sans-serif;
+  --font-mono:
+    var(--font-ibm-plex-mono), "IBM Plex Mono", Menlo, Consolas, monospace;
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -39,133 +49,266 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-pressed: var(--primary-pressed);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Carbon neutrals */
+  --color-gray-100: var(--gray-100);
+  --color-gray-70: var(--gray-70);
+  --color-gray-30: var(--gray-30);
+  --color-gray-20: var(--gray-20);
+  --color-gray-10: var(--gray-10);
+  --color-legal: var(--legal);
+
+  /* Status (tables only) */
+  --color-status-high: var(--status-high);
+  --color-status-medium: var(--status-medium);
+  --color-status-low: var(--status-low);
+
+  /* Product mockup only */
+  --color-excel-green: var(--excel-green);
+  --color-excel-green-dark: var(--excel-green-dark);
+  --color-sheet-header: var(--sheet-header);
+
+  /* 0 px radius everywhere */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-4xl: 0;
+
+  /* Layout tokens (Carbon-inspired). Grid column counts switch at 672 / 1056 via .lna-grid. */
+  --container-max: 99rem; /* 1584px */
+  --grid-gutter: 2rem; /* 32px */
+
+  /* Type scale */
+  --text-hero: 3.375rem; /* 54px */
+  --text-hero--line-height: 4rem; /* 64px */
+  --text-hero-mobile: 2.25rem; /* 36px */
+  --text-hero-mobile--line-height: 2.75rem; /* 44px */
+  --text-h2: 2.625rem; /* 42px */
+  --text-h2--line-height: 3.125rem; /* 50px */
+  --text-h3: 1.75rem; /* 28px */
+  --text-h3--line-height: 2.25rem; /* 36px */
+  --text-tile: 1.25rem; /* 20px */
+  --text-tile--line-height: 1.75rem; /* 28px */
+  --text-lead: 1.25rem; /* 20px */
+  --text-lead--line-height: 1.75rem; /* 28px */
+  --text-body: 1rem; /* 16px */
+  --text-body--line-height: 1.5rem; /* 24px */
+
+  /* Spacing on 8px scale (exposed beyond Tailwind defaults) */
+  --spacing-18: 4.5rem; /* 72 — not in scale but useful */
+  --spacing-22: 5.5rem;
 }
 
-/*
- * LNA Brand Design Tokens
- *
- * Primary: Blue (#2563EB) — seule couleur d'accent, réservée aux CTA
- * Secondary: gris bleuté très clair — surface, pas une couleur d'accent
- * Fiabilité: vert #22C55E / ambre #EAB308 / rouge #EF4444 (valeurs de l'app produit),
- *   la seule zone où la couleur porte du sens — toujours doublée d'un libellé texte
- * Destructive: Red — for errors and danger actions
- * Neutral: Slate gray scale
- *
- * All colors use oklch for perceptual uniformity.
- */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.15 0.01 260);
+  /* Neutrals */
+  --gray-100: #161616;
+  --gray-70: #525252;
+  --gray-30: #c6c6c6;
+  --gray-20: #e0e0e0;
+  --gray-10: #f4f4f4;
+  --legal: #000000;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.01 260);
+  /* Primary: LNA navy */
+  --primary: #14366f;
+  --primary-hover: #0f2a57;
+  --primary-pressed: #0a1f42;
+  --primary-foreground: #ffffff;
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.01 260);
+  --background: #ffffff;
+  --foreground: #161616;
 
-  /* Primary: Blue #2563EB */
-  --primary: oklch(0.546 0.245 262.881);
-  --primary-foreground: oklch(0.985 0 0);
+  --card: #ffffff;
+  --card-foreground: #161616;
 
-  /* Secondary: Indigo #6366F1 */
-  --secondary: oklch(0.95 0.02 260);
-  --secondary-foreground: oklch(0.25 0.05 260);
+  --popover: #ffffff;
+  --popover-foreground: #161616;
 
-  --muted: oklch(0.965 0.005 260);
-  --muted-foreground: oklch(0.5 0.01 260);
+  --secondary: #f4f4f4;
+  --secondary-foreground: #161616;
 
-  --accent: oklch(0.95 0.02 260);
-  --accent-foreground: oklch(0.25 0.05 260);
+  --muted: #f4f4f4;
+  --muted-foreground: #525252;
 
-  --destructive: oklch(0.577 0.245 27.325);
+  --accent: #f4f4f4;
+  --accent-foreground: #14366f;
 
-  --border: oklch(0.91 0.005 260);
-  --input: oklch(0.91 0.005 260);
-  --ring: oklch(0.546 0.245 262.881);
+  --destructive: #da1e28;
 
-  --chart-1: oklch(0.546 0.245 262.881);
-  --chart-2: oklch(0.532 0.19 275);
-  --chart-3: oklch(0.62 0.16 250);
-  --chart-4: oklch(0.7 0.12 240);
-  --chart-5: oklch(0.8 0.08 230);
+  --border: #e0e0e0;
+  --input: #e0e0e0;
+  --ring: #14366f;
 
-  --radius: 0.625rem;
+  /* Status (tables only) */
+  --status-high: #198038;
+  --status-medium: #b28600;
+  --status-low: #da1e28;
 
-  --sidebar: oklch(0.985 0.005 260);
-  --sidebar-foreground: oklch(0.15 0.01 260);
-  --sidebar-primary: oklch(0.546 0.245 262.881);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.95 0.02 260);
-  --sidebar-accent-foreground: oklch(0.25 0.05 260);
-  --sidebar-border: oklch(0.91 0.005 260);
-  --sidebar-ring: oklch(0.546 0.245 262.881);
+  /* Product mockup only */
+  --excel-green: #217346;
+  --excel-green-dark: #107c41;
+  --sheet-header: #1f4e78;
+
+  --chart-1: #14366f;
+  --chart-2: #525252;
+  --chart-3: #198038;
+  --chart-4: #b28600;
+  --chart-5: #da1e28;
+
+  --radius: 0;
+
+  --sidebar: #f4f4f4;
+  --sidebar-foreground: #161616;
+  --sidebar-primary: #14366f;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e0e0e0;
+  --sidebar-accent-foreground: #161616;
+  --sidebar-border: #e0e0e0;
+  --sidebar-ring: #14366f;
 }
 
 .dark {
-  --background: oklch(0.13 0.01 260);
-  --foreground: oklch(0.96 0.005 260);
+  --background: #161616;
+  --foreground: #f4f4f4;
 
-  --card: oklch(0.17 0.015 260);
-  --card-foreground: oklch(0.96 0.005 260);
+  --card: #161616;
+  --card-foreground: #f4f4f4;
 
-  --popover: oklch(0.17 0.015 260);
-  --popover-foreground: oklch(0.96 0.005 260);
+  --popover: #161616;
+  --popover-foreground: #f4f4f4;
 
-  /* Primary: lighter blue for dark mode contrast */
-  --primary: oklch(0.68 0.2 262);
-  --primary-foreground: oklch(0.13 0.01 260);
+  --primary: #14366f;
+  --primary-hover: #0f2a57;
+  --primary-pressed: #0a1f42;
+  --primary-foreground: #ffffff;
 
-  /* Secondary: lighter indigo for dark mode */
-  --secondary: oklch(0.22 0.02 260);
-  --secondary-foreground: oklch(0.96 0.005 260);
+  --secondary: #262626;
+  --secondary-foreground: #f4f4f4;
 
-  --muted: oklch(0.22 0.02 260);
-  --muted-foreground: oklch(0.65 0.01 260);
+  --muted: #262626;
+  --muted-foreground: #c6c6c6;
 
-  --accent: oklch(0.22 0.02 260);
-  --accent-foreground: oklch(0.96 0.005 260);
+  --accent: #262626;
+  --accent-foreground: #f4f4f4;
 
-  --destructive: oklch(0.704 0.191 22.216);
+  --destructive: #da1e28;
 
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.68 0.2 262);
+  --border: #393939;
+  --input: #393939;
+  --ring: #c6c6c6;
 
-  --chart-1: oklch(0.68 0.2 262);
-  --chart-2: oklch(0.6 0.17 275);
-  --chart-3: oklch(0.55 0.2 263);
-  --chart-4: oklch(0.5 0.22 265);
-  --chart-5: oklch(0.45 0.18 266);
+  --chart-1: #78a9ff;
+  --chart-2: #c6c6c6;
+  --chart-3: #42be65;
+  --chart-4: #f1c21b;
+  --chart-5: #fa4d56;
 
-  --sidebar: oklch(0.17 0.015 260);
-  --sidebar-foreground: oklch(0.96 0.005 260);
-  --sidebar-primary: oklch(0.68 0.2 262);
-  --sidebar-primary-foreground: oklch(0.13 0.01 260);
-  --sidebar-accent: oklch(0.22 0.02 260);
-  --sidebar-accent-foreground: oklch(0.96 0.005 260);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.68 0.2 262);
+  --sidebar: #161616;
+  --sidebar-foreground: #f4f4f4;
+  --sidebar-primary: #14366f;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #f4f4f4;
+  --sidebar-border: #393939;
+  --sidebar-ring: #c6c6c6;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+
   html {
     @apply font-sans;
+  }
+
+  body {
+    @apply bg-background text-foreground text-base leading-6 antialiased;
+    font-weight: 400;
+  }
+
+  /* Soften default shadows from any leftover utilities */
+  .shadow-none,
+  [data-slot="card"],
+  [data-slot="button"],
+  [data-slot="input"] {
+    box-shadow: none;
+  }
+}
+
+@layer utilities {
+  /**
+   * 16 / 8 / 4 column grid (Carbon-inspired).
+   * Gutters: 32px. Use inside Container (max-width 1584px).
+   */
+  .lna-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: var(--grid-gutter);
+    row-gap: var(--grid-gutter);
+  }
+
+  @media (min-width: 672px) {
+    .lna-grid {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1056px) {
+    .lna-grid {
+      grid-template-columns: repeat(16, minmax(0, 1fr));
+    }
+  }
+
+  .text-hero {
+    font-size: var(--text-hero-mobile);
+    line-height: var(--text-hero-mobile--line-height);
+    font-weight: 300;
+  }
+
+  @media (min-width: 672px) {
+    .text-hero {
+      font-size: var(--text-hero);
+      line-height: var(--text-hero--line-height);
+    }
+  }
+
+  .text-h2 {
+    font-size: var(--text-h2);
+    line-height: var(--text-h2--line-height);
+    font-weight: 300;
+  }
+
+  .text-h3 {
+    font-size: var(--text-h3);
+    line-height: var(--text-h3--line-height);
+    font-weight: 400;
+  }
+
+  .text-tile {
+    font-size: var(--text-tile);
+    line-height: var(--text-tile--line-height);
+    font-weight: 400;
+  }
+
+  .text-lead {
+    font-size: var(--text-lead);
+    line-height: var(--text-lead--line-height);
+    font-weight: 400;
+  }
+
+  .text-body {
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    font-weight: 400;
+    color: var(--gray-70);
   }
 }

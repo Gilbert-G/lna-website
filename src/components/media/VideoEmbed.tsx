@@ -87,7 +87,7 @@ export function VideoEmbed({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden rounded-2xl bg-black ${className ?? ""}`}
+      className={`border-border relative overflow-hidden rounded-none border bg-black shadow-none ${className ?? ""}`}
       style={{ aspectRatio: "16 / 9" }}
     >
       {!playing ? (
@@ -106,9 +106,9 @@ export function VideoEmbed({
             />
           )}
           <div className="absolute inset-0 bg-black/30 transition-colors group-hover:bg-black/40" />
-          <div className="relative z-10 flex size-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform group-hover:scale-110 sm:size-20">
+          <div className="bg-primary relative z-10 flex size-16 items-center justify-center rounded-none shadow-none transition-opacity group-hover:opacity-90 sm:size-20">
             <Play
-              className="size-7 text-blue-600 sm:size-9"
+              className="text-primary-foreground size-7 sm:size-9"
               fill="currentColor"
             />
           </div>

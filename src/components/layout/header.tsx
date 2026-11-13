@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { usePathname } from "@/i18n/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
@@ -46,7 +46,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          "bg-background/80 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-md transition-all duration-300",
+          "bg-background fixed top-0 right-0 left-0 z-50 border-b transition-colors duration-200",
           scrolled ? "border-border py-2" : "border-transparent py-4"
         )}
       >
@@ -71,7 +71,7 @@ export function Header() {
           </Link>
 
           <nav
-            className="hidden items-center gap-1 md:flex"
+            className="hidden items-center gap-1 lg:flex"
             aria-label={t("mainNavigation")}
           >
             {navLinks.map((link) => (
@@ -79,10 +79,10 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                  "px-3 py-2 text-sm font-normal transition-colors",
                   pathname === link.href || pathname.startsWith(link.href + "/")
-                    ? "text-primary bg-primary/5"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                    ? "text-primary bg-gray-10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-gray-10"
                 )}
               >
                 {link.label}
@@ -90,25 +90,22 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-3 md:flex">
+          <div className="hidden items-center gap-3 lg:flex">
             <LanguageSwitcher />
             <a
               href={appUrls.login}
-              className="text-muted-foreground hover:text-foreground rounded-lg px-3 py-2 text-sm font-medium transition-colors"
+              className="text-muted-foreground hover:text-foreground px-3 py-2 text-sm font-normal transition-colors"
             >
               {t("signIn")}
             </a>
-            <Button
-              size="lg"
-              render={<a href={appUrls.register} />}
-              className="bg-gradient-to-b from-blue-500 to-blue-600 text-white shadow-sm shadow-blue-500/20 hover:shadow-md hover:shadow-blue-500/30"
-            >
+            <Button size="lg" render={<a href={appUrls.register} />}>
               {t("cta")}
+              <ArrowRight data-icon="inline-end" aria-hidden="true" />
             </Button>
           </div>
 
           <button
-            className="text-foreground md:hidden"
+            className="text-foreground lg:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? t("menuClose") : t("menuOpen")}
             aria-expanded={mobileOpen}
@@ -122,18 +119,16 @@ export function Header() {
         </Container>
       </header>
 
-      {/* Mobile nav overlay. It must live OUTSIDE <header>: the header's
-          backdrop-blur-md creates a containing block, which traps a `fixed inset-0`
-          child inside the 56px header box instead of covering the viewport. */}
+      {/* Mobile nav overlay lives outside <header> so fixed inset-0 covers the viewport. */}
       <div
         className={cn(
-          "bg-background fixed inset-0 z-40 flex flex-col overflow-y-auto transition-opacity duration-300 md:hidden",
+          "bg-background fixed inset-0 z-40 flex flex-col overflow-y-auto transition-opacity duration-300 lg:hidden",
           mobileOpen
             ? "visible opacity-100"
             : "pointer-events-none invisible opacity-0"
         )}
       >
-        <div className="flex items-center justify-between border-b px-4 py-4">
+        <div className="flex items-center justify-between border-b px-8 py-4">
           <Link href="/" onClick={() => setMobileOpen(false)}>
             <Image
               src="/brand/logo.svg"
@@ -159,7 +154,7 @@ export function Header() {
           </button>
         </div>
         <nav
-          className="flex flex-1 flex-col gap-1 p-4"
+          className="flex flex-1 flex-col gap-1 p-8"
           aria-label={t("mobileNavigation")}
         >
           {navLinks.map((link) => (
@@ -168,10 +163,10 @@ export function Header() {
               href={link.href}
               onClick={() => setMobileOpen(false)}
               className={cn(
-                "rounded-lg px-4 py-3 text-lg font-medium transition-colors",
+                "px-4 py-3 text-lg font-normal transition-colors",
                 pathname === link.href || pathname.startsWith(link.href + "/")
-                  ? "text-primary bg-primary/5"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  ? "text-primary bg-gray-10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-gray-10"
               )}
             >
               {link.label}
@@ -180,7 +175,7 @@ export function Header() {
           <div className="mt-4 flex flex-col gap-3">
             <Button
               size="lg"
-              className="h-11 w-full bg-gradient-to-b from-blue-500 to-blue-600 text-white shadow-sm shadow-blue-500/20"
+              className="w-full"
               render={
                 <a
                   href={appUrls.register}
@@ -189,11 +184,12 @@ export function Header() {
               }
             >
               {t("cta")}
+              <ArrowRight data-icon="inline-end" aria-hidden="true" />
             </Button>
             <a
               href={appUrls.login}
               onClick={() => setMobileOpen(false)}
-              className="text-muted-foreground hover:text-foreground flex min-h-11 items-center justify-center rounded-lg px-4 text-base font-medium transition-colors"
+              className="text-muted-foreground hover:text-foreground flex min-h-12 items-center justify-center px-4 text-base font-normal transition-colors"
             >
               {t("signIn")}
             </a>

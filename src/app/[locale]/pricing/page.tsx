@@ -31,16 +31,15 @@ export default async function PricingPage({
   return (
     <>
       {/* Hero */}
-      <Section className="relative overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
-        <div className="from-primary/5 via-secondary/5 to-background pointer-events-none absolute inset-0 bg-gradient-to-b" />
-        <Container className="relative text-center">
+      <Section className="overflow-hidden pt-24 pb-8 md:pt-32 md:pb-12">
+        <Container className="text-center">
           <AnimateIn>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-hero text-foreground text-balance">
               {t("hero.heading")}
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
+            <p className="text-lead mx-auto mt-4 max-w-2xl text-pretty">
               {t("hero.description")}
             </p>
           </AnimateIn>
